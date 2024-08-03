@@ -180,6 +180,7 @@ async function createTemplate(orgfolder, outputPath, skipPaths = [], skipTexts =
     let template = await buildTemplate(orgfolder, skipPaths, skipTexts);
     let fileExist = false;
     try {
+        // 继承旧翻译
         fileExist = await fs.access(outputPath, fs.constants.F_OK);
         console.warn("已存在文件，将对原文件进行改动");
         let existData = JSON.parse(await fs.readFile(outputPath, 'utf8'));
@@ -198,9 +199,22 @@ async function createTemplate(orgfolder, outputPath, skipPaths = [], skipTexts =
                 });
             }
         });
+        // 数量统计
+        let filecount = 0;
+        let textcount = 0;
+        let translatedcount = 0;
+        Object.keys(template).forEach(path => {
+            filecount++;
+            Object.keys(template[path]).forEach(text => {
+                textcount++;
+                if (template[path][text] !== text) translatedcount++;
+            });
+        });
         try {
             await fs.writeFile(outputPath, JSON.stringify(template));
             console.log("已更新翻译文件：" + outputPath);
+            console.log("目前共有 " + filecount + " 个文件，共计 " + textcount + " 个翻译条目！");
+            console.log("当前已经翻译 " + translatedcount + " 个条目，占比 " + (translatedcount / textcount).toFixed(2) + "% ，还有 " + (textcount - translatedcount) + " 个条目未翻译");
         }
         catch (err) {
             console.error("无法更新翻译文件：" + outputPath + "\n", err);
@@ -210,6 +224,7 @@ async function createTemplate(orgfolder, outputPath, skipPaths = [], skipTexts =
         try {
             await fs.writeFile(outputPath, JSON.stringify(template));
             console.log("已生成翻译文件：" + outputPath);
+            console.log("目前共有 " + filecount + " 个文件， " + textcount + " 个翻译条目！");
         }
         catch (err) {
             console.error("无法创建翻译文件：" + outputPath + "\n", err);
