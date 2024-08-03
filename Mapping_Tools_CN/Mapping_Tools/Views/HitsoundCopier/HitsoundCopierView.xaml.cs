@@ -21,7 +21,7 @@ namespace Mapping_Tools.Views.HitsoundCopier {
     /// </summary>
     [VerticalContentScroll]
     public partial class HitsoundCopierView : ISavable<HitsoundCopierVm> {
-        public static readonly string ToolName = "Hitsound Copier";
+        public static readonly string ToolName = "音效复制器";
 
         /// <summary>
         /// 
@@ -320,7 +320,7 @@ namespace Mapping_Tools.Views.HitsoundCopier {
                 }
             }
 
-            return "Done!";
+            return "完成！";
         }
 
         private static void CopyHitsounds(HitsoundCopierVm arg, Timeline tlFrom, Timeline tlTo) {

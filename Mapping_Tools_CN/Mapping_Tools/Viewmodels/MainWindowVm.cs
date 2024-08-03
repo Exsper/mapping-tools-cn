@@ -204,7 +204,7 @@ namespace Mapping_Tools.Viewmodels {
         private ListBoxItem CreateNavigationItem(Type type, double verticalMargin=4) {
             var name = ViewCollection.GetName(type);
             var content = new TextBlock { Text = name, Margin = new Thickness(10, verticalMargin, 0, verticalMargin) };
-            var item = new ListBoxItem { Tag = name, ToolTip = $"Open {name}.", Content = content};
+            var item = new ListBoxItem { Tag = name, ToolTip = $"打开 {name}.", Content = content};
             CreateContextMenu(item, name);
             item.PreviewMouseLeftButtonDown += ItemOnPreviewMouseLeftButtonDown;
             return item;
@@ -249,7 +249,7 @@ namespace Mapping_Tools.Viewmodels {
             mi.Icon = isFavorite ?
                 new PackIcon { Kind = PackIconKind.Star } :
                 new PackIcon { Kind = PackIconKind.StarBorder };
-            mi.Header = isFavorite ? @"_Unfavorite" : @"_Favorite";
+            mi.Header = isFavorite ? @"取消置顶（_U）" : @"置顶（_F）";
         }
 
         private bool SearchItemsFilter(object obj) {
@@ -341,9 +341,9 @@ namespace Mapping_Tools.Viewmodels {
 
         private MenuItem GetSaveProjectMenuItem() {
             var menu = new MenuItem {
-                Header = "_Save project",
+                Header = "保存项目（_S）",
                 Icon = new PackIcon { Kind = PackIconKind.ContentSave },
-                ToolTip = "Save tool settings to file."
+                ToolTip = "保存当前工具的设置到文件。"
             };
             menu.Click += SaveProject;
 
@@ -352,9 +352,9 @@ namespace Mapping_Tools.Viewmodels {
 
         private MenuItem GetLoadProjectMenuItem() {
             var menu = new MenuItem {
-                Header = "_Load project",
+                Header = "加载项目（_L）",
                 Icon = new PackIcon { Kind = PackIconKind.Folder },
-                ToolTip = "Load tool settings from file."
+                ToolTip = "从文件导入当前工具的设置。"
             };
             menu.Click += LoadProject;
 
@@ -363,9 +363,9 @@ namespace Mapping_Tools.Viewmodels {
 
         private MenuItem GetNewProjectMenuItem() {
             var menu = new MenuItem {
-                Header = "_New project",
+                Header = "新建项目（_N）",
                 Icon = new PackIcon { Kind = PackIconKind.Rocket },
-                ToolTip = "Load the default tool settings."
+                ToolTip = "加载当前工具的初始设置。"
             };
             menu.Click += NewProject;
 

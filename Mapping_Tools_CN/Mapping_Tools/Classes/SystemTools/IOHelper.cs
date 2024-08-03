@@ -30,8 +30,8 @@ namespace Mapping_Tools.Classes.SystemTools {
             bool restore = initialDirectory == "";
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog {
-                Filter = "JSON File|*.json",
-                Title = "Save a project",
+                Filter = "JSON文件|*.json",
+                Title = "保存项目",
                 InitialDirectory = initialDirectory,
                 RestoreDirectory = restore
             };
@@ -43,8 +43,8 @@ namespace Mapping_Tools.Classes.SystemTools {
             bool restore = initialDirectory == "";
 
             OpenFileDialog saveFileDialog1 = new OpenFileDialog {
-                Filter = "JSON File|*.json",
-                Title = "Open a project",
+                Filter = "JSON文件|*.json",
+                Title = "打开项目",
                 InitialDirectory = initialDirectory,
                 RestoreDirectory = restore
             };
@@ -54,7 +54,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static string ZipFileDialog() {
             OpenFileDialog saveFileDialog1 = new OpenFileDialog {
-                Filter = "ZIP File|*.zip",
+                Filter = "ZIP文件|*.zip",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true
@@ -76,7 +76,7 @@ namespace Mapping_Tools.Classes.SystemTools {
             bool restore = initialDirectory == "";
 
             OpenFileDialog openFileDialog = new OpenFileDialog {
-                Filter = "Config files (*.cfg)|*.cfg",
+                Filter = "配置文件 (*.cfg)|*.cfg",
                 FilterIndex = 1,
                 InitialDirectory = initialDirectory,
                 RestoreDirectory = restore,
@@ -88,7 +88,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static string MidiFileDialog() {
             OpenFileDialog openFileDialog = new OpenFileDialog {
-                Filter = "MIDI files (*.mid)|*.mid",
+                Filter = "MIDI文件 (*.mid)|*.mid",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true
@@ -99,7 +99,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static string SampleFileDialog() {
             OpenFileDialog openFileDialog = new OpenFileDialog {
-                Filter = "Audio files (*.wav;*.ogg)|*.wav;*.ogg|SoundFont files (*.sf2)|*.sf2",
+                Filter = "音频文件 (*.wav;*.ogg)|*.wav;*.ogg|音色库文件 (*.sf2)|*.sf2",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true
@@ -110,7 +110,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static string[] AudioFileDialog(bool multiselect = false) {
             OpenFileDialog openFileDialog = new OpenFileDialog {
-                Filter = "Audio files (*.wav;*.ogg)|*.wav;*.ogg",
+                Filter = "音频文件 (*.wav;*.ogg)|*.wav;*.ogg",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true,
@@ -124,7 +124,7 @@ namespace Mapping_Tools.Classes.SystemTools {
             string path = MainWindow.AppWindow.GetCurrentMaps()[0];
             OpenFileDialog openFileDialog = new OpenFileDialog {
                 InitialDirectory = restore ? "" : path != "" ? Editor.GetParentFolder(path) : SettingsManager.GetSongsPath(),
-                Filter = "osu! files (*.osu;*.osb)|*.osu;*.osb",
+                Filter = "osu!文件 (*.osu;*.osb)|*.osu;*.osb",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true,
@@ -138,7 +138,7 @@ namespace Mapping_Tools.Classes.SystemTools {
             string path = MainWindow.AppWindow.GetCurrentMaps()[0];
             OpenFileDialog openFileDialog = new OpenFileDialog {
                 InitialDirectory = initialDirectory,
-                Filter = "osu! files (*.osu;*.osb)|*.osu;*.osb",
+                Filter = "osu!文件 (*.osu;*.osb)|*.osu;*.osb",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true,
@@ -167,18 +167,18 @@ namespace Mapping_Tools.Classes.SystemTools {
 
                 if (string.IsNullOrEmpty(songs)) {
                     throw new Exception(
-                        @"Can't fetch current in-game beatmap, because there is no Songs path specified in Preferences.");
+                        @"无法获取游戏当前谱面，因为还未设置Songs文件夹地址。");
                 }
 
                 string folder = ReadString(osuBaseAddresses.Beatmap, nameof(CurrentBeatmap.FolderName));
                 string filename = ReadString(osuBaseAddresses.Beatmap, nameof(CurrentBeatmap.OsuFileName));
 
                 if (string.IsNullOrEmpty(folder)) {
-                    throw new Exception(@"Can't fetch the folder name of the current in-game beatmap.");
+                    throw new Exception(@"无法从游戏当前谱面获取文件夹名称。");
                 }
 
                 if (string.IsNullOrEmpty(filename)) {
-                    throw new Exception(@"Can't fetch the file name of the current in-game beatmap.");
+                    throw new Exception(@"无法从游戏当前谱面获取谱面文件名。");
                 }
 
                 path = Path.Combine(songs, folder, filename);

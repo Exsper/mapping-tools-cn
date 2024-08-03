@@ -27,7 +27,7 @@
                         <TextBlock FontSize="40" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
                             <Run Text="Slider Picturator"/>
                         </TextBlock>
-                        <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="Click me!">
+                        <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                             <materialDesign:PopupBox.ToggleContent>
                                 <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
@@ -35,7 +35,7 @@
                                 Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.
                             </TextBlock>
                         </materialDesign:PopupBox>
-                        <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="Click me!">
+                        <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
                             <materialDesign:PopupBox.ToggleContent>
                                 <materialDesign:PackIcon Kind="LightningBoltCircle" Width="24" Height="24" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
@@ -268,7 +268,7 @@
                     IsEnabled="{Binding ElementName=This, Path=CanRun}"
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
                     Click="Start_Click"
-                    ToolTip="Run this tool.">
+                    ToolTip="运行该工具。">
                     <materialDesign:PackIcon
                         Kind="Play" Height="36" Width="36" />
                 </Button>

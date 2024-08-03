@@ -296,7 +296,7 @@ namespace Mapping_Tools.Views.PropertyTransformer {
                 }
             }
 
-            return "Done!";
+            return "完成！";
         }
 
         private void Start_Click(object sender, RoutedEventArgs e) {

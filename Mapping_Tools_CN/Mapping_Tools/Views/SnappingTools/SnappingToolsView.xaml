@@ -30,7 +30,7 @@
                         <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
                     <Run Text="Geometry Dashboard"/>
                         </TextBlock>
-                        <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="Click me!">
+                        <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                             <materialDesign:PopupBox.ToggleContent>
                                 <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
@@ -180,7 +180,7 @@ The savestates window is opened by clicking the button next to the preferences b
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <WrapPanel VerticalAlignment="Bottom">
-                    <TextBlock TextWrapping="NoWrap" Text="Made by OliBomby" FontWeight="Bold" Opacity="0.58"/>
+                    <TextBlock TextWrapping="NoWrap" Text="由 OliBomby 制作" FontWeight="Bold" Opacity="0.58"/>
                 </WrapPanel>
             </Grid>
             <Grid Grid.Column="1">

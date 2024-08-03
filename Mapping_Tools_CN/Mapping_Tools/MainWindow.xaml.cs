@@ -305,7 +305,7 @@ namespace Mapping_Tools {
                 var paths = GetCurrentMaps();
                 var result = await Task.Run(() => BackupManager.SaveMapBackup(paths, true, "UB"));  // UB stands for User Backup
                 if (result) {
-                    await Task.Run(() => MessageQueue.Enqueue($"谱面复制成功！"));
+                    await Task.Run(() => MessageQueue.Enqueue($"谱面备份成功！"));
                 }
             } catch (Exception ex) {
                 ex.Show();

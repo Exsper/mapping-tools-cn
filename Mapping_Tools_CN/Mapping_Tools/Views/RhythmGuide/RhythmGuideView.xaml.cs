@@ -57,7 +57,7 @@ namespace Mapping_Tools.Views.RhythmGuide {
             if (worker != null && worker.WorkerReportsProgress) {
                 worker.ReportProgress(100);
             }
-            return args.ExportMode == Classes.Tools.RhythmGuide.ExportMode.NewMap ? "" : "Done!";
+            return args.ExportMode == Classes.Tools.RhythmGuide.ExportMode.NewMap ? "" : "完成！";
         }
 
         public RhythmGuideVm GetSaveData() {

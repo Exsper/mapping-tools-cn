@@ -224,7 +224,7 @@ namespace Mapping_Tools.Views.SliderPicturator {
 
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, reader != null, arg.Quick));
-            return arg.Quick ? "" : "Done!";
+            return arg.Quick ? "" : "完成！";
         }
         public SliderPicturatorVm GetSaveData() {
             return ViewModel;

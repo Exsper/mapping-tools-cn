@@ -43,7 +43,7 @@
             <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
                 <Run Text="Sliderator"/>
             </TextBlock>
-            <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="Click me!">
+            <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                 <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                 </materialDesign:PopupBox.ToggleContent>
@@ -68,7 +68,7 @@
                     Check out all the options. The tooltips should help you further.
                 </TextBlock>
             </materialDesign:PopupBox>
-            <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="Click me!">
+            <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
                 <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="LightningBoltCircle" Width="24" Height="24" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
                 </materialDesign:PopupBox.ToggleContent>
@@ -375,7 +375,7 @@
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
                     IsEnabled="{Binding ElementName=This, Path=CanRun}"
                     Click="Start_Click"
-                    ToolTip="Run this tool.">
+                    ToolTip="运行该工具。">
                     <materialDesign:PackIcon
                         Kind="Play" Height="36" Width="36" />
                 </Button>
@@ -389,7 +389,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <WrapPanel VerticalAlignment="Bottom">
-                    <TextBlock TextWrapping="NoWrap" Text="Made by OliBomby, Karoo, &amp; JPK314" FontWeight="Bold" Opacity="0.58"/>
+                    <TextBlock TextWrapping="NoWrap" Text="由 OliBomby, Karoo, &amp; JPK314 制作" FontWeight="Bold" Opacity="0.58"/>
                 </WrapPanel>
             </Grid>
             <Grid Grid.Column="1">

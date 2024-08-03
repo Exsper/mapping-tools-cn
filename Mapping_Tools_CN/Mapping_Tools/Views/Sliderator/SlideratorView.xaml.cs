@@ -801,7 +801,7 @@ namespace Mapping_Tools.Views.Sliderator {
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true,  arg.Reload && editorRead, arg.Quick));
 
-            return arg.Quick ? string.Empty : "Done!";
+            return arg.Quick ? string.Empty : "完成！";
         }
 
         public SlideratorVm GetSaveData() {

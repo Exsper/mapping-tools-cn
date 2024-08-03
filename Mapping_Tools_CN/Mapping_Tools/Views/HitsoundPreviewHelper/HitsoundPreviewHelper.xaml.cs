@@ -117,7 +117,7 @@ namespace Mapping_Tools.Views.HitsoundPreviewHelper
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, reader != null, args.Quick));
 
-            return args.Quick ? "" : "Done!";
+            return args.Quick ? "" : "完成！";
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)

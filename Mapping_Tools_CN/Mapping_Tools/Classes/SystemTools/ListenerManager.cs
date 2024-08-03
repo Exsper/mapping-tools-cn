@@ -373,7 +373,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 EditorReaderStuff.BetterSave();
             }
             catch (Exception ex) {
-                MessageBox.Show("Failed to overwrite osu! save with BetterSave.");
+                MessageBox.Show("使用 BetterSave 代替osu!保存谱面失败。");
                 ex.Show();
             }
         }

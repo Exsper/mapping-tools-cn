@@ -60,6 +60,10 @@ function getContentInXaml(str) {
     quoteRegex = /Text="([^"]*)"/g;
     results = str.match(quoteRegex);
     if (results) match.push(...results);
+    // ComboBoxItem Content
+    quoteRegex = /Content="([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
     // materialDesign:HintAssist.Hint
     quoteRegex = /materialDesign:HintAssist\.Hint="([^"]*)"/g;
     results = str.match(quoteRegex);

@@ -88,7 +88,7 @@
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
                     IsEnabled="{Binding ElementName=This, Path=CanRun}"
                     Click="Start_Click"
-                    ToolTip="运行">
+                    ToolTip="运行该工具。">
                     <materialDesign:PackIcon
                         Kind="Play" Height="36" Width="36" />
                 </Button>
@@ -101,7 +101,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <WrapPanel VerticalAlignment="Bottom">
-                    <TextBlock TextWrapping="NoWrap" Text="Made by OliBomby &amp; Karoo" FontWeight="Bold" Opacity="0.58"/>
+                    <TextBlock TextWrapping="NoWrap" Text="由 OliBomby &amp; Karoo 制作" FontWeight="Bold" Opacity="0.58"/>
                 </WrapPanel>
             </Grid>
             <Grid Grid.Column="1">

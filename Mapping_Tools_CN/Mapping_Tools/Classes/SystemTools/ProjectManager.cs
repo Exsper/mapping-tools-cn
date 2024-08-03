@@ -75,7 +75,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.StackTrace);
                 Console.WriteLine(ex.Message);
 
-                MessageBox.Show("Project could not be saved!");
+                MessageBox.Show("无法保存项目！");
                 ex.Show();
             }
         }
@@ -91,7 +91,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 T project = LoadJson<T>(path);
 
                 if (project == null) {
-                    throw new Exception("Loaded project is a null reference.");
+                    throw new Exception("导入项目为空。");
                 }
 
                 view.SetSaveData(project);
@@ -100,7 +100,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.Message);
 
                 if (message) {
-                    MessageBox.Show("Project could not be loaded!");
+                    MessageBox.Show("无法加载项目！");
                     ex.Show();
                 }
             }
@@ -108,7 +108,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static void NewProject<T>(ISavable<T> view, bool dialog = false, bool message = true) {
             if (dialog) {
-                var messageBoxResult = MessageBox.Show("Are you sure you want to start a new project? All unsaved progress will be lost.", "Confirm new project", MessageBoxButton.YesNo);
+                var messageBoxResult = MessageBox.Show("您确定要创建一个新项目吗？所有未保存的进度都将丢失。", "新建项目确认", MessageBoxButton.YesNo);
                 if (messageBoxResult != MessageBoxResult.Yes) return;
             }
 
@@ -120,7 +120,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.Message);
 
                 if (message) {
-                    MessageBox.Show("New project could not be initialized!");
+                    MessageBox.Show("无法初始化新项目！");
                     ex.Show();
                 }
             }

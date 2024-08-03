@@ -33,7 +33,7 @@
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
                     <Run Text="Combo Colour Studio"/>
                 </TextBlock>
-                <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="Click me!">
+                <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
                         <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
@@ -213,7 +213,7 @@
                         IsEnabled="{Binding ElementName=This, Path=CanRun}"
                         Style="{StaticResource MaterialDesignFloatingActionButton}"
                         Click="Start_Click"
-                        ToolTip="Run this tool.">
+                        ToolTip="运行该工具。">
                         <materialDesign:PackIcon
                             Kind="Play" Height="36" Width="36" />
                     </Button>
@@ -227,7 +227,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <WrapPanel VerticalAlignment="Bottom">
-                    <TextBlock TextWrapping="NoWrap" Text="Made by OliBomby" FontWeight="Bold" Opacity="0.58"/>
+                    <TextBlock TextWrapping="NoWrap" Text="由 OliBomby 制作" FontWeight="Bold" Opacity="0.58"/>
                 </WrapPanel>
             </Grid>
             <Grid Grid.Column="1">
