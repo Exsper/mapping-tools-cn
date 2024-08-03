@@ -29,6 +29,10 @@ function getContentInXaml(str) {
     let quoteRegex = /ToolTip="([^"]*)"/g;
     let results = str.match(quoteRegex);
     if (results) match.push(...results);
+    // Text
+    quoteRegex = /Text="([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
     // materialDesign:HintAssist.Hint
     quoteRegex = /materialDesign:HintAssist\.Hint="([^"]*)"/g;
     results = str.match(quoteRegex);
@@ -236,7 +240,12 @@ async function translateRepo(orgfolder, transJsonPath, distfolder, skipPaths = [
             // 翻译文本
             Object.keys(existTranslation[filePaths[i]]).forEach(subkey => {
                 let transText = existTranslation[filePaths[i]][subkey];
-                data = data.replaceAll(subkey, transText);
+                // 因为 MainWindow.xaml.cs 内 UpdateManager 和 制作者名单 都出现了"OliBomby"
+                // 而更新器的地址需要更改为本项目，需要将UpdateManager的参数改为本人Github用户名
+                // 故需要防止在翻译 MainWindow.xaml.cs 时将制作者名单中的"OliBomby"也替换掉
+                if (filePaths[i] === "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs" && subkey === "\"OliBomby\"")
+                    data = data.replace(subkey, transText);
+                else data = data.replaceAll(subkey, transText);
             });
             // 写入文件
             await fs.writeFile(destPath, data, "utf8");

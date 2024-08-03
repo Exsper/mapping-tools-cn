@@ -391,7 +391,7 @@ namespace Mapping_Tools {
             builder.AppendLine($"Mapping Tools {version}");
             builder.AppendLine();
             builder.AppendLine("Made by:");
-            builder.AppendLine("Exsper");
+            builder.AppendLine("OliBomby");
             builder.AppendLine();
             builder.AppendLine("Supporters:");
             builder.AppendLine("Mercury");
