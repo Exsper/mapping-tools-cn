@@ -17,17 +17,23 @@
 ## 汉化步骤
 
 1. 更新原项目
-使用git更新Mapping_Tools
+
+   使用git更新Mapping_Tools
 
 2. 生成翻译JSON
-使用nodejs运行BuildTranslationJson.js
-会自动继承现有翻译内容，不用担心原项目更新后丢失原有翻译
+
+   使用nodejs运行BuildTranslationJson.js
+
+   会自动继承现有翻译内容，不用担心原项目更新后丢失原有翻译
 
 3. 汉化文本
-修改 Translations 文件夹下的 translate.json
+
+   修改 Translations 文件夹下的 translate.json
 
 4. 生成项目
-使用nodejs运行Translate.js，生成Mapping_Tools_CN项目文件
+
+   使用nodejs运行Translate.js，生成Mapping_Tools_CN项目文件
 
 5. 生成程序
-在Mapping_Tools_CN中生成程序并发布
+
+   在Mapping_Tools_CN中生成程序并发布
