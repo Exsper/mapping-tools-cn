@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace Mapping_Tools.Views.Standard {
     [DontShowTitle]
     public partial class StandardView {
-        public static readonly string ToolName = "Get started";
+        public static readonly string ToolName = "开始";
 
         public static readonly string ToolDescription = $@"";
 

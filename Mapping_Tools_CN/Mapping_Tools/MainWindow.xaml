@@ -93,48 +93,48 @@
                                 WindowChrome.IsHitTestVisibleInChrome="true" 
                                 IsMainMenu="True"
                                 Foreground="{DynamicResource PrimaryHueMidForegroundBrush}">
-                                <MenuItem Header="_File" MinWidth="50" Height="35">
-                                    <MenuItem Header="_Open beatmap" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
+                                <MenuItem Header="文件（_F）" MinWidth="50" Height="35">
+                                    <MenuItem Header="打开谱面（_O）" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Select the current beatmap with File Explorer." />
-                                    <MenuItem Header="_Open current beatmap" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
+                                    <MenuItem Header="打开当前谱面（_O）" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Set the current beatmap to the selected beatmap in your osu! client." />
-                                    <MenuItem Header="_Generate backup" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
+                                    <MenuItem Header="生成备份（_G）" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Save a backup of the current beatmap to the backups folder." />
-                                    <MenuItem Header="_Load backup" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
+                                    <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Load a backup from the backups folder into the current beatmap." />
-                                    <MenuItem Header="_BetterSave™ current beatmap" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
+                                    <MenuItem Header="使用 BetterSave™ 保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated." />
                                 </MenuItem>
                                 <Separator/>
-                                <MenuItem Header="_About" MinWidth="67" Height="35">
-                                    <MenuItem Header="_Open Mapping Tools folder" Click="OpenConfig" Icon="{materialDesign:PackIcon FolderOpen}"
+                                <MenuItem Header="关于（_A）" MinWidth="67" Height="35">
+                                    <MenuItem Header="打开程序文件夹（_O）" Click="OpenConfig" Icon="{materialDesign:PackIcon FolderOpen}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="Open the Mapping Tools folder." />
-                                    <MenuItem Header="_Open backups folder" Click="OpenBackups" Icon="{materialDesign:PackIcon FolderOpen}"
+                                    <MenuItem Header="打开备份文件夹（_O）" Click="OpenBackups" Icon="{materialDesign:PackIcon FolderOpen}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="Open the backups folder." />
-                                    <MenuItem Header="_Check for updates" Click="MenuItem_OnClick" Icon="{materialDesign:PackIcon Update}"
+                                    <MenuItem Header="检查更新（_C）" Click="MenuItem_OnClick" Icon="{materialDesign:PackIcon Update}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="Check if there are updates available." />
-                                    <MenuItem Header="_Website" Click="OpenWebsite" Icon="{materialDesign:PackIcon OpenInBrowser}"
+                                    <MenuItem Header="网站（_W）" Click="OpenWebsite" Icon="{materialDesign:PackIcon OpenInBrowser}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="Open the official Mapping Tools website in your browser." />
-                                    <MenuItem Header="_Github" Click="OpenGitHub" Icon="{materialDesign:PackIcon Github}"
+                                    <MenuItem Header="Github（_G）" Click="OpenGitHub" Icon="{materialDesign:PackIcon Github}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="Go to the Mapping Tools Github." />
-                                    <MenuItem Header="_Donate" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
+                                    <MenuItem Header="捐赠（_D）" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Support Mapping Tools." />
-                                    <MenuItem Header="_About" Click="OpenInfo" Icon="{materialDesign:PackIcon InfoCircle}"
+                                    <MenuItem Header="关于（_A）" Click="OpenInfo" Icon="{materialDesign:PackIcon InfoCircle}"
                                               Foreground="{DynamicResource MaterialDesignBody}"/>
                                 </MenuItem>
                                 <MenuItem Visibility="{Binding ProjectMenuVisibility}"
-                                          Header="_Project" Height="35" MinWidth="67"
+                                          Header="项目（_P）" Height="35" MinWidth="67"
                                           ItemsSource="{Binding ProjectMenuItems}"/>
                             </Menu>
                         </StackPanel>
@@ -160,7 +160,7 @@
                                     Click="CloseWin">
                                 <Button.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="_Exit without saving" Click="CloseWinNoSave"
+                                        <MenuItem Header="不保存并退出（_E）" Click="CloseWinNoSave"
                                             ToolTip="Exits the program without saving any preferences or tool settings." />
                                     </ContextMenu>
                                 </Button.ContextMenu>
@@ -178,15 +178,15 @@
                             Mode="PrimaryDark">
                             <materialDesign:ColorZone.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="_Open beatmap" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
+                                    <MenuItem Header="打开谱面（_O）" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
                                         ToolTip="Select the current beatmap with File Explorer." />
-                                    <MenuItem Header="_Open current beatmap" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
+                                    <MenuItem Header="打开当前谱面（_O）" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
                                         ToolTip="Set the current beatmap to the selected beatmap in your osu! client." />
-                                    <MenuItem Header="_Generate backup" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
+                                    <MenuItem Header="生成备份（_G）" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
                                         ToolTip="Save a backup of the current beatmap to the backups folder." />
-                                    <MenuItem Header="_Load backup" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
+                                    <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
                                         ToolTip="Load a backup from the backups folder into the current beatmap." />
-                                    <MenuItem Header="_BetterSave™ current beatmap" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
+                                    <MenuItem Header="使用 BetterSave™ 保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
                                         ToolTip="Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated." />
                                 </ContextMenu>
                             </materialDesign:ColorZone.ContextMenu>
@@ -225,7 +225,7 @@
                             Padding="8"
                             Width="Auto"
                             domain:FocusExtension.IsFocused="{Binding SearchFocused}"
-                            materialDesign:HintAssist.Hint="Search"
+                            materialDesign:HintAssist.Hint="搜索"
                             materialDesign:HintAssist.IsFloating="True"
                             materialDesign:TextFieldAssist.HasClearButton="True"
                             materialDesign:TextFieldAssist.HasOutlinedTextField="True"
