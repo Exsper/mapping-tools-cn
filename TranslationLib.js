@@ -218,7 +218,7 @@ async function createTemplate(orgfolder, outputPath, skipPaths = [], skipTexts =
             await fs.writeFile(outputPath, JSON.stringify(template));
             console.log("已更新翻译文件：" + outputPath);
             console.log("目前共有 " + filecount + " 个文件，共计 " + textcount + " 个翻译条目！");
-            console.log("当前已经翻译 " + translatedcount + " 个条目，占比 " + (translatedcount / textcount).toFixed(2) + "% ，还有 " + (textcount - translatedcount) + " 个条目未翻译");
+            console.log("当前已经翻译 " + translatedcount + " 个条目，占比 " + (translatedcount * 100 / textcount).toFixed(2) + "% ，还有 " + (textcount - translatedcount) + " 个条目未翻译");
         }
         catch (err) {
             console.error("无法更新翻译文件：" + outputPath + "\n", err);

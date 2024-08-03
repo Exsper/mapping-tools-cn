@@ -1,6 +1,6 @@
 # mapping-tools-cn
 
-🚧**本汉化项目尚未完成，目前翻译进度：0.09%，还有 1867 个条目未翻译**🚧
+🚧**本汉化项目尚未完成，目前翻译进度：187个条目（9.12%），还有 1863 个条目未翻译**🚧
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目
 
