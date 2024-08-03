@@ -2,28 +2,43 @@ const fs = require("fs").promises;
 const path = require("path");
 
 function getContentBetweenQuotes(str) {
-    const quoteRegex = /"([^"]*)"|`([^`]*)`/g;
     let lines = str.split("\r\n");
     // 排除注释
     lines = lines.filter((line) => !(line.trim().startsWith("//")));
     // 排除Debug
     lines = lines.filter((line) => !(line.trim().startsWith("Console.WriteLine")));
+
+
+
     let match = [];
     lines.map((line) => {
-        let m = line.match(quoteRegex);
-        if (!m) return;
-        // 带换行的都是错误匹配，因为'"'之类的
-        // m = m.filter((text) => (!text.includes("\r\n")));
+        // 匹配 $"...{}..." 使用贪婪匹配模式
+        let quoteRegex1 = /\$"(.*)"|`(.*)`/g;
+        let m1 = line.match(quoteRegex1);
+        let _line = line;
+        // 删除已匹配字符
+        if (m1) m1.map((ma) => {
+            _line = _line.replaceAll(ma, "");
+        });
+        // 普通引号匹配
+        let quoteRegex2 = /"([^"]*)"|`([^`]*)`/g;
+        let m2 = _line.match(quoteRegex2);
+
+        let m = [];
+        if (m1) m.push(...m1);
+        if (m2) m.push(...m2);
+        if (m.length <= 0) return;
+
         // 排除一个字或者没有字
         m = m.filter((text) => (text.length > 3));
         // 排除 name="" 或 cref="" 或 href="" 的情况
-        m = m.filter((text) => !(str.includes("name=" + text) || str.includes("cref=" + text) || str.includes("href=" + text)));
+        m = m.filter((text) => !(line.includes("name=" + text) || line.includes("cref=" + text) || line.includes("href=" + text)));
         // 排除 case "xxx" 的情况
-        m = m.filter((text) => !(str.includes("case " + text)));
+        m = m.filter((text) => !(line.includes("case " + text)));
         // 排除 if语句 的情况
-        m = m.filter((text) => !(str.includes("== " + text) || str.includes("!= " + text)));
+        m = m.filter((text) => !(line.includes("== " + text) || line.includes("!= " + text)));
         // 排除 索引 的情况
-        m = m.filter((text) => !(str.includes("[" + text + "]")));
+        m = m.filter((text) => !(line.includes("[" + text + "]")));
 
         match.push(...m);
     });

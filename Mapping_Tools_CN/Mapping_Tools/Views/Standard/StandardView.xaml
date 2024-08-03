@@ -65,7 +65,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="Changelog"/></TextBlock>
+            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="更新日志"/></TextBlock>
             <ListView Grid.Row="1" x:Name="ChangelogList" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                 <ListView.ItemTemplate>
                     <DataTemplate>

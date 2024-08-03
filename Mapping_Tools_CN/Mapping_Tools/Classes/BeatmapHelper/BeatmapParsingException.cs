@@ -10,7 +10,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper
         }
 
         public BeatmapParsingException(string line)
-            : base($"分析谱面时遇到意外值。\n{line}") {
+            : base($"Unexpected value encountered while parsing beatmap.\n{line}") {
 
         }
 

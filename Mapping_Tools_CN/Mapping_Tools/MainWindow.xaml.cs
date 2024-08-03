@@ -109,7 +109,7 @@ namespace Mapping_Tools {
 
                 if (!hasUpdate) {
                     if (notifyUser)
-                        MessageQueue.Enqueue("No new versions available.");
+                        MessageQueue.Enqueue("暂无新版本。");
                     return;
                 }
 
@@ -172,9 +172,9 @@ namespace Mapping_Tools {
                     updaterWindow.Show();
                 });
             } catch (Exception e) {
-                MessageBox.Show("UPDATER_EXCEPTION: " + e.Message);
+                MessageBox.Show("更新程序异常：" + e.Message);
                 if (notifyUser) {
-                    MessageQueue.Enqueue("Error fetching update: " + e.Message);
+                    MessageQueue.Enqueue("获取更新出错：" + e.Message);
                 }
             }
         }
@@ -267,7 +267,7 @@ namespace Mapping_Tools {
             var maps = ViewModel.CurrentBeatmaps.Split('|');
             
             if (maps.Any(o => !File.Exists(o))) {
-                MessageQueue.Enqueue("It seems like one of the selected beatmaps does not exist. Please re-select the file with 'File > Open beatmap'.", true);
+                MessageQueue.Enqueue("找不到当前选择的部分谱面文件。请使用“文件 > 打开谱面”重新选择谱面。", true);
             }
 
             return maps;
@@ -305,7 +305,7 @@ namespace Mapping_Tools {
                 var paths = GetCurrentMaps();
                 var result = await Task.Run(() => BackupManager.SaveMapBackup(paths, true, "UB"));  // UB stands for User Backup
                 if (result) {
-                    await Task.Run(() => MessageQueue.Enqueue($"Beatmap{( paths.Length == 1 ? "" : "s" )} successfully copied!"));
+                    await Task.Run(() => MessageQueue.Enqueue($"谱面复制成功！"));
                 }
             } catch (Exception ex) {
                 ex.Show();
