@@ -121,6 +121,11 @@ async function buildFileList(folder, skipPaths = []) {
 async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
     let filePaths = await buildFileList(orgfolder, skipPaths);
     let template = {};
+    let globalSkipTextsUnused = [];
+
+    skipTexts.map((skipText) => {
+        if (!skipText.filePath) globalSkipTextsUnused.push(skipText.skipText);
+    });
 
     for (let i = 0; i < filePaths.length; i++) {
         try {
@@ -132,12 +137,14 @@ async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
             }
             else {
                 let skipTextsInThisFile = [];
+                let skipTextsUnused = [];
                 skipTexts.map((skipText) => {
                     if (!skipText.filePath) skipTextsInThisFile.push(skipText.skipText);
                     else {
                         let skipFilePath = "./" + path.join(skipText.filePath);
                         if (skipFilePath === filePaths[i]) {
                             skipTextsInThisFile.push(skipText.skipText);
+                            skipTextsUnused.push(skipText.skipText);
                         }
                     }
                 })
@@ -145,8 +152,13 @@ async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
                 let fileStrings = {};
                 strings.map((string) => {
                     if (!skipTextsInThisFile.includes(string)) fileStrings[string] = string;
+                    else {
+                        skipTextsUnused = skipTextsUnused.filter(item => item !== string);
+                        globalSkipTextsUnused = globalSkipTextsUnused.filter(item => item !== string);
+                    }
                 });
                 if (Object.keys(fileStrings).length > 0) template[filePaths[i]] = fileStrings;
+                if (skipTextsUnused.length > 0) console.log(filePaths[i] + " 的排除规则中多余 " + skipTextsUnused.join(", ") + " ，请检查");
             }
         }
         catch (err) {
@@ -154,6 +166,7 @@ async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
             continue;
         }
     }
+    if (globalSkipTextsUnused.length > 0) console.log("全局字符串排除规则中多余 " + globalSkipTextsUnused.join(", ") + " ，请检查");
     return template;
 }
 
