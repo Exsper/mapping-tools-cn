@@ -4,6 +4,10 @@ const path = require("path");
 function getContentBetweenQuotes(str) {
     const quoteRegex = /"([^"]*)"|`([^`]*)`/g;
     let lines = str.split("\r\n");
+    // 排除注释
+    lines = lines.filter((line) => !(line.trim().startsWith("//")));
+    // 排除Debug
+    lines = lines.filter((line) => !(line.trim().startsWith("Console.WriteLine")));
     let match = [];
     lines.map((line) => {
         let m = line.match(quoteRegex);
@@ -16,6 +20,10 @@ function getContentBetweenQuotes(str) {
         m = m.filter((text) => !(str.includes("name=" + text) || str.includes("cref=" + text) || str.includes("href=" + text)));
         // 排除 case "xxx" 的情况
         m = m.filter((text) => !(str.includes("case " + text)));
+        // 排除 if语句 的情况
+        m = m.filter((text) => !(str.includes("== " + text) || str.includes("!= " + text)));
+        // 排除 索引 的情况
+        m = m.filter((text) => !(str.includes("[" + text + "]")));
 
         match.push(...m);
     });

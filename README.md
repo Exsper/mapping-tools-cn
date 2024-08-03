@@ -1,8 +1,12 @@
 # mapping-tools-cn
 
+🚧本汉化项目尚未完成🚧
+
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目
 
 考虑到 Mapping_Tools 更新频繁且无官方语言切换模块，故制作此项目
+
+使用翻译表修改项目文件字符串的方式进行翻译，解决因原项目更新导致需重复翻译的问题
 
 ## 文件说明
 
@@ -24,7 +28,7 @@
 
    使用nodejs运行BuildTranslationJson.js
 
-   会自动继承现有翻译内容，不用担心原项目更新后丢失原有翻译
+   **会自动继承现有翻译内容，不用担心原项目更新后丢失原有翻译**
 
 3. 汉化文本
 

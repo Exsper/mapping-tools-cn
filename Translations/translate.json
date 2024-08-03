@@ -1,25 +1,18 @@
 {
     "./Mapping_Tools\\Mapping_Tools\\App.xaml.cs": {
         "\"\\nInner exception:\"": "\"\\n内部异常：\"",
-        "\"crash-log.txt\"": "\"crash-log.txt\"",
         "\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\"": "\"程序遇到未处理异常。查阅 {filename} 获得更多信息：\\n{path}\"",
         "\"Error\"": "\"错误\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\BeatmapParsingException.cs": {
-        "\"Unexpected value encountered while parsing beatmap.\\n{line}\"": "\"分析谱面时遇到意外值。\\n{line}\"",
-        "\"{message}\\n{line}\"": "\"{message}\\n{line}\""
+        "\"Unexpected value encountered while parsing beatmap.\\n{line}\"": "\"分析谱面时遇到意外值。\\n{line}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\ComboColour.cs": {
-        "\"Colours\"": "\"Colours\"",
         "\"Failed to parse red component of colour.\"": "\"转换颜色的红色分量失败。\"",
         "\"Failed to parse green component of colour.\"": "\"转换颜色的绿色分量失败。\"",
-        "\"Failed to parse blue component of colour.\"": "\"转换颜色的蓝色分量失败。\"",
-        "\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()}\"": "\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()}\""
+        "\"Failed to parse blue component of colour.\"": "\"转换颜色的蓝色分量失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Animation.cs": {
-        "\"Animation,{Layer},{Origin},\\\"": "\"Animation,{Layer},{Origin},\\\"",
-        "\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"": "\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"",
-        "\"Animation\"": "\"Animation\"",
         "\"This line is not an animation.\"": "\"This line is not an animation.\"",
         "\"Failed to parse layer of animation.\"": "\"Failed to parse layer of animation.\"",
         "\"Failed to parse origin of animation.\"": "\"Failed to parse origin of animation.\"",
@@ -30,16 +23,12 @@
         "\"Failed to parse loop type of animation.\"": "\"Failed to parse loop type of animation.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Background.cs": {
-        "\"{EventType},{StartTime.ToInvariant()},\\\"": "\"{EventType},{StartTime.ToInvariant()},\\\"",
-        "\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"": "\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"",
         "\"This line is not a background.\"": "\"This line is not a background.\"",
         "\"Failed to parse start time of background.\"": "\"Failed to parse start time of background.\"",
         "\"Failed to parse X offset of background.\"": "\"Failed to parse X offset of background.\"",
         "\"Failed to parse Y offset of background.\"": "\"Failed to parse Y offset of background.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Break.cs": {
-        "\"{EventType},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"": "\"{EventType},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"",
-        "\"Break\"": "\"Break\"",
         "\"This line is not a break.\"": "\"This line is not a break.\"",
         "\"Failed to parse start time of break.\"": "\"Failed to parse start time of break.\"",
         "\"Failed to parse end time of break.\"": "\"Failed to parse end time of break.\""
@@ -56,9 +45,6 @@
         "\"Failed to parse end time of param command.\"": "\"Failed to parse end time of param command.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Sprite.cs": {
-        "\"Sprite,{Layer},{Origin},\\\"": "\"Sprite,{Layer},{Origin},\\\"",
-        "\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
-        "\"Sprite\"": "\"Sprite\"",
         "\"This line is not a sprite.\"": "\"This line is not a sprite.\"",
         "\"Failed to parse layer of sprite.\"": "\"Failed to parse layer of sprite.\"",
         "\"Failed to parse origin of sprite.\"": "\"Failed to parse origin of sprite.\"",
@@ -66,29 +52,20 @@
         "\"Failed to parse Y position of sprite.\"": "\"Failed to parse Y position of sprite.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StandardLoop.cs": {
-        "\"{EventType},{StartTime.ToInvariant()},{LoopCount.ToInvariant()}\"": "\"{EventType},{StartTime.ToInvariant()},{LoopCount.ToInvariant()}\"",
         "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
         "\"Failed to parse loop count of event param.\"": "\"Failed to parse loop count of event param.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StoryboardSoundSample.cs": {
-        "\"soft-hitnormal.wav\"": "\"soft-hitnormal.wav\"",
-        "\"Sample,{StartTime.ToInvariant()},{Layer.ToIntInvariant()},\\\"": "\"Sample,{StartTime.ToInvariant()},{Layer.ToIntInvariant()},\\\"",
-        "\",{Volume.ToRoundInvariant()}\"": "\",{Volume.ToRoundInvariant()}\"",
-        "\"Sample\"": "\"Sample\"",
         "\"This line is not a storyboarded sample.\"": "\"This line is not a storyboarded sample.\"",
         "\"Failed to parse time of storyboarded sample.\"": "\"Failed to parse time of storyboarded sample.\"",
         "\"Failed to parse layer of storyboarded sample.\"": "\"Failed to parse layer of storyboarded sample.\"",
         "\"Failed to parse volume of storyboarded sample.\"": "\"Failed to parse volume of storyboarded sample.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\TriggerLoop.cs": {
-        "\"{EventType},{TriggerName},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"": "\"{EventType},{TriggerName},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"",
         "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
         "\"Failed to parse end time of event param.\"": "\"Failed to parse end time of event param.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Video.cs": {
-        "\"{EventType},{StartTime.ToInvariant()},\\\"": "\"{EventType},{StartTime.ToInvariant()},\\\"",
-        "\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"": "\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"",
-        "\"Video\"": "\"Video\"",
         "\"This line is not a video.\"": "\"This line is not a video.\"",
         "\"Failed to parse start time of video.\"": "\"Failed to parse start time of video.\"",
         "\"Failed to parse X offset of video.\"": "\"Failed to parse X offset of video.\"",
@@ -106,34 +83,14 @@
         "\"Failed to parse pixel length of slider.\"": "\"Failed to parse pixel length of slider.\"",
         "\"Spinner object is missing values.\"": "\"Spinner object is missing values.\"",
         "\"Failed to parse end time of spinner.\"": "\"Failed to parse end time of spinner.\"",
-        "\"{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"": "\"{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"",
-        "\"|{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"": "\"|{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"",
-        "\"|{EdgeSampleSets[i].ToIntInvariant()}:{EdgeAdditionSets[i].ToIntInvariant()}\"": "\"|{EdgeSampleSets[i].ToIntInvariant()}:{EdgeAdditionSets[i].ToIntInvariant()}\"",
-        "\"slide\"": "\"slide\"",
-        "\"whistle\"": "\"whistle\"",
-        "\"tick\"": "\"tick\"",
         "\"This hit object has no type.\"": "\"This hit object has no type.\"",
-        "\"{sampleSet.ToString().ToLower()}-slider{sampleName}-default.wav\"": "\"{sampleSet.ToString().ToLower()}-slider{sampleName}-default.wav\"",
-        "\"{sampleSet.ToString().ToLower()}-slider{sampleName}.wav\"": "\"{sampleSet.ToString().ToLower()}-slider{sampleName}.wav\"",
-        "\"{sampleSet.ToString().ToLower()}-slider{sampleName}{index}.wav\"": "\"{sampleSet.ToString().ToLower()}-slider{sampleName}{index}.wav\"",
         "\"Failed to parse end time of hold note.\"": "\"Failed to parse end time of hold note.\"",
         "\"Failed to parse sample set of hit object.\"": "\"Failed to parse sample set of hit object.\"",
         "\"Failed to parse additional sample set of hit object.\"": "\"Failed to parse additional sample set of hit object.\"",
         "\"Failed to parse custom index of hit object.\"": "\"Failed to parse custom index of hit object.\"",
-        "\"Failed to parse volume of hit object.\"": "\"Failed to parse volume of hit object.\"",
-        "\"bodyhitsound:\"": "\"bodyhitsound:\"",
-        "\"volume: \"": "\"volume: \"",
-        "\"sampleset: \"": "\"sampleset: \"",
-        "\"index: \"": "\"index: \"",
-        "\"timelineobject:\"": "\"timelineobject:\"",
-        "\"time: \"": "\"time: \"",
-        "\"repeat: \"": "\"repeat: \"",
-        "\"filename: \"": "\"filename: \"",
-        "\"feno index: \"": "\"feno index: \"",
-        "\"feno volume: \"": "\"feno volume: \""
+        "\"Failed to parse volume of hit object.\"": "\"Failed to parse volume of hit object.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\TimingPoint.cs": {
-        "\"{(SaveWithFloatPrecision ? Offset.ToInvariant() : Offset.ToRoundInvariant())},{MpB.ToInvariant()},{Meter.TempoNumerator.ToInvariant()},{SampleSet.ToIntInvariant()},{SampleIndex.ToInvariant()},{(SaveWithFloatPrecision ? Volume.ToInvariant() : Volume.ToRoundInvariant())},{Convert.ToInt32(Uninherited).ToInvariant()},{style.ToInvariant()}\"": "\"{(SaveWithFloatPrecision ? Offset.ToInvariant() : Offset.ToRoundInvariant())},{MpB.ToInvariant()},{Meter.TempoNumerator.ToInvariant()},{SampleSet.ToIntInvariant()},{SampleIndex.ToInvariant()},{(SaveWithFloatPrecision ? Volume.ToInvariant() : Volume.ToRoundInvariant())},{Convert.ToInt32(Uninherited).ToInvariant()},{style.ToInvariant()}\"",
         "\"Failed to parse offset of timing point\"": "\"Failed to parse offset of timing point\"",
         "\"Failed to parse milliseconds per beat of timing point\"": "\"Failed to parse milliseconds per beat of timing point\"",
         "\"Failed to parse meter of timing point\"": "\"Failed to parse meter of timing point\"",
@@ -154,8 +111,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Classes\\GenericExtensions.cs": {
         "\"Error\"": "\"Error\"",
         "\"Inner exception\"": "\"Inner exception\"",
-        "\"\\n\\n\"": "\"\\n\\n\"",
-        "\"gdi32.dll\"": "\"gdi32.dll\""
+        "\"\\n\\n\"": "\"\\n\\n\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\Effects\\SoftLimiter.cs": {
         "\"Soft Clipper/ Limiter\"": "\"Soft Clipper/ Limiter\"",
@@ -167,89 +123,16 @@
         "\"Custom indices can't fit the sample packages.\\n\"": "\"Custom indices can't fit the sample packages.\\n\"",
         "\"Maybe you are using an incompatible previous sample schema and growth is disabled.\"": "\"Maybe you are using an incompatible previous sample schema and growth is disabled.\""
     },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundExporter.cs": {
-        "\"StackLeniency\"": "\"StackLeniency\"",
-        "\"0.0\"": "\"0.0\"",
-        "\"Mode\"": "\"Mode\"",
-        "\"Version\"": "\"Version\"",
-        "\"CircleSize\"": "\"CircleSize\"",
-        "\"{ex.Message} while copying sample {path} to {dest}.\"": "\"{ex.Message} while copying sample {path} to {dest}.\"",
-        "\".wav\"": "\".wav\"",
-        "\".ogg\"": "\".ogg\"",
-        "\".mid\"": "\".mid\"",
-        "\"{ex.Message} while importing sample {sampleGeneratingArgs}.\"": "\"{ex.Message} while importing sample {sampleGeneratingArgs}.\"",
-        "\"{ex.Message} while importing sample {args}.\"": "\"{ex.Message} while importing sample {args}.\""
-    },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs": {
-        "\".wav\"": "\".wav\"",
-        "\".ogg\"": "\".ogg\"",
-        "\".mp3\"": "\".mp3\"",
-        "\"*.*\"": "\"*.*\"",
         "\"Exception '{ex.Message}' while trying to analyze samples.\"": "\"Exception '{ex.Message}' while trying to analyze samples.\"",
-        "\"Warning\"": "\"Warning\"",
-        "\"Mode\"": "\"Mode\"",
-        "\"SB: \"": "\"SB: \"",
-        "\"hitnormal\"": "\"hitnormal\"",
-        "\"hitwhistle\"": "\"hitwhistle\"",
-        "\"hitfinish\"": "\"hitfinish\"",
-        "\"hitclap\"": "\"hitclap\"",
-        "\"^(normal|soft|drum)-(hit(normal|whistle|finish|clap)|slidertick|sliderslide)\"": "\"^(normal|soft|drum)-(hit(normal|whistle|finish|clap)|slidertick|sliderslide)\"",
-        "\"Format {mf.FileFormat}, \"": "\"Format {mf.FileFormat}, \"",
-        "\"Tracks {mf.Tracks}, \"": "\"Tracks {mf.Tracks}, \"",
-        "\"Delta Ticks Per Quarter Note {mf.DeltaTicksPerQuarterNote}\"": "\"Delta Ticks Per Quarter Note {mf.DeltaTicksPerQuarterNote}\"",
-        "\"Percussion\"": "\"Percussion\"",
-        "\"Undefined\"": "\"Undefined\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\LayerImportArgs.cs": {
-        "\"ImportType\"": "\"ImportType\"",
-        "\"CoordinateVisibility\"": "\"CoordinateVisibility\"",
-        "\"KeysoundVisibility\"": "\"KeysoundVisibility\"",
-        "\"Path\"": "\"Path\"",
-        "\"SamplePath\"": "\"SamplePath\"",
-        "\"Volume\"": "\"Volume\"",
-        "\"Velocity\"": "\"Velocity\"",
-        "\"DiscriminateVolumes\"": "\"DiscriminateVolumes\"",
-        "\"DetectDuplicateSamples\"": "\"DetectDuplicateSamples\"",
-        "\"RemoveDuplicates\"": "\"RemoveDuplicates\"",
-        "\"Bank\"": "\"Bank\"",
-        "\"Patch\"": "\"Patch\"",
-        "\"Key\"": "\"Key\"",
-        "\"Length\"": "\"Length\"",
-        "\"LengthRoughness\"": "\"LengthRoughness\"",
-        "\"VelocityRoughness\"": "\"VelocityRoughness\"",
-        "\"Offset\"": "\"Offset\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\MidiExporter.cs": {
-        "\"Note Stream\"": "\"Note Stream\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\Sample.cs": {
-        "\"{SampleArgs}, outside volume: {OutsideVolume}, priority: {Priority}, sampleset: {SampleSet}, hitsound: {Hitsound}\"": "\"{SampleArgs}, outside volume: {OutsideVolume}, priority: {Priority}, sampleset: {SampleSet}, hitsound: {Hitsound}\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleGeneratingArgsComparer.cs": {
-        "\".sf2\"": "\".sf2\""
+        "\"Warning\"": "\"Warning\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleImporter.cs": {
-        "\".sfz\"": "\".sfz\"",
-        "\".sf1\"": "\".sf1\"",
-        "\".ssx\"": "\".ssx\"",
-        "\".sfpack\"": "\".sfpack\"",
-        "\".sfark\"": "\".sfark\"",
-        "\".wav\"": "\".wav\"",
-        "\".mp3\"": "\".mp3\"",
         "\"File not found\"": "\"File not found\"",
-        "\"Invalid file extension\"": "\"Invalid file extension\"",
-        "\"Number of presets: \"": "\"Number of presets: \"",
-        "\"Number of instruments: \"": "\"Number of instruments: \"",
-        "\"continue\"": "\"continue\"",
-        "\"closest: \"": "\"closest: \""
+        "\"Invalid file extension\"": "\"Invalid file extension\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\VorbisFileWriter.cs": {
         "\"Vorbis writer does not support {sampleRate} sample rate.\"": "\"Vorbis writer does not support {sampleRate} sample rate.\"",
-        "\"Initiating variable bit rate: {channels} channels, {sampleRate} sample rate, {quality} quality\"": "\"Initiating variable bit rate: {channels} channels, {sampleRate} sample rate, {quality} quality\"",
-        "\"Writing page header with {page.Header.Length} bytes of data\"": "\"Writing page header with {page.Header.Length} bytes of data\"",
-        "\"Writing page body with {page.Body.Length} bytes of data\"": "\"Writing page body with {page.Body.Length} bytes of data\"",
-        "\"Writing {count} samples!\"": "\"Writing {count} samples!\"",
-        "\"Got packet with {packet.PacketData.Length} bytes of data\"": "\"Got packet with {packet.PacketData.Length} bytes of data\"",
         "\"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}\"": "\"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\JsonConverters\\Vector2Converter.cs": {
@@ -259,14 +142,10 @@
         "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"": "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"",
         "\"Error\"": "\"Error\"",
         "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"": "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"",
-        "\".osu\"": "\".osu\"",
-        "\"yyyy-MM-dd HH-mm-ss\"": "\"yyyy-MM-dd HH-mm-ss\"",
-        "\"__\"": "\"__\"",
         "\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"": "\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"",
         "\"Do you want to load the backup anyways?\"": "\"Do you want to load the backup anyways?\"",
         "\"Load backup\"": "\"Load backup\"",
-        "\"Backup successfully loaded!\"": "\"Backup successfully loaded!\"",
-        "\"temp.osu\"": "\"temp.osu\""
+        "\"Backup successfully loaded!\"": "\"Backup successfully loaded!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\IOHelper.cs": {
         "\"JSON File|*.json\"": "\"JSON File|*.json\"",
@@ -283,15 +162,6 @@
         "\"Can't fetch the file name of the current in-game beatmap.\"": "\"Can't fetch the file name of the current in-game beatmap.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ListenerManager.cs": {
-        "\"temp.osu\"": "\"temp.osu\"",
-        "\"PB\"": "\"PB\"",
-        "\"Registered hotkey {hotkey.Modifiers}, {hotkey.Key}, {action}\"": "\"Registered hotkey {hotkey.Modifiers}, {hotkey.Key}, {action}\"",
-        "\"<Current Tool>\"": "\"<Current Tool>\"",
-        "\"user32.dll\"": "\"user32.dll\"",
-        "\"osu!\"": "\"osu!\"",
-        "\"^{L 10}\"": "\"^{L 10}\"",
-        "\"{ENTER}\"": "\"{ENTER}\"",
-        "\"*.osu\"": "\"*.osu\"",
         "\"Failed to overwrite osu! save with BetterSave.\"": "\"Failed to overwrite osu! save with BetterSave.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ProjectManager.cs": {
@@ -302,20 +172,15 @@
         "\"Confirm new project\"": "\"Confirm new project\"",
         "\"New project could not be initialized!\"": "\"New project could not be initialized!\""
     },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\Settings.cs": {
-        "\"<Current Tool>\"": "\"<Current Tool>\""
-    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\Settings.cs": {},
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs": {
-        "\"config.json\"": "\"config.json\"",
         "\"User-specific configuration could not be loaded!\"": "\"User-specific configuration could not be loaded!\"",
         "\"User-specific configuration could not be saved!\"": "\"User-specific configuration could not be saved!\"",
         "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
-        "\"osu!\"": "\"osu!\"",
         "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
         "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"": "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"",
         "\"osu!.{Environment.UserName}.cfg\"": "\"osu!.{Environment.UserName}.cfg\"",
         "\"Backups\"": "\"Backups\"",
-        "\"BeatmapDirectory\"": "\"BeatmapDirectory\"",
         "\"Songs\"": "\"Songs\"",
         "\"DisplayName\"": "\"DisplayName\"",
         "\"UninstallString\"": "\"UninstallString\"",
@@ -334,12 +199,8 @@
         "\"Provided timestamp has too many values.\"": "\"Provided timestamp has too many values.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\EditorReaderStuff.cs": {
-        "\"osu!\"": "\"osu!\"",
-        "\"osu!.exe\"": "\"osu!.exe\"",
         "\".osu\"": "\".osu\"",
         "\"No active editor detected.\"": "\"No active editor detected.\"",
-        "\"A problem has been encountered with editor reader. An error log has been saved to editor_reader_error.txt\"": "\"A problem has been encountered with editor reader. An error log has been saved to editor_reader_error.txt\"",
-        "\"Warning\"": "\"Warning\"",
         "\"editor_reader_error.txt\"": "\"editor_reader_error.txt\"",
         "\"ContainingFolder: \"": "\"ContainingFolder: \"",
         "\"Filename: \"": "\"Filename: \"",
@@ -361,10 +222,7 @@
         "\"ProcessTitle: \"": "\"ProcessTitle: \"",
         "\"[HitObjects]\"": "\"[HitObjects]\"",
         "\"[TimingPoints]\"": "\"[TimingPoints]\"",
-        "\"Successfully saved current beatmap!\"": "\"Successfully saved current beatmap!\"",
-        "\"PreviewTime\"": "\"PreviewTime\"",
-        "\"SliderMultiplier\"": "\"SliderMultiplier\"",
-        "\"SliderTickRate\"": "\"SliderTickRate\""
+        "\"Successfully saved current beatmap!\"": "\"Successfully saved current beatmap!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\PathHelper.cs": {
         "\"Point 1 must be part of a linked list.\"": "\"Point 1 must be part of a linked list.\"",
@@ -381,24 +239,6 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\Reconstructor.cs": {
         "\"Can not convert hint path to non-bezier path type.\"": "\"Can not convert hint path to non-bezier path type.\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\PathGenerator.cs": {
-        "\"Iterating from {startIndexInt} to {endIndexInt}\"": "\"Iterating from {startIndexInt} to {endIndexInt}\"",
-        "\"Angle change: \"": "\"Angle change: \"",
-        "\"Adding segment for inflection point or red: {startSubRange} to {i}\"": "\"Adding segment for inflection point or red: {startSubRange} to {i}\"",
-        "\"Found inflection point or red anchor: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"": "\"Found inflection point or red anchor: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"",
-        "\"Adding segment for start zero angle change: {startSubRange} to {i}\"": "\"Adding segment for start zero angle change: {startSubRange} to {i}\"",
-        "\"start of zero angle change: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"": "\"start of zero angle change: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"",
-        "\"Adding segment for end zero angle change: {startSubRange} to {i}\"": "\"Adding segment for end zero angle change: {startSubRange} to {i}\"",
-        "\"end of zero angle change: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"": "\"end of zero angle change: {angleChange}, {lastAngleChange}, {pos}, {angleChange * lastAngleChange}\"",
-        "\"Num segments: \"": "\"Num segments: \"",
-        "\"sub-range angle: \"": "\"sub-range angle: \"",
-        "\"Iterating subrange from {segmentStartIndexInt} to {segmentEndIndexInt}\"": "\"Iterating subrange from {segmentStartIndexInt} to {segmentEndIndexInt}\"",
-        "\"Adding segment for angle: {startSegment} to {i}\"": "\"Adding segment for angle: {startSegment} to {i}\"",
-        "\"Adding segment at the end: {startSegment}, {subRange.Item2}\"": "\"Adding segment at the end: {startSegment}, {subRange.Item2}\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\TimingPointsChange.cs": {
-        "\"{MpB}, {Meter}, {Sampleset}, {Index}, {Volume}, {UnInherited}, {Kiai}, {OmitFirstBarLine}\"": "\"{MpB}, {Meter}, {Sampleset}, {Index}, {Volume}, {UnInherited}, {Kiai}, {OmitFirstBarLine}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\AutoFailDetector.cs": {
         "\"\\nDo you want to use this solution?\"": "\"\\nDo you want to use this solution?\"",
@@ -419,19 +259,9 @@
         "\"Combo{i + 1}\"": "\"Combo{i + 1}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\MapCleanerStuff\\MapCleaner.cs": {
-        "\"Mode\"": "\"Mode\"",
-        "\"CircleSize\"": "\"CircleSize\"",
-        "\"*.osu\"": "\"*.osu\"",
-        "\"SliderTickRate\"": "\"SliderTickRate\"",
-        "\"AudioFilename\"": "\"AudioFilename\"",
         "\"*.osb\"": "\"*.osb\"",
         "\"spinnerspin\"": "\"spinnerspin\"",
         "\"spinnerbonus\"": "\"spinnerbonus\"",
-        "\".wav\"": "\".wav\"",
-        "\".ogg\"": "\".ogg\"",
-        "\".mp3\"": "\".mp3\"",
-        "\"*.*\"": "\"*.*\"",
-        "\"Deleting sample {fi.Name}\"": "\"Deleting sample {fi.Name}\"",
         "\"count1s\"": "\"count1s\"",
         "\"count2s\"": "\"count2s\"",
         "\"count3s\"": "\"count3s\"",
@@ -474,16 +304,8 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternMaker.cs": {
         "\"No selected hit objects found.\"": "\"No selected hit objects found.\"",
-        "\"Version\"": "\"Version\"",
-        "\"yyyy-MM-dd HH-mm-ss\"": "\"yyyy-MM-dd HH-mm-ss\"",
-        "\"__\"": "\"__\"",
         "\".osu\"": "\".osu\"",
         "\"[{Regex.Escape(regexSearch)}]\"": "\"[{Regex.Escape(regexSearch)}]\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternPlacer.cs": {
-        "\"Mode\"": "\"Mode\"",
-        "\"CircleSize\"": "\"CircleSize\"",
-        "\"SliderTickRate\"": "\"SliderTickRate\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\PatternCodeImportVm.cs": {
         "\"Name\"": "\"Name\"",
@@ -520,28 +342,10 @@
         "\"explorer.exe\"": "\"explorer.exe\"",
         "\"Export path must be a file.\"": "\"Export path must be a file.\"",
         "\"There must be at least one beatmap.\"": "\"There must be at least one beatmap.\"",
-        "\"StackLeniency\"": "\"StackLeniency\"",
-        "\"0.0\"": "\"0.0\"",
-        "\"Mode\"": "\"Mode\"",
-        "\"Version\"": "\"Version\"",
-        "\"CircleSize\"": "\"CircleSize\""
+        "\"0.0\"": "\"0.0\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SlideratorStuff\\Sliderator.cs": {
-        "\"Zero length path.\"": "\"Zero length path.\"",
-        "\"Total wanted length: \"": "\"Total wanted length: \"",
-        "\"Total wanted length after scale: \"": "\"Total wanted length after scale: \"",
-        "\"Expected total wanted length: \"": "\"Expected total wanted length: \"",
-        "\"Number of neurons: \"": "\"Number of neurons: \"",
-        "\"Adding {dendriteToAddLeft + dendriteToAddRight} length to dendrites!\"": "\"Adding {dendriteToAddLeft + dendriteToAddRight} length to dendrites!\"",
-        "\"Actually added {afterLength - beforeLength} length to dendrites and got {leftovers} leftover!\"": "\"Actually added {afterLength - beforeLength} length to dendrites and got {leftovers} leftover!\"",
-        "\"Path length: \"": "\"Path length: \"",
-        "\"Wanted length: \"": "\"Wanted length: \"",
-        "\"Axon length: \"": "\"Axon length: \"",
-        "\"Dendrite length: \"": "\"Dendrite length: \"",
-        "\"DendriteToAdd length: \"": "\"DendriteToAdd length: \""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SlideratorStuff\\SliderPicturator.cs": {
-        "\"best rational approximation\"": "\"best rational approximation\""
+        "\"Zero length path.\"": "\"Zero length path.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\CoordinateConverter.cs": {
         "\"Fullscreen\"": "\"Fullscreen\"",
@@ -570,14 +374,9 @@
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Allocation\\RelevantObjectPairGenerator.cs": {
         "\"Dependencies:\"": "\"Dependencies:\"",
         "\"Dependencies count:\"": "\"Dependencies count:\"",
-        "\": \"": "\": \"",
-        "\"Check succeeded\"": "\"Check succeeded\"",
         "\"combinations of every type:\"": "\"combinations of every type:\"",
-        "\"Number of combinations: {a.Count()}\"": "\"Number of combinations: {a.Count()}\"",
         "\"Cartesian product:\"": "\"Cartesian product:\"",
-        "\"Number of combinations: {combinationCombinations.Count()}\"": "\"Number of combinations: {combinationCombinations.Count()}\"",
         "\"Flattened:\"": "\"Flattened:\"",
-        "\"Number of combinations: {parametersCollection.Count()}\"": "\"Number of combinations: {parametersCollection.Count()}\"",
         "\"Array length can't be less than number of selected elements\"": "\"Array length can't be less than number of selected elements\"",
         "\"Number of selected elements can't be less than 1\"": "\"Number of selected elements can't be less than 1\""
     },
@@ -753,7 +552,6 @@
         "\"Successfully loaded settings from {saveSlot.Name}!\"": "\"Successfully loaded settings from {saveSlot.Name}!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\Serialization\\SnappingToolsSaveSlot.cs": {
-        "\"ProjectHotkey\"": "\"ProjectHotkey\"",
         "\"SaveSlot - {number}\"": "\"SaveSlot - {number}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Options\\TumourLayer.cs": {
@@ -823,7 +621,6 @@
         "\"Double format error.\"": "\"Double format error.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\DoubleToStringConverter.cs": {
-        "\"727 WYSI\"": "\"727 WYSI\"",
         "\"Cannot convert back null.\"": "\"Cannot convert back null.\"",
         "\"Double format error.\"": "\"Double format error.\""
     },
@@ -839,7 +636,6 @@
         "\", CultureInfo.InvariantCulture)}\"": "\", CultureInfo.InvariantCulture)}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IntToStringConverter.cs": {
-        "\"727 WYSI\"": "\"727 WYSI\"",
         "\"Cannot convert back null.\"": "\"Cannot convert back null.\"",
         "\"Int format error.\"": "\"Int format error.\""
     },
@@ -897,7 +693,6 @@
         "\"PlayAnimation\"": "\"PlayAnimation\"",
         "\"GIF Source was not found.\"": "\"GIF Source was not found.\"",
         "\"Mapping_Tools.{GifSource}\"": "\"Mapping_Tools.{GifSource}\"",
-        "\"gdi32.dll\"": "\"gdi32.dll\"",
         "\"DeleteObject\"": "\"DeleteObject\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Anchor.xaml": {
@@ -990,7 +785,6 @@
         "\"SliderBallStroke\"": "\"SliderBallStroke\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ObjectVisualiser\\OsuPatternToThumbnailConverter.cs": {
-        "\"CircleSize\"": "\"CircleSize\"",
         "\"OsuPatternToThumbnailConverter is a OneWay converter.\"": "\"OsuPatternToThumbnailConverter is a OneWay converter.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\TimeLine\\TimeLineElement.xaml.cs": {
@@ -1007,9 +801,6 @@
     "./Mapping_Tools\\Mapping_Tools\\Components\\ViewHeaderComponent.xaml": {
         "Text=\"Test\"": "Text=\"Test\"",
         "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Components\\ViewHeaderComponent.xaml.cs": {
-        "\"PROPERTY CHANGED!\"": "\"PROPERTY CHANGED!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml": {
         "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"": "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"",
@@ -1096,26 +887,6 @@
     "./Mapping_Tools\\Mapping_Tools\\Properties\\Annotations.cs": {
         "\"Software\"": "\"Software\"",
         "\"AS IS\"": "\"AS IS\"",
-        "\"message\"": "\"message\"",
-        "\"Failed: {0}\"": "\"Failed: {0}\"",
-        "\"TestNamespace.Constants\"": "\"TestNamespace.Constants\"",
-        "\"par\"": "\"par\"",
-        "\"LastName\"": "\"LastName\"",
-        "\"Property\"": "\"Property\"",
-        "\"=&gt; halt\"": "\"=&gt; halt\"",
-        "\"null &lt;= param:null\"": "\"null &lt;= param:null\"",
-        "\"s:null =&gt; true\"": "\"s:null =&gt; true\"",
-        "\"null =&gt; null; notnull =&gt; notnull\"": "\"null =&gt; null; notnull =&gt; notnull\"",
-        "\"=&gt; true, result: notnull; =&gt; false, result: null\"": "\"=&gt; true, result: notnull; =&gt; false, result: null\"",
-        "\"my string\"": "\"my string\"",
-        "\"Use the return value to...\"": "\"Use the return value to...\"",
-        "\"context\"": "\"context\"",
-        "\"item\"": "\"item\"",
-        "\"suggestVariableName()\"": "\"suggestVariableName()\"",
-        "\"guid()\"": "\"guid()\"",
-        "\"$newguid$\"": "\"$newguid$\"",
-        "\"Foo\"": "\"Foo\"",
-        "\"Bar\"": "\"Bar\"",
         "\"Use [ContractAnnotation('=> halt')] instead\"": "\"Use [ContractAnnotation('=> halt')] instead\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Properties\\Resources.Designer.cs": {
@@ -1144,13 +915,10 @@
         "Text=\"Downloading new update ...\"": "Text=\"Downloading new update ...\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdaterWindow.xaml.cs": {
-        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/Mapping_Tools_CN/releases/latest\"",
-        "\"name\"": "\"name\"",
-        "\"body\"": "\"body\""
+        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/Mapping_Tools_CN/releases/latest\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\HitsoundPreviewHelperVm.cs": {
-        "\"Please select a hit object to fetch the coordinates.\"": "\"Please select a hit object to fetch the coordinates.\"",
-        "\"Mode\"": "\"Mode\""
+        "\"Please select a hit object to fetch the coordinates.\"": "\"Please select a hit object to fetch the coordinates.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\HitsoundStudioVm.cs": {
         "\"Default\"": "\"Default\"",
@@ -1174,16 +942,6 @@
         "\"_New project\"": "\"_New project\"",
         "\"Load the default tool settings.\"": "\"Load the default tool settings.\""
     },
-    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\MetadataManagerVm.cs": {
-        "\"ArtistUnicode\"": "\"ArtistUnicode\"",
-        "\"Artist\"": "\"Artist\"",
-        "\"TitleUnicode\"": "\"TitleUnicode\"",
-        "\"Title\"": "\"Title\"",
-        "\"Creator\"": "\"Creator\"",
-        "\"Source\"": "\"Source\"",
-        "\"Tags\"": "\"Tags\"",
-        "\"PreviewTime\"": "\"PreviewTime\""
-    },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\PatternGalleryVm.cs": {
         "\"Name\"": "\"Name\"",
         "\"Creation time\"": "\"Creation time\"",
@@ -1200,7 +958,6 @@
         "\" and \\\"": "\" and \\\"",
         "\" and {selected.Count-1} others?\"": "\" and {selected.Count-1} others?\"",
         "\"Confirm deletion\"": "\"Confirm deletion\"",
-        "\"None\"": "\"None\"",
         "\"Type new group name...\"": "\"Type new group name...\"",
         "\"Group {groups.Count}\"": "\"Group {groups.Count}\"",
         "\"_Rename group...\"": "\"_Rename group...\""
@@ -1208,12 +965,9 @@
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SlideratorVm.cs": {
         "\"You've reached the end of the slider list.\"": "\"You've reached the end of the slider list.\"",
         "\"You've reached the start of the slider list.\"": "\"You've reached the start of the slider list.\"",
-        "\"Could not fetch selected hit objects.\"": "\"Could not fetch selected hit objects.\"",
-        "\"SliderMultiplier\"": "\"SliderMultiplier\""
+        "\"Could not fetch selected hit objects.\"": "\"Could not fetch selected hit objects.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SliderPicturatorVm.cs": {
-        "\"SliderTrackOverride\"": "\"SliderTrackOverride\"",
-        "\"gdi32.dll\"": "\"gdi32.dll\"",
         "\".png\"": "\".png\"",
         "\"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"": "\"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"",
         "\"Could not fetch selected hit object.\"": "\"Could not fetch selected hit object.\""
@@ -1222,9 +976,6 @@
         "\"GeneratorType\"": "\"GeneratorType\"",
         "\".osu\"": "\".osu\"",
         "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"": "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"",
-        "\"Drawable count: {LayerCollection.GetAllRelevantDrawables().Count()}\"": "\"Drawable count: {LayerCollection.GetAllRelevantDrawables().Count()}\"",
-        "\"CurrentPreferences\"": "\"CurrentPreferences\"",
-        "\"OsuConfigPath\"": "\"OsuConfigPath\"",
         "\"Can't set ConfigWatcher Path/Filter: \"": "\"Can't set ConfigWatcher Path/Filter: \"",
         "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"": "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"",
         "\"Warning\"": "\"Warning\""
@@ -1238,7 +989,6 @@
         "\"{copy.Name} (Copy)\"": "\"{copy.Name} (Copy)\"",
         "\"Could not fetch selected hit objects.\"": "\"Could not fetch selected hit objects.\"",
         "\"Could not find any sliders in imported hit objects.\"": "\"Could not find any sliders in imported hit objects.\"",
-        "\"CircleSize\"": "\"CircleSize\"",
         "\"Successfully imported slider.\"": "\"Successfully imported slider.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\AutoFailDetector\\AutoFailDetectorView.xaml": {
@@ -1275,8 +1025,6 @@
         "\"Auto-fail Detector\"": "\"Auto-fail 检测\"",
         "\"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \\\"": "\"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \\\"",
         "\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.\"": "\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.\"",
-        "\"ApproachRate\"": "\"ApproachRate\"",
-        "\"OverallDifficulty\"": "\"OverallDifficulty\"",
         "\"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!\"": "\"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!\"",
         "\"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected.\"": "\"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected.\"",
         "\"No auto-fail detected.\"": "\"未检测到auto-fail。\""
@@ -1316,11 +1064,7 @@
         "\"Combo Colour Studio\"": "\"Combo Colour Studio\"",
         "\"With Combo Colour Studio you can easily customize the combo colours of your beatmap. AKA colour haxing.{Environment.NewLine}You define colored sections much like how you use timing points in the osu! editor. Just add a new colour point and define the sequence of combo colours.{Environment.NewLine}You can also define colour points which only work for one combo, so you can emphasize specific patterns using colour.{Environment.NewLine}You can get started by adding a combo colour using the plus on the bottom left or by importing combo colours from an existing map. The combo colours can be edited by clicking on the coloured circles.{Environment.NewLine}Add a colour point by clicking on the plus on the bottom right. You can edit the colour sequence by double clicking the colour sequence cell.\"": "\"With Combo Colour Studio you can easily customize the combo colours of your beatmap. AKA colour haxing.{Environment.NewLine}You define colored sections much like how you use timing points in the osu! editor. Just add a new colour point and define the sequence of combo colours.{Environment.NewLine}You can also define colour points which only work for one combo, so you can emphasize specific patterns using colour.{Environment.NewLine}You can get started by adding a combo colour using the plus on the bottom left or by importing combo colours from an existing map. The combo colours can be edited by clicking on the coloured circles.{Environment.NewLine}Add a colour point by clicking on the plus on the bottom right. You can edit the colour sequence by double clicking the colour sequence cell.\"",
         "\"RootDialog\"": "\"RootDialog\"",
-        "\"colourPointColourIndex: \"": "\"colourPointColourIndex: \"",
-        "\"colourPointColour: \"": "\"colourPointColour: \"",
         "\"Can not use colour {colourSequence[colourPointColourIndex].Name} of colour point at offset {colourPoint.Time} because it does not exist in the combo colours.\"": "\"Can not use colour {colourSequence[colourPointColourIndex].Name} of colour point at offset {colourPoint.Time} because it does not exist in the combo colours.\"",
-        "\"colourIndex: \"": "\"colourIndex: \"",
-        "\"comboSkip: \"": "\"comboSkip: \"",
         "\"Successfully exported colours to {mapsDone} {(mapsDone == 1 ? \"": "\"Successfully exported colours to {mapsDone} {(mapsDone == 1 ? \"",
         "\" : \"": "\" : \"",
         "\")}!\"": "\")}!\""
@@ -1388,14 +1132,12 @@
         "\" This mode will copy over all the hitsounds from the map you’re copying from. \"": "\" This mode will copy over all the hitsounds from the map you’re copying from. \"",
         "\"Anything in the map you’re copying to that has not been defined in the map you’re copying from will not change. \"": "\"Anything in the map you’re copying to that has not been defined in the map you’re copying from will not change. \"",
         "\"For instance muted sliderends will remain there.\"": "\"For instance muted sliderends will remain there.\"",
-        "\"Mode\"": "\"Mode\"",
         "\"explorer.exe\"": "\"explorer.exe\"",
         "\"Done!\"": "\"Done!\"",
         "\"slidertick\"": "\"slidertick\"",
         "\"{oldSampleSet.ToString().ToLower()}-sliderslide{(oldIndex == 1 ? string.Empty : oldIndex.ToInvariant())}\"": "\"{oldSampleSet.ToString().ToLower()}-sliderslide{(oldIndex == 1 ? string.Empty : oldIndex.ToInvariant())}\"",
         "\"{sampleSet.ToString().ToLower()}-sliderslide{index.ToInvariant()}\"": "\"{sampleSet.ToString().ToLower()}-sliderslide{index.ToInvariant()}\"",
         "\"sliderslide\"": "\"sliderslide\"",
-        "\"SliderTickRate\"": "\"SliderTickRate\"",
         "\"hitsoundcopierproject.json\"": "\"hitsoundcopierproject.json\"",
         "\"Hitsound Copier Projects\"": "\"Hitsound Copier Projects\""
     },
@@ -1695,22 +1437,14 @@
         "\"Mapset Merger\"": "\"Mapset Merger\"",
         "\"Combine multiple mapsets into one mapset and automatically resolve file conflicts.\"": "\"Combine multiple mapsets into one mapset and automatically resolve file conflicts.\"",
         "\" - \"": "\" - \"",
-        "\"Version\"": "\"Version\"",
         "\"^(normal|soft|drum)-(hit(normal|whistle|finish|clap)|slidertick|sliderslide)\"": "\"^(normal|soft|drum)-(hit(normal|whistle|finish|clap)|slidertick|sliderslide)\"",
         "\"Successfully merged {mapsetsMerged} {(mapsetsMerged == 1 ? \"": "\"Successfully merged {mapsetsMerged} {(mapsetsMerged == 1 ? \"",
         "\" : \"": "\" : \"",
         "\")}!\"": "\")}!\"",
-        "\".wav\"": "\".wav\"",
-        "\".mp3\"": "\".mp3\"",
-        "\".ogg\"": "\".ogg\"",
         "\".png\"": "\".png\"",
         "\".jpg\"": "\".jpg\"",
         "\".mp4\"": "\".mp4\"",
         "\".avi\"": "\".avi\"",
-        "\"Mode\"": "\"Mode\"",
-        "\"SliderTickRate\"": "\"SliderTickRate\"",
-        "\"AudioFilename\"": "\"AudioFilename\"",
-        "\"*.osu\"": "\"*.osu\"",
         "\"Beatmap limit exceeded in mapset: \"": "\"Beatmap limit exceeded in mapset: \"",
         "\"*.osb\"": "\"*.osb\"",
         "\"Storyboard limit exceeded in mapset: \"": "\"Storyboard limit exceeded in mapset: \""
@@ -1781,16 +1515,6 @@
         "\"Metadata Manager Projects\"": "\"Metadata Manager Projects\"",
         "\"Metadata Manager\"": "\"Metadata Manager\"",
         "\"To save you the time of editing metadata on every individual difficulty, edit metadata in this tool and copy it to multiple diffs anytime.{Environment.NewLine}You can also import metadata from beatmaps, so you can copy metadata from A to B.{Environment.NewLine}Save and load metadata configurations, so you can work on multiple mapsets without hassle.\"": "\"To save you the time of editing metadata on every individual difficulty, edit metadata in this tool and copy it to multiple diffs anytime.{Environment.NewLine}You can also import metadata from beatmaps, so you can copy metadata from A to B.{Environment.NewLine}Save and load metadata configurations, so you can work on multiple mapsets without hassle.\"",
-        "\"ArtistUnicode\"": "\"ArtistUnicode\"",
-        "\"Artist\"": "\"Artist\"",
-        "\"TitleUnicode\"": "\"TitleUnicode\"",
-        "\"Title\"": "\"Title\"",
-        "\"Creator\"": "\"Creator\"",
-        "\"Source\"": "\"Source\"",
-        "\"Tags\"": "\"Tags\"",
-        "\"PreviewTime\"": "\"PreviewTime\"",
-        "\"BeatmapID\"": "\"BeatmapID\"",
-        "\"BeatmapSetID\"": "\"BeatmapSetID\"",
         "\"-1\"": "\"-1\"",
         "\"Successfully exported metadata to {mapsDone} {(mapsDone == 1 ? \"": "\"Successfully exported metadata to {mapsDone} {(mapsDone == 1 ? \"",
         "\" : \"": "\" : \"",
@@ -1879,7 +1603,6 @@
         "\"Do you want to merge the imported collection into your current collection?\"": "\"Do you want to merge the imported collection into your current collection?\"",
         "\"Load new collection\"": "\"Load new collection\"",
         "\".osu\"": "\".osu\"",
-        "\".json\"": "\".json\"",
         "\"A collection with the name \\\"": "\"A collection with the name \\\"",
         "\" already exists in {ViewModel.FileHandler.BasePath}.\"": "\" already exists in {ViewModel.FileHandler.BasePath}.\"",
         "\"Successfully imported the collection!\"": "\"Successfully imported the collection!\"",
@@ -1931,8 +1654,7 @@
         "materialDesign:HintAssist.Hint=\"Backup interval\"": "materialDesign:HintAssist.Hint=\"Backup interval\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Preferences\\PreferencesView.xaml.cs": {
-        "\"Preferences\"": "\"设置\"",
-        "\"<Current Tool>\"": "\"<Current Tool>\""
+        "\"Preferences\"": "\"设置\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PropertyTransformer\\PropertyTransformerView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"Click me!\"",
@@ -2011,8 +1733,6 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\PropertyTransformer\\PropertyTransformerView.xaml.cs": {
         "\"Property Transformer\"": "\"Property Transformer\"",
         "\"Multiple and add to properties of all the timingpoints, hitobjects, bookmarks and storyboarded samples of the current map.{Environment.NewLine}The new value is the old value times the multiplier plus the offset. The multiplier is the left textbox and the offset is the right textbox. The multiplier gets done first.{Environment.NewLine}Resulting values get rounded if they have to be integer.\"": "\"Multiple and add to properties of all the timingpoints, hitobjects, bookmarks and storyboarded samples of the current map.{Environment.NewLine}The new value is the old value times the multiplier plus the offset. The multiplier is the left textbox and the offset is the right textbox. The multiplier gets done first.{Environment.NewLine}Resulting values get rounded if they have to be integer.\"",
-        "\".osb\"": "\".osb\"",
-        "\"PreviewTime\"": "\"PreviewTime\"",
         "\"Done!\"": "\"Done!\"",
         "\"propertytransformerproject.json\"": "\"propertytransformerproject.json\"",
         "\"Property Transformer Projects\"": "\"Property Transformer Projects\""
@@ -2270,11 +1990,6 @@
         "\"Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.\"": "\"Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.\"",
         "\"No image file selected.\"": "\"No image file selected.\"",
         "\"Not a valid image file.\"": "\"Not a valid image file.\"",
-        "\"CircleSize\"": "\"CircleSize\"",
-        "\"C:\\Users\\User\\Desktop\\badapple\\images-6fps@360p\"": "\"C:\\Users\\User\\Desktop\\badapple\\images-6fps@360p\"",
-        "\"*.png\"": "\"*.png\"",
-        "\"SliderTrackOverride\"": "\"SliderTrackOverride\"",
-        "\"SliderBorder\"": "\"SliderBorder\"",
         "\"Done!\"": "\"Done!\"",
         "\"sliderpicturatorproject.json\"": "\"sliderpicturatorproject.json\"",
         "\"Slider Picturator Projects\"": "\"Slider Picturator Projects\""
@@ -2476,13 +2191,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\StandardView.xaml.cs": {
         "\"Get started\"": "\"开始\"",
-        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\"": "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\"",
-        "\"id\"": "\"id\"",
-        "\"name\"": "\"name\"",
-        "\"body\"": "\"body\"",
-        "\"published_at\"": "\"published_at\"",
-        "\"author\"": "\"author\"",
-        "\"login\"": "\"login\""
+        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\"": "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingCopier\\TimingCopierView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"Click me!\"",
@@ -2518,8 +2227,6 @@
         "\"Timing Copier Projects\"": "\"Timing Copier Projects\"",
         "\"Timing Copier\"": "\"Timing Copier\"",
         "\"Copies timing from A to B.{Environment.NewLine}There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:{Environment.NewLine}'Number of beats between objects stays the same' will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.{Environment.NewLine}'Just resnap' will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.{Environment.NewLine}'Don't move objects' will not move the objects at all.\"": "\"Copies timing from A to B.{Environment.NewLine}There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:{Environment.NewLine}'Number of beats between objects stays the same' will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.{Environment.NewLine}'Just resnap' will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.{Environment.NewLine}'Don't move objects' will not move the objects at all.\"",
-        "\"Number of beats between objects stays the same\"": "\"Number of beats between objects stays the same\"",
-        "\"Just resnap\"": "\"Just resnap\"",
         "\"Successfully copied timing to {mapsDone} {(mapsDone == 1 ? \"": "\"Successfully copied timing to {mapsDone} {(mapsDone == 1 ? \"",
         "\" : \"": "\" : \"",
         "\")}!\"": "\")}!\""
