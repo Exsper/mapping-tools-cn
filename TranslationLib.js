@@ -131,7 +131,7 @@ async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
                 strings.map((string) => {
                     if (!skipTextsInThisFile.includes(string)) fileStrings[string] = string;
                 });
-                template[filePaths[i]] = fileStrings;
+                if (Object.keys(fileStrings).length > 0) template[filePaths[i]] = fileStrings;
             }
         }
         catch (err) {

@@ -1,7 +1,7 @@
 {
     "./Mapping_Tools\\Mapping_Tools\\App.xaml.cs": {
         "\"\\nInner exception:\"": "\"\\n内部异常：\"",
-        "\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\"": "\"程序遇到未处理异常。查阅 {filename} 获得更多信息：\\n{path}\"",
+        "\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\"": "\"程序遇到未处理异常。查阅 {filename} 获取更多信息：\\n{path}\"",
         "\"Error\"": "\"错误\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\BeatmapParsingException.cs": {
@@ -172,7 +172,6 @@
         "\"Confirm new project\"": "\"Confirm new project\"",
         "\"New project could not be initialized!\"": "\"New project could not be initialized!\""
     },
-    "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\Settings.cs": {},
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs": {
         "\"User-specific configuration could not be loaded!\"": "\"User-specific configuration could not be loaded!\"",
         "\"User-specific configuration could not be saved!\"": "\"User-specific configuration could not be saved!\"",
