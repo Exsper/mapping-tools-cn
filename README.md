@@ -1,6 +1,6 @@
 # mapping-tools-cn
 
-🚧本汉化项目尚未完成🚧
+🚧本汉化项目尚未完成，目前翻译进度：0.02%🚧
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目
 
@@ -41,3 +41,7 @@
 5. 生成程序
 
    在Mapping_Tools_CN中生成程序并发布
+
+## 注意事项
+
+- 因为使用翻译表（JSON文件）替换字符串的方式进行项目翻译，所以翻译表带有引号和格式，在翻译时请务必保留原格式
