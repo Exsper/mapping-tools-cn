@@ -9,7 +9,7 @@ namespace Mapping_Tools.Components.Domain {
             if (!string.IsNullOrEmpty(value as string)) {
                 c = ((string) value).Split('|').Length;
             }
-            return c == 1 ? $"({c}) map total" : $"({c}) maps total";
+            return c == 1 ? $"共 ({c}) 张谱面" : $"共 ({c}) 张谱面";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
