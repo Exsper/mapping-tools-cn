@@ -87,7 +87,7 @@
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          HorizontalAlignment="Left" MinWidth="100" FontSize="14" Cursor="Hand"
                          materialDesign:HintAssist.Hint="Beat divisors"
-                         ToolTip="Input any number of beat divisors here separated with commas. Example: 1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
+                         ToolTip="输入所有节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
             </StackPanel>
 
             <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Margin="10">

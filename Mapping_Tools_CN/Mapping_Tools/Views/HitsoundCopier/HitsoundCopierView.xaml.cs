@@ -28,14 +28,14 @@ namespace Mapping_Tools.Views.HitsoundCopier {
         /// </summary>
         [UsedImplicitly] 
         public static readonly string ToolDescription =
-            $@"Copies hitsounds from A to B.{Environment.NewLine}There are 2 modes. " +
-            $@"First mode is overwrite everything. " +
-            $@"This will basically first remove the hitsounds from the map you’re copying to and then copy the hitsounds." +
-            $@"{Environment.NewLine}Second mode is copying only the defined hitsounds." +
-            $@" A defined hitsound is when there is something there in the map you’re copying from." +
-            $@" This mode will copy over all the hitsounds from the map you’re copying from. " +
-            $@"Anything in the map you’re copying to that has not been defined in the map you’re copying from will not change. " +
-            $@"For instance muted sliderends will remain there.";
+            $@"将A谱面的音效复制到B谱面。{Environment.NewLine}有 2 种工作模式。" +
+            $@"第一种是完全覆盖。" +
+            $@"基本是将目标谱面的所有音效移除后，再应用复制过来的音效。" +
+            $@"{Environment.NewLine}第二种是对应覆盖。" +
+            $@"只覆盖来源谱面里物件的音效，" +
+            $@"将源谱面的音效一一复制到对应的目标谱面。" +
+            $@"源谱面上没有定义音效时，不会改变此刻目标谱面的物件，" +
+            $@"比如滑条尾的静音。";
 
         /// <inheritdoc />
         public HitsoundCopierView() {
@@ -638,6 +638,6 @@ namespace Mapping_Tools.Views.HitsoundCopier {
 
         public string AutoSavePath => Path.Combine(MainWindow.AppDataPath, "hitsoundcopierproject.json");
 
-        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Hitsound Copier Projects");
+        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "音效复制器项目");
     }
 }

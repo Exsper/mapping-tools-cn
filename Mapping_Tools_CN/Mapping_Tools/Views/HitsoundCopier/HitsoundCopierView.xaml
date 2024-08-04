@@ -31,7 +31,7 @@
                       <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
                     <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                      将 A 的音效复制给 B
+                      将A谱面的音效复制到B谱面。
                       <LineBreak/>
                       有 2 种工作模式。第一种是完全覆盖，基本是将目标谱面的所有音效移除后，再应用复制过来的音效。
                       <LineBreak/>
@@ -158,13 +158,13 @@
                         <TextBox Text="{Binding BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  MinWidth="100" FontSize="14" Cursor="Hand" Grid.Column="0"
-                                 materialDesign:HintAssist.Hint="所有节拍划分"
-                                 ToolTip="输入所有使用到的节拍划分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
+                                 materialDesign:HintAssist.Hint="所有节拍细分"
+                                 ToolTip="输入所有使用到的节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
                         <TextBox Text="{Binding MutedDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  MinWidth="100" FontSize="14" Cursor="Hand" Grid.Column="2"
-                                 materialDesign:HintAssist.Hint="静音节拍划分"
-                                 ToolTip="输入所有可静音的节拍划分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
+                                 materialDesign:HintAssist.Hint="静音节拍细分"
+                                 ToolTip="输入所有可静音的节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
                         <TextBox x:Name="MutedMinLengthBox" Grid.Column="4"
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  materialDesign:HintAssist.Hint="最短时长"

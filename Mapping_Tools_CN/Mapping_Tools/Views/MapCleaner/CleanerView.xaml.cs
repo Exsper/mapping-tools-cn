@@ -34,7 +34,7 @@ namespace Mapping_Tools.Views.MapCleaner {
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string ToolName = "Map Cleaner";
+        public static readonly string ToolName = "谱面清洁器";
 
         /// <summary>
         /// 
@@ -138,9 +138,9 @@ namespace Mapping_Tools.Views.MapCleaner {
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, reader != null, args.Quick));
 
             // Make an accurate message
-            string message = $"Successfully {(result.TimingPointsRemoved < 0 ? "added" : "removed")} {Math.Abs(result.TimingPointsRemoved)} {(Math.Abs(result.TimingPointsRemoved) == 1 ? "greenline" : "greenlines")}" +
-                (args.MapCleanerArgs.ResnapObjects ? $" and resnapped {result.ObjectsResnapped} {(result.ObjectsResnapped == 1 ? "object" : "objects")}" : "") + 
-                (args.MapCleanerArgs.RemoveUnusedSamples ? $" and removed {result.SamplesRemoved} unused {(result.SamplesRemoved == 1 ? "sample" : "samples")}" : "") + "!";
+            string message = $"成功{(result.TimingPointsRemoved < 0 ? "添加" : "移除")}了 {Math.Abs(result.TimingPointsRemoved)} 条{(Math.Abs(result.TimingPointsRemoved) == 1 ? "绿线" : "绿线")}" +
+                (args.MapCleanerArgs.ResnapObjects ? $"并重新对齐了 {result.ObjectsResnapped} 个{(result.ObjectsResnapped == 1 ? "物件" : "物件")}" : "") + 
+                (args.MapCleanerArgs.RemoveUnusedSamples ? $"并移除了 {result.SamplesRemoved} 个未使用的{(result.SamplesRemoved == 1 ? "音效组" : "音效组")}" : "") + "！";
             return args.Quick ? string.Empty : message;
         }
 
@@ -214,6 +214,6 @@ namespace Mapping_Tools.Views.MapCleaner {
 
         public string AutoSavePath => Path.Combine(MainWindow.AppDataPath, "mapcleanerproject.json");
 
-        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Map Cleaner Projects");
+        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "谱面清洁器项目");
     }
 }

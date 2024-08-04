@@ -215,7 +215,7 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
         
         public string AutoSavePath => Path.Combine(MainWindow.AppDataPath, "tumourgeneratorproject.json");
 
-        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Tumour Generator Projects");
+        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "凸点生成器项目");
 
         public void QuickRun() {
             var currentMap = IOHelper.GetCurrentBeatmapOrCurrentBeatmap();

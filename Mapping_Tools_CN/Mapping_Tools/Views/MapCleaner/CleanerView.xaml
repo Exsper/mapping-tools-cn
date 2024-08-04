@@ -24,16 +24,16 @@
             <StackPanel>
               <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                        <Run Text="Map Cleaner"/>
+                        <Run Text="谱面清洁器"/>
                     </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                         <materialDesign:PopupBox.ToggleContent>
                             <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
                         <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                        It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.
+                        该工具可以清理谱面的无用绿线和一些针对整张谱面的其他功能。
                         <LineBreak/>
-                        Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.
+                        谱面清洁器通过分析所有时间轴的影响，然后移除原有时间轴并以更好的方式重建，来清理无用绿线。在此过程中绿线会自动对齐到使用它们的物件上。
                         </TextBlock>
                     </materialDesign:PopupBox>
                   <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
@@ -47,55 +47,55 @@
                 </StackPanel>
 
                 <CheckBox FontSize="14" x:Name="AnalyzeSamples" IsChecked="{Binding MapCleanerArgs.AnalyzeSamples}" Cursor="Hand" Margin="0,10,0,0"
-                          ToolTip="Analyze the samples used by the beatmap to optimize greenlines further. Disable this if your beatmap uses custom hitsounds but the sound sample files are not yet added.">
-                    Analyze samples
+                          ToolTip="分析谱面使用的音效组，进一步优化绿线。当您的谱面使用自定义音效组但还未添加音效文件时请禁用此项。">
+                    分析音效组
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="ResnapObjects" IsChecked="{Binding MapCleanerArgs.ResnapObjects}" Cursor="Hand"
-                          ToolTip="Resnap hit objects and slider ends.">
-                    Resnap objects
+                          ToolTip="重新对齐打击物件和滑条尾。">
+                    重新对齐物件
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="ResnapBookmarks" IsChecked="{Binding MapCleanerArgs.ResnapBookmarks}" Cursor="Hand"
-                          ToolTip="Resnap bookmarks.">
-                    Resnap bookmarks
+                          ToolTip="重新对齐书签。">
+                    重新对齐书签
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="RemoveHitsounds" IsChecked="{Binding MapCleanerArgs.RemoveHitsounds}" Cursor="Hand"
-                          ToolTip="Remove all hitsounds from the beatmap.">
-                    Remove hitsounds
+                          ToolTip="移除谱面的所有音效。">
+                    移除音效
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="RemoveUnusedSamples" IsChecked="{Binding MapCleanerArgs.RemoveUnusedSamples}" Cursor="Hand"
-                          ToolTip="Remove all samples that are unused by all maps and storyboards in the set.">
-                    Remove unused samples
+                          ToolTip="移除谱面集里所有谱面和故事板均未使用的音效组。">
+                    移除未使用音效组
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="RemoveMuting" IsChecked="{Binding MapCleanerArgs.RemoveMuting}" Cursor="Hand"
-                          ToolTip="Remove all occurances of 5% volume on slider ends or spinner ends.">
-                    Remove muting
+                          ToolTip="移除所有滑条尾或转盘尾的 5% 音量。">
+                    移除静音
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="RemoveUnclickableHitsounds" IsChecked="{Binding MapCleanerArgs.RemoveUnclickableHitsounds}" Cursor="Hand"
-                          ToolTip="Mute all slider ends/repeats and spinner ends.">
-                    Mute unclickable hitsounds
+                          ToolTip="给所有滑条尾、滑条折返和转盘尾加静音。">
+                    非点击物件静音
                 </CheckBox>
 
-                <TextBlock Text="Map info" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"/>
+                <TextBlock Text="谱面信息" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"/>
                 <CheckBox FontSize="14" x:Name="VolumeSliders" Cursor="Hand" IsChecked="{Binding MapCleanerArgs.VolumeSliders}"
-                          ToolTip="Flag volume changes in sliders as useful, so they don't get removed.">
-                    Map uses volume changes in sliders
+                          ToolTip="将滑条上的音量变化标记为有用，不会被删除。">
+                    谱面在滑条上使用了音量变化
                 </CheckBox>
                 <CheckBox FontSize="14" Name="SamplesetSliders" Cursor="Hand" IsChecked="{Binding MapCleanerArgs.SampleSetSliders}"
-                          ToolTip="Flag sample set changes in sliders as useful, so they don't get removed.">
-                    Map uses sampleset changes in sliders
+                          ToolTip="将滑条上的音效组变化标记为有用，不会被删除。">
+                    谱面在滑条上使用了音效组变化
                 </CheckBox>
                 <CheckBox FontSize="14" x:Name="VolumeSpinners" Cursor="Hand" IsChecked="{Binding MapCleanerArgs.VolumeSpinners}"
-                          ToolTip="Flag volume changes in spinners as useful, so they don't get removed.">
-                    Map uses volume changes in spinners
+                          ToolTip="将转盘上的音量变化标记为有用，不会被删除。">
+                    谱面在转盘上使用了音量变化
                 </CheckBox>
 
-                <TextBlock Text="Signatures" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
-                           ToolTip="Choose the snap divisors to resnap to."/>
+                <TextBlock Text="特征" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
+                           ToolTip="选择节拍细分来进行对齐。"/>
                 <TextBox Text="{Binding MapCleanerArgs.BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          HorizontalAlignment="Left" MinWidth="100" FontSize="14" Cursor="Hand"
-                         materialDesign:HintAssist.Hint="Beat divisors"
-                         ToolTip="Input any number of beat divisors here separated with commas. Example: 1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
+                         materialDesign:HintAssist.Hint="节拍细分"
+                         ToolTip="输入所有节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
             </StackPanel>
             <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Margin="10">
                 <Button
@@ -124,7 +124,7 @@
         </Grid>
         <Grid Name="FourthGrid" Grid.Row="2">
             <StackPanel x:Name="TlHost"
-                        ToolTip="This timeline shows the changes in the control points of the map. You can double-click the lines to go to that time."/>
+                        ToolTip="该时间线显示谱面控制点的更改情况。双击这些线条可以在编辑器中定位。"/>
         </Grid>
     </Grid>
 </local:SingleRunMappingTool>
