@@ -21,7 +21,7 @@ namespace Mapping_Tools.Views.TumourGenerator {
     //[HiddenTool]
     [SmartQuickRunUsage(SmartQuickRunTargets.AnySelection)]
     public partial class TumourGeneratorView : ISavable<TumourGeneratorVm>, IQuickRun {
-        public static readonly string ToolName = "Tumour Generator 2";
+        public static readonly string ToolName = "凸点生成器v2";
 
         public static readonly string ToolDescription = @"Tumour Generator 2 generates copious amounts of tumours on sliders.
 You can adjust the shape and size of tumours and choose where they should be placed along the path.
@@ -105,14 +105,14 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
             if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.Selected && editorReaderException1 != null) {
-                throw new Exception("Could not fetch selected hit objects.", editorReaderException1);
+                throw new Exception("无法获取选中物件。", editorReaderException1);
             }
 
             foreach (string path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                 if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.Selected && editorReaderException2 != null) {
-                    throw new Exception("Could not fetch selected hit objects.", editorReaderException2);
+                    throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
                 Beatmap beatmap = editor.Beatmap;
@@ -123,7 +123,7 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
                     TumourGeneratorVm.ImportMode.Bookmarked => beatmap.GetBookmarkedObjects(),
                     TumourGeneratorVm.ImportMode.Time => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
                     TumourGeneratorVm.ImportMode.Everything => beatmap.HitObjects,
-                    _ => throw new ArgumentException("Unexpected import mode.")
+                    _ => throw new ArgumentException("意料外的导入模式。")
                 };
 
                 for (int i = 0; i < markedObjects.Count; i++) {
@@ -193,7 +193,7 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true,  arg.Reload, arg.Quick));
 
-            return arg.Quick ? string.Empty : $"Succesfully generated tumours on {slidersTumourated} slider{(slidersTumourated == 1 ? string.Empty : "s")}!";
+            return arg.Quick ? string.Empty : $"已为 {slidersTumourated} 个滑条添加凸点！";
         }
 
         public TumourGeneratorVm GetSaveData() {

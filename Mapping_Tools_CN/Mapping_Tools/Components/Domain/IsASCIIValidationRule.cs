@@ -9,7 +9,7 @@ namespace Mapping_Tools.Components.Domain {
             string str = (value ?? "").ToString();
             return Encoding.UTF8.GetByteCount(str) == str.Length ? 
                 ValidationResult.ValidResult : 
-                new ValidationResult(false, "Field is not ASCII.");
+                new ValidationResult(false, "字段包含非ASCII字符。");
         }
     }
 

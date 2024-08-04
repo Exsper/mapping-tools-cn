@@ -40,7 +40,7 @@ namespace Mapping_Tools.Components.Domain {
                 if (valid) {
                     beatDivisors[i] = doubleValue;
                 } else {
-                    return new ValidationResult(false, "Double format error.");
+                    return new ValidationResult(false, "Double格式错误。");
                 }
             }
 

@@ -9,7 +9,7 @@ namespace Mapping_Tools.Components.Domain
         public override ValidationResult Validate(object value, CultureInfo cultureInfo) {
             return Regex.IsMatch((value ?? "").ToString(), @"^([0-9]+(\.[0-9]+)?(,[0-9]+(\.[0-9]+)?)*)?$") ? 
                 ValidationResult.ValidResult : 
-                new ValidationResult(false, "Field cannot be parsed.");
+                new ValidationResult(false, "无法解析字段。");
         }
     }
 }

@@ -106,9 +106,9 @@
                                     <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="Load a backup from the backups folder into the current beatmap." />
-                                    <MenuItem Header="使用 BetterSave™ 保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
+                                    <MenuItem Header="使用优化存储（BetterSave™）保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated." />
+                                              ToolTip="保存当前osu!编辑器打开的谱面。优化存储（BetterSave™）和原版编辑器一样保存谱面，但小数使用四舍五入的方式保存，取代原先截取的方式。" />
                                 </MenuItem>
                                 <Separator/>
                                 <MenuItem Header="关于（_A）" MinWidth="67" Height="35">
@@ -186,8 +186,8 @@
                                         ToolTip="Save a backup of the current beatmap to the backups folder." />
                                     <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
                                         ToolTip="Load a backup from the backups folder into the current beatmap." />
-                                    <MenuItem Header="使用 BetterSave™ 保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
-                                        ToolTip="Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated." />
+                                    <MenuItem Header="使用优化存储（BetterSave™）保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
+                                        ToolTip="保存当前osu!编辑器打开的谱面。优化存储（BetterSave™）和原版编辑器一样保存谱面，但小数使用四舍五入的方式保存，取代原先截取的方式。" />
                                 </ContextMenu>
                             </materialDesign:ColorZone.ContextMenu>
                             <Grid>

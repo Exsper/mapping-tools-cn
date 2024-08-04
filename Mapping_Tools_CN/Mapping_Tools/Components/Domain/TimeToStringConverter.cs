@@ -44,7 +44,7 @@ namespace Mapping_Tools.Components.Domain {
                 return result3;
             }
 
-            return new ValidationResult(false, "Time format error.");
+            return new ValidationResult(false, "时间格式错误。");
         }
     }
 }

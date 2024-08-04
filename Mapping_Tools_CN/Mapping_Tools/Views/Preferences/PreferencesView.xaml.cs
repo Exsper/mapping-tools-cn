@@ -13,7 +13,7 @@ namespace Mapping_Tools.Views.Preferences
     [HorizontalContentScroll]
     public partial class PreferencesView {
 
-        public static readonly string ToolName = "设置";
+        public static readonly string ToolName = "首选项";
 
         public static readonly string ToolDescription = $@"";
 

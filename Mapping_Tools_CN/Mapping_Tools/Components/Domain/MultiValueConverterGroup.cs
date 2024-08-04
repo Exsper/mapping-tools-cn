@@ -13,7 +13,7 @@ namespace Mapping_Tools.Components.Domain
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
             if ((this.Count - 1) % values.Length != 0) {
-                throw new ArgumentException("Could not interpret how to apply converters to values (make sure each value goes through the same number of converters, and there's one left at the end to combine them!)");
+                throw new ArgumentException("无法解释如何将转换器应用于值（确保每个值都经过相同数量的转换器，最后还需一个转换器可以组合它们！）");
             }
             int conversionsPerValue = (this.Count - 1) / values.Length;
             for (int i = 0; i < values.Length; i++) {

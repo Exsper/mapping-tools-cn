@@ -11,7 +11,7 @@ namespace Mapping_Tools.Components.Domain {
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
-            throw new InvalidOperationException("MapPathStringJustFilenameConverter can not convert back values.");
+            throw new InvalidOperationException("MapPathStringJustFilenameConverter 不能逆转换数值。");
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Mapping_Tools.Components.Domain {
                 if (parameter != null) {
                     return (int) parameter;
                 }
-                return new ValidationResult(false, "Cannot convert back null.");
+                return new ValidationResult(false, "不能逆转换null。");
             }
 
             if (value.ToString() == "727 WYSI") {
@@ -33,7 +33,7 @@ namespace Mapping_Tools.Components.Domain {
                     return result1;
                 }
 
-                return new ValidationResult(false, "Int format error.");
+                return new ValidationResult(false, "Int格式错误。");
             }
             TypeConverters.TryParseInt(value.ToString(), out int result2, int.Parse(parameter.ToString()));
             return result2;

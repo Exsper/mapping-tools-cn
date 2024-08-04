@@ -57,7 +57,7 @@ namespace Mapping_Tools.Components.Domain {
 
                         beatDivisors[i] = new IrrationalBeatDivisor(doubleValue);
                     } else {
-                        return new ValidationResult(false, "Double format error.");
+                        return new ValidationResult(false, "Double格式错误。");
                     }
                 }
             }

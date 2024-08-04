@@ -21,7 +21,7 @@ namespace Mapping_Tools.Components.Domain {
                 if (parameter != null) {
                     return double.Parse(parameter.ToString());
                 }
-                return new ValidationResult(false, "Cannot convert back null.");
+                return new ValidationResult(false, "不能逆转换null。");
             }
 
             if (value.ToString() == "727 WYSI") {
@@ -33,7 +33,7 @@ namespace Mapping_Tools.Components.Domain {
                     return result1;
                 }
 
-                return new ValidationResult(false, "Double format error.");
+                return new ValidationResult(false, "Double格式错误。");
             }
             TypeConverters.TryParseDouble(value.ToString(), out double result2, double.Parse(parameter.ToString()));
             return result2;

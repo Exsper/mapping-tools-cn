@@ -58,22 +58,22 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="40" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Tumour Generator 2"/>
+                    <Run Text="凸点生成器v2"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
                         <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
                     <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                        Tumour Generator 2 generates copious amounts of tumours on sliders.
+                        凸点生成器v2可以在滑条上批量生成凸点。
                         <LineBreak/>
-                        You can adjust the shape and size of tumours and choose where they should be placed along the path.
+                        可以自行设定突起的形状、大小和放置位置。
                         <LineBreak/>
-                        You can also generate multiple layers of tumours. A layer will either merge the tumours with the tumours of the previous layer or place the tumours on top of the previous tumours.
+                        还可以设置多层级的凸点。层级间的凸点既可以互相融合，也可以迭代计算。
                         <LineBreak/>
-                        Enable the Advanced toggle and click the ... button to edit how a parameter changes over time. Use the arrow keys on the sliders to do fine adjustments.
+                        启用高级模式后，点击...按钮可以使参数的值随时间变化。在数值条上按方向键可以进行微调。
                         <LineBreak/>
-                        To get started, select a slider in your beatmap and click 'Preview slider' to preview changes or click the run button to instantly generate tumours on the selected sliders.
+                        要开始，请在编辑器选中一个滑条，然后点击“导入并预览”预览生成后的滑条，或直接点击运行按钮立刻给选中滑条添加凸点。
                     </TextBlock>
                 </materialDesign:PopupBox>
             </StackPanel>
@@ -131,52 +131,52 @@
                     </ListBox>
 
                     <ToolBar Grid.Row="1">
-                        <Button ToolTip="Add a tumour layer." Command="{Binding AddCommand}">
+                        <Button ToolTip="添加一个层级。" Command="{Binding AddCommand}">
                             <materialDesign:PackIcon Kind="Plus" />
                         </Button>
-                        <Button ToolTip="Remove selected tumour layer." Command="{Binding RemoveCommand}">
+                        <Button ToolTip="删除选中层级。" Command="{Binding RemoveCommand}">
                             <materialDesign:PackIcon Kind="Trashcan"  />
                         </Button>
-                        <Button ToolTip="Copy selected tumour layer." Command="{Binding CopyCommand}">
+                        <Button ToolTip="复制选中层级。" Command="{Binding CopyCommand}">
                             <materialDesign:PackIcon Kind="ContentCopy" />
                         </Button>
-                        <Button ToolTip="Move selected layer to higher in the list." Command="{Binding RaiseCommand}" >
+                        <Button ToolTip="上移选中层级。" Command="{Binding RaiseCommand}" >
                             <materialDesign:PackIcon Kind="KeyboardArrowUp"  />
                         </Button>
-                        <Button ToolTip="Move selected layer to lower in the list." Command="{Binding LowerCommand}" >
+                        <Button ToolTip="下移选中层级。" Command="{Binding LowerCommand}" >
                             <materialDesign:PackIcon Kind="KeyboardArrowDown" />
                         </Button>
                     </ToolBar>
 
                     <StackPanel Grid.Row="2" Margin="0 0 0 10">
                         <Slider Minimum="0" Maximum="1" TickFrequency="0.1" Value="{Binding Scale}" Margin="5 10"
-                                ToolTip="Tumour scale"/>
+                                ToolTip="凸点大小"/>
                         <Slider Value="{Binding CircleSize}" Margin="5 10"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 TickPlacement="BottomRight" TickFrequency="1"
                                 Minimum="0" Maximum="10" SmallChange="0.1" LargeChange="1"
-                                ToolTip="Circle Size"/>
+                                ToolTip="圆圈大小（CS）"/>
                         <StackPanel Orientation="Horizontal" Margin="0 5 0 15">
                             <ToggleButton IsChecked="{Binding AdvancedOptions}"
                                           Style="{StaticResource MaterialDesignSwitchAccentToggleButton}"
-                                          ToolTip="Show advanced controls. Allows for fine control of parameters and changes over time."/>
-                            <TextBlock Text="Advanced" Margin="10 0 0 0"/>
+                                          ToolTip="显示高级控件。参数可以微调和随时间变化。"/>
+                            <TextBlock Text="高级模式" Margin="10 0 0 0"/>
                         </StackPanel>
-                        <CheckBox Content="Debug construction"
+                        <CheckBox Content="调试路径"
                                   IsChecked="{Binding DebugConstruction}"
-                                  ToolTip="Skip intelligent path reconstruction."/>
-                        <CheckBox Content="Only middle anchors"
+                                  ToolTip="跳过智能路径重建。"/>
+                        <CheckBox Content="仅中间锚点"
                                   IsChecked="{Binding JustMiddleAnchors}"
-                                  ToolTip="Construct path with only the middle anchors of all tumours."/>
-                        <CheckBox Content="Fix SV"
-                                  ToolTip="Automatically adjust SV such that the slider keeps the same duration after getting tumours."
+                                  ToolTip="仅使用所有凸点的中间锚点构建路径。"/>
+                        <CheckBox Content="SV修正"
+                                  ToolTip="自动调节SV，使得滑条在添加凸点后保持原来的时长。"
                                   IsChecked="{Binding FixSv}"/>
-                        <CheckBox Content="Delegate SV to BPM"
-                                  ToolTip="Use BPM to determine the velocity of the slider instead of greenline SV."
+                        <CheckBox Content="BPM替代SV修正"
+                                  ToolTip="改变BPM（红线）替代SV（绿线）来调节滑条速度。"
                                   IsEnabled="{Binding FixSv}"
                                   IsChecked="{Binding DelegateToBpm}"/>
-                        <CheckBox Content="Remove slider ticks"
-                                  ToolTip="Use a NaN greenline to remove slider ticks from the slider."
+                        <CheckBox Content="移除滑条点（slider tick）"
+                                  ToolTip="添加一个NaN绿线移除滑条上的滑条点（slider tick）。"
                                   IsChecked="{Binding RemoveSliderTicks}">
                             <CheckBox.IsEnabled>
                                 <MultiBinding Converter="{StaticResource BooleanAndConverter}">
@@ -197,38 +197,38 @@
                 <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Margin="10 0">
                         <!-- Add options about individual tumours: template, scale, length, rotation -->
-                        <TextBlock Text="Template" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBlock Text="模板" FontWeight="Bold" Margin="0 10 0 0"/>
                         <ComboBox ItemsSource="{Binding TumourTemplates}"
                                   SelectedItem="{Binding CurrentLayer.TumourTemplateEnum}"
-                                  ToolTip="Tumour template. Determines the shape of the tumour."/>
-                        <TextBlock Text="Scale" FontWeight="Bold" Margin="0 10 0 0"/>
+                                  ToolTip="凸点模板。确定凸点的形状。"/>
+                        <TextBlock Text="高度" FontWeight="Bold" Margin="0 10 0 0"/>
                         <components:ValueOrGraphControl GraphState="{Binding CurrentLayer.TumourScale}"
-                                                        ToolTip="The scale of the tumour determines how far the tumour protrudes from the slider."
+                                                        ToolTip="突点距离滑条的高度。"
                                                         Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Value="{Binding CurrentLayer.TumourScale, Converter={StaticResource GraphStateToDoubleConverter}}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="0" Maximum="500"
-                                ToolTip="The scale of the tumour determines how far the tumour protrudes from the slider."/>
-                        <TextBlock Text="Length" FontWeight="Bold" Margin="0 10 0 0"/>
+                                ToolTip="突点距离滑条的高度。"/>
+                        <TextBlock Text="宽度" FontWeight="Bold" Margin="0 10 0 0"/>
                         <components:ValueOrGraphControl GraphState="{Binding CurrentLayer.TumourLength}"
-                                                        ToolTip="The length of the tumour determines how much length the tumour takes up on the slider."
+                                                        ToolTip="凸点占据滑条的宽度。"
                                                         Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Value="{Binding CurrentLayer.TumourLength, Converter={StaticResource GraphStateToDoubleConverter}}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="0" Maximum="500"
-                                ToolTip="The length of the tumour determines how much length the tumour takes up on the slider."/>
-                        <TextBlock Text="Angle" FontWeight="Bold" Margin="0 10 0 0"/>
+                                ToolTip="凸点占据滑条的宽度。"/>
+                        <TextBlock Text="角度" FontWeight="Bold" Margin="0 10 0 0"/>
                         <components:ValueOrGraphControl GraphState="{Binding CurrentLayer.TumourRotation}"
-                                                        ToolTip="The angle of the tumour determines which way the tumour points in relation to the slider."
+                                                        ToolTip="凸点与滑条间的角度。"
                                                         Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Value="{Binding CurrentLayer.TumourRotation, Converter={StaticResource GraphStateToDoubleConverter}}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="0" Maximum="360"
-                                ToolTip="The angle of the tumour determines which way the tumour points in relation to the slider."/>
-                        <TextBlock Text="Parameter" FontWeight="Bold" Margin="0 10 0 0"
+                                ToolTip="凸点与滑条间的角度。"/>
+                        <TextBlock Text="形状" FontWeight="Bold" Margin="0 10 0 0"
                                    Visibility="{Binding CurrentLayer.TumourTemplate.NeedsParameter, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <components:ValueOrGraphControl GraphState="{Binding CurrentLayer.TumourParameter}"
-                                                        ToolTip="The special parameter of this tumour template. This parameter changes the shape of the tumour in some way.">
+                                                        ToolTip="调节凸点形状。">
                             <components:ValueOrGraphControl.Visibility>
                                 <MultiBinding Converter="{StaticResource BooleanOrToVisibilityConverter}">
                                     <Binding Path="AdvancedOptions"/>
@@ -239,70 +239,70 @@
                         <Slider Value="{Binding CurrentLayer.TumourParameter, Converter={StaticResource GraphStateToDoubleConverter}}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="0" Maximum="500"
-                                ToolTip="The special parameter of this tumour template. This parameter changes the shape of the tumour in some way."
+                                ToolTip="调节凸点形状。"
                                 Visibility="{Binding CurrentLayer.TumourTemplate.NeedsParameter, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <!-- Add options about placement of multiple tumours: sidedness, distance, count, start, end, recalculate -->
-                        <TextBlock Text="Wrapping" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBlock Text="环绕" FontWeight="Bold" Margin="0 10 0 0"/>
                         <ComboBox ItemsSource="{Binding WrappingModes}"
                                   SelectedItem="{Binding CurrentLayer.WrappingMode}"
                                   Margin="0 0 0 0"
-                                  ToolTip="The wrapping mode controls how the tumour wraps around the shape of the slider."/>
-                        <TextBlock Text="Sidedness" FontWeight="Bold" Margin="0 10 0 0"/>
+                                  ToolTip="确定凸点如何根据滑条的形状进行环绕。"/>
+                        <TextBlock Text="位置" FontWeight="Bold" Margin="0 10 0 0"/>
                         <ComboBox ItemsSource="{Binding TumourSides}"
                                   SelectedItem="{Binding CurrentLayer.TumourSidedness}"
                                   Margin="0 0 0 0"
-                                  ToolTip="Tumour sidedness. Determines on which side of the slider to place the tumours."/>
+                                  ToolTip="确定在滑条的哪一边放置凸点。"/>
                         <Grid Visibility="{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.Random}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBox Grid.Column="0" materialDesign:HintAssist.Hint="Random seed" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                            <TextBox Grid.Column="0" materialDesign:HintAssist.Hint="随机种子" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                      Text="{Binding CurrentLayer.RandomSeed, Converter={StaticResource IntToStringConverter}, ConverterParameter=0}"
-                                     ToolTip="The random seed which determines the sequence of tumour sidedness for this layer."/>
+                                     ToolTip="决定凸点在滑条两边序列的随机种子。"/>
                             <Button Grid.Column="1" Margin="5 0 0 0" VerticalAlignment="Bottom"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="Randomize the random seed." Command="{Binding CurrentLayer.RandomizeRandomSeedCommand}">
+                                    ToolTip="随机化随机种子。" Command="{Binding CurrentLayer.RandomizeRandomSeedCommand}">
                                 <materialDesign:PackIcon Kind="DiceMultiple" Width="24" Height="24"/>
                             </Button>
                         </Grid>
-                        <TextBlock Text="Distance" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBlock Text="间距" FontWeight="Bold" Margin="0 10 0 0"/>
                         <components:ValueOrGraphControl GraphState="{Binding CurrentLayer.TumourDistance}"
-                                                        ToolTip="The tumour distance determines the distance between the centre of each tumour."
+                                                        ToolTip="每个凸点中心之间的距离。"
                                                         Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Value="{Binding CurrentLayer.TumourDistance, Converter={StaticResource GraphStateToDoubleConverter}}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="5" Maximum="500"
-                                ToolTip="The tumour distance determines the distance between the centre of each tumour."/>
-                        <TextBlock Text="Count" FontWeight="Bold" Margin="0 10 0 0"/>
-                        <TextBox materialDesign:HintAssist.Hint="Count" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                ToolTip="每个凸点中心之间的距离。"/>
+                        <TextBlock Text="数量" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBox materialDesign:HintAssist.Hint="数量" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  Text="{Binding CurrentLayer.TumourCount, Converter={StaticResource IntToStringConverter}, ConverterParameter=-1}"
-                                 ToolTip="The number of tumours to place on the slider. If 0 this count will be automatically determined using the distance and slider length."
+                                 ToolTip="放置凸点的数量。设为 0 将根据间距和滑条长度自动决定凸点数量。"
                                  Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Value="{Binding CurrentLayer.TumourCount}"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 Minimum="0" Maximum="20"
-                                ToolTip="The number of tumours to place on the slider. If 0 this count will be automatically determined using the distance and slider length."/>
-                        <TextBlock Text="Start" FontWeight="Bold" Margin="0 10 0 0"/>
-                        <TextBox materialDesign:HintAssist.Hint="Start" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                ToolTip="放置凸点的数量。设为 0 将根据间距和滑条长度自动决定凸点数量。"/>
+                        <TextBlock Text="起始" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBox materialDesign:HintAssist.Hint="起始" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  Text="{Binding CurrentLayer.TumourStart, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=0}"
-                                 ToolTip="The progression along the slider where to start the placement of tumours. 0 is the slider head, 1 is the slider end. If 'Absolute range' is checked, then this distance is expressed in osu! pixels."
+                                 ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"
                                  Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Minimum="{Binding TumourStartSliderMin}" Maximum="{Binding TumourRangeSliderMax}" Value="{Binding CurrentLayer.TumourStart}"
                                 SmallChange="{Binding TumourRangeSliderSmallChange}"
-                                ToolTip="The progression along the slider where to start the placement of tumours. 0 is the slider head, 1 is the slider end. If 'Absolute range' is checked, then this distance is expressed in osu! pixels."/>
-                        <TextBlock Text="End" FontWeight="Bold" Margin="0 10 0 0"/>
-                        <TextBox materialDesign:HintAssist.Hint="End" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"/>
+                        <TextBlock Text="终止" FontWeight="Bold" Margin="0 10 0 0"/>
+                        <TextBox materialDesign:HintAssist.Hint="终止" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  Text="{Binding CurrentLayer.TumourEnd, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=1}"
-                                 ToolTip="The progression along the slider where to end the placement of tumours. 0 is the slider head, 1 is the slider end. If 'Absolute range' is checked, then this distance is expressed in osu! pixels."
+                                 ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"
                                  Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Minimum="0" Maximum="{Binding TumourRangeSliderMax}" Value="{Binding CurrentLayer.TumourEnd}"
                                 SmallChange="{Binding TumourRangeSliderSmallChange}"
-                                ToolTip="The progression along the slider where to end the placement of tumours. 0 is the slider head, 1 is the slider end. If 'Absolute range' is checked, then this distance is expressed in osu! pixels."/>
+                                ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"/>
                         <CheckBox IsChecked="{Binding CurrentLayer.UseAbsoluteRange}" Margin="0 10 0 0"
-                                  Content="Absolute range" ToolTip="Enable this to change the meaning of the Scale, Length, Distance, Start, and End fields to mean length in osu! pixels instead of length relative to the length of the slider."/>
+                                  Content="绝对范围" ToolTip="选中此项将使高度、宽度、间距、起始、终止的数值由相对于滑条长度替换为用绝对osu!像素表示。"/>
                         <CheckBox IsChecked="{Binding CurrentLayer.Recalculate}" Margin="0 5 0 0"
-                                  Content="Recalculate" ToolTip="Whether to recalculate the distances and angles of the slider before applying this layer. If true, tumours will be placed on top of tumours of the previous layers as if they were part of the slider, instead of merging with those tumours."/>
+                                  Content="迭代运算" ToolTip="应用该层级前是否重新计算滑条长度和角度。若勾选，该层凸点不再与前一层凸点进行融合，而是会把前一层的凸点视为滑条本身的一部分进行计算。"/>
                     </StackPanel>
                 </ScrollViewer>
 
@@ -313,7 +313,7 @@
                               Margin="0 10"/>
 
                 <materialDesign:Card Grid.Column="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="10" Margin="10 0 0 0"
-                                     ToolTip="Result preview">
+                                     ToolTip="生成预览">
                     <objectVisualiser:HitObjectElement x:Name="GraphHitObjectElement" HitObject="{Binding TumouredPreviewHitObject}"
                                                        Stroke="YellowGreen" Fill="DarkSlateGray" SliderBallStroke="White" ShowAnchors="True" AnchorSize="6"
                                                        Thickness="{Binding CircleSize, Converter={StaticResource CircleSizeToThicknessConverter}}"/>
@@ -340,15 +340,15 @@
                     </Grid.ColumnDefinitions>
 
                     <ComboBox x:Name="SelectionModeBox" Grid.Column="0" ItemsSource="{Binding ImportModes}" SelectedItem="{Binding ImportModeSetting}" Margin="0 0 5 0" VerticalAlignment="Top"
-                                  ToolTip="Slider selection mode. Choose which sliders should be targeted by Tumour Generator 2."/>
+                                  ToolTip="滑条选择模式。选择哪些滑条作为本工具的目标。"/>
 
                     <TextBox Grid.Column="1" Text="{Binding TimeCode}" Visibility="{Binding TimeCodeBoxVisibility}" Margin="5 0 5 2" Width="100" VerticalAlignment="Top"
-                                 materialDesign:HintAssist.Hint="Time code"
-                                 ToolTip="Input a time code here. Example time code: 00:56:823 (1) - "/>
+                                 materialDesign:HintAssist.Hint="时间码"
+                                 ToolTip="在此处输入时间码。例如：00:56:823 (1) - "/>
 
                     <Button Grid.Column="2" Style="{StaticResource MaterialDesignOutlinedButton}" Command="{Binding ImportCommand}" Margin="5 0 0 0"
-                                ToolTip="Import sliders into the preview." HorizontalAlignment="Right" VerticalAlignment="Top">
-                        Preview slider
+                                ToolTip="导入滑条并预览。" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        导入并预览
                     </Button>
                 </Grid>
 
@@ -357,7 +357,7 @@
                         IsEnabled="{Binding ElementName=This, Path=CanRun}"
                         Style="{StaticResource MaterialDesignFloatingActionButton}"
                         Click="Start_Click"
-                        ToolTip="Generate copious amounts of tumours.">
+                        ToolTip="批量生成凸点。">
                         <materialDesign:PackIcon
                             Kind="Play" Height="36" Width="36" />
                     </Button>

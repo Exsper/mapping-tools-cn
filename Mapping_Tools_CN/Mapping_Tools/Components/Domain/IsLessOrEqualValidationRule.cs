@@ -10,9 +10,9 @@ namespace Mapping_Tools.Components.Domain {
             double limit = ValueWrapper.Value;
             string str = (value ?? "").ToString();
             if (!TypeConverters.TryParseDouble(str, out double result)) {
-                return new ValidationResult(false, "Double format error.");
+                return new ValidationResult(false, "Double格式错误。");
             }
-            return result <= limit ? ValidationResult.ValidResult : new ValidationResult(false, $"Value can not be greater than {limit}.");
+            return result <= limit ? ValidationResult.ValidResult : new ValidationResult(false, $"数值不能大于 {limit}.");
         }
 
         public DoubleWrapper ValueWrapper { get; set; }

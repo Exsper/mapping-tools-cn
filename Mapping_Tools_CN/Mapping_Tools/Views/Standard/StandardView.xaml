@@ -28,32 +28,32 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="开始"/></TextBlock>
+            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="开始上手"/></TextBlock>
 
             <ListView HorizontalAlignment="Left" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <ListViewItem>
-                    0. Set the correct path to your Songs folder in the [Preferences].
+                    0. 在 [首选项] 中设置Songs文件夹的正确路径。
                 </ListViewItem>
                 <ListViewItem>
-                    1. Select a beatmap [File] -> [Open beatmap/Open current beatmap] to select a file from your system OR the current in-game selected beatmap.
+                    1. 选择一个谱面 [文件] -> [打开谱面/打开当前谱面] ，从您的系统中选择谱面或直接选择游戏中的谱面。
                 </ListViewItem>
                 <ListViewItem>
-                    2. Select a tool that you want to use from the navigation menu. (Ctrl+K)
+                    2. 从导航菜单中选择要使用的工具。（Ctrl+K）
                 </ListViewItem>
                 <ListViewItem>
-                    3. Read a basic summary of the tool by clicking the (?) button.
+                    3. 点击（？）按钮阅读工具的基本摘要。
                 </ListViewItem>
                 <ListViewItem>
-                    4. Configure your tool. To find out what specific things do, read the tooltips by hovering over them.
+                    4. 配置工具。要了解具体操作，可以将鼠标悬停在选项上阅读提示。
                 </ListViewItem>
                 <ListViewItem>
-                    5. Click the run button in the bottom right to run the program.
+                    5. 点击右下角的运行按钮运行程序。
                 </ListViewItem>
                 <ListViewItem>
-                    6. Reload your beatmap WITHOUT SAVING by either leaving and re-entering the editor or pressing Ctrl+L, Enter.
+                    6. 在编辑器中**不保存修改**并退出重进编辑器或者在编辑器中按下Ctrl+L和Enter，加载经程序修改后的谱面。
                 </ListViewItem>
                 <ListViewItem>
-                    7. If you run into issues, consult the FAQ over on the [About] -> [Website].
+                    7. 如果您遇到问题，可以参阅 [关于] -> [网站] 上的常见问题解答。
                 </ListViewItem>
             </ListView>
         </Grid>
@@ -85,13 +85,13 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="Recent"/></TextBlock>
+            <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="最近打开"/></TextBlock>
             <ListView Grid.Row="1" x:Name="RecentList" MouseDoubleClick="RecentList_MouseDoubleClick"
-                      ToolTip="Double-click any selection of items to set them as the current beatmap.">
+                      ToolTip="双击下列项目，将其设置为当前谱面。">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Path" DisplayMemberBinding="{Binding Path, Converter={StaticResource MapPathStringJustFilenameConverter}, Mode=OneWay}"/>
-                        <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date, Mode=OneWay}"/>
+                        <GridViewColumn Header="路径" DisplayMemberBinding="{Binding Path, Converter={StaticResource MapPathStringJustFilenameConverter}, Mode=OneWay}"/>
+                        <GridViewColumn Header="时间" DisplayMemberBinding="{Binding Date, Mode=OneWay}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
