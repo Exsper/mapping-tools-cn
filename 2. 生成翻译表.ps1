@@ -1,0 +1,2 @@
+node ./BuildTranslationJson.js
+pause

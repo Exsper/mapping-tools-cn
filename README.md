@@ -8,6 +8,12 @@
 
 使用翻译表修改项目文件字符串的方式进行翻译，解决因原项目更新导致需重复翻译的问题
 
+## 环境需求
+
+- node.js
+
+- dotnet 5.0
+
 ## 文件说明
 
 - 文件夹 Mapping_Tools 为原项目文件夹
@@ -28,7 +34,7 @@
 
 2. 生成翻译JSON
 
-   使用nodejs运行BuildTranslationJson.js
+   使用nodejs运行BuildTranslationJson.js，或直接运行“2. 生成翻译表.ps1”
 
    **会自动继承现有翻译内容，不用担心原项目更新后丢失原有翻译**
 
@@ -38,11 +44,11 @@
 
 4. 生成项目
 
-   使用nodejs运行Translate.js，生成Mapping_Tools_CN项目文件
+   使用nodejs运行Translate.js，或直接运行“4. 生成翻译项目.ps1”，生成Mapping_Tools_CN项目文件
 
 5. 生成程序
 
-   在Mapping_Tools_CN中生成程序并发布
+   在Mapping_Tools_CN中生成程序并发布，或直接运行“5. 生成程序.ps1”
 
 ## 注意事项
 
