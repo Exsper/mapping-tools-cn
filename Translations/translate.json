@@ -183,7 +183,7 @@
         "\"QuickRunHotkey\"": "\"QuickRunHotkey\"",
         "\"QuickUndoHotkey\"": "\"QuickUndoHotkey\"",
         "\"BetterSaveHotkey\"": "\"BetterSaveHotkey\"",
-        "\"Failed to overwrite osu! save with BetterSave.\"": "\"使用 BetterSave 代替osu!保存谱面失败。\""
+        "\"Failed to overwrite osu! save with BetterSave.\"": "\"使用优化存储（BetterSave）代替osu!保存谱面失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ProjectManager.cs": {
         "\"Project could not be saved!\"": "\"无法保存项目！\"",
@@ -616,7 +616,7 @@
         "$\"{rbd.Numerator.ToInvariant()}/{rbd.Denominator.ToInvariant()}\"": "$\"{rbd.Numerator.ToInvariant()}/{rbd.Denominator.ToInvariant()}\"",
         "\"^[\\\\s]*[1-9][0-9]*[\\\\s]*/[\\\\s]*[1-9][0-9]*[\\\\s]*$\"": "\"^[\\\\s]*[1-9][0-9]*[\\\\s]*/[\\\\s]*[1-9][0-9]*[\\\\s]*$\"",
         "\"Beat divisor must be greater than zero.\"": "\"Beat divisor must be greater than zero.\"",
-        "\"Double format error.\"": "\"Double format error.\""
+        "\"Double format error.\"": "\"Double格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\BooleanAndConverter.cs": {
         "\"BooleanAndConverter is a OneWay converter.\"": "\"BooleanAndConverter is a OneWay converter.\""
@@ -637,12 +637,12 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\DoubleArrayToStringConverter.cs": {
         "\", \"": "\", \"",
-        "\"Double format error.\"": "\"Double format error.\""
+        "\"Double format error.\"": "\"Double格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\DoubleToStringConverter.cs": {
         "\"727 WYSI\"": "\"727 WYSI\"",
-        "\"Cannot convert back null.\"": "\"Cannot convert back null.\"",
-        "\"Double format error.\"": "\"Double format error.\""
+        "\"Cannot convert back null.\"": "\"不能逆转换null。\"",
+        "\"Double format error.\"": "\"Double格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\FocusExtension.cs": {
         "\"IsFocused\"": "\"IsFocused\""
@@ -655,51 +655,51 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IntToStringConverter.cs": {
         "\"727 WYSI\"": "\"727 WYSI\"",
-        "\"Cannot convert back null.\"": "\"Cannot convert back null.\"",
-        "\"Int format error.\"": "\"Int format error.\""
+        "\"Cannot convert back null.\"": "\"不能逆转换null。\"",
+        "\"Int format error.\"": "\"Int格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IsASCIIValidationRule.cs": {
-        "\"Field is not ASCII.\"": "\"Field is not ASCII.\""
+        "\"Field is not ASCII.\"": "\"字段包含非ASCII字符。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IsGreaterOrEqualValidationRule.cs": {
-        "\"Double format error.\"": "\"Double format error.\"",
-        "$\"Value can not be less than {limit}.\"": "$\"Value can not be less than {limit}.\""
+        "\"Double format error.\"": "\"Double格式错误。\"",
+        "$\"Value can not be less than {limit}.\"": "$\"数值不能小于 {limit}.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IsGreaterValidationRule.cs": {
-        "\"Double format error.\"": "\"Double format error.\"",
-        "$\"Value must be greater than {limit}.\"": "$\"Value must be greater than {limit}.\""
+        "\"Double format error.\"": "\"Double格式错误。\"",
+        "$\"Value must be greater than {limit}.\"": "$\"数值必须大于 {limit}.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IsLessOrEqualValidationRule.cs": {
-        "\"Double format error.\"": "\"Double format error.\"",
-        "$\"Value can not be greater than {limit}.\"": "$\"Value can not be greater than {limit}.\"",
+        "\"Double format error.\"": "\"Double格式错误。\"",
+        "$\"Value can not be greater than {limit}.\"": "$\"数值不能大于 {limit}.\"",
         "\"Value\"": "\"Value\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\IsLessValidationRule.cs": {
-        "\"Double format error.\"": "\"Double format error.\"",
-        "$\"Value must be less than {limit}.\"": "$\"Value must be less than {limit}.\""
+        "\"Double format error.\"": "\"Double格式错误。\"",
+        "$\"Value must be less than {limit}.\"": "$\"数值必须小于 {limit}.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\MapPathStringJustFilenameConverter.cs": {
         "\" | \"": "\" | \"",
-        "\"MapPathStringJustFilenameConverter can not convert back values.\"": "\"MapPathStringJustFilenameConverter can not convert back values.\""
+        "\"MapPathStringJustFilenameConverter can not convert back values.\"": "\"MapPathStringJustFilenameConverter 不能逆转换数值。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\MapPathStringToCountStringConverter.cs": {
         "$\"({c}) map total\" : $\"({c}) maps total\"": "$\"共 ({c}) 张谱面\" : $\"共 ({c}) 张谱面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\MultiValueConverterGroup.cs": {
-        "\"Could not interpret how to apply converters to values (make sure each value goes through the same number of converters, and there's one left at the end to combine them!)\"": "\"Could not interpret how to apply converters to values (make sure each value goes through the same number of converters, and there's one left at the end to combine them!)\""
+        "\"Could not interpret how to apply converters to values (make sure each value goes through the same number of converters, and there's one left at the end to combine them!)\"": "\"无法解释如何将转换器应用于值（确保每个值都经过相同数量的转换器，最后还需一个转换器可以组合它们！）\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\NotEmptyValidationRule.cs": {
-        "\"Field is required.\"": "\"Field is required.\""
+        "\"Field is required.\"": "\"字段为必填项。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\ParsableDoubleListValidationRule.cs": {
         "\"^([0-9]+(\\.[0-9]+)?(,[0-9]+(\\.[0-9]+)?)*)?$\"": "\"^([0-9]+(\\.[0-9]+)?(,[0-9]+(\\.[0-9]+)?)*)?$\"",
-        "\"Field cannot be parsed.\"": "\"Field cannot be parsed.\""
+        "\"Field cannot be parsed.\"": "\"无法解析字段。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\TimeToStringConverter.cs": {
         "$\"{(timeSpan.Days > 0 ? $\"{timeSpan.Days:####}:\" : string.Empty)}\"": "$\"{(timeSpan.Days > 0 ? $\"{timeSpan.Days:####}:\" : string.Empty)}\"",
         "$\"{(timeSpan.Hours > 0 ? $\"{timeSpan.Hours:00}:\" : string.Empty)}\"": "$\"{(timeSpan.Hours > 0 ? $\"{timeSpan.Hours:00}:\" : string.Empty)}\"",
         "$\"{timeSpan.Minutes:00}:{timeSpan.Seconds:00}:{timeSpan.Milliseconds:000}\"": "$\"{timeSpan.Minutes:00}:{timeSpan.Seconds:00}:{timeSpan.Milliseconds:000}\"",
-        "\"Time format error.\"": "\"Time format error.\""
+        "\"Time format error.\"": "\"时间格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\DragAndDropListBox.cs": {
         "\"MaterialDesignListBoxItem\"": "\"MaterialDesignListBoxItem\""
@@ -820,7 +820,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ViewHeaderComponent.xaml": {
         "Text=\"Test\"": "Text=\"Test\"",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml": {
         "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"": "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"",
@@ -828,7 +828,7 @@
         "ToolTip=\"Set the current beatmap to the selected beatmap in your osu! client.\"": "ToolTip=\"Set the current beatmap to the selected beatmap in your osu! client.\"",
         "ToolTip=\"Save a backup of the current beatmap to the backups folder.\"": "ToolTip=\"Save a backup of the current beatmap to the backups folder.\"",
         "ToolTip=\"Load a backup from the backups folder into the current beatmap.\"": "ToolTip=\"Load a backup from the backups folder into the current beatmap.\"",
-        "ToolTip=\"Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated.\"": "ToolTip=\"Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated.\"",
+        "ToolTip=\"Save the beatmap which is currently open in your osu! editor. BetterSave™ saves the beatmap just like the vanilla editor, but decimal values get rounded instead of truncated.\"": "ToolTip=\"保存当前osu!编辑器打开的谱面。优化存储（BetterSave™）和原版编辑器一样保存谱面，但小数使用四舍五入的方式保存，取代原先截取的方式。\"",
         "ToolTip=\"Open the Mapping Tools folder.\"": "ToolTip=\"Open the Mapping Tools folder.\"",
         "ToolTip=\"Open the backups folder.\"": "ToolTip=\"Open the backups folder.\"",
         "ToolTip=\"Check if there are updates available.\"": "ToolTip=\"Check if there are updates available.\"",
@@ -842,7 +842,7 @@
         "Header=\"_Open current beatmap\"": "Header=\"打开当前谱面（_O）\"",
         "Header=\"_Generate backup\"": "Header=\"生成备份（_G）\"",
         "Header=\"_Load backup\"": "Header=\"载入备份（_L）\"",
-        "Header=\"_BetterSave™ current beatmap\"": "Header=\"使用 BetterSave™ 保存当前谱面（_B）\"",
+        "Header=\"_BetterSave™ current beatmap\"": "Header=\"使用优化存储（BetterSave™）保存当前谱面（_B）\"",
         "Header=\"_About\"": "Header=\"关于（_A）\"",
         "Header=\"_Open Mapping Tools folder\"": "Header=\"打开程序文件夹（_O）\"",
         "Header=\"_Open backups folder\"": "Header=\"打开备份文件夹（_O）\"",
@@ -1040,7 +1040,7 @@
         "Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.": "检测谱面中是否存在不正确的物件，导致osu!无法正确计算分数。",
         "Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \"2B\" patterns.": "引起 Auto-fail 最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。",
         "Use the AR and OD override options to see what would happen when you use hardrock mod on the map.": "使用自定义AR和OD来检查当开启HardRock后会发生什么。",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!",
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
         "Show unloading hit objects": "Show unloading hit objects",
         "Show potential unloading hit objects": "Show potential unloading hit objects",
         "Show disrupting hit objects": "Show disrupting hit objects",
@@ -1199,7 +1199,7 @@
         "Text=\"Made by OliBomby\"": "Text=\"由 OliBomby 制作\"",
         "Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio.": "Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio.",
         "This tool is meant to help a very specific hitsounding workflow. If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds. For example using a mania map and have each column represent a different sound.": "This tool is meant to help a very specific hitsounding workflow. If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds. For example using a mania map and have each column represent a different sound.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundPreviewHelper\\HitsoundPreviewHelper.xaml.cs": {
         "\"hspreviewproject.json\"": "\"hspreviewproject.json\"",
@@ -1487,7 +1487,7 @@
         "materialDesign:HintAssist.Hint=\"Beat divisors\"": "materialDesign:HintAssist.Hint=\"Beat divisors\"",
         "It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.": "It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.",
         "Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.": "Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!",
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
         "Analyze samples": "Analyze samples",
         "Resnap objects": "Resnap objects",
         "Resnap bookmarks": "Resnap bookmarks",
@@ -1664,7 +1664,7 @@
         "materialDesign:HintAssist.Hint=\"Pattern overwrite mode\"": "materialDesign:HintAssist.Hint=\"Pattern overwrite mode\"",
         "materialDesign:HintAssist.Hint=\"Timing overwrite mode\"": "materialDesign:HintAssist.Hint=\"Timing overwrite mode\"",
         "With the 'Project' menu you can save/load/rename/import/export your pattern collections.": "With the 'Project' menu you can save/load/rename/import/export your pattern collections.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PatternGallery\\PatternGalleryView.xaml.cs": {
         "\"patterngalleryproject.json\"": "\"patterngalleryproject.json\"",
@@ -1709,7 +1709,7 @@
         "ToolTip=\"The time between each automatic periodic backup while the editor is open.\"": "ToolTip=\"The time between each automatic periodic backup while the editor is open.\"",
         "ToolTip=\"Enable this to get the current beatmap folder as the default folder whenever you open a file explorer in a tool which doesn't use current beatmap (e.g. Hitsound Copier). Else it will default to the last used folder.\"": "ToolTip=\"Enable this to get the current beatmap folder as the default folder whenever you open a file explorer in a tool which doesn't use current beatmap (e.g. Hitsound Copier). Else it will default to the last used folder.\"",
         "ToolTip=\"Enable functionality of Editor Reader. Editor Reader reads the memory of your osu! client to get live data from your editor. It can sometimes break, so you can choose to not use it.\"": "ToolTip=\"Enable functionality of Editor Reader. Editor Reader reads the memory of your osu! client to get live data from your editor. It can sometimes break, so you can choose to not use it.\"",
-        "ToolTip=\"Automatically BetterSave after every osu! save. As a side-effect, this will also overwrite manual .osu changes if you have the editor open.\"": "ToolTip=\"Automatically BetterSave after every osu! save. As a side-effect, this will also overwrite manual .osu changes if you have the editor open.\"",
+        "ToolTip=\"Automatically BetterSave after every osu! save. As a side-effect, this will also overwrite manual .osu changes if you have the editor open.\"": "ToolTip=\"在每次osu!保存后自动使用优化存储（BetterSave）。作为副作用，当编辑器打开时，对.osu文件的任何手动修改都将被覆盖。\"",
         "ToolTip=\"Enable this to automatically reload the editor after every QuickRun.\"": "ToolTip=\"Enable this to automatically reload the editor after every QuickRun.\"",
         "ToolTip=\"QuickRun lets you quickly run a tool on the beatmap you have open in the editor.\"": "ToolTip=\"QuickRun lets you quickly run a tool on the beatmap you have open in the editor.\"",
         "ToolTip=\"Enable SmartQuickRun to modify the behavior of QuickRun based on the number of objects currently selected on the editor.\"": "ToolTip=\"Enable SmartQuickRun to modify the behavior of QuickRun based on the number of objects currently selected on the editor.\"",
@@ -1717,29 +1717,29 @@
         "ToolTip=\"This tool gets QuickRun if you have one object selected in the editor.\"": "ToolTip=\"This tool gets QuickRun if you have one object selected in the editor.\"",
         "ToolTip=\"This tool gets QuickRun if you have multiple objects selected in the editor.\"": "ToolTip=\"This tool gets QuickRun if you have multiple objects selected in the editor.\"",
         "ToolTip=\"Quickly loads the latest backup into the beatmap currently open in the editor.\"": "ToolTip=\"Quickly loads the latest backup into the beatmap currently open in the editor.\"",
-        "ToolTip=\"BetterSave saves the current map with proper rounding instead of truncating values.\"": "ToolTip=\"BetterSave saves the current map with proper rounding instead of truncating values.\"",
+        "ToolTip=\"BetterSave saves the current map with proper rounding instead of truncating values.\"": "ToolTip=\"优化存储（BetterSave）使用更好的四舍五入取代截取数值的方式保存当前谱面。\"",
         "ToolTip=\"Change the theme of Mapping Tools\"": "ToolTip=\"Change the theme of Mapping Tools\"",
-        "Text=\"Preferences\"": "Text=\"设置\"",
+        "Text=\"Preferences\"": "Text=\"首选项\"",
         "Text=\"{Binding OsuPath, Mode=TwoWay}\"": "Text=\"{Binding OsuPath, Mode=TwoWay}\"",
         "Text=\"{Binding SongsPath, Mode=TwoWay}\"": "Text=\"{Binding SongsPath, Mode=TwoWay}\"",
         "Text=\"{Binding OsuConfigPath, Mode=TwoWay}\"": "Text=\"{Binding OsuConfigPath, Mode=TwoWay}\"",
         "Text=\"{Binding BackupsPath, Mode=TwoWay}\"": "Text=\"{Binding BackupsPath, Mode=TwoWay}\"",
         "Text=\"{Binding MaxBackupFiles, Mode=TwoWay, Converter={StaticResource IntToStringConverter}}\"": "Text=\"{Binding MaxBackupFiles, Mode=TwoWay, Converter={StaticResource IntToStringConverter}}\"",
         "Text=\"{Binding PeriodicBackupInterval, Mode=TwoWay}\"": "Text=\"{Binding PeriodicBackupInterval, Mode=TwoWay}\"",
-        "Text=\"QuickRun hotkey:\"": "Text=\"QuickRun hotkey:\"",
+        "Text=\"QuickRun hotkey:\"": "Text=\"快速启动（QuickRun）快捷键：\"",
         "Text=\"None:\"": "Text=\"None:\"",
         "Text=\"Single:\"": "Text=\"Single:\"",
         "Text=\"Multiple:\"": "Text=\"Multiple:\"",
-        "Text=\"QuickUndo hotkey:\"": "Text=\"QuickUndo hotkey:\"",
-        "Text=\"BetterSave™ hotkey:\"": "Text=\"BetterSave™ hotkey:\"",
+        "Text=\"QuickUndo hotkey:\"": "Text=\"快速撤销（QuickUndo）快捷键：\"",
+        "Text=\"BetterSave™ hotkey:\"": "Text=\"优化存储（BetterSave™） 快捷键：\"",
         "Text=\"Light\"": "Text=\"Light\"",
         "Text=\"Dark\"": "Text=\"Dark\"",
         "Content=\"Make automatic backups\"": "Content=\"Make automatic backups\"",
         "Content=\"Make periodic backups\"": "Content=\"Make periodic backups\"",
         "Content=\"Current beatmap default folder in all tools\"": "Content=\"Current beatmap default folder in all tools\"",
         "Content=\"Enable Editor Reader\"": "Content=\"Enable Editor Reader\"",
-        "Content=\"Override osu! save with BetterSave™\"": "Content=\"Override osu! save with BetterSave™\"",
-        "Content=\"Auto reload after QuickRun\"": "Content=\"Auto reload after QuickRun\"",
+        "Content=\"Override osu! save with BetterSave™\"": "Content=\"使用优化存储（BetterSave™）代替osu!保存谱面\"",
+        "Content=\"Auto reload after QuickRun\"": "Content=\"快速启动（QuickRun）后自动重新加载\"",
         "materialDesign:HintAssist.Hint=\"osu! folder\"": "materialDesign:HintAssist.Hint=\"osu! folder\"",
         "materialDesign:HintAssist.Hint=\"Songs folder\"": "materialDesign:HintAssist.Hint=\"Songs folder\"",
         "materialDesign:HintAssist.Hint=\"osu! user config file\"": "materialDesign:HintAssist.Hint=\"osu! user config file\"",
@@ -1748,7 +1748,7 @@
         "materialDesign:HintAssist.Hint=\"Backup interval\"": "materialDesign:HintAssist.Hint=\"Backup interval\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Preferences\\PreferencesView.xaml.cs": {
-        "\"Preferences\"": "\"设置\""
+        "\"Preferences\"": "\"首选项\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PropertyTransformer\\PropertyTransformerView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -1938,7 +1938,7 @@
         "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.": "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.",
         "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.": "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.",
         "Check out all the options. The tooltips should help you further.": "Check out all the options. The tooltips should help you further.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!",
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
         "Import sliders": "Import sliders"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml.cs": {
@@ -2003,7 +2003,7 @@
         "Input a value of -1 anywhere to indicate that you want to keep that variable unchanged.": "Input a value of -1 anywhere to indicate that you want to keep that variable unchanged.",
         "For example, 1 duration and -1 length will change the duration to 1 beat while keeping the length the same.": "For example, 1 duration and -1 length will change the duration to 1 beat while keeping the length the same.",
         "Check the tooltips for more information about extra features.": "Check the tooltips for more information about extra features.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderCompletionator\\SliderCompletionatorView.xaml.cs": {
         "\"Slider Completionator\"": "\"Slider Completionator\"",
@@ -2044,7 +2044,7 @@
         "Merge 2 or more sliders into one big slider. The pixel length of the resulting slider is the sum of the pixel lengths of the sliders that made it up.": "Merge 2 or more sliders into one big slider. The pixel length of the resulting slider is the sum of the pixel lengths of the sliders that made it up.",
         "This program will automatically convert any type of slider into a Beziér slider for the purpose of merging.": "This program will automatically convert any type of slider into a Beziér slider for the purpose of merging.",
         "In order for 2 sliders to merge, place the second slider on top of the last anchor of the first slider.": "In order for 2 sliders to merge, place the second slider on top of the last anchor of the first slider.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderMerger\\SliderMergerView.xaml.cs": {
         "\"Slider Merger\"": "\"Slider Merger\"",
@@ -2108,7 +2108,7 @@
         "materialDesign:HintAssist.Hint=\"Y Position\"": "materialDesign:HintAssist.Hint=\"Y Position\"",
         "materialDesign:HintAssist.Hint=\"Track Color\"": "materialDesign:HintAssist.Hint=\"Track Color\"",
         "Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.": "Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!",
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
         "Remove slider": "Remove slider",
         "Import slider": "Import slider"
     },
@@ -2324,14 +2324,14 @@
         "Text=\"{Binding Title}\"": "Text=\"{Binding Title}\"",
         "Text=\"{Binding Text}\"": "Text=\"{Binding Text}\"",
         "Text=\"Recent\"": "Text=\"最近打开\"",
-        "0. Set the correct path to your Songs folder in the [Preferences].": "0. Set the correct path to your Songs folder in the [Preferences].",
-        "1. Select a beatmap [File] -> [Open beatmap/Open current beatmap] to select a file from your system OR the current in-game selected beatmap.": "1. Select a beatmap [File] -> [Open beatmap/Open current beatmap] to select a file from your system OR the current in-game selected beatmap.",
-        "2. Select a tool that you want to use from the navigation menu. (Ctrl+K)": "2. Select a tool that you want to use from the navigation menu. (Ctrl+K)",
-        "3. Read a basic summary of the tool by clicking the (?) button.": "3. Read a basic summary of the tool by clicking the (?) button.",
-        "4. Configure your tool. To find out what specific things do, read the tooltips by hovering over them.": "4. Configure your tool. To find out what specific things do, read the tooltips by hovering over them.",
-        "5. Click the run button in the bottom right to run the program.": "5. Click the run button in the bottom right to run the program.",
-        "6. Reload your beatmap WITHOUT SAVING by either leaving and re-entering the editor or pressing Ctrl+L, Enter.": "6. Reload your beatmap WITHOUT SAVING by either leaving and re-entering the editor or pressing Ctrl+L, Enter.",
-        "7. If you run into issues, consult the FAQ over on the [About] -> [Website].": "7. If you run into issues, consult the FAQ over on the [About] -> [Website]."
+        "0. Set the correct path to your Songs folder in the [Preferences].": "0. 在 [首选项] 中设置Songs文件夹的正确路径。",
+        "1. Select a beatmap [File] -> [Open beatmap/Open current beatmap] to select a file from your system OR the current in-game selected beatmap.": "1. 选择一个谱面 [文件] -> [打开谱面/打开当前谱面] ，从您的系统中选择谱面或直接选择游戏中的谱面。",
+        "2. Select a tool that you want to use from the navigation menu. (Ctrl+K)": "2. 从导航菜单中选择要使用的工具。（Ctrl+K）",
+        "3. Read a basic summary of the tool by clicking the (?) button.": "3. 点击（？）按钮阅读工具的基本摘要。",
+        "4. Configure your tool. To find out what specific things do, read the tooltips by hovering over them.": "4. 配置工具。要了解具体操作，可以将鼠标悬停在选项上阅读提示。",
+        "5. Click the run button in the bottom right to run the program.": "5. 点击右下角的运行按钮运行程序。",
+        "6. Reload your beatmap WITHOUT SAVING by either leaving and re-entering the editor or pressing Ctrl+L, Enter.": "6. 通过不保存退出并重进编辑器或者按下Ctrl+L、Enter，重新加载谱面。",
+        "7. If you run into issues, consult the FAQ over on the [About] -> [Website].": "7. 如果您遇到问题，可以参阅 [关于] -> [网站] 上的常见问题解答。"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\StandardView.xaml.cs": {
         "\"Get started\"": "\"开始\"",
@@ -2404,7 +2404,7 @@
         "Timing Helper is meant to speed up your timing job by placing the redlines for you. You only have to tell it exactly where all the sounds are.": "Timing Helper is meant to speed up your timing job by placing the redlines for you. You only have to tell it exactly where all the sounds are.",
         "What you do is place 'markers' exactly on the correct timing of sounds. These markers can be hit objects, bookmarks, greenlines and redlines.": "What you do is place 'markers' exactly on the correct timing of sounds. These markers can be hit objects, bookmarks, greenlines and redlines.",
         "Timing Helper will then adjust BPM and/or add redlines to make every marker be snapped.": "Timing Helper will then adjust BPM and/or add redlines to make every marker be snapped.",
-        "This tool is compatible with QuickRun!": "This tool is compatible with QuickRun!"
+        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingHelper\\TimingHelperView.xaml.cs": {
         "\"Timing Helper\"": "\"Timing Helper\"",
