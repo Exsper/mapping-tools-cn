@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+      
+jobs:
+  build:
+    runs-on: windows-2019
+
+    defaults:
+      run:
+        working-directory: Mapping_Tools_CN
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Get latest release version number
+      id: get_version
+      uses: battila7/get-version-action@v2
+
+    - name: Replace x86 Installer version
+      run: sed -i 's/#define MyAppVersion \"\b[0-9]*.\b[0-9]*.\b[0-9]*\"/#define MyAppVersion \"${{ steps.get_version.outputs.version-without-v }}\"/' Installer_Script_x86.iss
+
+    - name: Replace x64 Installer version
+      run: sed -i 's/#define MyAppVersion \"\b[0-9]*.\b[0-9]*.\b[0-9]*\"/#define MyAppVersion \"${{ steps.get_version.outputs.version-without-v }}\"/' Installer_Script_x64.iss
+
+    - name: Replace Assembly version
+      run: sed -i 's/<AssemblyVersion>\b[0-9]*.\b[0-9]*.\b[0-9]*/<AssemblyVersion>${{ steps.get_version.outputs.version-without-v }}/' Mapping_Tools/Mapping_Tools.csproj
+
+    - name: Replace File version
+      run: sed -i 's/<FileVersion>\b[0-9]*.\b[0-9]*.\b[0-9]*/<FileVersion>${{ steps.get_version.outputs.version-without-v }}/' Mapping_Tools/Mapping_Tools.csproj
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore Mapping_Tools
+      
+    - name: Build x86
+      run: dotnet build Mapping_Tools -c Release /p:Platform=x86 --no-restore
+      
+    - name: Build x64
+      run: dotnet build Mapping_Tools -c Release /p:Platform=AnyCPU --no-restore
+      
+    - name: Build x86 Installer
+      run: iscc Installer_Script_x86.iss
+      
+    - name: Build x64 Installer
+      run: iscc Installer_Script_x64.iss
+
+    - name: Create x86 release.zip
+      uses: thedoctor0/zip-release@master
+      with:
+        type: 'zip'
+        filename: 'release.zip'
+        directory: 'Mapping_Tools/bin/x86/Release/net5.0-windows/'
+
+    - name: Create x64 release_x64.zip
+      uses: thedoctor0/zip-release@master
+      with:
+        type: 'zip'
+        filename: 'release_x64.zip'
+        directory: 'Mapping_Tools/bin/Release/net5.0-windows/'
+
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        title: Release version ${{ steps.get_version.outputs.version-without-v }}
+        files: |
+          Mapping_Tools/bin/x86/Release/net5.0-windows/release.zip
+          Mapping_Tools/bin/Release/net5.0-windows/release_x64.zip
+          mapping_tools_installer_x86.exe
+          mapping_tools_installer_x64.exe
