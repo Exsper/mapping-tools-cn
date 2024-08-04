@@ -11,6 +11,8 @@
         "\"Failed to parse red component of colour.\"": "\"转换颜色的红色分量失败。\"",
         "\"Failed to parse green component of colour.\"": "\"转换颜色的绿色分量失败。\"",
         "\"Failed to parse blue component of colour.\"": "\"转换颜色的蓝色分量失败。\"",
+        "\"Failed to parse alpha component of colour.\"": "\"转换颜色的透明度分量失败。\"",
+        "$\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()},{Color.A.ToInvariant()}\"": "$\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()},{Color.A.ToInvariant()}\"",
         "$\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()}\"": "$\"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Animation.cs": {
@@ -25,14 +27,14 @@
         "\"Failed to parse loop type of animation.\"": "\"Failed to parse loop type of animation.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Background.cs": {
-        "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"": "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"",
+        "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
         "\"This line is not a background.\"": "\"This line is not a background.\"",
         "\"Failed to parse start time of background.\"": "\"Failed to parse start time of background.\"",
         "\"Failed to parse X offset of background.\"": "\"Failed to parse X offset of background.\"",
         "\"Failed to parse Y offset of background.\"": "\"Failed to parse Y offset of background.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Break.cs": {
-        "$\"{EventType},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"": "$\"{EventType},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"",
+        "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"",
         "\"This line is not a break.\"": "\"This line is not a break.\"",
         "\"Failed to parse start time of break.\"": "\"Failed to parse start time of break.\"",
         "\"Failed to parse end time of break.\"": "\"Failed to parse end time of break.\""
@@ -57,25 +59,25 @@
         "\"Failed to parse Y position of sprite.\"": "\"Failed to parse Y position of sprite.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StandardLoop.cs": {
-        "$\"{EventType},{StartTime.ToInvariant()},{LoopCount.ToInvariant()}\"": "$\"{EventType},{StartTime.ToInvariant()},{LoopCount.ToInvariant()}\"",
+        "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{LoopCount.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{LoopCount.ToInvariant()}\"",
         "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
         "\"Failed to parse loop count of event param.\"": "\"Failed to parse loop count of event param.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StoryboardSoundSample.cs": {
-        "$\"Sample,{StartTime.ToInvariant()},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"": "$\"Sample,{StartTime.ToInvariant()},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"",
+        "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"": "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"",
         "\"This line is not a storyboarded sample.\"": "\"This line is not a storyboarded sample.\"",
         "\"Failed to parse time of storyboarded sample.\"": "\"Failed to parse time of storyboarded sample.\"",
         "\"Failed to parse layer of storyboarded sample.\"": "\"Failed to parse layer of storyboarded sample.\"",
         "\"Failed to parse volume of storyboarded sample.\"": "\"Failed to parse volume of storyboarded sample.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\TriggerLoop.cs": {
-        "$\"{EventType},{TriggerName},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"": "$\"{EventType},{TriggerName},{StartTime.ToInvariant()},{EndTime.ToInvariant()}\"",
+        "$\"{EventType},{TriggerName},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"": "$\"{EventType},{TriggerName},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"",
         "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
         "\"Failed to parse end time of event param.\"": "\"Failed to parse end time of event param.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Video.cs": {
-        "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\"\"": "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\"\"",
-        "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"": "$\"{EventType},{StartTime.ToInvariant()},\\\"{Filename}\\\",{XOffset.ToInvariant()},{YOffset.ToInvariant()}\"",
+        "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"",
+        "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
         "\"This line is not a video.\"": "\"This line is not a video.\"",
         "\"Failed to parse start time of video.\"": "\"Failed to parse start time of video.\"",
         "\"Failed to parse X offset of video.\"": "\"Failed to parse X offset of video.\"",
@@ -142,10 +144,12 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs": {
         "$\"Exception '{ex.Message}' while trying to analyze samples.\"": "$\"Exception '{ex.Message}' while trying to analyze samples.\"",
-        "\"Warning\"": "\"Warning\""
+        "\"Warning\"": "\"Warning\"",
+        "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\"": "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleImporter.cs": {
         "\".sf2\"": "\".sf2\"",
+        "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"": "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"",
         "\"File not found\"": "\"File not found\"",
         "\"Invalid file extension\"": "\"Invalid file extension\""
     },
@@ -172,7 +176,7 @@
         "\"ZIP File|*.zip\"": "\"ZIP文件|*.zip\"",
         "\"Config files (*.cfg)|*.cfg\"": "\"配置文件 (*.cfg)|*.cfg\"",
         "\"MIDI files (*.mid)|*.mid\"": "\"MIDI文件 (*.mid)|*.mid\"",
-        "\"Audio files (*.wav;*.ogg)|*.wav;*.ogg|SoundFont files (*.sf2)|*.sf2\"": "\"音频文件 (*.wav;*.ogg)|*.wav;*.ogg|音色库文件 (*.sf2)|*.sf2\"",
+        "\"Sample files (*.wav;*.ogg;*.sf2)|*.wav;*.ogg;*.sf2|SoundFont files (*.sf2)|*.sf2\"": "\"音效文件 (*.wav;*.ogg;*.sf2)|*.wav;*.ogg;*.sf2|音色库文件 (*.sf2)|*.sf2\"",
         "\"Audio files (*.wav;*.ogg)|*.wav;*.ogg\"": "\"音频文件 (*.wav;*.ogg)|*.wav;*.ogg\"",
         "\"osu! files (*.osu;*.osb)|*.osu;*.osb\"": "\"osu!文件 (*.osu;*.osb)|*.osu;*.osb\"",
         "\"Can't fetch current in-game beatmap, because there is no Songs path specified in Preferences.\"": "\"无法获取游戏当前谱面，因为还未设置Songs文件夹地址。\"",
@@ -634,6 +638,10 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\CircleSizeToThicknessConverter.cs": {
         "\"CircleSizeToThicknessConverter is a OneWay converter.\"": "\"CircleSizeToThicknessConverter is a OneWay converter.\""
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\ColorToStringConverter.cs": {
+        "\"Cannot convert back null.\"": "\"不能逆转换null。\"",
+        "\"Color format error.\"": "\"颜色格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\DoubleArrayToStringConverter.cs": {
         "\", \"": "\", \"",
@@ -1295,10 +1303,11 @@
         "ToolTip=\"Check this to automatically delete all files in the export folder before exporting. When using this be sure there aren't any important files in your export folder.\"": "ToolTip=\"Check this to automatically delete all files in the export folder before exporting. When using this be sure there aren't any important files in your export folder.\"",
         "ToolTip=\"Check this to use the same samples as the previous export.\"": "ToolTip=\"Check this to use the same samples as the previous export.\"",
         "ToolTip=\"Alows expansion of the previous sample schema to always fit the need of the current export. If you dont check this, then the sample schema of this export needs to be a subset of the previous sample schema.\"": "ToolTip=\"Alows expansion of the previous sample schema to always fit the need of the current export. If you dont check this, then the sample schema of this export needs to be a subset of the previous sample schema.\"",
-        "ToolTip=\"Choose which format to export the hitsounds as. The 'Standard' option will generate hitsounds that can be copied to osu! standard beatmaps. The 'Coinciding' option combined with the osu! mania gamemode will export a lossless representation of the hitsound layers.\"": "ToolTip=\"Choose which format to export the hitsounds as. The 'Standard' option will generate hitsounds that can be copied to osu! standard beatmaps. The 'Coinciding' option combined with the osu! mania gamemode will export a lossless representation of the hitsound layers.\"",
+        "ToolTip=\"Choose which format to export the hitsounds as. The 'Standard' option will generate hitsounds that can be copied to osu! standard beatmaps. The 'Coinciding' option combined with the osu! mania gamemode will export a lossless representation of the hitsound layers. The 'Midi' option will export a single MIDI file with all the MIDI information of the hitsound layers.\"": "ToolTip=\"Choose which format to export the hitsounds as. The 'Standard' option will generate hitsounds that can be copied to osu! standard beatmaps. The 'Coinciding' option combined with the osu! mania gamemode will export a lossless representation of the hitsound layers. The 'Midi' option will export a single MIDI file with all the MIDI information of the hitsound layers.\"",
         "ToolTip=\"Maximum time in millisecond that can be between two hitsounds while treated as being at the same time.\"": "ToolTip=\"Maximum time in millisecond that can be between two hitsounds while treated as being at the same time.\"",
         "ToolTip=\"The index of the first custom index of custom indices that get generated.\"": "ToolTip=\"The index of the first custom index of custom indices that get generated.\"",
         "ToolTip=\"Check this to add whistles, claps, finishes, and samplesets ontop of the filename hitsounding used by coinciding export.\"": "ToolTip=\"Check this to add whistles, claps, finishes, and samplesets ontop of the filename hitsounding used by coinciding export.\"",
+        "ToolTip=\"Check this to add a track to the MIDI with volume changes from timing points.\"": "ToolTip=\"Check this to add a track to the MIDI with volume changes from timing points.\"",
         "ToolTip=\"Choose the gamemode for the exported hitsound map.\"": "ToolTip=\"Choose the gamemode for the exported hitsound map.\"",
         "ToolTip=\"Choose the file format for exported sound samples. Default will match the encoding of the source files.\"": "ToolTip=\"Choose the file format for exported sound samples. Default will match the encoding of the source files.\"",
         "ToolTip=\"Choose the file format for mixed exported sound samples. Mixing only occurs in the Standard hitsound export mode.\"": "ToolTip=\"Choose the file format for mixed exported sound samples. Mixing only occurs in the Standard hitsound export mode.\"",
@@ -1311,6 +1320,7 @@
         "Content=\"Use previous sample schema\"": "Content=\"Use previous sample schema\"",
         "Content=\"Allow growth of previous sample schema\"": "Content=\"Allow growth of previous sample schema\"",
         "Content=\"Add regular hitsounds\"": "Content=\"Add regular hitsounds\"",
+        "Content=\"Add green line volume\"": "Content=\"Add green line volume\"",
         "materialDesign:HintAssist.Hint=\"Export folder\"": "materialDesign:HintAssist.Hint=\"Export folder\"",
         "materialDesign:HintAssist.Hint=\"Hitsound map name\"": "materialDesign:HintAssist.Hint=\"Hitsound map name\"",
         "materialDesign:HintAssist.Hint=\"Export mode\"": "materialDesign:HintAssist.Hint=\"Export mode\"",
@@ -1335,7 +1345,7 @@
         "ToolTip=\"Pitch shift of the sound in keys. 12 is plus one octave. -12 is minus one octave.\"": "ToolTip=\"Pitch shift of the sound in keys. 12 is plus one octave. -12 is minus one octave.\"",
         "ToolTip=\"The bank number of the sample.\"": "ToolTip=\"The bank number of the sample.\"",
         "ToolTip=\"The patch number of the sample.\"": "ToolTip=\"The patch number of the sample.\"",
-        "ToolTip=\"The sub-zone index of the patch of the sample.\"": "ToolTip=\"The sub-zone index of the patch of the sample.\"",
+        "ToolTip=\"The layer index in the sound font preset or instrument index.\"": "ToolTip=\"The layer index in the sound font preset or instrument index.\"",
         "ToolTip=\"The key number of the sample.\"": "ToolTip=\"The key number of the sample.\"",
         "ToolTip=\"The length in milliseconds of the sample.\"": "ToolTip=\"The length in milliseconds of the sample.\"",
         "ToolTip=\"The velocity of the sample. Synonymous with the volume field.\"": "ToolTip=\"The velocity of the sample. Synonymous with the volume field.\"",
@@ -1439,9 +1449,13 @@
         "$\"Number of samples: {samples}, Number of greenlines: {greenlines}\"": "$\"Number of samples: {samples}, Number of greenlines: {greenlines}\"",
         "\"Number of sample indices: 0, \"": "\"Number of sample indices: 0, \"",
         "$\"Number of samples: {loadedSamples.Count}, Number of greenlines: 0\"": "$\"Number of samples: {loadedSamples.Count}, Number of greenlines: 0\"",
+        "$\"Number of notes: {samplePackages.SelectMany(o => o.Samples).Count()}, \"": "$\"Number of notes: {samplePackages.SelectMany(o => o.Samples).Count()}, \"",
+        "$\"Number of volume changes: {(arg.AddGreenLineVolumeToMidi ? beatmap.BeatmapTiming.TimingPoints.Count : 0)}\"": "$\"Number of volume changes: {(arg.AddGreenLineVolumeToMidi ? beatmap.BeatmapTiming.TimingPoints.Count : 0)}\"",
+        "\".mid\"": "\".mid\"",
         "\"explorer.exe\"": "\"explorer.exe\"",
         "\"RootDialog\"": "\"RootDialog\"",
         "\"Please select a base beatmap first.\"": "\"Please select a base beatmap first.\"",
+        "\"Can not use previous sample schema, because it has not been set by a previous run. Please run the tool first without 'Use previous sample schema' enabled.\"": "\"Can not use previous sample schema, because it has not been set by a previous run. Please run the tool first without 'Use previous sample schema' enabled.\"",
         "$\"Folder at path \\\"{settings.ExportFolder}\\\" does not exist.\\nCreate a new folder?\"": "$\"Folder at path \\\"{settings.ExportFolder}\\\" does not exist.\\nCreate a new folder?\"",
         "\"Export path not found.\"": "\"Export path not found.\"",
         "\"Could not load the specified sample.\"": "\"Could not load the specified sample.\"",

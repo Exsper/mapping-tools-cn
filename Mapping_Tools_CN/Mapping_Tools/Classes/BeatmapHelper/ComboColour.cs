@@ -10,6 +10,8 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
     public class ComboColour : BindableBase {
         private Color color;
 
+        private bool hasAlpha;
+
         /// <summary>
         /// The color value of the colour.
         /// </summary>
@@ -47,7 +49,14 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
             if (!TryParseInt(commaSplit[2], out int b))
                 throw new BeatmapParsingException("转换颜色的蓝色分量失败。", line);
 
-            Color = Color.FromRgb((byte)r, (byte)g, (byte)b);
+            if (commaSplit.Length > 3) {
+                if (!TryParseInt(commaSplit[3], out int a))
+                    throw new BeatmapParsingException("转换颜色的透明度分量失败。", line);
+                Color = Color.FromArgb((byte)a, (byte)r, (byte)g, (byte)b);
+                hasAlpha = true;
+            } else {
+                Color = Color.FromRgb((byte)r, (byte)g, (byte)b);
+            }
         }
 
         public ComboColour Copy() {
@@ -57,6 +66,9 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
         /// <summary>Returns a string that represents the current object.</summary>
         /// <returns>A string that represents the current object.</returns>
         public override string ToString() {
+            if (hasAlpha) {
+                return $"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()},{Color.A.ToInvariant()}";
+            }
             return $"{Color.R.ToInvariant()},{Color.G.ToInvariant()},{Color.B.ToInvariant()}";
         }
 

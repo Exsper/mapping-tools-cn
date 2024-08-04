@@ -84,7 +84,7 @@
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="备份间隔"
                              ToolTip="编辑器打开时自动定期备份间隔时间。"/>
                 </StackPanel>
-                <CheckBox HorizontalAlignment="Left" Content="所有工具使用当前默认谱面文件夹" IsChecked="{Binding CurrentBeatmapDefaultFolder, Mode=TwoWay}" 
+                <CheckBox HorizontalAlignment="Left" Content="所有工具默认使用当前谱面文件夹" IsChecked="{Binding CurrentBeatmapDefaultFolder, Mode=TwoWay}" 
                           ToolTip="勾选该选项后，在工具里（比如音效复制器）打开文件浏览器时，将使用当前谱面文件夹作为默认文件夹。不勾选时默认开启上一次使用的文件夹。"/>
                 <CheckBox HorizontalAlignment="Left" Content="允许读取编辑器" IsChecked="{Binding UseEditorReader, Mode=TwoWay}" 
                           ToolTip="开启读取编辑器功能，通过读取osu!客户端的内存来获取编辑器实时数据。它有时会出错，所以您可以选择不使用它。"/>

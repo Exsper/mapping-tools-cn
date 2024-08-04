@@ -50,7 +50,6 @@ async function create() {
         {filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs", skipText: "\"Delta Ticks Per Quarter Note {mf.DeltaTicksPerQuarterNote}\""},
         {filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs", skipText: "\"Percussion\""},
         {filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs", skipText: "\"Undefined\""},
-        {filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleImporter.cs", skipText: "\"continue\""},
         {skipText: "\"yyyy-MM-dd HH-mm-ss\""},
         {skipText: "\"__\""},
         {skipText: "\"temp.osu\""},

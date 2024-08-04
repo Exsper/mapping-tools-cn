@@ -99,7 +99,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
         public static string SampleFileDialog() {
             OpenFileDialog openFileDialog = new OpenFileDialog {
-                Filter = "音频文件 (*.wav;*.ogg)|*.wav;*.ogg|音色库文件 (*.sf2)|*.sf2",
+                Filter = "音效文件 (*.wav;*.ogg;*.sf2)|*.wav;*.ogg;*.sf2|音色库文件 (*.sf2)|*.sf2",
                 FilterIndex = 1,
                 RestoreDirectory = true,
                 CheckFileExists = true

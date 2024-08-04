@@ -336,7 +336,7 @@ namespace Mapping_Tools {
                             return;
                         }
                     }
-                    await Task.Run(() => MessageQueue.Enqueue("Backup successfully loaded!"));
+                    await Task.Run(() => MessageQueue.Enqueue("成功载入备份！"));
                 }
             } catch (Exception ex) {
                 ex.Show();
@@ -390,10 +390,10 @@ namespace Mapping_Tools {
             var builder = new StringBuilder();
             builder.AppendLine($"Mapping Tools {version}");
             builder.AppendLine();
-            builder.AppendLine("Made by:");
+            builder.AppendLine("制作者：");
             builder.AppendLine("OliBomby");
             builder.AppendLine();
-            builder.AppendLine("Supporters:");
+            builder.AppendLine("支持者：");
             builder.AppendLine("Mercury");
             builder.AppendLine("Ryuusei Aika");
             builder.AppendLine("Pon -");
@@ -406,13 +406,13 @@ namespace Mapping_Tools {
             builder.AppendLine("ZEduards");
             builder.AppendLine("Dcs");
             builder.AppendLine();
-            builder.AppendLine("Contributors:");
+            builder.AppendLine("贡献者：");
             builder.AppendLine("Potoofu");
             builder.AppendLine("Karoo13");
             builder.AppendLine("Coppertine");
             builder.AppendLine("JPK314");
 
-            MessageBox.Show(builder.ToString(), "Info");
+            MessageBox.Show(builder.ToString(), "信息");
         }
 
         //Change top right icons on changed window state and set state variable
