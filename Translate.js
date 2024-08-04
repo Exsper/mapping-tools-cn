@@ -5,4 +5,6 @@ async function translate() {
     await translateRepo("./Mapping_Tools",  "./Translations/translate.json", "./Mapping_Tools_CN", skipPaths );
 }
 
+console.log("正在翻译项目...");
+
 translate();

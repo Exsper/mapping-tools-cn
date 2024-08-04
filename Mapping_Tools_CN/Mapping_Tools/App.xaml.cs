@@ -26,7 +26,7 @@ namespace Mapping_Tools {
             const string filename = "crash-log.txt";
             var path = AppDataPath != null ? Path.Combine(AppDataPath, filename) : filename;
             File.WriteAllLines(path, lines);
-            MessageBox.Show($"The program encountered an unhandled exception. Look in {filename} for more info:\n{path}", "Error");
+            MessageBox.Show($"程序发生未处理异常。更多信息请参阅 {filename} ：\n{path}", "错误");
 
             // Prevent default unhandled exception processing
             e.Handled = AppDataPath != null;

@@ -71,4 +71,6 @@ async function create() {
     await createTemplate("./Mapping_Tools", "./Translations/translate.json", skipPaths, skipTexts);
 }
 
+console.log("正在抽取项目字符串...");
+
 create();

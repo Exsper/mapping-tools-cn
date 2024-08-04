@@ -1,10 +1,10 @@
 {
     "./Mapping_Tools\\Mapping_Tools\\App.xaml.cs": {
         "\"\\nInner exception:\"": "\"\\n内部异常：\"",
-        "$\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\", \"Error\"": "$\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\", \"Error\""
+        "$\"The program encountered an unhandled exception. Look in {filename} for more info:\\n{path}\", \"Error\"": "$\"程序发生未处理异常。更多信息请参阅 {filename} ：\\n{path}\", \"错误\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\BeatmapParsingException.cs": {
-        "$\"Unexpected value encountered while parsing beatmap.\\n{line}\"": "$\"Unexpected value encountered while parsing beatmap.\\n{line}\"",
+        "$\"Unexpected value encountered while parsing beatmap.\\n{line}\"": "$\"分析谱面时遇到意外数值。\\n{line}\"",
         "$\"{message}\\n{line}\"": "$\"{message}\\n{line}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\ComboColour.cs": {
@@ -261,15 +261,15 @@
         "\"Can not convert hint path to non-bezier path type.\"": "\"Can not convert hint path to non-bezier path type.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\AutoFailDetector.cs": {
-        "\"\\nDo you want to use this solution?\"": "\"\\nDo you want to use this solution?\"",
-        "$\"Solution {++solutionCount}\"": "$\"Solution {++solutionCount}\"",
-        "\"Auto-fail fix guide. Place these extra objects to fix auto-fail:\\n\"": "\"Auto-fail fix guide. Place these extra objects to fix auto-fail:\\n\"",
-        "$\"Extra objects before {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"": "$\"Extra objects before {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"",
-        "$\"Extra objects between {lastTime} - {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"": "$\"Extra objects between {lastTime} - {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"",
-        "$\"Extra objects after {lastTime}: {paddingSolution[^1]}\"": "$\"Extra objects after {lastTime}: {paddingSolution[^1]}\"",
-        "$\"Can't find a safe place to place objects between {lastTime} and {problemAreas[i].GetStartTime()}.\"": "$\"Can't find a safe place to place objects between {lastTime} and {problemAreas[i].GetStartTime()}.\"",
-        "$\"Can't find a safe place to place objects between {lastTime} and {mapEndTime}.\"": "$\"Can't find a safe place to place objects between {lastTime} and {mapEndTime}.\"",
-        "\"No auto-fail fix padding solution found.\"": "\"No auto-fail fix padding solution found.\""
+        "\"\\nDo you want to use this solution?\"": "\"\\n您想使用这个解决方案吗？\"",
+        "$\"Solution {++solutionCount}\"": "$\"解决方案 {++solutionCount}\"",
+        "\"Auto-fail fix guide. Place these extra objects to fix auto-fail:\\n\"": "\"自动失败修正向导。请放置这些额外物件来修正自动失败：\\n\"",
+        "$\"Extra objects before {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"": "$\"在 {problemAreas[i].GetStartTime()} 之前放置： {paddingSolution[i]}\"",
+        "$\"Extra objects between {lastTime} - {problemAreas[i].GetStartTime()}: {paddingSolution[i]}\"": "$\"在 {lastTime} - {problemAreas[i].GetStartTime()} 之间放置： {paddingSolution[i]}\"",
+        "$\"Extra objects after {lastTime}: {paddingSolution[^1]}\"": "$\"在 {lastTime} 之后放置： {paddingSolution[^1]}\"",
+        "$\"Can't find a safe place to place objects between {lastTime} and {problemAreas[i].GetStartTime()}.\"": "$\"在 {lastTime} - {problemAreas[i].GetStartTime()} 之间找不到一个安全的地点放置物件。\"",
+        "$\"Can't find a safe place to place objects between {lastTime} and {mapEndTime}.\"": "$\"在 {lastTime} - {mapEndTime} 之间找不到一个安全的地点放置物件。\"",
+        "\"No auto-fail fix padding solution found.\"": "\"找不到填充物件的自动失败解决方案。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ColourPoint.cs": {
         "\"Add at least one combo colour before adding colours to this sequence.\"": "\"Add at least one combo colour before adding colours to this sequence.\""
@@ -820,7 +820,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ViewHeaderComponent.xaml": {
         "Text=\"Test\"": "Text=\"Test\"",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml": {
         "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"": "ToolTip=\"Use Ctrl+K to use this toggle anywhere in the program.\"",
@@ -1019,17 +1019,17 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\AutoFailDetector\\AutoFailDetectorView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
-        "ToolTip=\"Show the start times of unloading hit objects which cause auto-fail. Red in the timeline.\"": "ToolTip=\"Show the start times of unloading hit objects which cause auto-fail. Red in the timeline.\"",
-        "ToolTip=\"Show the start times of hit objects which could unload to cause auto-fail depending on the object counts. Green in the timeline.\"": "ToolTip=\"Show the start times of hit objects which could unload to cause auto-fail depending on the object counts. Green in the timeline.\"",
-        "ToolTip=\"Show the start times of hit objects which cause the potential unloading of other hit objects. Purple in the timeline.\"": "ToolTip=\"Show the start times of hit objects which cause the potential unloading of other hit objects. Purple in the timeline.\"",
-        "ToolTip=\"Get a guide on where to place extra objects such that there will be no auto-fail anymore.\"": "ToolTip=\"Get a guide on where to place extra objects such that there will be no auto-fail anymore.\"",
-        "ToolTip=\"Automatically place spinners according to the guide on where to place extra objects such that there will be no auto-fail anymore. This adds negative length spinners at probably unwanted moments. It's recommended to place your objects yourself.\"": "ToolTip=\"Automatically place spinners according to the guide on where to place extra objects such that there will be no auto-fail anymore. This adds negative length spinners at probably unwanted moments. It's recommended to place your objects yourself.\"",
-        "ToolTip=\"Override the approach rate used for finding the loaded hit objects. Use -1 for no override.\"": "ToolTip=\"Override the approach rate used for finding the loaded hit objects. Use -1 for no override.\"",
-        "ToolTip=\"Override the overall difficulty used for finding which hit objects unload incorrectly. Use -1 for no override.\"": "ToolTip=\"Override the overall difficulty used for finding which hit objects unload incorrectly. Use -1 for no override.\"",
+        "ToolTip=\"Show the start times of unloading hit objects which cause auto-fail. Red in the timeline.\"": "ToolTip=\"显示因错误卸载继而引发自动失败的物件的开始时间。在时间线中以红色标出。\"",
+        "ToolTip=\"Show the start times of hit objects which could unload to cause auto-fail depending on the object counts. Green in the timeline.\"": "ToolTip=\"显示当物件数量满足一定条件时，可能引起错误卸载继而引发自动失败的物件的开始时间。在时间线中以绿色标出。\"",
+        "ToolTip=\"Show the start times of hit objects which cause the potential unloading of other hit objects. Purple in the timeline.\"": "ToolTip=\"显示可能引起其他物件出现潜在卸载问题的物件的开始时间。在时间线中以紫色标出。\"",
+        "ToolTip=\"Get a guide on where to place extra objects such that there will be no auto-fail anymore.\"": "ToolTip=\"显示解决方案指导，通过放置额外物件来解决自动失败问题。\"",
+        "ToolTip=\"Automatically place spinners according to the guide on where to place extra objects such that there will be no auto-fail anymore. This adds negative length spinners at probably unwanted moments. It's recommended to place your objects yourself.\"": "ToolTip=\"根据放置额外物件指导，自动放置转盘来解决自动失败问题。由于该功能可能会在不尽如人意的时刻放置负时长转盘，最好还是由您手动放置物件。\"",
+        "ToolTip=\"Override the approach rate used for finding the loaded hit objects. Use -1 for no override.\"": "ToolTip=\"在分析谱面物件加载时使用自定义AR。-1表示不改变。\"",
+        "ToolTip=\"Override the overall difficulty used for finding which hit objects unload incorrectly. Use -1 for no override.\"": "ToolTip=\"在分析谱面物件错误卸载时使用自定义OD。-1表示不改变。\"",
         "ToolTip=\"Time in milliseconds to require objects to unload later to account for the update frequency of the physics engine. A value of 9ms or higher is recommended, so players with 120fps (8.33ms frame time) can pass the map. Increase it further if your map is really laggy.\"": "ToolTip=\"考虑到物理引擎的刷新频率，物件延迟卸载的最大时间（毫秒）。推荐 9ms 或更大，让使用120fps（8.33ms每帧）的玩家可以pass谱面。如果你的谱面玩起来很卡，还需要再调高一些。\"",
         "ToolTip=\"Run this tool.\"": "ToolTip=\"运行该工具。\"",
-        "ToolTip=\"This timeline shows where the auto-fail occurs. Red lines show the objects which unload and cause auto-fail. Green lines show the objects which could potentially unload with different object counts. Purple lines show objects which make other objects potentially unload. You can double-click the lines to go to that time.\"": "ToolTip=\"This timeline shows where the auto-fail occurs. Red lines show the objects which unload and cause auto-fail. Green lines show the objects which could potentially unload with different object counts. Purple lines show objects which make other objects potentially unload. You can double-click the lines to go to that time.\"",
-        "Text=\"Auto-fail Detector\"": "Text=\"Auto-fail 检测\"",
+        "ToolTip=\"This timeline shows where the auto-fail occurs. Red lines show the objects which unload and cause auto-fail. Green lines show the objects which could potentially unload with different object counts. Purple lines show objects which make other objects potentially unload. You can double-click the lines to go to that time.\"": "ToolTip=\"该时间线显示自动失败发生时间。红线表示因错误卸载继而引发自动失败的物件。绿线表示当物件数量满足一定条件时，可能引起错误卸载的物件。紫线表示可能会引发其他物件引起错误卸载的物件。双击这些线可以在编辑器中定位。\"",
+        "Text=\"Auto-fail Detector\"": "Text=\"自动失败检测\"",
         "Text=\"{Binding ApproachRateOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}\"": "Text=\"{Binding ApproachRateOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}\"",
         "Text=\"{Binding OverallDifficultyOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}\"": "Text=\"{Binding OverallDifficultyOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}\"",
         "Text=\"{Binding PhysicsUpdateLeniency}\"": "Text=\"{Binding PhysicsUpdateLeniency}\"",
@@ -1038,21 +1038,21 @@
         "materialDesign:HintAssist.Hint=\"OD override\"": "materialDesign:HintAssist.Hint=\"自定义OD\"",
         "materialDesign:HintAssist.Hint=\"Physics update leniency\"": "materialDesign:HintAssist.Hint=\"物理更新冗余时间\"",
         "Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.": "检测谱面中是否存在不正确的物件，导致osu!无法正确计算分数。",
-        "Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \"2B\" patterns.": "引起 Auto-fail 最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。",
+        "Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \"2B\" patterns.": "引起自动失败（Auto-fail）最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。",
         "Use the AR and OD override options to see what would happen when you use hardrock mod on the map.": "使用自定义AR和OD来检查当开启HardRock后会发生什么。",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
-        "Show unloading hit objects": "Show unloading hit objects",
-        "Show potential unloading hit objects": "Show potential unloading hit objects",
-        "Show disrupting hit objects": "Show disrupting hit objects",
-        "Get auto-fail fix guide": "Get auto-fail fix guide",
-        "Auto-insert spinners": "Auto-insert spinners"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
+        "Show unloading hit objects": "显示卸载物件",
+        "Show potential unloading hit objects": "显示潜在的卸载物件",
+        "Show disrupting hit objects": "显示引起混乱的物件",
+        "Get auto-fail fix guide": "使用自动失败修复向导",
+        "Auto-insert spinners": "自动插入转盘"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\AutoFailDetector\\AutoFailDetectorView.xaml.cs": {
-        "\"Auto-fail Detector\"": "\"Auto-fail 检测\"",
-        "$\"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \\\"2B\\\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.\"": "$\"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \\\"2B\\\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.\"",
-        "$\"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!\"": "$\"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!\"",
-        "$\"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected.\"": "$\"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected.\"",
-        "\"No auto-fail detected.\"": "\"未检测到auto-fail。\""
+        "\"Auto-fail Detector\"": "\"自动失败检测\"",
+        "$\"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \\\"2B\\\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.\"": "$\"检测谱面中是否存在不正确的物件，导致osu!无法正确计算分数。{Environment.NewLine} 引起自动失败（Auto-fail）最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。{Environment.NewLine} 使用自定义AR和OD来检查当开启HardRock后会发生什么。\"",
+        "$\"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!\"": "$\"检测到 {autoFailDetector.UnloadingObjects.Count} 个卸载物件和 {autoFailDetector.PotentialUnloadingObjects.Count} 个潜在卸载物件！\"",
+        "$\"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected.\"": "$\"未检测到自动失败（Auto-fail），但存在 {autoFailDetector.PotentialUnloadingObjects.Count} 个潜在卸载物件。\"",
+        "\"No auto-fail detected.\"": "\"未检测到自动失败（Auto-fail）。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\ComboColourStudio\\ComboColourStudioView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -1199,7 +1199,7 @@
         "Text=\"Made by OliBomby\"": "Text=\"由 OliBomby 制作\"",
         "Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio.": "Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio.",
         "This tool is meant to help a very specific hitsounding workflow. If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds. For example using a mania map and have each column represent a different sound.": "This tool is meant to help a very specific hitsounding workflow. If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds. For example using a mania map and have each column represent a different sound.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundPreviewHelper\\HitsoundPreviewHelper.xaml.cs": {
         "\"hspreviewproject.json\"": "\"hspreviewproject.json\"",
@@ -1487,7 +1487,7 @@
         "materialDesign:HintAssist.Hint=\"Beat divisors\"": "materialDesign:HintAssist.Hint=\"Beat divisors\"",
         "It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.": "It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.",
         "Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.": "Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
         "Analyze samples": "Analyze samples",
         "Resnap objects": "Resnap objects",
         "Resnap bookmarks": "Resnap bookmarks",
@@ -1664,7 +1664,7 @@
         "materialDesign:HintAssist.Hint=\"Pattern overwrite mode\"": "materialDesign:HintAssist.Hint=\"Pattern overwrite mode\"",
         "materialDesign:HintAssist.Hint=\"Timing overwrite mode\"": "materialDesign:HintAssist.Hint=\"Timing overwrite mode\"",
         "With the 'Project' menu you can save/load/rename/import/export your pattern collections.": "With the 'Project' menu you can save/load/rename/import/export your pattern collections.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PatternGallery\\PatternGalleryView.xaml.cs": {
         "\"patterngalleryproject.json\"": "\"patterngalleryproject.json\"",
@@ -1726,12 +1726,12 @@
         "Text=\"{Binding BackupsPath, Mode=TwoWay}\"": "Text=\"{Binding BackupsPath, Mode=TwoWay}\"",
         "Text=\"{Binding MaxBackupFiles, Mode=TwoWay, Converter={StaticResource IntToStringConverter}}\"": "Text=\"{Binding MaxBackupFiles, Mode=TwoWay, Converter={StaticResource IntToStringConverter}}\"",
         "Text=\"{Binding PeriodicBackupInterval, Mode=TwoWay}\"": "Text=\"{Binding PeriodicBackupInterval, Mode=TwoWay}\"",
-        "Text=\"QuickRun hotkey:\"": "Text=\"快速启动（QuickRun）快捷键：\"",
+        "Text=\"QuickRun hotkey:\"": "Text=\"快速执行 快捷键：\"",
         "Text=\"None:\"": "Text=\"None:\"",
         "Text=\"Single:\"": "Text=\"Single:\"",
         "Text=\"Multiple:\"": "Text=\"Multiple:\"",
-        "Text=\"QuickUndo hotkey:\"": "Text=\"快速撤销（QuickUndo）快捷键：\"",
-        "Text=\"BetterSave™ hotkey:\"": "Text=\"优化存储（BetterSave™） 快捷键：\"",
+        "Text=\"QuickUndo hotkey:\"": "Text=\"快速撤销 快捷键：\"",
+        "Text=\"BetterSave™ hotkey:\"": "Text=\"优化存储 快捷键：\"",
         "Text=\"Light\"": "Text=\"Light\"",
         "Text=\"Dark\"": "Text=\"Dark\"",
         "Content=\"Make automatic backups\"": "Content=\"Make automatic backups\"",
@@ -1739,7 +1739,7 @@
         "Content=\"Current beatmap default folder in all tools\"": "Content=\"Current beatmap default folder in all tools\"",
         "Content=\"Enable Editor Reader\"": "Content=\"Enable Editor Reader\"",
         "Content=\"Override osu! save with BetterSave™\"": "Content=\"使用优化存储（BetterSave™）代替osu!保存谱面\"",
-        "Content=\"Auto reload after QuickRun\"": "Content=\"快速启动（QuickRun）后自动重新加载\"",
+        "Content=\"Auto reload after QuickRun\"": "Content=\"快速执行（QuickRun）后自动重新加载\"",
         "materialDesign:HintAssist.Hint=\"osu! folder\"": "materialDesign:HintAssist.Hint=\"osu! folder\"",
         "materialDesign:HintAssist.Hint=\"Songs folder\"": "materialDesign:HintAssist.Hint=\"Songs folder\"",
         "materialDesign:HintAssist.Hint=\"osu! user config file\"": "materialDesign:HintAssist.Hint=\"osu! user config file\"",
@@ -1938,7 +1938,7 @@
         "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.": "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.",
         "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.": "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.",
         "Check out all the options. The tooltips should help you further.": "Check out all the options. The tooltips should help you further.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
         "Import sliders": "Import sliders"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml.cs": {
@@ -2003,7 +2003,7 @@
         "Input a value of -1 anywhere to indicate that you want to keep that variable unchanged.": "Input a value of -1 anywhere to indicate that you want to keep that variable unchanged.",
         "For example, 1 duration and -1 length will change the duration to 1 beat while keeping the length the same.": "For example, 1 duration and -1 length will change the duration to 1 beat while keeping the length the same.",
         "Check the tooltips for more information about extra features.": "Check the tooltips for more information about extra features.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderCompletionator\\SliderCompletionatorView.xaml.cs": {
         "\"Slider Completionator\"": "\"Slider Completionator\"",
@@ -2044,7 +2044,7 @@
         "Merge 2 or more sliders into one big slider. The pixel length of the resulting slider is the sum of the pixel lengths of the sliders that made it up.": "Merge 2 or more sliders into one big slider. The pixel length of the resulting slider is the sum of the pixel lengths of the sliders that made it up.",
         "This program will automatically convert any type of slider into a Beziér slider for the purpose of merging.": "This program will automatically convert any type of slider into a Beziér slider for the purpose of merging.",
         "In order for 2 sliders to merge, place the second slider on top of the last anchor of the first slider.": "In order for 2 sliders to merge, place the second slider on top of the last anchor of the first slider.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderMerger\\SliderMergerView.xaml.cs": {
         "\"Slider Merger\"": "\"Slider Merger\"",
@@ -2108,7 +2108,7 @@
         "materialDesign:HintAssist.Hint=\"Y Position\"": "materialDesign:HintAssist.Hint=\"Y Position\"",
         "materialDesign:HintAssist.Hint=\"Track Color\"": "materialDesign:HintAssist.Hint=\"Track Color\"",
         "Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.": "Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！",
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
         "Remove slider": "Remove slider",
         "Import slider": "Import slider"
     },
@@ -2404,7 +2404,7 @@
         "Timing Helper is meant to speed up your timing job by placing the redlines for you. You only have to tell it exactly where all the sounds are.": "Timing Helper is meant to speed up your timing job by placing the redlines for you. You only have to tell it exactly where all the sounds are.",
         "What you do is place 'markers' exactly on the correct timing of sounds. These markers can be hit objects, bookmarks, greenlines and redlines.": "What you do is place 'markers' exactly on the correct timing of sounds. These markers can be hit objects, bookmarks, greenlines and redlines.",
         "Timing Helper will then adjust BPM and/or add redlines to make every marker be snapped.": "Timing Helper will then adjust BPM and/or add redlines to make every marker be snapped.",
-        "This tool is compatible with QuickRun!": "此工具兼容快速启动（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingHelper\\TimingHelperView.xaml.cs": {
         "\"Timing Helper\"": "\"Timing Helper\"",

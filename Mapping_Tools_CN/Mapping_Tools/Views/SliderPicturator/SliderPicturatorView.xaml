@@ -40,7 +40,7 @@
                                 <materialDesign:PackIcon Kind="LightningBoltCircle" Width="24" Height="24" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
                             <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                          此工具兼容快速启动（QuickRun）！
+                          此工具兼容快速执行（QuickRun）！
                             </TextBlock>
                         </materialDesign:PopupBox>
                     </StackPanel>

@@ -204,7 +204,7 @@ namespace Mapping_Tools.Viewmodels {
         private ListBoxItem CreateNavigationItem(Type type, double verticalMargin=4) {
             var name = ViewCollection.GetName(type);
             var content = new TextBlock { Text = name, Margin = new Thickness(10, verticalMargin, 0, verticalMargin) };
-            var item = new ListBoxItem { Tag = name, ToolTip = $"打开 {name}.", Content = content};
+            var item = new ListBoxItem { Tag = name, ToolTip = $"打开 {name}。", Content = content};
             CreateContextMenu(item, name);
             item.PreviewMouseLeftButtonDown += ItemOnPreviewMouseLeftButtonDown;
             return item;

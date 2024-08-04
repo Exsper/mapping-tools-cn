@@ -23,7 +23,7 @@
             <StackPanel>
               <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                        <Run Text="Auto-fail 检测"/>
+                        <Run Text="自动失败检测"/>
                     </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                         <materialDesign:PopupBox.ToggleContent>
@@ -32,7 +32,7 @@
                         <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
                             检测谱面中是否存在不正确的物件，导致osu!无法正确计算分数。 
                             <LineBreak/> 
-                            引起 Auto-fail 最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。
+                            引起自动失败（Auto-fail）最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。
                             <LineBreak/>
                             使用自定义AR和OD来检查当开启HardRock后会发生什么。
                         </TextBlock>
@@ -42,39 +42,39 @@
                           <materialDesign:PackIcon Kind="LightningBoltCircle" Width="24" Height="24" Foreground="{DynamicResource PrimaryHueLightBrush}"/>
                       </materialDesign:PopupBox.ToggleContent>
                       <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                          此工具兼容快速启动（QuickRun）！
+                          此工具兼容快速执行（QuickRun）！
                       </TextBlock>
                   </materialDesign:PopupBox>
                 </StackPanel>
 
                 <CheckBox FontSize="14" IsChecked="{Binding ShowUnloadingObjects}" Cursor="Hand"
-                          ToolTip="Show the start times of unloading hit objects which cause auto-fail. Red in the timeline.">
-                    Show unloading hit objects
+                          ToolTip="显示因错误卸载继而引发自动失败的物件的开始时间。在时间线中以红色标出。">
+                    显示卸载物件
                 </CheckBox>
                 <CheckBox FontSize="14" IsChecked="{Binding ShowPotentialUnloadingObjects}" Cursor="Hand"
-                          ToolTip="Show the start times of hit objects which could unload to cause auto-fail depending on the object counts. Green in the timeline.">
-                    Show potential unloading hit objects
+                          ToolTip="显示当物件数量满足一定条件时，可能引起错误卸载继而引发自动失败的物件的开始时间。在时间线中以绿色标出。">
+                    显示潜在的卸载物件
                 </CheckBox>
                 <CheckBox FontSize="14" IsChecked="{Binding ShowPotentialDisruptors}" Cursor="Hand"
-                          ToolTip="Show the start times of hit objects which cause the potential unloading of other hit objects. Purple in the timeline.">
-                    Show disrupting hit objects
+                          ToolTip="显示可能引起其他物件出现潜在卸载问题的物件的开始时间。在时间线中以紫色标出。">
+                    显示引起混乱的物件
                 </CheckBox>
                 <CheckBox FontSize="14" IsChecked="{Binding GetAutoFailFix}" Cursor="Hand"
-                          ToolTip="Get a guide on where to place extra objects such that there will be no auto-fail anymore.">
-                    Get auto-fail fix guide
+                          ToolTip="显示解决方案指导，通过放置额外物件来解决自动失败问题。">
+                    使用自动失败修复向导
                 </CheckBox>
                 <CheckBox FontSize="14" IsChecked="{Binding AutoPlaceFix}" Cursor="Hand"
-                          ToolTip="Automatically place spinners according to the guide on where to place extra objects such that there will be no auto-fail anymore. This adds negative length spinners at probably unwanted moments. It's recommended to place your objects yourself.">
-                    Auto-insert spinners
+                          ToolTip="根据放置额外物件指导，自动放置转盘来解决自动失败问题。由于该功能可能会在不尽如人意的时刻放置负时长转盘，最好还是由您手动放置物件。">
+                    自动插入转盘
                 </CheckBox>
                 <TextBox Width="258" HorizontalAlignment="Left" Margin="0,10,0,0"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="自定义AR"
-                        ToolTip="Override the approach rate used for finding the loaded hit objects. Use -1 for no override."
+                        ToolTip="在分析谱面物件加载时使用自定义AR。-1表示不改变。"
                         Text="{Binding ApproachRateOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}">
                 </TextBox>
                 <TextBox Width="258" HorizontalAlignment="Left" Margin="0,10,0,0"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="自定义OD"
-                         ToolTip="Override the overall difficulty used for finding which hit objects unload incorrectly. Use -1 for no override."
+                         ToolTip="在分析谱面物件错误卸载时使用自定义OD。-1表示不改变。"
                          Text="{Binding OverallDifficultyOverride, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}">
                 </TextBox>
                 <TextBox Width="258" HorizontalAlignment="Left" Margin="0,20,0,0"
@@ -110,7 +110,7 @@
         </Grid>
         <Grid Name="FourthGrid" Grid.Row="2">
             <StackPanel x:Name="TlHost"
-                        ToolTip="This timeline shows where the auto-fail occurs. Red lines show the objects which unload and cause auto-fail. Green lines show the objects which could potentially unload with different object counts. Purple lines show objects which make other objects potentially unload. You can double-click the lines to go to that time."/>
+                        ToolTip="该时间线显示自动失败发生时间。红线表示因错误卸载继而引发自动失败的物件。绿线表示当物件数量满足一定条件时，可能引起错误卸载的物件。紫线表示可能会引发其他物件引起错误卸载的物件。双击这些线可以在编辑器中定位。"/>
         </Grid>
     </Grid>
 </local:SingleRunMappingTool>

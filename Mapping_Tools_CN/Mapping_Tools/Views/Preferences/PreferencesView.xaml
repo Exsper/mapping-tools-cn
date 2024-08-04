@@ -90,13 +90,13 @@
                           ToolTip="Enable functionality of Editor Reader. Editor Reader reads the memory of your osu! client to get live data from your editor. It can sometimes break, so you can choose to not use it."/>
                 <CheckBox HorizontalAlignment="Left" Content="使用优化存储（BetterSave™）代替osu!保存谱面" IsChecked="{Binding OverrideOsuSave, Mode=TwoWay}" 
                           ToolTip="在每次osu!保存后自动使用优化存储（BetterSave）。作为副作用，当编辑器打开时，对.osu文件的任何手动修改都将被覆盖。"/>
-                <CheckBox HorizontalAlignment="Left" Content="快速启动（QuickRun）后自动重新加载" IsChecked="{Binding AutoReload, Mode=TwoWay}" 
+                <CheckBox HorizontalAlignment="Left" Content="快速执行（QuickRun）后自动重新加载" IsChecked="{Binding AutoReload, Mode=TwoWay}" 
                           ToolTip="Enable this to automatically reload the editor after every QuickRun."/>
             </StackPanel>
 
             <StackPanel Margin="5 10 0 0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="150" VerticalAlignment="Center" Text="快速启动（QuickRun）快捷键：" ToolTip="QuickRun lets you quickly run a tool on the beatmap you have open in the editor."/>
+                    <TextBlock Width="150" VerticalAlignment="Center" Text="快速执行 快捷键：" ToolTip="QuickRun lets you quickly run a tool on the beatmap you have open in the editor."/>
                     <components:HotkeyEditorControl Width="150" Hotkey="{Binding QuickRunHotkey, UpdateSourceTrigger=LostFocus}"/>
 
                     <CheckBox x:Name="SmartQuickRunCheckBox" IsChecked="{Binding SmartQuickRunEnabled}" Margin="15 0 0 0" VerticalAlignment="Center"
@@ -121,13 +121,13 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="150" VerticalAlignment="Center" Text="快速撤销（QuickUndo）快捷键：" 
+                    <TextBlock Width="150" VerticalAlignment="Center" Text="快速撤销 快捷键：" 
                                ToolTip="Quickly loads the latest backup into the beatmap currently open in the editor."/>
                     <components:HotkeyEditorControl Width="150" Hotkey="{Binding QuickUndoHotkey, UpdateSourceTrigger=LostFocus}"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Width="150" VerticalAlignment="Center" Text="优化存储（BetterSave™） 快捷键：" 
+                    <TextBlock Width="150" VerticalAlignment="Center" Text="优化存储 快捷键：" 
                                ToolTip="优化存储（BetterSave）使用更好的四舍五入取代截取数值的方式保存当前谱面。"/>
                     <components:HotkeyEditorControl Width="150" Hotkey="{Binding BetterSaveHotkey, UpdateSourceTrigger=LostFocus}"/>
                 </StackPanel>

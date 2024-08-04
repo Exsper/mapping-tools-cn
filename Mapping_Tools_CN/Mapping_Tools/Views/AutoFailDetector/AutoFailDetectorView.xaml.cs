@@ -29,12 +29,12 @@ namespace Mapping_Tools.Views.AutoFailDetector {
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string ToolName = "Auto-fail 检测";
+        public static readonly string ToolName = "自动失败检测";
 
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string ToolDescription = $"Detects cases of incorrect object loading in a beatmap which makes osu! unable to calculate scores correctly.{Environment.NewLine} Auto-fail is most often caused by placing other hit objects during sliders, so there are multiple hit objects going on at the same time also known as \"2B\" patterns.{Environment.NewLine} Use the AR and OD override options to see what would happen when you use hardrock mod on the map.";
+        public static readonly string ToolDescription = $"检测谱面中是否存在不正确的物件，导致osu!无法正确计算分数。{Environment.NewLine} 引起自动失败（Auto-fail）最常见的原因是在滑条中放置了其他击打物件，导致同一时间有多个击打物件，俗称“2B”图。{Environment.NewLine} 使用自定义AR和OD来检查当开启HardRock后会发生什么。";
 
         /// <summary>
         /// Initializes the Map Cleaner view to <see cref="MainWindow"/>
@@ -144,9 +144,9 @@ namespace Mapping_Tools.Views.AutoFailDetector {
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, false, args.Quick));
 
-            return autoFail ? $"{autoFailDetector.UnloadingObjects.Count} unloading objects detected and {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected!" :
-                autoFailDetector.PotentialUnloadingObjects.Count > 0 ? $"No auto-fail, but {autoFailDetector.PotentialUnloadingObjects.Count} potential unloading objects detected." : 
-                "未检测到auto-fail。";
+            return autoFail ? $"检测到 {autoFailDetector.UnloadingObjects.Count} 个卸载物件和 {autoFailDetector.PotentialUnloadingObjects.Count} 个潜在卸载物件！" :
+                autoFailDetector.PotentialUnloadingObjects.Count > 0 ? $"未检测到自动失败（Auto-fail），但存在 {autoFailDetector.PotentialUnloadingObjects.Count} 个潜在卸载物件。" : 
+                "未检测到自动失败（Auto-fail）。";
         }
 
 

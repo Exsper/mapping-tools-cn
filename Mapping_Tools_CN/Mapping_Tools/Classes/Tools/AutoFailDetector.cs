@@ -185,9 +185,9 @@ namespace Mapping_Tools.Classes.Tools {
 
                 StringBuilder guideBuilder = new StringBuilder();
                 AddFixGuide(guideBuilder, sol);
-                guideBuilder.AppendLine("\nDo you want to use this solution?");
+                guideBuilder.AppendLine("\n您想使用这个解决方案吗？");
 
-                var result = MessageBox.Show(guideBuilder.ToString(), $"Solution {++solutionCount}", MessageBoxButton.YesNoCancel);
+                var result = MessageBox.Show(guideBuilder.ToString(), $"解决方案 {++solutionCount}", MessageBoxButton.YesNoCancel);
                 if (result == MessageBoxResult.Yes) {
                     acceptedSolution = true;
                     break;
@@ -207,19 +207,19 @@ namespace Mapping_Tools.Classes.Tools {
         }
 
         private void AddFixGuide(StringBuilder guideBuilder, IReadOnlyList<int> paddingSolution) {
-            guideBuilder.AppendLine("Auto-fail fix guide. Place these extra objects to fix auto-fail:\n");
+            guideBuilder.AppendLine("自动失败修正向导。请放置这些额外物件来修正自动失败：\n");
             int lastTime = 0;
             for (int i = 0; i < problemAreas.Count; i++) {
                 if (!(placementTimes != null && !placementTimes[i].HasValue) && paddingSolution[i] > 0) {
                     guideBuilder.AppendLine(i == 0
-                        ? $"Extra objects before {problemAreas[i].GetStartTime()}: {paddingSolution[i]}"
-                        : $"Extra objects between {lastTime} - {problemAreas[i].GetStartTime()}: {paddingSolution[i]}");
+                        ? $"在 {problemAreas[i].GetStartTime()} 之前放置： {paddingSolution[i]}"
+                        : $"在 {lastTime} - {problemAreas[i].GetStartTime()} 之间放置： {paddingSolution[i]}");
                 }
                 lastTime = GetAdjustedEndTime(problemAreas[i].UnloadableHitObject) - approachTime;
             }
 
             if (!(placementTimes != null && !placementTimes[^1].HasValue) && paddingSolution[^1] > 0) {
-                guideBuilder.AppendLine($"Extra objects after {lastTime}: {paddingSolution[^1]}");
+                guideBuilder.AppendLine($"在 {lastTime} 之后放置： {paddingSolution[^1]}");
             }
         }
 
@@ -236,7 +236,7 @@ namespace Mapping_Tools.Classes.Tools {
                                 new HitObject {Pos = Vector2.Zero, Time = t.Value, ObjectType = 8, EndTime = t.Value - 1});
                         }
                     } else {
-                        throw new Exception($"Can't find a safe place to place objects between {lastTime} and {problemAreas[i].GetStartTime()}.");
+                        throw new Exception($"在 {lastTime} - {problemAreas[i].GetStartTime()} 之间找不到一个安全的地点放置物件。");
                     }
                 }
 
@@ -252,7 +252,7 @@ namespace Mapping_Tools.Classes.Tools {
                         hitObjects.Add(new HitObject {Pos = Vector2.Zero, Time = t.Value, ObjectType = 8, EndTime = t.Value - 1});
                     }
                 } else {
-                    throw new Exception($"Can't find a safe place to place objects between {lastTime} and {mapEndTime}.");
+                    throw new Exception($"在 {lastTime} - {mapEndTime} 之间找不到一个安全的地点放置物件。");
                 }
             }
 
@@ -293,7 +293,7 @@ namespace Mapping_Tools.Classes.Tools {
             int[] solution;
             while (!SolveAutoFailPadding(padding++, out solution)) {
                 if (padding > MaxPaddingCount) {
-                    throw new Exception("No auto-fail fix padding solution found.");
+                    throw new Exception("找不到填充物件的自动失败解决方案。");
                 }
             }
 
