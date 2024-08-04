@@ -277,6 +277,16 @@ async function translateRepo(orgfolder, transJsonPath, distfolder, skipPaths = [
         console.error("无法读取翻译文件：" + transJsonPath + "\n", err);
         console.warn("将直接复制原项目到目标文件夹");
     }
+    // 数量统计
+    let textcount = 0;
+    let translatedcount = 0;
+    Object.keys(existTranslation).forEach(path => {
+        Object.keys(existTranslation[path]).forEach(text => {
+            textcount++;
+            if (existTranslation[path][text] !== text) translatedcount++;
+        });
+    });
+    console.log("当前已经翻译 " + translatedcount + " 个条目，占比 " + (translatedcount * 100 / textcount).toFixed(2) + "% ，还有 " + (textcount - translatedcount) + " 个条目未翻译");
     // 复制文件
     let filePaths = await buildFileList(orgfolder, skipPaths);
     for (let i = 0; i < filePaths.length; i++) {
