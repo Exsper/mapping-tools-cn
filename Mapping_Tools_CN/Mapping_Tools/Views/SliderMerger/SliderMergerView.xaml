@@ -72,8 +72,8 @@
                               ToolTip="Choose how to select hit objects to merge. Slider Merger will not always merge all the specified objects, because the distance between every pair of objects must still be within the connection distance leniency.">
                     </ComboBox>
                     <TextBox Margin="15 0 0 0" Width="258" Text="{Binding TimeCode}" Visibility="{Binding TimeCodeBoxVisibility}"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Time code"
-                             ToolTip="Input a time code here. Example time code: 00:56:823 (1,2,1,2) - "/>
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="时间码"
+                             ToolTip="在此处输入时间码。例如：00:56:823 (1,2,1,2) - "/>
                 </StackPanel>
                 
 

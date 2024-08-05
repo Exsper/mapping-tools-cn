@@ -171,12 +171,12 @@
                         <CheckBox Content="SV修正"
                                   ToolTip="自动调节SV，使得滑条在添加凸点后保持原来的时长。"
                                   IsChecked="{Binding FixSv}"/>
-                        <CheckBox Content="BPM替代SV修正"
-                                  ToolTip="改变BPM（红线）替代SV（绿线）来调节滑条速度。"
+                        <CheckBox Content="用BPM替代SV"
+                                  ToolTip="用BPM（红线）代替SV（绿线）来调节滑条速度。"
                                   IsEnabled="{Binding FixSv}"
                                   IsChecked="{Binding DelegateToBpm}"/>
                         <CheckBox Content="移除滑条点（slider tick）"
-                                  ToolTip="添加一个NaN绿线移除滑条上的滑条点（slider tick）。"
+                                  ToolTip="添加一个NaN绿线来移除滑条上的滑条点（slider tick）。"
                                   IsChecked="{Binding RemoveSliderTicks}">
                             <CheckBox.IsEnabled>
                                 <MultiBinding Converter="{StaticResource BooleanAndConverter}">

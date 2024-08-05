@@ -214,6 +214,6 @@ namespace Mapping_Tools.Views.MapCleaner {
 
         public string AutoSavePath => Path.Combine(MainWindow.AppDataPath, "mapcleanerproject.json");
 
-        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "谱面清洁器项目");
+        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Map Cleaner Projects");
     }
 }

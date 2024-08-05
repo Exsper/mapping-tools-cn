@@ -41,31 +41,31 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                <Run Text="Sliderator"/>
+                <Run Text="滑条加速器"/>
             </TextBlock>
             <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                 <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                 </materialDesign:PopupBox.ToggleContent>
                 <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                    Sliderator is a tool meant to make sliders with variable velocity. That means sliders that change speed during the animation. You can also make variable velocity streams with this tool.
+                    滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。
                     <LineBreak/>
                     <LineBreak/>
-                    The UI consists of a slider import section, some options, a position/velocity graph, and a slider preview.
+                    工具界面由滑条导入区、选项区、位置/速度图和预览图组成。
                     <LineBreak/>
                     <LineBreak/>
-                    To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.
+                    要开始，从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。
                     <LineBreak/>
                     <LineBreak/>
-                    The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.
+                    最关键的是位置/速度图，它决定了滑条如何动作。点击曲线图下方的绿色按钮可以切换曲线图模式。
                     <LineBreak/>
-                    Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.
-                    <LineBreak/>
-                    <LineBreak/>
-                    Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.
+                    用右键添加、删除和编辑锚点，用左键拖拽锚点。当拖拽时，按住Shift仅水平移动，按住Ctrl仅竖直移动，按住Alt不再吸附网格。
                     <LineBreak/>
                     <LineBreak/>
-                    Check out all the options. The tooltips should help you further.
+                    使用恒定速度运行工具会生成原始滑条。调低SV、调高堆积块长度可以优化滑条，解决卡顿问题。
+                    <LineBreak/>
+                    <LineBreak/>
+                    查看所有选项的提示来获取更多信息。
                 </TextBlock>
             </materialDesign:PopupBox>
             <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
@@ -95,7 +95,7 @@
                          MaxX="{Binding GraphBeats, Mode=TwoWay}"/>
 
             <materialDesign:Card Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Padding="10"
-                                 ToolTip="Result preview">
+                                 ToolTip="生成预览">
                 <objectVisualiser:HitObjectElement x:Name="GraphHitObjectElement" Width="200" HitObject="{Binding VisibleHitObject}"
                                                    Stroke="YellowGreen" Fill="DarkSlateGray" SliderBallStroke="White" Thickness="50"/>
             </materialDesign:Card>
@@ -110,15 +110,15 @@
                         </Grid.ColumnDefinitions>
 
                         <ComboBox Grid.Column="0" ItemsSource="{Binding ImportModes}" SelectedItem="{Binding ImportModeSetting}" Margin="0 0 5 0"
-                                  ToolTip="Import mode"/>
+                                  ToolTip="导入模式"/>
 
                         <TextBox Grid.Column="1" Text="{Binding TimeCode}" Visibility="{Binding TimeCodeBoxVisibility}" Margin="5 0 5 2" Width="100"
-                                 materialDesign:HintAssist.Hint="Time code"
-                                 ToolTip="Input a time code here. Example time code: 00:56:823 (1,2,1,2) - "/>
+                                 materialDesign:HintAssist.Hint="时间码"
+                                 ToolTip="在此处输入时间码。例如：00:56:823 (1,2,1,2) - "/>
 
                         <Button Grid.Column="2" Style="{StaticResource MaterialDesignRaisedButton}" Command="{Binding ImportCommand}" Margin="5 0 0 0"
-                                ToolTip="Import sliders into the preview." HorizontalAlignment="Right" VerticalAlignment="Top">
-                            Import sliders
+                                ToolTip="将滑条导入预览" HorizontalAlignment="Right" VerticalAlignment="Top">
+                            导入滑条
                         </Button>
                     </Grid>
                     <Grid Margin="0 10 0 0">
@@ -127,19 +127,19 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding LoadedHitObjects.Count, StringFormat={}Loaded {0} slider(s)}"/>
+                        <TextBlock Grid.Column="0" Text="{Binding LoadedHitObjects.Count, StringFormat={}加载了 {0} 个滑条}"/>
 
                         <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                             <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Margin="0 0 5 0"
                                     Command="{Binding MoveLeftCommand}"
-                                    ToolTip="Go to previous slider. Hold Shift for quick run before going to previous slider.">
+                                    ToolTip="切换到上一个滑条。同时按下 Shift 在切换前快速执行。">
                                 <Button.Content>
                                     <materialDesign:PackIcon Kind="KeyboardArrowLeft" Width="24" Height="24"/>
                                 </Button.Content>
                             </Button>
                             <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                                     Command="{Binding MoveRightCommand}"
-                                    ToolTip="Go to next slider. Hold Shift for quick run before going to next slider.">
+                                    ToolTip="切换到下一个滑条。同时按下 Shift 在切换前快速执行。">
                                 <Button.Content>
                                     <materialDesign:PackIcon Kind="KeyboardArrowRight" Width="24" Height="24"/>
                                 </Button.Content>
@@ -153,8 +153,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBox Grid.Column="0" Margin="0 0 10 0" materialDesign:HintAssist.Hint="Beat length" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="Duration of the slider in beats.">
+                        <TextBox Grid.Column="0" Margin="0 0 10 0" materialDesign:HintAssist.Hint="节拍数" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="滑条长度对应的节拍数。">
                             <TextBox.Text>
                                 <Binding Path="GraphBeats" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
                                     <Binding.Converter>
@@ -176,7 +176,7 @@
                             </TextBox.Text>
                         </TextBox>
                         <TextBox Grid.Column="1" Margin="0 0 10 0" materialDesign:HintAssist.Hint="BPM" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The BPM at which this slider gets played.">
+                                 ToolTip="滑条播放时的BPM。">
                             <TextBox.Text>
                                 <Binding Path="BeatsPerMinute" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                     <Binding.Converter>
@@ -192,8 +192,8 @@
                                 </Binding>
                             </TextBox.Text>
                         </TextBox>
-                        <TextBox Grid.Column="2" Margin="0" materialDesign:HintAssist.Hint="Global SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The Global Slider Velocity at which this slider gets played.">
+                        <TextBox Grid.Column="2" Margin="0" materialDesign:HintAssist.Hint="全局SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="滑条播放时的全局滑条速度（SV）。">
                             <TextBox.Text>
                                 <Binding Path="GlobalSv" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                     <Binding.Converter>
@@ -216,32 +216,32 @@
                         </TextBox>
                     </Grid>
 
-                    <TextBox Margin="0 20 0 0" materialDesign:HintAssist.Hint="Time" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="The time in the current beatmap to export the sliderated slider to."
+                    <TextBox Margin="0 20 0 0" materialDesign:HintAssist.Hint="时间" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             ToolTip="导出滑条在谱面中的时间。"
                              Text="{Binding ExportTime, Converter={StaticResource TimeToStringConverter}}"/>
 
-                    <ComboBox Margin="0 10 0 0" ToolTip="Choose how you want to export sliders." ItemsSource="{Binding ExportModes}"
+                    <ComboBox Margin="0 10 0 0" ToolTip="选择导出方式。" ItemsSource="{Binding ExportModes}"
                               SelectedItem="{Binding ExportModeSetting}"/>
 
-                    <RadioButton Content="Export as slider" Margin="0 10 0 0"
+                    <RadioButton Content="导出滑条" Margin="0 10 0 0"
                                  GroupName="exportFormat"
-                                 ToolTip="Exports a normal sliderated slider."
+                                 ToolTip="以普通滑条形式导出。"
                                  IsChecked="{Binding ExportAsNormal}"/>
-                    <RadioButton Content="Export as stream" Margin="0 0 0 0"
+                    <RadioButton Content="导出连打（stream）" Margin="0 0 0 0"
                                  GroupName="exportFormat"
-                                 ToolTip="Exports an accelerating stream. This stream uses the beat snap divisor of the graph to determine the density of notes."
+                                 ToolTip="以连打形式导出。使用曲线图中的节拍细分来决定连打密度。"
                                  IsChecked="{Binding ExportAsStream}"/>
-                    <RadioButton Content="Export as invisible slider" Margin="0 0 0 0"
+                    <RadioButton Content="导出隐形滑条" Margin="0 0 0 0"
                                  GroupName="exportFormat"
-                                 ToolTip="Makes the slider invisible using a method by JPK314. This will also delegate SV to BPM."
+                                 ToolTip="使用 JPK314 提供的方法制作隐形滑条。该方法将用BPM改变替代SV改变。"
                                  IsChecked="{Binding ExportAsInvisibleSlider}"/>
 
-                    <CheckBox x:Name="ManualSvBox" Content="Manually choose new SV" Margin="0 10 0 5"
-                              ToolTip="Allows you to manually choose the SV for the sliderator algorithm and optimise the resulting slider."
+                    <CheckBox x:Name="ManualSvBox" Content="手动选择新SV" Margin="0 10 0 5"
+                              ToolTip="允许提供自定义SV给算法，优化生成的滑条。"
                               IsChecked="{Binding ManualVelocity}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                     </CheckBox>
-                    <TextBox materialDesign:HintAssist.Hint="New SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 5"
-                             ToolTip="The new SV for the sliderated slider. This SV influences the Sliderator algorithm. Use lower SV for less lag."
+                    <TextBox materialDesign:HintAssist.Hint="新SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 5"
+                             ToolTip="生成滑条的新SV。SV影响程序运算。降低SV可以减少卡顿。"
                              IsEnabled="{Binding ManualVelocity}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <TextBox.Text>
                             <Binding Path="NewVelocity" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
@@ -258,8 +258,8 @@
                             </Binding>
                         </TextBox.Text>
                     </TextBox>
-                    <TextBox materialDesign:HintAssist.Hint="Minimum tumour length" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="Minimum length for tumours which slow down the sliderball in the sliderated slider. Longer tumours result in less lag but a more shaky sliderball."
+                    <TextBox materialDesign:HintAssist.Hint="最短堆积块长度" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             ToolTip="用于降低滑条球速度的堆积块的最小长度。长堆积块可以减少卡顿，但滑条球会抖动得更加明显。"
                              Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <TextBox.Text>
                             <Binding Path="MinDendrite" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
@@ -283,17 +283,17 @@
                     </TextBox>
 
                     <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                        <TextBlock Text="Expected segment count: "
-                                   ToolTip="This is the estimated segment count for your result. More segments means more lag, so try to optimise this value."/>
+                        <TextBlock Text="预计分段数量："
+                                   ToolTip="这是估算结果的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
                         <TextBlock Text="{Binding ExpectedSegments}"
-                                   ToolTip="This is the estimated segment count for your result. More segments means more lag, so try to optimise this value."/>
+                                   ToolTip="这是估算结果的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
                     </StackPanel>
 
-                    <CheckBox x:Name="DelegateSvToBpmBox" Content="Delegate SV to BPM" Margin="0 15 0 0"
-                              ToolTip="Use BPM to determine the velocity of the resulting slider instead of greenline SV. This allows you to use SV higher than 10x."
+                    <CheckBox x:Name="DelegateSvToBpmBox" Content="用BPM替代SV" Margin="0 15 0 0"
+                              ToolTip="用BPM（红线）代替SV（绿线）来调节滑条速度，可以突破SV的10x上限。"
                               IsChecked="{Binding DelegateToBpm}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                    <CheckBox Content="Remove slider ticks"
-                              ToolTip="Use a NaN greenline to remove slider ticks from the resulting slider."
+                    <CheckBox Content="移除滑条点（slider tick）"
+                              ToolTip="添加一个NaN绿线来移除滑条上的滑条点（slider tick）。"
                               IsChecked="{Binding RemoveSliderTicks}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}"
                               IsEnabled="{Binding DelegateToBpm}"/>
                 </StackPanel>
@@ -313,9 +313,9 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBox Grid.Column="0" Margin="0 0 8 0" HorizontalAlignment="Left"
-                             materialDesign:HintAssist.Hint="SV limit" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             materialDesign:HintAssist.Hint="SV限制" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                              MaxWidth="140" MinWidth="100"
-                             ToolTip="Self-imposed SV limit to help you make sure the slope in the graph doesn't become greater than this speed limit. For example use 10x SV limit to match the osu! speed limit."
+                             ToolTip="限定最大SV，确保曲线图中的斜率不会超过此速度限制。比如设为10x来匹配osu!速度限制。"
                              Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <TextBox.Text>
                             <Binding Path="VelocityLimit" Mode="TwoWay" Converter="{StaticResource DoubleToStringConverter}" ConverterParameter="10" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
@@ -337,19 +337,19 @@
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Margin="0 0 5 0"
-                                ToolTip="Scale graph to completion." Click="ScaleCompleteButton_OnClick">
+                                ToolTip="整体缩放曲线图。" Click="ScaleCompleteButton_OnClick">
                             <Button.Content>
                                 <materialDesign:PackIcon Kind="RelativeScale" Width="24" Height="24"/>
                             </Button.Content>
                         </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Margin="0 0 5 0"
-                                ToolTip="Reset graph." Click="ClearButton_OnClick">
+                                ToolTip="重置曲线图。" Click="ClearButton_OnClick">
                             <Button.Content>
                                 <materialDesign:PackIcon Kind="Rocket" Width="24" Height="24"/>
                             </Button.Content>
                         </Button>
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Margin="5 0 0 0"
-                                ToolTip="Toggle graph mode." Command="{Binding GraphToggleCommand}">
+                                ToolTip="切换曲线图模式。" Command="{Binding GraphToggleCommand}">
                             <Button.Content>
                                 <Viewbox Width="24" Height="24">
                                     <TextBlock x:Name="GraphToggleContentTextBlock" FontWeight="Bold">V</TextBlock>
@@ -360,13 +360,13 @@
                 </Grid>
 
                 <Slider Grid.Row="1" Minimum="1" Maximum="16" Value="{Binding BeatSnapDivisor}" Style="{StaticResource MaterialDesignDiscreteSlider}"
-                        ToolTip="Beat snap divisor." Margin="0 5 0 0"/>
+                        ToolTip="节拍细分。" Margin="0 5 0 0"/>
 
                 <ToolBarOverflowPanel HorizontalAlignment="Left" Grid.Row="2" Margin="5 10 5 0">
-                    <CheckBox IsChecked="{Binding ShowRedAnchors}" Content="Show red anchors" Margin="0 0 5 0"
-                              ToolTip="Show the positions of red anchors in the graph and preview."/>
-                    <CheckBox IsChecked="{Binding ShowGraphAnchors}" Content="Show graph anchors"
-                              ToolTip="Show the positions of graph anchors in the preview."/>
+                    <CheckBox IsChecked="{Binding ShowRedAnchors}" Content="显示红色锚点" Margin="0 0 5 0"
+                              ToolTip="在曲线图和预览图中显示红色锚点。"/>
+                    <CheckBox IsChecked="{Binding ShowGraphAnchors}" Content="显示曲线图锚点"
+                              ToolTip="在预览图中显示曲线图锚点。"/>
                 </ToolBarOverflowPanel>
             </Grid>
 

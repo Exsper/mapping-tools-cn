@@ -58,8 +58,8 @@
                             ToolTip="Choose how to select sliders to completionate.">
                         </ComboBox>
                         <TextBox Margin="15 0 0 0" Width="258" Text="{Binding TimeCode}" Visibility="{Binding TimeCodeBoxVisibility}"
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Time code"
-                            ToolTip="Input a time code here. Example time code: 00:56:823 (1,2,1,2) - "/>
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="时间码"
+                            ToolTip="在此处输入时间码。例如：00:56:823 (1,2,1,2) - "/>
                     </StackPanel>
 
                     <CheckBox x:Name="MoveAnchorsBox" Margin="0,20,0,0" Content="Move anchors to new length"
@@ -74,11 +74,11 @@
                               IsChecked="{Binding UseCurrentEditorTime}"
                               ToolTip="Snap the slider ends to the current editor time."/>
 
-                    <CheckBox x:Name="DelegateSvToBpmBox" Content="Delegate SV to BPM" Margin="0 0 0 0"
-                              ToolTip="Use BPM to determine the velocity of the slider instead of greenline SV."
+                    <CheckBox x:Name="DelegateSvToBpmBox" Content="用BPM替代SV" Margin="0 0 0 0"
+                              ToolTip="用BPM（红线）代替SV（绿线）来调节滑条速度。"
                               IsChecked="{Binding DelegateToBpm}"/>
-                    <CheckBox Content="Remove slider ticks"
-                              ToolTip="Use a NaN greenline to remove slider ticks from the slider."
+                    <CheckBox Content="移除滑条点（slider tick）"
+                              ToolTip="添加一个NaN绿线来移除滑条上的滑条点（slider tick）。"
                               IsEnabled="{Binding DelegateToBpm}"
                               IsChecked="{Binding RemoveSliderTicks}"/>
 

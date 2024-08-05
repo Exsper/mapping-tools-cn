@@ -26,7 +26,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
         }
 
         [DisplayName("Filter")]
-        [Description("Input an optional time code here. Example time code: 00:56:823 (1,2,1,2) - ")]
+        [Description("在此处输入时间码。例如：00:56:823 (1,2,1,2) - ")]
         public string Filter {
             get => filter;
             set => Set(ref filter, value);

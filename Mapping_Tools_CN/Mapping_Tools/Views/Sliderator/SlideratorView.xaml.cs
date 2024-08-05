@@ -34,21 +34,21 @@ namespace Mapping_Tools.Views.Sliderator {
     //[HiddenTool]
     [SmartQuickRunUsage(SmartQuickRunTargets.SingleSelection)]
     public partial class SlideratorView : ISavable<SlideratorVm>, IQuickRun {
-        public static readonly string ToolName = "Sliderator";
+        public static readonly string ToolName = "滑条加速器";
 
-        public static readonly string ToolDescription = "Sliderator is a tool meant to make sliders or streams with variable velocity. That means sliders that change speed during the animation. You can also make variable velocity streams with this tool." +
+        public static readonly string ToolDescription = "滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "The UI consists of a slider import section, some options, a position/velocity graph, and a slider preview." +
+                                                        "工具界面由滑条导入区、选项区、位置/速度图和预览图组成。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu." +
+                                                        "要开始，从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below." +
+                                                        "最关键的是位置/速度图，它决定了滑条如何动作。点击曲线图下方的绿色按钮可以切换曲线图模式。" +
                                                         Environment.NewLine +
-                                                        "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping." +
+                                                        "用右键添加、删除和编辑锚点，用左键拖拽锚点。当拖拽时，按住Shift仅水平移动，按住Ctrl仅竖直移动，按住Alt不再吸附网格。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider." +
+                                                        "使用恒定速度运行工具会生成原始滑条。调低SV、调高堆积块长度可以优化滑条，解决卡顿问题。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "Check out all the options. The tooltips should help you further.";
+                                                        "查看所有选项的提示来获取更多信息。";
 
         private bool ignoreAnchorsChange;
         private bool initialized;
@@ -432,7 +432,7 @@ namespace Mapping_Tools.Views.Sliderator {
         }
 
         private void ClearButton_OnClick(object sender, RoutedEventArgs e) {
-            var messageBoxResult = MessageBox.Show("Clear the graph?", "Confirm deletion", MessageBoxButton.YesNo);
+            var messageBoxResult = MessageBox.Show("清除当前曲线？", "确认清除", MessageBoxButton.YesNo);
             if (messageBoxResult != MessageBoxResult.Yes) return;
 
             ResetGraph();
@@ -493,36 +493,36 @@ namespace Mapping_Tools.Views.Sliderator {
 
         private bool ValidateToolInput(out string message) {
             if (GetMinCompletion() < -1E-4) {
-                message = "Negative position is illegal.";
+                message = "不允许负数位置。";
                 return false;
             }
 
             var maxVelocity = ViewModel.NewVelocity;
             if (ViewModel.ExportAsNormal && double.IsInfinity(maxVelocity)) {
-                message = "Infinite slope on the path is illegal.";
+                message = "路径上不允许无限斜率。";
                 return false;
             }
 
             if (ViewModel.ExportAsNormal && maxVelocity > ViewModel.VelocityLimit + Precision.DoubleEpsilon) {
-                message = "A velocity faster than the SV limit is illegal. Please check your graph or increase the SV limit.";
+                message = "滑条速度不允许超出SV上限。请检查曲线图或提高SV上限。";
                 return false;
             }
 
             if (double.IsInfinity(ViewModel.BeatsPerMinute) || double.IsNaN(ViewModel.BeatsPerMinute) ||
                 Math.Abs(ViewModel.BeatsPerMinute) < Precision.DoubleEpsilon) {
-                message = "The beats per minute field has an illegal value";
+                message = "BPM填写不正确";
                 return false;
             }
 
             if (double.IsInfinity(ViewModel.GraphBeats) || double.IsNaN(ViewModel.GraphBeats) ||
                 Math.Abs(ViewModel.GraphBeats) < Precision.DoubleEpsilon) {
-                message = "The beat length field has an illegal value";
+                message = "节拍数填写不正确";
                 return false;
             }
 
             if (double.IsInfinity(ViewModel.GlobalSv) || double.IsNaN(ViewModel.GlobalSv) ||
                 Math.Abs(ViewModel.GlobalSv) < Precision.DoubleEpsilon) {
-                message = "The global SV field has an illegal value";
+                message = "全局SV填写不正确";
                 return false;
             }
 
@@ -659,13 +659,13 @@ namespace Mapping_Tools.Views.Sliderator {
 
                     // Check for some illegal output
                     if (double.IsInfinity(sliderator.MaxS) || double.IsNaN(sliderator.MaxS)) {
-                        return "Encountered unexpected values from Sliderator. Please check your input.";
+                        return "工具遇到意料外的数值。请检查输入。";
                     }
                 }
 
                 // Check for some illegal output
                 if (slideration.Any(v => double.IsNaN(v.X) || double.IsNaN(v.Y))) {
-                    return "Encountered NaN coordinates. Please check your input.";
+                    return "遇到非数字坐标。请检查输入。";
                 }
             }
             

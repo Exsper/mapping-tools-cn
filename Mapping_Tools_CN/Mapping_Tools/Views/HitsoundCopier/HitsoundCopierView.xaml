@@ -108,8 +108,8 @@
                 </TextBox>
                 <CheckBox x:Name="CopyHitsoundsBox" IsChecked="{Binding CopyHitsounds}" Content="复制打击音效" Margin="0,10,0,0"
                           ToolTip="复制单点、滑条头/折返/滑条尾、转盘结束和面条头的音效。"/>
-                <CheckBox x:Name="CopyBodyBox" IsChecked="{Binding CopyBodyHitsounds}" Content="复制滑条身体音效"
-                          ToolTip="复制滑条身体（sliderbody）的音效"/>
+                <CheckBox x:Name="CopyBodyBox" IsChecked="{Binding CopyBodyHitsounds}" Content="复制滑条体音效"
+                          ToolTip="复制滑条体（sliderbody）的音效"/>
                 <CheckBox x:Name="CopySamplesetBox" IsChecked="{Binding CopySampleSets}" Content="复制音效组"
                           ToolTip="复制音效组（sample sets）。"/>
                 <CheckBox x:Name="CopyVolumeBox" IsChecked="{Binding CopyVolumes}" Content="复制音量"
@@ -133,7 +133,7 @@
                 <CheckBox IsChecked="{Binding CopyToSliderTicks}" Content="复制到滑条点"
                           IsEnabled="{Binding SmartCopyModeSelected}"
                           ToolTip="启用此选项后，当源音效对应目标滑条而无法复制音效时，将会尝试给滑条点（slider tick）分配自定义音效。生成的音效文件需要您放到谱面文件夹中。仅适用于“对应覆盖”模式。"/>
-                <CheckBox IsChecked="{Binding CopyToSliderSlides}" Content="复制到滑条身体"
+                <CheckBox IsChecked="{Binding CopyToSliderSlides}" Content="复制到滑条体"
                           IsEnabled="{Binding SmartCopyModeSelected}"
                           ToolTip="启用此选项后，当源音效对应目标滑条而无法复制音效时，将会尝试给滑条滑动音（slider slide）分配自定义音效。生成的音效文件需要您放到谱面文件夹中。仅适用于“对应覆盖”模式。"/>
                 <TextBox Text="{Binding StartIndex, Converter={StaticResource IntToStringConverter}, ConverterParameter=100}"

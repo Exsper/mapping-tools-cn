@@ -638,6 +638,6 @@ namespace Mapping_Tools.Views.HitsoundCopier {
 
         public string AutoSavePath => Path.Combine(MainWindow.AppDataPath, "hitsoundcopierproject.json");
 
-        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "音效复制器项目");
+        public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Hitsound Copier Projects");
     }
 }
