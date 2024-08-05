@@ -22,9 +22,9 @@ namespace Mapping_Tools.Views.TimingCopier {
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Timing Copier Projects");
 
-        public static readonly string ToolName = "Timing Copier";
+        public static readonly string ToolName = "Timing复制器";
 
-        public static readonly string ToolDescription = $@"Copies timing from A to B.{Environment.NewLine}There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:{Environment.NewLine}'Number of beats between objects stays the same' will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.{Environment.NewLine}'Just resnap' will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.{Environment.NewLine}'Don't move objects' will not move the objects at all.";
+        public static readonly string ToolDescription = $@"将A谱面的timing复制到B谱面。{Environment.NewLine}程序有 3 种工作模式处理移动物件（打击物件/时间轴/书签）以适配新timing：{Environment.NewLine}“物件间的节拍数保持不变”模式在移动并保证物件间节拍数不变后，也会按照指定的节拍细分自动对齐。注意使用前确保所有物件都已对齐，并且当新timing更改了物件间的节拍数时请勿使用该模式。{Environment.NewLine}“仅重新对齐”模式将物件对齐到新timing指定的节拍细分上。该模式不对齐书签。{Environment.NewLine}“不移动物件”模式不会移动任何物件。";
 
         public TimingCopierView() {
             InitializeComponent();
@@ -186,7 +186,7 @@ namespace Mapping_Tools.Views.TimingCopier {
             }
 
             // Make an accurate message
-            string message = $"Successfully copied timing to {mapsDone} {(mapsDone == 1 ? "beatmap" : "beatmaps")}!";
+            string message = $"成功复制timing到 {mapsDone} 张{(mapsDone == 1 ? "谱面" : "谱面")}！";
             return message;
         }
 

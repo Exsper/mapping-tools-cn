@@ -22,22 +22,22 @@
             <StackPanel Grid.Row="0" Margin="0,0,120,0">
                 <StackPanel Orientation="Horizontal">
                   <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Timing Copier"/>
+                    <Run Text="Timing 复制器（Timing Copier）"/>
                   </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
                       <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
                     <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                      Copies timing from A to B.
+                      将A谱面的timing复制到B谱面。
                       <LineBreak/>
-                      There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:
+                      程序有 3 种工作模式处理移动物件（打击物件/时间轴/书签）以适配新timing：
                       <LineBreak/>
-                      "Number of beats between objects stays the same" will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.
+                      “物件间的节拍数保持不变”模式在移动并保证物件间节拍数不变后，也会按照指定的节拍细分自动对齐。注意使用前确保所有物件都已对齐，并且当新timing更改了物件间的节拍数时请勿使用该模式。
                       <LineBreak/>
-                      "Just resnap" will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.
+                      “仅重新对齐”模式将物件对齐到新timing指定的节拍细分上。该模式不对齐书签。
                       <LineBreak/>
-                      "Don't move objects" will not move the objects at all.
+                      “不移动物件”模式不会移动任何物件。
                         </TextBlock>
                   </materialDesign:PopupBox>
                 </StackPanel>
@@ -50,14 +50,14 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" Text="{Binding ImportPath}" Margin="0,0,5,0"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Copy timing from"
-                        ToolTip="Path to the beatmap to copy timing from."/>
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="timing来源从"
+                        ToolTip="timing来源谱面的地址。"/>
                     <Button Grid.Column="1" Cursor="Hand" Command="{Binding ImportLoadCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="Fetch the selected beatmap from your osu! client.">
+                            ToolTip="从osu!客户端获取当前选中谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                     <Button Grid.Column="3" Cursor="Hand" Command="{Binding ImportBrowseCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="Select beatmaps with File Explorer.">
+                            ToolTip="从文件浏览器中选择谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                 </Grid>
@@ -70,33 +70,33 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" x:Name="ExportPathBox" Text="{Binding ExportPath}"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Copy timing to"
-                        ToolTip="Beatmap(s) to copy timing to. You can input multiple beatmap paths seperated with '|'."/>
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="复制timing到"
+                        ToolTip="将timing复制给这些谱面。您可以用 '|' 字符分隔多个谱面。"/>
                     <TextBlock Grid.Column="1" Margin="3 15 5 0" FontStyle="Italic"
-                               ToolTip="Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character."
+                               ToolTip="该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。"
                                Text="{Binding ElementName=ExportPathBox, Path=Text, Converter={StaticResource MapPathStringToCountStringConverter}}"/>
                     <Button Grid.Column="2" Cursor="Hand" Command="{Binding ExportLoadCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="Fetch the selected beatmap from your osu! client.">
+                            ToolTip="从osu!客户端获取当前选中谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                     <Button Grid.Column="4" Cursor="Hand" Command="{Binding ExportBrowseCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="Select beatmaps with File Explorer.">
+                            ToolTip="从文件浏览器中选择谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                 </Grid>
                 <ComboBox Margin="0,20,0,0" Cursor="Hand" Text="{Binding ResnapMode}"
-                    Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Resnapping mode"
-                    ToolTip="Choose how to move hit objects to the new timing.">
-                    <ComboBoxItem Content="Number of beats between objects stays the same" Cursor="Hand"/>
-                    <ComboBoxItem Content="Just resnap" Cursor="Hand"/>
-                    <ComboBoxItem Content="Don't move objects" Cursor="Hand"/>
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="重新对齐模式"
+                    ToolTip="选择如何移动物件到新timing。">
+                    <ComboBoxItem Content="物件间的节拍数保持不变" Cursor="Hand"/>
+                    <ComboBoxItem Content="仅重新对齐" Cursor="Hand"/>
+                    <ComboBoxItem Content="不移动物件" Cursor="Hand"/>
                 </ComboBox>
-                <TextBlock Text="Signatures" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
+                <TextBlock Text="特征" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
                            ToolTip="Beat snap divisors for resnapping."/>
                 <TextBox Text="{Binding BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          HorizontalAlignment="Left" MinWidth="100" FontSize="14" Cursor="Hand"
-                         materialDesign:HintAssist.Hint="Beat divisors"
+                         materialDesign:HintAssist.Hint="节拍细分"
                          ToolTip="输入所有节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
             </StackPanel>
             <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Margin="10">

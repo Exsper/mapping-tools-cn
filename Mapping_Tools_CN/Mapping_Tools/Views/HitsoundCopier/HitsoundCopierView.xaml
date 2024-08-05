@@ -24,7 +24,7 @@
             <StackPanel Grid.Row="0" Margin="0,0,0,100">
                 <StackPanel Orientation="Horizontal">
                   <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="音效复制器"/>
+                    <Run Text="音效复制器（Hitsound Copier）"/>
                   </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
@@ -49,13 +49,13 @@
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" x:Name="BeatmapFromBox" Margin="0,0,5,0" Text="{Binding PathFrom}"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="音效来源从"
-                        ToolTip="从该谱面获取音效"/>
+                        ToolTip="从该谱面获取音效。"/>
                     <Button Grid.Column="1" Cursor="Hand" Command="{Binding ImportLoadCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="从osu!客户端获取当前选中谱面">
+                            ToolTip="从osu!客户端获取当前选中谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                     <Button Grid.Column="3" Cursor="Hand" Command="{Binding ImportBrowseCommand}"  Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="从文件浏览器中选择谱面">
+                            ToolTip="从文件浏览器中选择谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                 </Grid>
@@ -74,11 +74,11 @@
                                ToolTip="该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。"
                                Text="{Binding ElementName=BeatmapToBox, Path=Text, Converter={StaticResource MapPathStringToCountStringConverter}}"/>
                     <Button Grid.Column="2" Cursor="Hand" Command="{Binding ExportLoadCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="从osu!客户端获取当前选中谱面">
+                            ToolTip="从osu!客户端获取当前选中谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                     <Button Grid.Column="4" Cursor="Hand" Command="{Binding ExportBrowseCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                            ToolTip="从文件浏览器中选择谱面">
+                            ToolTip="从文件浏览器中选择谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                     </Button >
                 </Grid>

@@ -81,7 +81,7 @@
                     Text="{Binding BeatsBetween, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=-1}">
                 </TextBox>
 
-                <TextBlock Text="Signatures" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
+                <TextBlock Text="特征" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
                            ToolTip="Beat snap divisors for resnapping."/>
                 <TextBox Text="{Binding BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"

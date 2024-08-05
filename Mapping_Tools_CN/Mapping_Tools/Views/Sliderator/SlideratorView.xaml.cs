@@ -34,9 +34,9 @@ namespace Mapping_Tools.Views.Sliderator {
     //[HiddenTool]
     [SmartQuickRunUsage(SmartQuickRunTargets.SingleSelection)]
     public partial class SlideratorView : ISavable<SlideratorVm>, IQuickRun {
-        public static readonly string ToolName = "滑条加速器";
+        public static readonly string ToolName = "滑条变速器";
 
-        public static readonly string ToolDescription = "滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。" +
+        public static readonly string ToolDescription = "滑条变速器可以让滑条速度随时间变化，也可以用来生成变距连打。" +
                                                         Environment.NewLine + Environment.NewLine +
                                                         "工具界面由滑条导入区、选项区、位置/速度图和预览图组成。" +
                                                         Environment.NewLine + Environment.NewLine +

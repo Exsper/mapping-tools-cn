@@ -23,7 +23,7 @@
             <StackPanel>
               <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                        <Run Text="自动失败检测"/>
+                        <Run Text="自动失败检测（Auto-fail Detector）"/>
                     </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                         <materialDesign:PopupBox.ToggleContent>

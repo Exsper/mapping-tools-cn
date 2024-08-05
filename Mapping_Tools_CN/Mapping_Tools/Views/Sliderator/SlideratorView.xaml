@@ -41,14 +41,14 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                <Run Text="滑条加速器"/>
+                <Run Text="滑条变速器（Sliderator）"/>
             </TextBlock>
             <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                 <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                 </materialDesign:PopupBox.ToggleContent>
                 <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                    滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。
+                    滑条变速器可以让滑条速度随时间变化，也可以用来生成变距连打。
                     <LineBreak/>
                     <LineBreak/>
                     工具界面由滑条导入区、选项区、位置/速度图和预览图组成。
@@ -284,9 +284,9 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
                         <TextBlock Text="预计分段数量："
-                                   ToolTip="这是估算结果的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
+                                   ToolTip="这是估算的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
                         <TextBlock Text="{Binding ExpectedSegments}"
-                                   ToolTip="这是估算结果的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
+                                   ToolTip="这是估算的分段数量。分段越多玩着越卡，请尽可能优化该值。"/>
                     </StackPanel>
 
                     <CheckBox x:Name="DelegateSvToBpmBox" Content="用BPM替代SV" Margin="0 15 0 0"
