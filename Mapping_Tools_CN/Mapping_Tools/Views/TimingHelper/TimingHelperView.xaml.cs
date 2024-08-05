@@ -23,9 +23,9 @@ namespace Mapping_Tools.Views.TimingHelper {
     [VerticalContentScroll]
     [HorizontalContentScroll]
     public partial class TimingHelperView : IQuickRun, ISavable<TimingHelperVm> {
-        public static readonly string ToolName = "Timing Helper";
+        public static readonly string ToolName = "Timing 助手";
 
-        public static readonly string ToolDescription = $@"Timing Helper is meant to speed up your timing job by placing the redlines for you. You only have to tell it exactly where all the sounds are.{Environment.NewLine}What you do is place 'markers' exactly on the correct timing of sounds. These markers can be hit objects, bookmarks, greenlines and redlines.{Environment.NewLine}Timing Helper will then adjust BPM and/or add redlines to make every marker be snapped.";
+        public static readonly string ToolDescription = $@"Timing助手通过自动放置红线来提高timing效率。您只需要提供声音的精确位置即可。{Environment.NewLine}您需要做的是精准地在声音处加“标记”。标记可以是打击物件、书签、绿线和红线。{Environment.NewLine}随后Timing助手会调整BPM并且/或者增加红线，对齐所有标记。";
 
         public TimingHelperView() {
             InitializeComponent();
@@ -258,12 +258,12 @@ namespace Mapping_Tools.Views.TimingHelper {
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, reader != null, arg.Quick));
 
             // Make an accurate message
-            string message = "Successfully added ";
+            string message = "成功添加 ";
             message += redlinesAdded;
             if (Math.Abs(redlinesAdded) == 1) {
-                message += " redlines!";
+                message += " 条红线！";
             } else {
-                message += " redlines!";
+                message += " 条红线！";
             }
 
             return arg.Quick ? string.Empty : message;

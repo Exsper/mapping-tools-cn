@@ -92,7 +92,7 @@
                     <ComboBoxItem Content="不移动物件" Cursor="Hand"/>
                 </ComboBox>
                 <TextBlock Text="特征" Margin="0,20,0,0" FontSize="14" FontWeight="Bold"
-                           ToolTip="Beat snap divisors for resnapping."/>
+                           ToolTip="参照节拍细分以对齐。"/>
                 <TextBox Text="{Binding BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                          HorizontalAlignment="Left" MinWidth="100" FontSize="14" Cursor="Hand"
