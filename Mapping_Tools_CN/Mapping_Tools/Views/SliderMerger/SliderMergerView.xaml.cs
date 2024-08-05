@@ -21,10 +21,10 @@ namespace Mapping_Tools.Views.SliderMerger {
     [VerticalContentScroll]
     [HorizontalContentScroll]
     public partial class SliderMergerView : IQuickRun, ISavable<SliderMergerVm> {
-        public static readonly string ToolName = "Slider Merger";
+        public static readonly string ToolName = "滑条合并器";
 
         public static readonly string ToolDescription =
-            $@"Merge 2 or more sliders and circles into one big slider.{Environment.NewLine}This program will automatically convert any type of slider into a Beziér slider for the purpose of merging.{Environment.NewLine}Circles can be merged too and will always use the linear connection mode.";
+            $@"将多个滑条组合为长滑条。{Environment.NewLine}该程序会自动转换任何类型的滑条变成贝塞尔滑条来进行合并。{Environment.NewLine}圆圈也能被合并，且固定使用直线连接模式。";
 
         public SliderMergerView() {
             InitializeComponent();
@@ -75,14 +75,14 @@ namespace Mapping_Tools.Views.SliderMerger {
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
             if (arg.ImportModeSetting == 0 && editorReaderException1 != null) {
-                throw new Exception("Could not fetch selected hit objects.", editorReaderException1);
+                throw new Exception("无法获取选中的打击物件。", editorReaderException1);
             }
 
             foreach (var path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                 if (arg.ImportModeSetting == SliderMergerVm.ImportMode.Selected && editorReaderException2 != null) {
-                    throw new Exception("Could not fetch selected hit objects.", editorReaderException2);
+                    throw new Exception("无法获取选中的打击物件。", editorReaderException2);
                 }
 
                 var beatmap = editor.Beatmap;
@@ -267,9 +267,9 @@ namespace Mapping_Tools.Views.SliderMerger {
             // Make an accurate message
             var message = "";
             if (Math.Abs(slidersMerged) == 1)
-                message += "Successfully merged " + slidersMerged + " slider!";
+                message += "成功合并 " + slidersMerged + " 个滑条！";
             else
-                message += "Successfully merged " + slidersMerged + " sliders!";
+                message += "成功合并 " + slidersMerged + " 个滑条！";
             return arg.Quick ? "" : message;
         }
 

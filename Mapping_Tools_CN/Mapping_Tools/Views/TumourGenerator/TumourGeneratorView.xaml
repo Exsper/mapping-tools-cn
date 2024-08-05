@@ -58,7 +58,7 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="40" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="凸点生成器v2"/>
+                    <Run Text="凸点生成器v2（Tumour Generator 2）"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>

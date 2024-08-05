@@ -53,7 +53,7 @@
                 <StackPanel Width="531" HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal" Margin="0,26,0,0" HorizontalAlignment="Left">
                         <ComboBox x:Name="SelectionModeBox" Cursor="Hand" Width="258"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Object selection mode"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="物件选择模式"
                             ItemsSource="{Binding ImportModes}" SelectedItem="{Binding ImportModeSetting}"
                             ToolTip="Choose how to select sliders to completionate.">
                         </ComboBox>
