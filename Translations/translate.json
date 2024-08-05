@@ -1186,7 +1186,7 @@
         "\"sliderslide\"": "\"sliderslide\"",
         "\"SliderTickRate\"": "\"SliderTickRate\"",
         "\"hitsoundcopierproject.json\"": "\"hitsoundcopierproject.json\"",
-        "\"Hitsound Copier Projects\"": "\"音效复制器项目\""
+        "\"Hitsound Copier Projects\"": "\"Hitsound Copier Projects\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundPreviewHelper\\HitsoundPreviewHelper.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -1520,7 +1520,7 @@
         "$\" and resnapped {result.ObjectsResnapped} {(result.ObjectsResnapped == 1 ? \"object\" : \"objects\")}\" : \"\"": "$\"并重新对齐了 {result.ObjectsResnapped} 个{(result.ObjectsResnapped == 1 ? \"物件\" : \"物件\")}\" : \"\"",
         "$\" and removed {result.SamplesRemoved} unused {(result.SamplesRemoved == 1 ? \"sample\" : \"samples\")}\" : \"\") + \"!\"": "$\"并移除了 {result.SamplesRemoved} 个未使用的{(result.SamplesRemoved == 1 ? \"音效组\" : \"音效组\")}\" : \"\") + \"！\"",
         "\"mapcleanerproject.json\"": "\"mapcleanerproject.json\"",
-        "\"Map Cleaner Projects\"": "\"谱面清洁器项目\""
+        "\"Map Cleaner Projects\"": "\"Map Cleaner Projects\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\MapsetMerger\\MapsetMergerView.cs": {
         "\"mapsetmergerproject.json\"": "\"mapsetmergerproject.json\"",
@@ -1947,10 +1947,10 @@
         "materialDesign:HintAssist.Hint=\"SV limit\"": "materialDesign:HintAssist.Hint=\"SV限制\"",
         "Sliderator is a tool meant to make sliders with variable velocity. That means sliders that change speed during the animation. You can also make variable velocity streams with this tool.": "滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。",
         "The UI consists of a slider import section, some options, a position/velocity graph, and a slider preview.": "工具界面由滑条导入区、选项区、位置/速度图和预览图组成。",
-        "To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.": "To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.",
-        "The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.": "The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.",
-        "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.": "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.",
-        "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.": "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.",
+        "To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.": "要开始，从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。",
+        "The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.": "最关键的是位置/速度图，它决定了滑条如何动作。点击曲线图下方的绿色按钮可以切换曲线图模式。",
+        "Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.": "用右键添加、删除和编辑锚点，用左键拖拽锚点。当拖拽时，按住Shift仅水平移动，按住Ctrl仅竖直移动，按住Alt不再吸附网格。",
+        "Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.": "使用恒定速度运行工具会生成原始滑条。调低SV、调高堆积块长度可以优化滑条，解决卡顿问题。",
         "Check out all the options. The tooltips should help you further.": "查看所有选项的提示来获取更多信息。",
         "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
         "Import sliders": "导入滑条"
@@ -1959,25 +1959,25 @@
         "\"Sliderator\"": "\"滑条加速器\"",
         "\"Sliderator is a tool meant to make sliders or streams with variable velocity. That means sliders that change speed during the animation. You can also make variable velocity streams with this tool.\"": "\"滑条加速器可以让滑条速度随时间变化，也可以用来生成变距连打。\"",
         "\"The UI consists of a slider import section, some options, a position/velocity graph, and a slider preview.\"": "\"工具界面由滑条导入区、选项区、位置/速度图和预览图组成。\"",
-        "\"To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.\"": "\"To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.\"",
-        "\"The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.\"": "\"The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.\"",
-        "\"Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.\"": "\"Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.\"",
-        "\"Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.\"": "\"Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.\"",
+        "\"To get started, simply import one or more sliders using the 'Import sliders' button. Use any of the three different import methods from the dropdown menu.\"": "\"要开始，从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。\"",
+        "\"The most important element is the position/velocity graph. This is where you tell Sliderator what you want your slider animation to look like. You can toggle between position and velocity mode by clicking the accent colored button below.\"": "\"最关键的是位置/速度图，它决定了滑条如何动作。点击曲线图下方的绿色按钮可以切换曲线图模式。\"",
+        "\"Add, remove, or edit anchors with right click and move stuff by dragging with left click. While dragging, hold Shift for horizontal clipping, hold Ctrl for vertical clipping, and hold Alt to disable snapping.\"": "\"用右键添加、删除和编辑锚点，用左键拖拽锚点。当拖拽时，按住Shift仅水平移动，按住Ctrl仅竖直移动，按住Alt不再吸附网格。\"",
+        "\"Running Sliderator with a constant velocity will give back the original slider. You can manually choose a lower SV and bigger tumour length to optimise your slider.\"": "\"使用恒定速度运行工具会生成原始滑条。调低SV、调高堆积块长度可以优化滑条，解决卡顿问题。\"",
         "\"Check out all the options. The tooltips should help you further.\"": "\"查看所有选项的提示来获取更多信息。\"",
         "\"RootDialog\"": "\"RootDialog\"",
-        "\"Clear the graph?\"": "\"Clear the graph?\"",
-        "\"Confirm deletion\"": "\"Confirm deletion\"",
-        "\"Negative position is illegal.\"": "\"Negative position is illegal.\"",
-        "\"Infinite slope on the path is illegal.\"": "\"Infinite slope on the path is illegal.\"",
-        "\"A velocity faster than the SV limit is illegal. Please check your graph or increase the SV limit.\"": "\"A velocity faster than the SV limit is illegal. Please check your graph or increase the SV limit.\"",
-        "\"The beats per minute field has an illegal value\"": "\"The beats per minute field has an illegal value\"",
-        "\"The beat length field has an illegal value\"": "\"The beat length field has an illegal value\"",
-        "\"The global SV field has an illegal value\"": "\"The global SV field has an illegal value\"",
-        "\"Encountered unexpected values from Sliderator. Please check your input.\"": "\"Encountered unexpected values from Sliderator. Please check your input.\"",
-        "\"Encountered NaN coordinates. Please check your input.\"": "\"Encountered NaN coordinates. Please check your input.\"",
+        "\"Clear the graph?\"": "\"清除当前曲线？\"",
+        "\"Confirm deletion\"": "\"确认清除\"",
+        "\"Negative position is illegal.\"": "\"不允许负数位置。\"",
+        "\"Infinite slope on the path is illegal.\"": "\"路径上不允许无限斜率。\"",
+        "\"A velocity faster than the SV limit is illegal. Please check your graph or increase the SV limit.\"": "\"滑条速度不允许超出SV上限。请检查曲线图或提高SV上限。\"",
+        "\"The beats per minute field has an illegal value\"": "\"BPM填写不正确\"",
+        "\"The beat length field has an illegal value\"": "\"节拍数填写不正确\"",
+        "\"The global SV field has an illegal value\"": "\"全局SV填写不正确\"",
+        "\"Encountered unexpected values from Sliderator. Please check your input.\"": "\"工具遇到意料外的数值。请检查输入。\"",
+        "\"Encountered NaN coordinates. Please check your input.\"": "\"遇到非数字坐标。请检查输入。\"",
         "\"Done!\"": "\"完成！\"",
         "\"slideratorproject.json\"": "\"slideratorproject.json\"",
-        "\"Sliderator Projects\"": "\"滑条加速器项目\""
+        "\"Sliderator Projects\"": "\"Sliderator Projects\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderCompletionator\\SliderCompletionatorView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -2510,7 +2510,7 @@
         "\"Unexpected import mode.\"": "\"意料外的导入模式。\"",
         "$\"Succesfully generated tumours on {slidersTumourated} slider{(slidersTumourated == 1 ? string.Empty : \"s\")}!\"": "$\"已为 {slidersTumourated} 个滑条添加凸点！\"",
         "\"tumourgeneratorproject.json\"": "\"tumourgeneratorproject.json\"",
-        "\"Tumour Generator Projects\"": "\"凸点生成器项目\""
+        "\"Tumour Generator Projects\"": "\"Tumour Generator Projects\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\ViewCollection.cs": {
         "\"ToolName\"": "\"ToolName\"",
