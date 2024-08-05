@@ -30,14 +30,14 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Mapset Merger"/>
+                    <Run Text="曲包合并器（Mapset Merger）"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
                         <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
                     <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                        Combine multiple mapsets into one mapset and automatically resolve file conflicts.
+                        合并多个谱面集并自动解决文件冲突。
                     </TextBlock>
                 </materialDesign:PopupBox>
             </StackPanel>
@@ -64,9 +64,9 @@
                     <DataGrid.Columns>
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding Name, UpdateSourceTrigger=LostFocus}"
-                            Header="Name"
+                            Header="名称"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
-                        <DataGridTemplateColumn Header="Path" Width="{Binding Width, ElementName=MapsetPathText}">
+                        <DataGridTemplateColumn Header="路径" Width="{Binding Width, ElementName=MapsetPathText}">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Name="MapsetPathText" Text="{Binding Path}"/>
@@ -110,15 +110,15 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBox Grid.Column="0" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
-                                         materialDesign:HintAssist.Hint="Export path" 
-                                         ToolTip="The folder to put the merged mapset files in."
+                                         materialDesign:HintAssist.Hint="输出路径" 
+                                         ToolTip="合并后的谱面集文件所在文件夹。"
                                          Text="{Binding ExportPath}"/>
                                 <Button Grid.Column="1" Cursor="Hand" Command="{Binding BrowseExportPathCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                    ToolTip="Select export path with File Explorer.">
+                                    ToolTip="使用文件浏览器选择输出路径。">
                                     <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                                 </Button>
-                                <CheckBox Grid.Column="2" Content="Move storyboard to .osu" Margin="10 0 5 0"
-                                          ToolTip="Moves the content of any .osb files into the .osu for beatmap-specific storyboards."
+                                <CheckBox Grid.Column="2" Content="故事板放入.osu文件" Margin="10 0 5 0"
+                                          ToolTip="为每张谱面保留各自的故事板，将.osb文件内容移入.osu文件。"
                                           IsChecked="{Binding MoveSbToBeatmap}"/>
                             </Grid>
                         </materialDesign:Card>
@@ -132,12 +132,12 @@
 
                         <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
                             <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
-                                    ToolTip="Add a mapset. Hold shift to get current beatmap from osu! client." 
+                                    ToolTip="添加一个谱面集。按住shift使用osu!客户端当前谱面。" 
                                     VerticalAlignment="Center" Margin="5" Command="{Binding AddMapsetCommand}">
                                 <materialDesign:PackIcon Kind="Plus" Width="24" Height="24"/>
                             </Button>
                             <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
-                                    ToolTip="Remove selected mapsets or last mapset."
+                                    ToolTip="删除选中谱面集或最后一个谱面集。"
                                     VerticalAlignment="Center" Margin="5" Command="{Binding RemoveMapsetCommand}">
                                 <materialDesign:PackIcon Kind="Minus" Width="24" Height="24"/>
                             </Button>

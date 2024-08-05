@@ -21,9 +21,9 @@ namespace Mapping_Tools.Views.ComboColourStudio {
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Mapset Merger Projects");
 
-        public static readonly string ToolName = "Mapset Merger";
+        public static readonly string ToolName = "曲包合并器";
 
-        public static readonly string ToolDescription = $@"Combine multiple mapsets into one mapset and automatically resolve file conflicts.";
+        public static readonly string ToolDescription = $@"合并多个谱面集并自动解决文件冲突。";
 
         private MapsetMergerVm ViewModel => (MapsetMergerVm)DataContext;
 
@@ -171,7 +171,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
             }
 
             // Make an accurate message
-            var message = $"Successfully merged {mapsetsMerged} {(mapsetsMerged == 1 ? "mapset" : "mapsets")}!";
+            var message = $"成功合并 {mapsetsMerged} 个{(mapsetsMerged == 1 ? "谱面集" : "谱面集")}!";
             return message;
         }
 
@@ -315,7 +315,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
             var beatmaps = Directory.GetFiles(mapset.Path, "*.osu", SearchOption.AllDirectories).ToList();
 
             if (beatmaps.Count > MaxMapsetMaps) {
-                throw new Exception("Beatmap limit exceeded in mapset: " + mapset.Name);
+                throw new Exception("谱面数量超出上限：" + mapset.Name);
             }
 
             foreach (var path in beatmaps) {
@@ -330,7 +330,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
             var storyboards = Directory.GetFiles(mapset.Path, "*.osb", SearchOption.AllDirectories).ToList();
 
             if (storyboards.Count > MaxMapsetMaps) {
-                throw new Exception("Storyboard limit exceeded in mapset: " + mapset.Name);
+                throw new Exception("故事板数量超出上限：" + mapset.Name);
             }
 
             foreach (var path in storyboards) {

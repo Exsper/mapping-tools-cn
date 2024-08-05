@@ -39,7 +39,7 @@ namespace Mapping_Tools.Views.MapCleaner {
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string ToolDescription = $@"It cleans the current map of useless greenlines and it also lets you do some other stuff regarding the whole map.{Environment.NewLine}Map cleaner cleans useless greenline stuff by storing all the influences of the timingpoints and then removing all the timingpoints and then rebuilding all the timingpoints in a good way. This means the greenlines automatically get resnapped to the objects that use them.";
+        public static readonly string ToolDescription = $@"该工具可以清理谱面的无用绿线和一些针对整张谱面的其他功能。{Environment.NewLine}谱面清洁器通过分析所有时间轴的影响，然后移除原有时间轴并以更好的方式重建，来清理无用绿线。在此过程中绿线会自动对齐到使用它们的物件上。";
 
         /// <summary>
         /// Initializes the Map Cleaner view to <see cref="MainWindow"/>
