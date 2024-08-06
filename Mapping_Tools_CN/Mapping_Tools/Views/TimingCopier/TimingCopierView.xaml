@@ -70,7 +70,7 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" x:Name="ExportPathBox" Text="{Binding ExportPath}"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="复制timing到"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="timing复制到"
                         ToolTip="将timing复制给这些谱面。您可以用 '|' 字符分隔多个谱面。"/>
                     <TextBlock Grid.Column="1" Margin="3 15 5 0" FontStyle="Italic"
                                ToolTip="该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。"

@@ -68,7 +68,7 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" x:Name="BeatmapToBox" Margin="0,0,5,0" Text="{Binding PathTo}"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="复制音效到"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="音效复制到"
                         ToolTip="将音效复制给这些谱面。您可以用 '|' 字符分隔多个谱面。"/>
                     <TextBlock Grid.Column="1" Margin="3 15 5 0" FontStyle="Italic"
                                ToolTip="该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。"

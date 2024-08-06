@@ -31,23 +31,23 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Combo Colour Studio"/>
+                    <Run Text="Combo色彩工作室（Combo Colour Studio）"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
                         <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                     </materialDesign:PopupBox.ToggleContent>
                     <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                        With Combo Colour Studio you can easily customize the combo colours of your beatmap. AKA colour haxing.
+                        本工具可以轻松定制谱面combo颜色，也叫做colour haxing。
                         <LineBreak/>
-                        You define colored sections much like how you use timing points in the osu! editor. Just add a new colour point and define the sequence of combo colours.
+                        定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。
                         <LineBreak/>
-                        You can also define 'burst' colour points which only work for one combo, so you can emphasize specific patterns using colour.
+                        您也可以定义爆发（burst）颜色轴，只用于单combo，适合于用颜色强调特定的图案。
                         <LineBreak/>
-                        You can get started by adding a combo colour using the plus on the bottom left or by importing combo colours from an existing map.
-                        The combo colours can be edited by clicking on the coloured circles.
+                        要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。
+                        combo颜色可以通过点击修改。
                         <LineBreak/>
-                        Add a colour point by clicking on the plus on the bottom right. You can edit the colour sequence by double clicking the colour sequence cell.
+                        点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。
                     </TextBlock>
                 </materialDesign:PopupBox>
             </StackPanel>
@@ -77,10 +77,10 @@
                             Header="Offset"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                         <materialDesign:DataGridComboBoxColumn
-                            Header="Mode"
+                            Header="模式"
                             SelectedValueBinding="{Binding Mode, UpdateSourceTrigger=PropertyChanged}"
                             ItemsSourceBinding="{Binding ColourPointModes}" />
-                        <DataGridTemplateColumn Header="Colour Sequence" Width="{Binding Width, ElementName=SmallColourSequence}">
+                        <DataGridTemplateColumn Header="颜色次序" Width="{Binding Width, ElementName=SmallColourSequence}">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate DataType="comboColourStudio:ColourPoint">
                                     <ItemsControl ItemsSource="{Binding ColourSequence}">
@@ -115,10 +115,10 @@
                                                 </DataTemplate>
                                             </ListBox.ItemTemplate>
                                         </ListBox>
-                                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new colour." VerticalAlignment="Center" Margin="5 0 5 0" Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=This}">
+                                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="添加一个颜色。" VerticalAlignment="Center" Margin="5 0 5 0" Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=This}">
                                             <materialDesign:PackIcon Kind="Plus" Width="24" Height="24"/>
                                         </Button>
-                                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Remove last colour." VerticalAlignment="Center" Margin="5 0 5 0" Command="{Binding RemoveCommand}">
+                                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="删除最后一个颜色。" VerticalAlignment="Center" Margin="5 0 5 0" Command="{Binding RemoveCommand}">
                                             <materialDesign:PackIcon Kind="Minus" Width="24" Height="24"/>
                                         </Button>
                                     </StackPanel>
@@ -144,14 +144,14 @@
                     <Grid Grid.Row="1">
                         <materialDesign:Card VerticalAlignment="Bottom" HorizontalAlignment="Stretch" UniformCornerRadius="5" Padding="2" Margin="0 10 5 5">
                             <StackPanel Orientation="Horizontal">
-                                <Button Content="Import colours" Click="ImportColoursButton_OnClick" Margin="5 0 5 0"
-                                        ToolTip="Import combo colours from a beatmap."/>
-                                <Button Content="Import colorhax" Click="ImportColourHaxButton_OnClick" Margin="5 0 20 0"
-                                        ToolTip="Import colour haxing from a beatmap and populate the colour points."/>
+                                <Button Content="导入颜色" Click="ImportColoursButton_OnClick" Margin="5 0 5 0"
+                                        ToolTip="从谱面中导入combo颜色"/>
+                                <Button Content="导入换色" Click="ImportColourHaxButton_OnClick" Margin="5 0 20 0"
+                                        ToolTip="从谱面中导入换色（colorhax）并添加颜色轴。"/>
 
                                 <TextBox Width="120" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10 0 10 5"
-                                         materialDesign:HintAssist.Hint="Max burst length" 
-                                         ToolTip="Determines the maximum combo size for burst combos. Combos longer than this value can't get a colour from burst colour points."
+                                         materialDesign:HintAssist.Hint="爆发（burst）上限" 
+                                         ToolTip="定义爆发（burst）combo的连击数上限。连击数大于该值将不会使用爆发（burst）颜色轴的颜色。"
                                          Text="{Binding Project.MaxBurstLength}"/>
                             </StackPanel>
                         </materialDesign:Card>
@@ -179,7 +179,7 @@
                                                 </materialDesign:PopupBox.ToggleContent>
                                                 <StackPanel Orientation="Horizontal" Margin="20">
                                                     <TextBox Text="{Binding Color, ElementName=ColorPicker, Converter={StaticResource ColorToStringConverter}}"
-                                                             Style="{StaticResource MaterialDesignFilledTextBox}" materialDesign:HintAssist.Hint="HEX value"
+                                                             Style="{StaticResource MaterialDesignFilledTextBox}" materialDesign:HintAssist.Hint="HEX值"
                                                              Width="100" Margin="2,0,10,2" Height="50" VerticalAlignment="Top"/>
                                                     <materialDesign:ColorPicker Color="{Binding Color}" x:Name="ColorPicker" Width="300" Height="300"/>
                                                 </StackPanel>
@@ -188,19 +188,19 @@
                                     </ListBox.ItemTemplate>
                                 </ListBox>
                             </materialDesign:Card>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new combo colour." VerticalAlignment="Center" Margin="10 5 5 5" Command="{Binding Project.AddComboCommand}">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="添加一个combo颜色。" VerticalAlignment="Center" Margin="10 5 5 5" Command="{Binding Project.AddComboCommand}">
                                 <materialDesign:PackIcon Kind="Plus" Width="24" Height="24"/>
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Remove last combo colour." VerticalAlignment="Center" Margin="5" Command="{Binding Project.RemoveComboCommand}">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="删除最后一个combo颜色。" VerticalAlignment="Center" Margin="5" Command="{Binding Project.RemoveComboCommand}">
                                 <materialDesign:PackIcon Kind="Minus" Width="24" Height="24"/>
                             </Button>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new colour point. Hold shift to add current editor time." VerticalAlignment="Center" Margin="5" Command="{Binding Project.AddColourPointCommand}">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="添加一个颜色轴。按住shift以添加编辑器当前时间。" VerticalAlignment="Center" Margin="5" Command="{Binding Project.AddColourPointCommand}">
                                 <materialDesign:PackIcon Kind="Plus" Width="24" Height="24"/>
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Remove selected colour points or last colour point." VerticalAlignment="Center" Margin="5" Command="{Binding Project.RemoveColourPointCommand}">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="删除选中颜色轴或最后一个颜色轴。" VerticalAlignment="Center" Margin="5" Command="{Binding Project.RemoveColourPointCommand}">
                                 <materialDesign:PackIcon Kind="Minus" Width="24" Height="24"/>
                             </Button>
                         </StackPanel>

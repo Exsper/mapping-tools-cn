@@ -49,7 +49,7 @@ namespace Mapping_Tools.Classes.Tools.ComboColourStudio {
 
             if (colourSource.ComboColours.Count == 0) {
                 cm.Items.Add(new MenuItem
-                    {Header = "Add at least one combo colour before adding colours to this sequence."});
+                    {Header = "在设置顺序之前请先在下方添加combo颜色。"});
             } else {
                 foreach (var comboColour in colourSource.ComboColours) {
                     cm.Items.Add(new MenuItem {

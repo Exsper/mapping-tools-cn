@@ -24,9 +24,9 @@ namespace Mapping_Tools.Views.ComboColourStudio {
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Combo Colour Studio Projects");
 
-        public static readonly string ToolName = "Combo Colour Studio";
+        public static readonly string ToolName = "Combo色彩工作室";
 
-        public static readonly string ToolDescription = $@"With Combo Colour Studio you can easily customize the combo colours of your beatmap. AKA colour haxing.{Environment.NewLine}You define colored sections much like how you use timing points in the osu! editor. Just add a new colour point and define the sequence of combo colours.{Environment.NewLine}You can also define colour points which only work for one combo, so you can emphasize specific patterns using colour.{Environment.NewLine}You can get started by adding a combo colour using the plus on the bottom left or by importing combo colours from an existing map. The combo colours can be edited by clicking on the coloured circles.{Environment.NewLine}Add a colour point by clicking on the plus on the bottom right. You can edit the colour sequence by double clicking the colour sequence cell.";
+        public static readonly string ToolDescription = $@"本工具可以轻松定制谱面combo颜色，也叫做colour haxing。{Environment.NewLine}定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。{Environment.NewLine}您也可以定义爆发（burst）颜色轴，只用于单combo，适合于用颜色强调特定的图案。{Environment.NewLine}要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。combo颜色可以通过点击修改。{Environment.NewLine}点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。";
 
         private ComboColourStudioVm ViewModel => (ComboColourStudioVm) DataContext;
 
@@ -137,7 +137,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
                             orderedComboColours.FindIndex(o => o.Name == colourSequence[colourPointColourIndex].Name);
 
                         if (colourIndex == -1) {
-                            throw new ArgumentException($"Can not use colour {colourSequence[colourPointColourIndex].Name} of colour point at offset {colourPoint.Time} because it does not exist in the combo colours.");
+                            throw new ArgumentException($"无法使用颜色轴内的颜色 {colourSequence[colourPointColourIndex].Name} 在offset时间 {colourPoint.Time} 因为该颜色不在combo颜色之中。");
                         }
 
                         //Console.WriteLine("colourIndex: " + colourIndex);
@@ -170,7 +170,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
             }
 
             // Make an accurate message
-            var message = $"Successfully exported colours to {mapsDone} {(mapsDone == 1 ? "beatmap" : "beatmaps")}!";
+            var message = $"成功导出颜色到 {mapsDone} 个{(mapsDone == 1 ? "谱面" : "谱面")}!";
             return message;
         }
 
