@@ -224,7 +224,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\EditorReaderStuff.cs": {
         "\".osu\"": "\".osu\"",
-        "\"No active editor detected.\"": "\"No active editor detected.\"",
+        "\"No active editor detected.\"": "\"未检测到正在运行的编辑器。\"",
         "\"editor_reader_error.txt\"": "\"editor_reader_error.txt\"",
         "\"ContainingFolder: \"": "\"ContainingFolder: \"",
         "\"Filename: \"": "\"Filename: \"",
@@ -246,7 +246,7 @@
         "\"ProcessTitle: \"": "\"ProcessTitle: \"",
         "\"[HitObjects]\"": "\"[HitObjects]\"",
         "\"[TimingPoints]\"": "\"[TimingPoints]\"",
-        "\"Successfully saved current beatmap!\"": "\"Successfully saved current beatmap!\""
+        "\"Successfully saved current beatmap!\"": "\"成功保存当前谱面！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\PathHelper.cs": {
         "\"Point 1 must be part of a linked list.\"": "\"Point 1 must be part of a linked list.\"",
@@ -301,62 +301,62 @@
         "\"pause-loop\"": "\"pause-loop\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\CollectionRenameVm.cs": {
-        "\"New name\"": "\"New name\"",
-        "\"The new name for the collection.\"": "\"The new name for the collection.\"",
-        "\"New directory name\"": "\"New directory name\"",
-        "\"The new name for the collection's directory in the Pattern Files directory.\"": "\"The new name for the collection's directory in the Pattern Files directory.\""
+        "\"New name\"": "\"新名称\"",
+        "\"The new name for the collection.\"": "\"该收藏夹的新名称。\"",
+        "\"New directory name\"": "\"新文件夹名称\"",
+        "\"The new name for the collection's directory in the Pattern Files directory.\"": "\"图案文件夹中该收藏夹的新文件夹名称。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\NewGroupVm.cs": {
-        "\"Group name\"": "\"Group name\"",
-        "\"The name for new group.\"": "\"The name for new group.\""
+        "\"Group name\"": "\"组名\"",
+        "\"The name for new group.\"": "\"该组的新名称。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternDetailsVm.cs": {
-        "\"Name\"": "\"Name\"",
-        "\"The name of the pattern.\"": "\"The name of the pattern.\"",
-        "\"Creation time\"": "\"Creation time\"",
-        "\"Time of last use\"": "\"Time of last use\"",
-        "\"Usage count\"": "\"Usage count\"",
-        "\"Object count\"": "\"Object count\"",
-        "\"Duration\"": "\"Duration\"",
-        "\"Beat length\"": "\"Beat length\"",
-        "\"File name\"": "\"File name\""
+        "\"Name\"": "\"名称\"",
+        "\"The name of the pattern.\"": "\"该图案的名称。\"",
+        "\"Creation time\"": "\"制作时间\"",
+        "\"Time of last use\"": "\"最后使用时间\"",
+        "\"Usage count\"": "\"使用次数\"",
+        "\"Object count\"": "\"物件数\"",
+        "\"Duration\"": "\"时长\"",
+        "\"Beat length\"": "\"节拍数\"",
+        "\"File name\"": "\"文件名\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternFileHandler.cs": {
         "\"Pattern Files\"": "\"Pattern Files\"",
-        "$\"A collection with the name \\\"{newName}\\\" already exists in {BasePath}.\"": "$\"A collection with the name \\\"{newName}\\\" already exists in {BasePath}.\""
+        "$\"A collection with the name \\\"{newName}\\\" already exists in {BasePath}.\"": "$\"收藏夹 {BasePath} 中已存在 \\\"{newName}\\\" 。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternMaker.cs": {
-        "\"No selected hit objects found.\"": "\"No selected hit objects found.\"",
+        "\"No selected hit objects found.\"": "\"找不到选中的打击物件。\"",
         "\".osu\"": "\".osu\"",
         "$\"[{Regex.Escape(regexSearch)}]\"": "$\"[{Regex.Escape(regexSearch)}]\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\PatternCodeImportVm.cs": {
-        "\"Name\"": "\"Name\"",
-        "\"The name for the pattern.\"": "\"The name for the pattern.\"",
-        "\"Hit objects\"": "\"Hit objects\"",
-        "\"The hit objects for the pattern.\"": "\"The hit objects for the pattern.\"",
-        "\"Timing points\"": "\"Timing points\"",
-        "\"The timing points for the pattern. Tip: Include a redline so timing scaling works during export.\"": "\"The timing points for the pattern. Tip: Include a redline so timing scaling works during export.\"",
-        "\"Global SV\"": "\"Global SV\"",
-        "\"The global slider multiplier for the pattern.\"": "\"The global slider multiplier for the pattern.\"",
-        "\"Game mode\"": "\"Game mode\"",
-        "\"The game mode for the pattern.\"": "\"The game mode for the pattern.\""
+        "\"Name\"": "\"名称\"",
+        "\"The name for the pattern.\"": "\"该图案的名称。\"",
+        "\"Hit objects\"": "\"打击物件\"",
+        "\"The hit objects for the pattern.\"": "\"该图案中的所有打击物件代码。\"",
+        "\"Timing points\"": "\"时间轴\"",
+        "\"The timing points for the pattern. Tip: Include a redline so timing scaling works during export.\"": "\"图案所在的时间轴。提示：请包含一条红线，使程序在输出时能够缩放timing。\"",
+        "\"Global SV\"": "\"全局SV\"",
+        "\"The global slider multiplier for the pattern.\"": "\"该图案所用的全局滑条速度。\"",
+        "\"Game mode\"": "\"游戏模式\"",
+        "\"The game mode for the pattern.\"": "\"该图案的游戏模式。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\PatternFileImportVm.cs": {
-        "\"Name\"": "\"Name\"",
-        "\"The name for the pattern.\"": "\"The name for the pattern.\"",
-        "\"Pattern file path\"": "\"Pattern file path\"",
-        "\"The path to the pattern file to import.\"": "\"The path to the pattern file to import.\"",
-        "\"Filter\"": "\"Filter\"",
+        "\"Name\"": "\"名称\"",
+        "\"The name for the pattern.\"": "\"该图案的名称。\"",
+        "\"Pattern file path\"": "\"图案文件路径\"",
+        "\"The path to the pattern file to import.\"": "\"导入的图案文件路径。\"",
+        "\"Filter\"": "\"筛选器\"",
         "\"Input an optional time code here. Example time code: 00:56:823 (1,2,1,2) - \"": "\"在此处输入时间码。例如：00:56:823 (1,2,1,2) - \"",
-        "\"Start time\"": "\"Start time\"",
-        "\"Optional lower bound time. All objects before this time will be ignored.\"": "\"Optional lower bound time. All objects before this time will be ignored.\"",
-        "\"End time\"": "\"End time\"",
-        "\"Optional upper bound time. All objects after this time will be ignored.\"": "\"Optional upper bound time. All objects after this time will be ignored.\""
+        "\"Start time\"": "\"开始时间\"",
+        "\"Optional lower bound time. All objects before this time will be ignored.\"": "\"可选填的开始时间。在此之前的物件会被忽略。\"",
+        "\"End time\"": "\"结束时间\"",
+        "\"Optional upper bound time. All objects after this time will be ignored.\"": "\"可选填的结束时间。在此之前的物件会被忽略。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\SelectedPatternImportVm.cs": {
-        "\"Name\"": "\"Name\"",
-        "\"The name for the pattern.\"": "\"The name for the pattern.\""
+        "\"Name\"": "\"名称\"",
+        "\"The name for the pattern.\"": "\"该图案的名称。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\RhythmGuide.cs": {
         "\"Hitsounds\"": "\"Hitsounds\"",
@@ -975,25 +975,25 @@
         "\"Load the default tool settings.\"": "\"加载当前工具的初始设置。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\PatternGalleryVm.cs": {
-        "\"Name\"": "\"Name\"",
-        "\"Creation time\"": "\"Creation time\"",
-        "\"Last used time\"": "\"Last used time\"",
-        "\"Usage count\"": "\"Usage count\"",
-        "\"Object count\"": "\"Object count\"",
-        "\"Duration\"": "\"Duration\"",
-        "\"Beat length\"": "\"Beat length\"",
-        "\"My Pattern Collection\"": "\"My Pattern Collection\"",
-        "$\"Pattern {patterns.Count + 1}\"": "$\"Pattern {patterns.Count + 1}\"",
+        "\"Name\"": "\"名称\"",
+        "\"Creation time\"": "\"制作时间\"",
+        "\"Last used time\"": "\"最后使用时间\"",
+        "\"Usage count\"": "\"使用次数\"",
+        "\"Object count\"": "\"物件数\"",
+        "\"Duration\"": "\"时长\"",
+        "\"Beat length\"": "\"节拍数\"",
+        "\"My Pattern Collection\"": "\"我的图案收藏夹\"",
+        "$\"Pattern {patterns.Count + 1}\"": "$\"图案 {patterns.Count + 1}\"",
         "\"RootDialog\"": "\"RootDialog\"",
-        "\"At least one valid hit object is required.\"": "\"At least one valid hit object is required.\"",
-        "$\"Are you sure you want to delete \\\"{selected.First().Name}\\\"?\"": "$\"Are you sure you want to delete \\\"{selected.First().Name}\\\"?\"",
-        "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and \\\"{selected[1].Name}\\\"?\"": "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and \\\"{selected[1].Name}\\\"?\"",
-        "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and {selected.Count-1} others?\"": "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and {selected.Count-1} others?\"",
-        "\"Confirm deletion\"": "\"Confirm deletion\"",
-        "\"None\"": "\"None\"",
-        "\"Type new group name...\"": "\"Type new group name...\"",
-        "$\"Group {groups.Count}\"": "$\"Group {groups.Count}\"",
-        "\"_Rename group...\"": "\"_Rename group...\""
+        "\"At least one valid hit object is required.\"": "\"需要至少一个有效的打击物件。\"",
+        "$\"Are you sure you want to delete \\\"{selected.First().Name}\\\"?\"": "$\"确定要删除 \\\"{selected.First().Name}\\\"吗？\"",
+        "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and \\\"{selected[1].Name}\\\"?\"": "$\"确定要删除 \\\"{selected[0].Name}\\\" 和 \\\"{selected[1].Name}\\\"吗？\"",
+        "$\"Are you sure you want to delete \\\"{selected[0].Name}\\\" and {selected.Count-1} others?\"": "$\"确定要删除 \\\"{selected[0].Name}\\\" 等 {selected.Count} 个图案吗？\"",
+        "\"Confirm deletion\"": "\"删除确认\"",
+        "\"None\"": "\"无\"",
+        "\"Type new group name...\"": "\"输入新组名...\"",
+        "$\"Group {groups.Count}\"": "$\"组 {groups.Count}\"",
+        "\"_Rename group...\"": "\"修改组名（_R）...\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SlideratorVm.cs": {
         "\"You've reached the end of the slider list.\"": "\"You've reached the end of the slider list.\"",
@@ -1643,7 +1643,7 @@
         "Header=\"_Open in File Explorer\"": "Header=\"_Open in File Explorer\"",
         "Header=\"_Group\"": "Header=\"_Group\"",
         "Header=\"_Properties\"": "Header=\"_Properties\"",
-        "Text=\"Pattern Gallery\"": "Text=\"Pattern Gallery\"",
+        "Text=\"Pattern Gallery\"": "Text=\"图案展览馆（Pattern Gallery）\"",
         "Text=\"{Binding CollectionName}\"": "Text=\"{Binding CollectionName}\"",
         "Text=\"{Binding Name}\"": "Text=\"{Binding Name}\"",
         "Text=\"{Binding ItemCount}\"": "Text=\"{Binding ItemCount}\"",
@@ -1684,7 +1684,7 @@
         "\"patterngalleryproject.json\"": "\"patterngalleryproject.json\"",
         "\"Pattern Gallery Projects\"": "\"Pattern Gallery Projects\"",
         "\"project.json\"": "\"project.json\"",
-        "\"Pattern Gallery\"": "\"Pattern Gallery\"",
+        "\"Pattern Gallery\"": "\"图案展览馆\"",
         "\"Import and export patterns from osu! beatmaps and create pattern collections which you can share with your friends.\"": "\"Import and export patterns from osu! beatmaps and create pattern collections which you can share with your friends.\"",
         "\"You can add or remove patterns by using the buttons at the bottom.\"": "\"You can add or remove patterns by using the buttons at the bottom.\"",
         "\"To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it.\"": "\"To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it.\"",
