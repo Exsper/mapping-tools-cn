@@ -31,7 +31,7 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                  <Run Text="Pattern Gallery"/>
+                  <Run Text="Pattern展览馆（Pattern Gallery）"/>
                 </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                   <materialDesign:PopupBox.ToggleContent>
@@ -42,7 +42,7 @@
                       You can add or remove patterns by using the buttons at the bottom.<LineBreak/>
                       To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it.<LineBreak/>
                       On the right there are export options which allow for additional processing on the pattern during export.<LineBreak/>
-                      With the 'Project' menu you can save/load/rename/import/export your pattern collections.
+                      在“项目”菜单中进行保存/读取/重命名/导入/导出Pattern收藏夹。
                   </TextBlock>
                     </materialDesign:PopupBox>
                   <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
@@ -110,7 +110,7 @@
                                                                 <StackPanel Orientation="Horizontal">
                                                                     <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="Gray" FontSize="22" VerticalAlignment="Bottom" />
                                                                     <TextBlock Text="{Binding ItemCount}" FontSize="22" Foreground="Green" FontWeight="Bold" FontStyle="Italic" Margin="10,0,0,0" VerticalAlignment="Bottom" />
-                                                                    <TextBlock Text=" item(s)" FontSize="22" Foreground="Silver" FontStyle="Italic" VerticalAlignment="Bottom" />
+                                                                    <TextBlock Text=" 个项目" FontSize="22" Foreground="Silver" FontStyle="Italic" VerticalAlignment="Bottom" />
                                                                 </StackPanel>
                                                             </Expander.Header>
                                                             <ItemsPresenter />
@@ -130,21 +130,21 @@
                             </ListBox.GroupStyle>
                             <ListBox.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="_Delete" Command="{Binding RemoveCommand}" Tag="Delete"
-                                      ToolTip="Delete selected patterns. Hold shift to skip dialog.">
+                                    <MenuItem Header="删除（_D）" Command="{Binding RemoveCommand}" Tag="Delete"
+                                      ToolTip="删除选中Pattern。按住shift不显示对话框。">
                                         <MenuItem.Icon>
                                             <materialDesign:PackIcon Kind="TrashCan"/>
                                         </MenuItem.Icon>
                                     </MenuItem>
-                                    <MenuItem Header="_Open in File Explorer" Command="{Binding OpenExplorerSelectedCommand}"
-                                      ToolTip="Open the source files of the selected patterns in the File Explorer.">
+                                    <MenuItem Header="在资源管理器中打开（_O）" Command="{Binding OpenExplorerSelectedCommand}"
+                                      ToolTip="用资源管理器打开选中Pattern的源文件。">
                                         <MenuItem.Icon>
                                             <materialDesign:PackIcon Kind="ArrowTopRightThick"/>
                                         </MenuItem.Icon>
                                     </MenuItem>
-                                    <MenuItem Header="_Group" ItemsSource="{Binding PatternGroupContextMenu}"/>
-                                    <MenuItem Header="_Properties" Command="{Binding ShowDetailsCommand}"
-                                              ToolTip="View additional properties of the pattern.">
+                                    <MenuItem Header="分组（_G）" ItemsSource="{Binding PatternGroupContextMenu}"/>
+                                    <MenuItem Header="属性（_P）" Command="{Binding ShowDetailsCommand}"
+                                              ToolTip="查看Pattern的其他属性。">
                                     </MenuItem>
                                 </ContextMenu>
                             </ListBox.ContextMenu>
@@ -188,16 +188,16 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
                             Orientation="Horizontal">
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a pattern from .osu code." Command="{Binding AddCodeCommand}" Margin="5">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="通过.osu文件代码添加Pattern。" Command="{Binding AddCodeCommand}" Margin="5">
                                 <materialDesign:PackIcon Kind="CodeBraces" Height="24" Width="24" />
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a pattern from a file." Command="{Binding AddFileCommand}" Margin="5">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="通过读取osu文件添加Pattern。" Command="{Binding AddFileCommand}" Margin="5">
                                 <materialDesign:PackIcon Kind="FilePlus" Height="24" Width="24" />
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a pattern from selected hit objects." Command="{Binding AddSelectedCommand}" Margin="5">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="导入编辑器选中物件为Pattern。" Command="{Binding AddSelectedCommand}" Margin="5">
                                 <materialDesign:PackIcon Kind="PlusBox" Height="24" Width="24" />
                             </Button>
-                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete selected patterns. Hold shift to skip dialog." Command="{Binding RemoveCommand}" Margin="5">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="删除选中Pattern。按住shift不显示对话框。" Command="{Binding RemoveCommand}" Margin="5">
                                 <materialDesign:PackIcon Kind="Trashcan" Height="24" Width="24" />
                             </Button>
                         </StackPanel>
@@ -212,22 +212,22 @@
                             <TextBox Margin="5"
                                      Width="120"
                                      Height="24"
-                                     materialDesign:HintAssist.Hint="Search"
+                                     materialDesign:HintAssist.Hint="搜索"
                                      materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                     ToolTip="Search for a pattern." Text="{Binding SearchFilter, UpdateSourceTrigger=PropertyChanged, Delay=100}"/>
+                                     ToolTip="搜索Pattern。" Text="{Binding SearchFilter, UpdateSourceTrigger=PropertyChanged, Delay=100}"/>
                             <ComboBox Width="120"
                                       Margin="5"
                                       Height="24"
-                                      materialDesign:HintAssist.Hint="Sort by"
+                                      materialDesign:HintAssist.Hint="排序"
                                       ItemsSource="{Binding SortableProperties}"
                                       SelectedItem="{Binding SortProperty}"/>
                             <ComboBox Width="100"
                                       Margin="5"
                                       Height="24"
-                                      materialDesign:HintAssist.Hint="Direction"
+                                      materialDesign:HintAssist.Hint="方向"
                                       SelectedIndex="{Binding SortDirection}">
-                                <ComboBoxItem Content="Ascending"/>
-                                <ComboBoxItem Content="Descending"/>
+                                <ComboBoxItem Content="升序"/>
+                                <ComboBoxItem Content="降序"/>
                             </ComboBox>
                         </StackPanel>
                     </Grid>
@@ -238,10 +238,10 @@
                         <StackPanel>
                             <ComboBox SelectedItem="{Binding ExportTimeMode}" ItemsSource="{Binding ExportTimeModes}"
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                              materialDesign:HintAssist.Hint="Export offset" Margin="0 7 0 0"
-                              ToolTip="Determines at what time to put the pattern."/>
-                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Custom export offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="Determines at what time to put the pattern for the custom offset mode." 
+                              materialDesign:HintAssist.Hint="导出offset" Margin="0 7 0 0"
+                              ToolTip="将Pattern插入到哪个时间点。"/>
+                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="自定义导出offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             ToolTip="将Pattern插入到自定义的时间点。" 
                              Visibility="{Binding CustomExportTimeVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
                                 <TextBox.Text>
                                     <Binding Path="CustomExportTime" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
@@ -251,8 +251,8 @@
                                     </Binding>
                                 </TextBox.Text>
                             </TextBox>
-                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Deletion margin" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="Extra time in milliseconds around the patterns for deleting parts of the original map.">
+                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="删除边距" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             ToolTip="覆盖原谱面的对应部分时，在Pattern前后额外删除多少毫秒内的物件。">
                                 <TextBox.Text>
                                     <Binding Path="Padding" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                         <Binding.Converter>
@@ -268,8 +268,8 @@
                                     </Binding>
                                 </TextBox.Text>
                             </TextBox>
-                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="Parting distance" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="Minimum number of beats required in a gap to split a pattern into smaller parts.">
+                            <TextBox Margin="0 5 0 0" materialDesign:HintAssist.Hint="分割距离" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             ToolTip="可以细分Pattern的最小间隔节拍数。">
                                 <TextBox.Text>
                                     <Binding Path="PartingDistance" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                         <Binding.Converter>
@@ -287,7 +287,7 @@
                             </TextBox>
                             <TextBox Text="{Binding BeatDivisors, Converter={StaticResource BeatDivisorArrayToStringConverter}}" 
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             materialDesign:HintAssist.Hint="Beat divisors" Margin="0 5 0 0"
+                             materialDesign:HintAssist.Hint="节拍细分" Margin="0 5 0 0"
                              ToolTip="输入所有节拍细分，用半角逗号分隔。例如：1/4, 1/12, 1/7, 4/5, 0.13435622499"/>
                             <Grid Margin="0 5 0 0">
                                 <Grid.ColumnDefinitions>
@@ -297,51 +297,51 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBox Text="{Binding CustomScale, Converter={StaticResource D2SConverter}}" 
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 materialDesign:HintAssist.Hint="Custom scale" Grid.Column="0"
-                                 ToolTip="Scalar to change the size of the pattern."/>
+                                 materialDesign:HintAssist.Hint="自定义缩放" Grid.Column="0"
+                                 ToolTip="缩放Pattern为多少倍大小。"/>
                                 <TextBox Text="{Binding CustomRotate, Converter={StaticResource D2SConverter}}" 
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 materialDesign:HintAssist.Hint="Custom rotate" Grid.Column="2"
-                                 ToolTip="Degrees to rotate the pattern clockwise."/>
+                                 materialDesign:HintAssist.Hint="自定义旋转" Grid.Column="2"
+                                 ToolTip="将Pattern顺时针旋转多少度。"/>
                             </Grid>
                             <ComboBox SelectedItem="{Binding PatternOverwriteMode}" ItemsSource="{Binding PatternOverwriteModes}"
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                              materialDesign:HintAssist.Hint="Pattern overwrite mode" Margin="0 5 0 0"
-                              ToolTip="Determines how to overwrite the objects in the original beatmap when a pattern gets placed on them."/>
+                              materialDesign:HintAssist.Hint="Pattern覆盖模式" Margin="0 5 0 0"
+                              ToolTip="Pattern覆盖原谱面物件的方式。"/>
                             <ComboBox SelectedItem="{Binding TimingOverwriteMode}" ItemsSource="{Binding TimingOverwriteModes}"
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                              materialDesign:HintAssist.Hint="Timing overwrite mode" Margin="0 5 0 0"
-                              ToolTip="Determines how to combine the timing of the orignal beatmap and the timing of the pattern."/>
+                              materialDesign:HintAssist.Hint="Timing覆盖模式" Margin="0 5 0 0"
+                              ToolTip="Pattern的timing覆盖原谱面timing的方式。"/>
 
-                            <CheckBox Content="Include hitsounds" Margin="0 5 0 0"
-                              ToolTip="Export the pattern with the hitsound effects of the pattern timing points."
+                            <CheckBox Content="包含音效" Margin="0 5 0 0"
+                              ToolTip="导出的Pattern包含时间轴内的音效。"
                               IsChecked="{Binding IncludeHitsounds}"/>
-                            <CheckBox Content="Include kiai"
-                              ToolTip="Export the pattern with the kiai of the pattern."
+                            <CheckBox Content="包含kiai"
+                              ToolTip="导出的Pattern包含kiai。"
                               IsChecked="{Binding IncludeKiai}"/>
-                            <CheckBox Content="Scale to new circle size"
-                              ToolTip="Scale the pattern such that the spacing relative to the circle size stays the same."
+                            <CheckBox Content="适应新CS"
+                              ToolTip="根据谱面圆圈大小（CS）缩放Pattern，保持Pattern的物件间距相对于CS不变。"
                               IsChecked="{Binding ScaleToNewCircleSize}"/>
-                            <CheckBox Content="Scale to new timing"
-                              ToolTip="Scale the pattern in time such that the number of beats between objects stays the same in the new timing. Incorrect snaps can occur if your timing has unsnapped redlines. Do not use this if you have 0 or infinite BPM redlines."
+                            <CheckBox Content="适应新timing"
+                              ToolTip="根据新timing调整Pattern，使Pattern物件的间隔节拍数保持不变。如果timing存在未对齐红线，可能会导致Pattern错误对齐。当谱面包含BPM为0或无限大的红线时请勿勾选。"
                               IsChecked="{Binding ScaleToNewTiming}"/>
-                            <CheckBox Content="Snap to new timing"
-                              ToolTip="Snap the objects of the pattern to the new timing using the specified beat divisors."
+                            <CheckBox Content="对齐到新timing"
+                              ToolTip="使用指定节拍细分将Pattern物件对齐到新timing。"
                               IsChecked="{Binding SnapToNewTiming}"/>
-                            <CheckBox Content="Manualify stacks"
-                              ToolTip="Manually stack objects of the pattern."
+                            <CheckBox Content="手动堆叠"
+                              ToolTip="略微移动物件形成堆叠效果，不依赖谱面堆叠度（Stack Leniency）。"
                               IsChecked="{Binding FixStackLeniency}"/>
-                            <CheckBox Content="Fix global SV"
-                              ToolTip="Adjust greenline SV in the pattern to the new global SV so sliders have the same SV in the new beatmap."
+                            <CheckBox Content="修正全局SV"
+                              ToolTip="调整Pattern的绿线以适应新谱面全局SV，保证滑条在新谱面中速度不变。"
                               IsChecked="{Binding FixGlobalSv}"/>
-                            <CheckBox Content="Fix BPM SV"
-                              ToolTip="Adjust greenline SV in the pattern to the new BPM so sliders have the same SV in the new beatmap. It is recommended to disable this feature if you are using the 'Scale to new timing' feature."
+                            <CheckBox Content="修正BPM SV"
+                              ToolTip="调整Pattern的绿线以适应新谱面BPM，保证滑条在新谱面中速度不变。当您已经开启了“适应新timing”时，不建议使用这个功能。"
                               IsChecked="{Binding FixBpmSv}"/>
-                            <CheckBox Content="Fix colourhax"
-                              ToolTip="Adjust colour skip such that the colour indices of objects stay the same for the pattern and the original beatmap."
+                            <CheckBox Content="修正换色（colourhax）"
+                              ToolTip="调整Pattern的combo颜色次序以适应新谱面。"
                               IsChecked="{Binding FixColourHax}"/>
-                            <CheckBox Content="Fix slider tick rate"
-                              ToolTip="Multiply BPM in the pattern so the slider tick rate in the pattern stays the same."
+                            <CheckBox Content="修正滑条点密度"
+                              ToolTip="加倍BPM使Pattern的滑条点密度保持不变。"
                               IsChecked="{Binding FixTickRate}"/>
                         </StackPanel>
                     </Grid>

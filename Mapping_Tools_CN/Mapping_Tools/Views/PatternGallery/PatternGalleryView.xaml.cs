@@ -31,13 +31,13 @@ namespace Mapping_Tools.Views.PatternGallery {
 
         public string ExtraAutoSavePath => Path.Combine(ViewModel.FileHandler.GetCollectionFolderPath(), "project.json");
 
-        public static readonly string ToolName = "Pattern Gallery";
+        public static readonly string ToolName = "Pattern展览馆";
         public static readonly string ToolDescription =
-            $@"Import and export patterns from osu! beatmaps and create pattern collections which you can share with your friends."+Environment.NewLine+ 
-            @"You can add or remove patterns by using the buttons at the bottom."+Environment.NewLine+ 
-            @"To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it."+Environment.NewLine+ 
-            @"On the right there are export options which allow for additional processing on the pattern during export."+Environment.NewLine+
-            @"With the 'Project' menu you can save/load/rename/import/export your pattern collections.";
+            $@"导入导出谱面的Pattern，制作成Pattern收藏夹并与其他人分享。"+Environment.NewLine+ 
+            @"使用底部按钮添加或删除Pattern。"+Environment.NewLine+ 
+            @"选择一个或多个Pattern并点击运行按钮，或者直接双击Pattern，来导出Pattern到当前谱面。"+Environment.NewLine+ 
+            @"界面右边的选项可以定制导出规则。"+Environment.NewLine+
+            @"在“项目”菜单中进行保存/读取/重命名/导入/导出Pattern收藏夹。";
 
         /// <summary>
         /// 
@@ -102,7 +102,7 @@ namespace Mapping_Tools.Views.PatternGallery {
                         exportTime = reader.EditorTime();
                     }
                     catch (Exception e) {
-                        throw new Exception("Could not fetch the current editor time.", e);
+                        throw new Exception("无法获取当前编辑器时间。", e);
                     }
                     break;
                 case ExportTimeMode.Pattern:
@@ -114,7 +114,7 @@ namespace Mapping_Tools.Views.PatternGallery {
                     exportTime = args.CustomExportTime;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(ExportTimeMode), "Invalid value encountered");
+                    throw new ArgumentOutOfRangeException(nameof(ExportTimeMode), "遇到无效值");
             }
            
             var editor = EditorReaderStuff.GetNewestVersionOrNot(args.Paths[0], reader);
@@ -122,7 +122,7 @@ namespace Mapping_Tools.Views.PatternGallery {
             var patternCount = args.Patterns.Count(o => o.IsSelected);
 
             if (patternCount == 0)
-                throw new Exception("No pattern has been selected to export.");
+                throw new Exception("未选择需要导出的Pattern。");
 
             var patternPlacer = args.OsuPatternPlacer;
             foreach (var pattern in args.Patterns.Where(o => o.IsSelected)) {
@@ -147,7 +147,7 @@ namespace Mapping_Tools.Views.PatternGallery {
             // Do stuff
             RunFinished?.Invoke(this, new RunToolCompletedEventArgs(true, reader != null, args.Quick));
 
-            return "Successfully exported pattern!";
+            return "成功导出Pattern！";
         }
 
         private void InitializeOsuPatternFileHandler() {
@@ -176,20 +176,20 @@ namespace Mapping_Tools.Views.PatternGallery {
 
         public MenuItem[] GetMenuItems() {
             var renameMenu = new MenuItem {
-                Header = "_Rename collection", Icon = new PackIcon { Kind = PackIconKind.Rename },
-                ToolTip = "Rename this collection and the collection's directory in the Pattern Files directory."
+                Header = "重命名收藏夹（_R）", Icon = new PackIcon { Kind = PackIconKind.Rename },
+                ToolTip = "重命名该收藏夹和Pattern文件夹中该收藏夹的文件夹名称。。"
             };
             renameMenu.Click += DoRenameCollection;
 
             var importMenu = new MenuItem {
-                Header = "_Import collection", Icon = new PackIcon { Kind = PackIconKind.Import },
-                ToolTip = "Import a collection zip file to the projects folder."
+                Header = "导入收藏夹（_I）", Icon = new PackIcon { Kind = PackIconKind.Import },
+                ToolTip = "将收藏夹zip文件导入到项目文件夹。"
             };
             importMenu.Click += DoImportCollection;
 
             var exportMenu = new MenuItem {
-                Header = "_Export collection", Icon = new PackIcon { Kind = PackIconKind.Export },
-                ToolTip = "Export this collection to the Exports folder. The exported file can later be imported with the import menu."
+                Header = "导出收藏夹（_E）", Icon = new PackIcon { Kind = PackIconKind.Export },
+                ToolTip = "导出该收藏夹到导出文件夹，导出的文件可以再使用导入菜单进行导入。"
             };
             exportMenu.Click += DoExportCollection;
 
@@ -211,7 +211,7 @@ namespace Mapping_Tools.Views.PatternGallery {
                 ViewModel.CollectionName = viewModel.NewName;
                 ViewModel.FileHandler.RenameCollectionFolder(viewModel.NewFolderName);
 
-                await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully renamed this collection!"));
+                await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("重命名收藏夹成功！"));
             } catch (ArgumentException) { } catch (Exception ex) {
                 ex.Show();
             }
@@ -223,8 +223,8 @@ namespace Mapping_Tools.Views.PatternGallery {
                 if (string.IsNullOrEmpty(path)) return;
 
                 var result1 = MessageBox.Show(
-                    "Do you want to merge the imported collection into your current collection?",
-                    "Load new collection",
+                    "将导入的收藏夹与当前收藏夹合并吗？",
+                    "加载新收藏夹",
                     MessageBoxButton.YesNo);
 
                 if (result1 == MessageBoxResult.Yes) {
@@ -247,17 +247,17 @@ namespace Mapping_Tools.Views.PatternGallery {
                         archiveFolderName = archive.Entries[0].FullName.Split(new[] {'/', '\\'}, StringSplitOptions.RemoveEmptyEntries)[0];
 
                         if (ViewModel.FileHandler.CollectionFolderExists(archiveFolderName)) {
-                            throw new DuplicateNameException($"A collection with the name \"{archiveFolderName}\" already exists in {ViewModel.FileHandler.BasePath}.");
+                            throw new DuplicateNameException($"文件夹 {ViewModel.FileHandler.BasePath} 中已存在收藏夹 \"{archiveFolderName}\" 。");
                         }
 
                         archive.ExtractToDirectory(ViewModel.FileHandler.BasePath);
                     }
 
-                    await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully imported the collection!"));
+                    await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功导入收藏夹！"));
 
                     var result2 = MessageBox.Show(
-                        "Do you want to load the newly imported collection right now?\n Warning: Unsaved changes will be lost.",
-                        "Load new collection",
+                        "立刻加载导入的新收藏夹吗？\n 警告：未保存的更改将会丢失。",
+                        "加载新收藏夹",
                         MessageBoxButton.YesNo);
 
                     if (result2 != MessageBoxResult.Yes) {
@@ -300,7 +300,7 @@ namespace Mapping_Tools.Views.PatternGallery {
                     }
                 }
 
-                await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully exported this collection!"));
+                await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功导出收藏夹！"));
                 ShowSelectedInExplorer.FilesOrFolders(savePath);
             } catch (ArgumentException) { } catch (Exception ex) {
                 ex.Show();

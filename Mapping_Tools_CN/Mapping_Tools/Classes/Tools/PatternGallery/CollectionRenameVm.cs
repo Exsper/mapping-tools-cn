@@ -2,12 +2,12 @@
 
 namespace Mapping_Tools.Classes.Tools.PatternGallery {
     public class CollectionRenameVm {
-        [DisplayName("New name")]
-        [Description("The new name for the collection.")]
+        [DisplayName("新名称")]
+        [Description("该收藏夹的新名称。")]
         public string NewName { get; set; }
 
-        [DisplayName("New directory name")]
-        [Description("The new name for the collection's directory in the Pattern Files directory.")]
+        [DisplayName("新文件夹名称")]
+        [Description("Pattern文件夹中该收藏夹的新文件夹名称。")]
         public string NewFolderName { get; set; }
     }
 }

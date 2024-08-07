@@ -53,10 +53,10 @@ namespace Mapping_Tools.Viewmodels {
         public string SearchFilter { get => searchFilter; set => SetSearchFilter(value); }
 
         [JsonIgnore]
-        public string[] SortableProperties { get; } = { "Name", "Creation time", "Last used time", "Usage count", "Object count", "Duration", "Beat length" };
+        public string[] SortableProperties { get; } = { "名称", "制作时间", "最后使用时间", "使用次数", "物件数", "时长", "节拍数" };
 
         [JsonIgnore]
-        private string sortProperty = "Creation time";
+        private string sortProperty = "制作时间";
         [JsonIgnore]
         public string SortProperty { get => sortProperty; set => SetSortProperty(value); }
 
@@ -217,7 +217,7 @@ namespace Mapping_Tools.Viewmodels {
         public bool Quick { get; set; }
 
         public PatternGalleryVm() {
-            CollectionName = @"My Pattern Collection";
+            CollectionName = @"我的Pattern收藏夹";
             patterns = new ObservableCollection<OsuPattern>();
             FileHandler = new OsuPatternFileHandler();
             OsuPatternMaker = new OsuPatternMaker();
@@ -262,7 +262,7 @@ namespace Mapping_Tools.Viewmodels {
 
                         // The pattern needs at least one hitobject
                         if (hitObjects.Count == 0) {
-                            MessageBox.Show("At least one valid hit object is required.");
+                            MessageBox.Show("需要至少一个有效的打击物件。");
                             return;
                         }
 
@@ -317,10 +317,10 @@ namespace Mapping_Tools.Viewmodels {
                         if (selected.Count == 0) return;
 
                         if (!(Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift))){
-                            string message = selected.Count == 1 ? $"Are you sure you want to delete \"{selected.First().Name}\"?" :
-                                selected.Count == 2 ? $"Are you sure you want to delete \"{selected[0].Name}\" and \"{selected[1].Name}\"?" :
-                                $"Are you sure you want to delete \"{selected[0].Name}\" and {selected.Count-1} others?";
-                            var messageBoxResult = MessageBox.Show(message, "Confirm deletion", MessageBoxButton.YesNo);
+                            string message = selected.Count == 1 ? $"确定要删除 \"{selected.First().Name}\"吗？" :
+                                selected.Count == 2 ? $"确定要删除 \"{selected[0].Name}\" 和 \"{selected[1].Name}\"吗？" :
+                                $"确定要删除 \"{selected[0].Name}\" 等 {selected.Count} 个Pattern吗？";
+                            var messageBoxResult = MessageBox.Show(message, "删除确认", MessageBoxButton.YesNo);
                             if (messageBoxResult != MessageBoxResult.Yes) return;
                         }
 
@@ -361,7 +361,7 @@ namespace Mapping_Tools.Viewmodels {
 
             var existingGroups = PatternGroupContextMenu.OfType<MenuItem>().SkipLast(1).Select(o => {
                 var header = o.Header as string;
-                return header == "None" ? null : header;
+                return header == "无" ? null : header;
             }).ToList();
             existingGroups.Sort(StringComparer.Ordinal);
 
@@ -372,7 +372,7 @@ namespace Mapping_Tools.Viewmodels {
 
             foreach (var group in groups) {
                 var item = new MenuItem {
-                    Header = string.IsNullOrEmpty(group) ? "None" : group,
+                    Header = string.IsNullOrEmpty(group) ? "无" : group,
                     Command = new CommandImplementation(
                         _ => {
                             try {
@@ -391,11 +391,11 @@ namespace Mapping_Tools.Viewmodels {
             PatternGroupContextMenu.Add(new Separator());
 
             var typeNewGroupItem = new MenuItem {
-                Header = "Type new group name...",
+                Header = "输入新组名...",
                 Command = new CommandImplementation(
                     async _ => {
                         try {
-                            var viewModel = new NewGroupVm { GroupName = $"Group {groups.Count}" };
+                            var viewModel = new NewGroupVm { GroupName = $"组 {groups.Count}" };
                             var dialog = new CustomDialog(viewModel, 0);
                             var result = await DialogHost.Show(dialog, "RootDialog");
 
@@ -412,11 +412,11 @@ namespace Mapping_Tools.Viewmodels {
             };
 
             var renameGroupItem = new MenuItem {
-                Header = "_Rename group...",
+                Header = "修改组名（_R）...",
                 Command = new CommandImplementation(
                     async _ => {
                         try {
-                            var viewModel = new NewGroupVm { GroupName = $"Group {groups.Count}" };
+                            var viewModel = new NewGroupVm { GroupName = $"组 {groups.Count}" };
                             var dialog = new CustomDialog(viewModel, 0);
                             var result = await DialogHost.Show(dialog, "RootDialog");
 
@@ -474,13 +474,13 @@ namespace Mapping_Tools.Viewmodels {
                 if (x is not OsuPattern p1 || y is not OsuPattern p2) return -1;
 
                 int result = Parent.SortProperty switch {
-                    "Name" => string.Compare(p1.Name, p2.Name, StringComparison.Ordinal),
-                    "Creation time" => DateTime.Compare(p1.CreationTime, p2.CreationTime),
-                    "Last used time" => DateTime.Compare(p1.LastUsedTime, p2.LastUsedTime),
-                    "Usage count" => p1.UseCount.CompareTo(p2.UseCount),
-                    "Object count" => p1.ObjectCount.CompareTo(p2.ObjectCount),
-                    "Duration" => TimeSpan.Compare(p1.Duration, p2.Duration),
-                    "Beat length" => p1.BeatLength.CompareTo(p2.BeatLength),
+                    "名称" => string.Compare(p1.Name, p2.Name, StringComparison.Ordinal),
+                    "制作时间" => DateTime.Compare(p1.CreationTime, p2.CreationTime),
+                    "最后使用时间" => DateTime.Compare(p1.LastUsedTime, p2.LastUsedTime),
+                    "使用次数" => p1.UseCount.CompareTo(p2.UseCount),
+                    "物件数" => p1.ObjectCount.CompareTo(p2.ObjectCount),
+                    "时长" => TimeSpan.Compare(p1.Duration, p2.Duration),
+                    "节拍数" => p1.BeatLength.CompareTo(p2.BeatLength),
                     _ => -1
                 };
 

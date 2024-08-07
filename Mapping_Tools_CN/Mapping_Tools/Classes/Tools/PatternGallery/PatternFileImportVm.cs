@@ -10,22 +10,22 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
         private double startTime = -1;
         private double endTime = -1;
 
-        [DisplayName("Name")]
-        [Description("The name for the pattern.")]
+        [DisplayName("名称")]
+        [Description("Pattern名称。")]
         public string Name { 
             get => name; 
             set => Set(ref name, value);
         }
 
         [BeatmapBrowse]
-        [DisplayName("Pattern file path")]
-        [Description("The path to the pattern file to import.")]
+        [DisplayName("Pattern文件路径")]
+        [Description("导入的Pattern文件路径。")]
         public string FilePath {
             get => filePath;
             set => Set(ref filePath, value);
         }
 
-        [DisplayName("Filter")]
+        [DisplayName("筛选器")]
         [Description("在此处输入时间码。例如：00:56:823 (1,2,1,2) - ")]
         public string Filter {
             get => filter;
@@ -34,8 +34,8 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
 
         [TimeInput]
         [ConverterParameter(-1)]
-        [DisplayName("Start time")]
-        [Description("Optional lower bound time. All objects before this time will be ignored.")]
+        [DisplayName("开始时间")]
+        [Description("可选填的开始时间。在此之前的物件会被忽略。")]
         public double StartTime {
             get => startTime;
             set => Set(ref startTime, value);
@@ -43,8 +43,8 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
 
         [TimeInput]
         [ConverterParameter(-1)]
-        [DisplayName("End time")]
-        [Description("Optional upper bound time. All objects after this time will be ignored.")]
+        [DisplayName("结束时间")]
+        [Description("可选填的结束时间。在此之前的物件会被忽略。")]
         public double EndTime {
             get => endTime;
             set => Set(ref endTime, value);

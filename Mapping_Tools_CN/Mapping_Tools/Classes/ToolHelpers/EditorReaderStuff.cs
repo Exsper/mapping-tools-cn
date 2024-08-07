@@ -74,7 +74,7 @@ namespace Mapping_Tools.Classes.ToolHelpers {
 
             var process = GetOsuProcess();
             if (!IsEditorOpen(process)) {
-                throw new Exception("No active editor detected.");
+                throw new Exception("未检测到正在运行的编辑器。");
             }
 
             var reader = GetEditorReader();
@@ -219,7 +219,7 @@ namespace Mapping_Tools.Classes.ToolHelpers {
                 editor.SaveFile();
             }
 
-            Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully saved current beatmap!"));
+            Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功保存当前谱面！"));
         }
 
 

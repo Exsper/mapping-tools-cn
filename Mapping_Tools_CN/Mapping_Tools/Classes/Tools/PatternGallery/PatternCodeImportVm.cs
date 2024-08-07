@@ -13,8 +13,8 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
         private double globalSv = 1.4;
         private GameMode gameMode = GameMode.Standard;
 
-        [DisplayName("Name")]
-        [Description("The name for the pattern.")]
+        [DisplayName("名称")]
+        [Description("Pattern名称。")]
         public string Name { 
             get => name; 
             set => Set(ref name, value);
@@ -22,8 +22,8 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
 
         [MultiLineInput]
         [TextWrapping(TextWrapping.NoWrap)]
-        [DisplayName("Hit objects")]
-        [Description("The hit objects for the pattern.")]
+        [DisplayName("打击物件")]
+        [Description("Pattern中的所有打击物件代码。")]
         public string HitObjects {
             get => hitObjects;
             set => Set(ref hitObjects, value);
@@ -31,22 +31,22 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
 
         [MultiLineInput]
         [TextWrapping(TextWrapping.NoWrap)]
-        [DisplayName("Timing points")]
-        [Description("The timing points for the pattern. Tip: Include a redline so timing scaling works during export.")]
+        [DisplayName("时间轴")]
+        [Description("Pattern所在的时间轴。提示：请包含一条红线，使程序在输出时能够缩放timing。")]
         public string TimingPoints {
             get => timingPoints;
             set => Set(ref timingPoints, value);
         }
 
-        [DisplayName("Global SV")]
-        [Description("The global slider multiplier for the pattern.")]
+        [DisplayName("全局SV")]
+        [Description("Pattern所用的全局滑条速度。")]
         public double GlobalSv {
             get => globalSv;
             set => Set(ref globalSv, value);
         }
 
-        [DisplayName("Game mode")]
-        [Description("The game mode for the pattern.")]
+        [DisplayName("游戏模式")]
+        [Description("Pattern的游戏模式。")]
         public GameMode GameMode {
             get => gameMode;
             set => Set(ref gameMode, value);

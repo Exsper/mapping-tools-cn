@@ -12,43 +12,43 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
         private string name;
 
         [UsedImplicitly]
-        [DisplayName("Name")]
-        [Description("The name of the pattern.")]
+        [DisplayName("名称")]
+        [Description("Pattern名称。")]
         public string Name {
             get => name;
             set => Set(ref name, value);
         }
 
         [UsedImplicitly]
-        [DisplayName("Creation time")]
+        [DisplayName("制作时间")]
         public DateTime CreationTime { get; }
 
         [UsedImplicitly]
-        [DisplayName("Time of last use")]
+        [DisplayName("最后使用时间")]
         public DateTime LastUsedTime { get; }
 
         [UsedImplicitly]
-        [DisplayName("Usage count")]
+        [DisplayName("使用次数")]
         [InvariantCulture]
         public int UseCount { get; }
 
         [UsedImplicitly]
-        [DisplayName("Object count")]
+        [DisplayName("物件数")]
         [InvariantCulture]
         public int ObjectCount { get; }
 
         [UsedImplicitly]
-        [DisplayName("Duration")]
+        [DisplayName("时长")]
         [InvariantCulture]
         public TimeSpan Duration { get; }
 
         [UsedImplicitly]
-        [DisplayName("Beat length")]
+        [DisplayName("节拍数")]
         [InvariantCulture]
         public double BeatLength { get; }
 
         [UsedImplicitly]
-        [DisplayName("File name")]
+        [DisplayName("文件名")]
         [InvariantCulture]
         public string FileName { get; }
 

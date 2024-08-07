@@ -66,7 +66,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
             if (CollectionFolderName == newName) return;
 
             if (CollectionFolderExists(newName)) {
-                throw new DuplicateNameException($"A collection with the name \"{newName}\" already exists in {BasePath}.");
+                throw new DuplicateNameException($"收藏夹 {BasePath} 中已存在 \"{newName}\" 。");
             }
 
             Directory.Move(GetCollectionFolderPath(), Path.Combine(BasePath, newName));
