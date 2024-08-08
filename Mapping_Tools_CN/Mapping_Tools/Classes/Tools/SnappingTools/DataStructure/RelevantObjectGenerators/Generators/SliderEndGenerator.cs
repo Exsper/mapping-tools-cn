@@ -4,8 +4,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SliderEndGenerator : RelevantObjectsGenerator {
-        public override string Name => "Points on Slider Ends";
-        public override string Tooltip => "Generates virtual points on the actual ends of sliders.";
+        public override string Name => "滑条尾作点";
+        public override string Tooltip => "在滑条尾作辅助点。";
         public override GeneratorType GeneratorType => GeneratorType.Basic;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.Custom;
 

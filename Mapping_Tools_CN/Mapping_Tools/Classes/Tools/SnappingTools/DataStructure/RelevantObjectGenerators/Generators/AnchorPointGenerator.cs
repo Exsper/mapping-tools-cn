@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class AnchorPointGenerator : RelevantObjectsGenerator {
-        public override string Name => "Points on Slider Anchors";
-        public override string Tooltip => "Generates virtual points on the anchor points of sliders.";
+        public override string Name => "滑条锚点";
+        public override string Tooltip => "在滑条锚点上生成辅助点。";
         public override GeneratorType GeneratorType => GeneratorType.Basic;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.Custom;
 

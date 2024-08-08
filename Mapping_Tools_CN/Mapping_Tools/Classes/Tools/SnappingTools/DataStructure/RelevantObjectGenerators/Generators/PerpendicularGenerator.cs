@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class PerpendicularGenerator : RelevantObjectsGenerator {
-        public override string Name => "Perpendicular Lines";
-        public override string Tooltip => "Takes a pair of line and point and generates a virtual line across the point that is perpendicular to the line.";
+        public override string Name => "垂线";
+        public override string Tooltip => "选取一条辅助线和一个辅助点，过辅助点作辅助线的垂线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public PerpendicularGenerator() {

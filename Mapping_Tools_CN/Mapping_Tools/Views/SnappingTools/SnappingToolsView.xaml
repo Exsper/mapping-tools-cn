@@ -28,7 +28,7 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Geometry Dashboard"/>
+                    <Run Text="几何仪表盘（Geometry Dashboard）"/>
                         </TextBlock>
                         <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                             <materialDesign:PopupBox.ToggleContent>
@@ -93,7 +93,7 @@ The savestates window is opened by clicking the button next to the preferences b
                             </Button>
                         </StackPanel>
                         
-                        <TextBlock x:Name="FilterTextBlock" Grid.Column="0" Text="Search" VerticalAlignment="Center" Margin="10,0"/>
+                        <TextBlock x:Name="FilterTextBlock" Grid.Column="0" Text="搜索" VerticalAlignment="Center" Margin="10,0"/>
                         <TextBox Grid.Column="1" Margin="0,0,10,10" Name="TxtFilter" ToolTip="Search for a generator." Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}"/>
                     </Grid>
                 </StackPanel>
@@ -102,14 +102,14 @@ The savestates window is opened by clicking the button next to the preferences b
                     <ListView SelectionMode="Single" ItemsSource="{Binding Generators}" ScrollViewer.CanContentScroll="False">
                         <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Active">
+                            <GridViewColumn Header="启用">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" IsChecked="{Binding Settings.IsActive}" Cursor="Hand"/>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Settings">
+                            <GridViewColumn Header="设置">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <Viewbox Width="100" Height="30" Margin="-5,-5,15,-5">
@@ -120,14 +120,14 @@ The savestates window is opened by clicking the button next to the preferences b
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Name" Width="500">
+                            <GridViewColumn Header="名称" Width="500">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <TextBlock Text="{Binding Name}" ToolTip="{Binding Tooltip}"/>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Sequential">
+                            <GridViewColumn Header="有序">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <ToggleButton Style="{StaticResource MaterialDesignSwitchToggleButton}" IsChecked="{Binding Settings.IsSequential}" Cursor="Hand"/>
@@ -156,7 +156,7 @@ The savestates window is opened by clicking the button next to the preferences b
                                                         <StackPanel Orientation="Horizontal">
                                                             <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="Gray" FontSize="22" VerticalAlignment="Bottom" />
                                                             <TextBlock Text="{Binding ItemCount}" FontSize="22" Foreground="Green" FontWeight="Bold" FontStyle="Italic" Margin="10,0,0,0" VerticalAlignment="Bottom" />
-                                                            <TextBlock Text=" item(s)" FontSize="22" Foreground="Silver" FontStyle="Italic" VerticalAlignment="Bottom" />
+                                                            <TextBlock Text=" 个项目" FontSize="22" Foreground="Silver" FontStyle="Italic" VerticalAlignment="Bottom" />
                                                         </StackPanel>
                                                     </Expander.Header>
                                                     <ItemsPresenter />

@@ -410,130 +410,130 @@
         "\" OR \"": "\" OR \""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AnchorPointGenerator.cs": {
-        "\"Points on Slider Anchors\"": "\"Points on Slider Anchors\"",
-        "\"Generates virtual points on the anchor points of sliders.\"": "\"Generates virtual points on the anchor points of sliders.\""
+        "\"Points on Slider Anchors\"": "\"滑条锚点\"",
+        "\"Generates virtual points on the anchor points of sliders.\"": "\"在滑条锚点上生成辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AngleBisectorGenerator.cs": {
-        "\"Bisectors of Angles\"": "\"Bisectors of Angles\"",
-        "\"Takes a pair virtual lines and generates the bisector of the angle between those lines at the point of the intersection.\"": "\"Takes a pair virtual lines and generates the bisector of the angle between those lines at the point of the intersection.\""
+        "\"Bisectors of Angles\"": "\"角平分线\"",
+        "\"Takes a pair virtual lines and generates the bisector of the angle between those lines at the point of the intersection.\"": "\"选取一对辅助线，在交点处生成角平分线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AveragePointGenerator2.cs": {
-        "\"Average of Two Points\"": "\"Average of Two Points\"",
-        "\"Takes a pair of virtual points and calculates the average of the points.\"": "\"Takes a pair of virtual points and calculates the average of the points.\""
+        "\"Average of Two Points\"": "\"两点中间点\"",
+        "\"Takes a pair of virtual points and calculates the average of the points.\"": "\"选取一对辅助点，生成中间点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AveragePointGenerator3.cs": {
-        "\"Average of Three Points\"": "\"Average of Three Points\"",
-        "\"Takes three virtual points and calculates the average of the points.\"": "\"Takes three virtual points and calculates the average of the points.\""
+        "\"Average of Three Points\"": "\"三点中心点\"",
+        "\"Takes three virtual points and calculates the average of the points.\"": "\"选取三个辅助点，生成中心点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\CircleTangentGenerator.cs": {
-        "\"Tangent Lines on Circle\"": "\"Tangent Lines on Circle\"",
-        "\"Takes a pair of virtual circle and point and generates virtual lines that stretch to the sides of the circle and pass through the point.\"": "\"Takes a pair of virtual circle and point and generates virtual lines that stretch to the sides of the circle and pass through the point.\""
+        "\"Tangent Lines on Circle\"": "\"过点作圆切线\"",
+        "\"Takes a pair of virtual circle and point and generates virtual lines that stretch to the sides of the circle and pass through the point.\"": "\"选取一个辅助圆和一个辅助点，从辅助点作圆的切线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\EqualSpacingGenerator.cs": {
-        "\"Circles by Two Points\"": "\"Circles by Two Points\"",
-        "\"Takes a pair of virtual points and generates a pair of virtual circles with their centers on each point. Their radius is equal to the spacing between the two.\"": "\"Takes a pair of virtual points and generates a pair of virtual circles with their centers on each point. Their radius is equal to the spacing between the two.\""
+        "\"Circles by Two Points\"": "\"两点作相交圆\"",
+        "\"Takes a pair of virtual points and generates a pair of virtual circles with their centers on each point. Their radius is equal to the spacing between the two.\"": "\"选取两个辅助点，分别作以自己为中心，到对方的距离为半径的圆。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\IntersectionGenerator.cs": {
-        "\"Intersection Points\"": "\"Intersection Points\"",
-        "\"Takes a pair of virtual lines or circles and generates a virtual point on each of their intersections.\"": "\"Takes a pair of virtual lines or circles and generates a virtual point on each of their intersections.\""
+        "\"Intersection Points\"": "\"直线交点\"",
+        "\"Takes a pair of virtual lines or circles and generates a virtual point on each of their intersections.\"": "\"选取两条辅助线，生成交点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LastAnchorGenerator.cs": {
-        "\"Points on Last Anchors\"": "\"Points on Last Anchors\"",
-        "\"Generates virtual points on the last anchors of sliders.\"": "\"Generates virtual points on the last anchors of sliders.\""
+        "\"Points on Last Anchors\"": "\"滑条末尾锚点\"",
+        "\"Generates virtual points on the last anchors of sliders.\"": "\"在滑条最后一个锚点上生成辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LinearLineGenerator.cs": {
-        "\"Lines on Linear Sliders\"": "\"Lines on Linear Sliders\"",
-        "\"Takes a linear slider and generates a virtual line that matches it.\"": "\"Takes a linear slider and generates a virtual line that matches it.\""
+        "\"Lines on Linear Sliders\"": "\"直线滑条\"",
+        "\"Takes a linear slider and generates a virtual line that matches it.\"": "\"在直线滑条上生成辅助线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LineGenerator.cs": {
-        "\"Lines by Two Points\"": "\"Lines by Two Points\"",
-        "\"Takes a pair of virtual points and generates a virtual line that connects the two.\"": "\"Takes a pair of virtual points and generates a virtual line that connects the two.\""
+        "\"Lines by Two Points\"": "\"两点直线\"",
+        "\"Takes a pair of virtual points and generates a virtual line that connects the two.\"": "\"选取两个辅助点作直线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\ParallelismGenerator.cs": {
-        "\"Parallel Lines\"": "\"Parallel Lines\"",
-        "\"Takes a pair of line and point and generates a virtual line across the point that is parallel to the line.\"": "\"Takes a pair of line and point and generates a virtual line across the point that is parallel to the line.\""
+        "\"Parallel Lines\"": "\"平行线\"",
+        "\"Takes a pair of line and point and generates a virtual line across the point that is parallel to the line.\"": "\"选取一条辅助线和一个辅助点，过辅助点作直线的平行线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerfectCircleBlanketGenerator.cs": {
-        "\"Points on Blanket Centers\"": "\"Points on Blanket Centers\"",
-        "\"Takes a circular arc slider and generates a virtual point on its blanket center.\"": "\"Takes a circular arc slider and generates a virtual point on its blanket center.\""
+        "\"Points on Blanket Centers\"": "\"包裹（Blanket）中心点\"",
+        "\"Takes a circular arc slider and generates a virtual point on its blanket center.\"": "\"选取一个弧形滑条，生成包裹（Blanket）中心点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerfectCircleGenerator.cs": {
-        "\"Circles on 3-Point Sliders\"": "\"Circles on 3-Point Sliders\"",
-        "\"Takes a circular arc slider and generates a virtual circle that completes the arc.\"": "\"Takes a circular arc slider and generates a virtual circle that completes the arc.\""
+        "\"Circles on 3-Point Sliders\"": "\"三点滑条所在圆\"",
+        "\"Takes a circular arc slider and generates a virtual circle that completes the arc.\"": "\"选取一个有且只有三个白色锚点的弧形滑条，沿弧形生成完整圆。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerpendicularGenerator.cs": {
-        "\"Perpendicular Lines\"": "\"Perpendicular Lines\"",
-        "\"Takes a pair of line and point and generates a virtual line across the point that is perpendicular to the line.\"": "\"Takes a pair of line and point and generates a virtual line across the point that is perpendicular to the line.\""
+        "\"Perpendicular Lines\"": "\"垂线\"",
+        "\"Takes a pair of line and point and generates a virtual line across the point that is perpendicular to the line.\"": "\"选取一条辅助线和一个辅助点，过辅助点作辅助线的垂线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PointBisectorGenerator.cs": {
-        "\"Bisector of Two Points\"": "\"Bisector of Two Points\"",
-        "\"Takes a pair virtual points and generates the bisector of those points.\"": "\"Takes a pair virtual points and generates the bisector of those points.\""
+        "\"Bisector of Two Points\"": "\"两点垂直平分线\"",
+        "\"Takes a pair virtual points and generates the bisector of those points.\"": "\"选取一对辅助点，生成垂直平分线。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator2.cs": {
-        "\"Successor of 2 Points\"": "\"Successor of 2 Points\"",
-        "\"Takes 2 virtual points and calculates the next virtual point using the same velocity.\"": "\"Takes 2 virtual points and calculates the next virtual point using the same velocity.\""
+        "\"Successor of 2 Points\"": "\"两点后继点\"",
+        "\"Takes 2 virtual points and calculates the next virtual point using the same velocity.\"": "\"选取两个辅助点，按前一个点到后一个点的速度作后续辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator3.cs": {
-        "\"Successor of 3 Points\"": "\"Successor of 3 Points\"",
-        "\"Takes 3 virtual points and calculates the next virtual point using the same angle and velocity change.\"": "\"Takes 3 virtual points and calculates the next virtual point using the same angle and velocity change.\""
+        "\"Successor of 3 Points\"": "\"三点后继点\"",
+        "\"Takes 3 virtual points and calculates the next virtual point using the same angle and velocity change.\"": "\"选取三个辅助点，按前一个点到后一个点的角度和速度变化作后续辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator3Reversed.cs": {
-        "\"Successor of 3 Points Reversed\"": "\"Successor of 3 Points Reversed\"",
-        "\"Takes 3 virtual points and calculates the next virtual point using the same velocity change and opposite angle.\"": "\"Takes 3 virtual points and calculates the next virtual point using the same velocity change and opposite angle.\""
+        "\"Successor of 3 Points Reversed\"": "\"三点反向后继点\"",
+        "\"Takes 3 virtual points and calculates the next virtual point using the same velocity change and opposite angle.\"": "\"选取三个辅助点，按前一个点到后一个点的相反角度和速度变化作后续辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator4.cs": {
-        "\"Successor of 4 Points\"": "\"Successor of 4 Points\"",
-        "\"Takes 4 virtual points and calculates the next virtual point using the same angle, angle change, velocity change and change of velocity change.\"": "\"Takes 4 virtual points and calculates the next virtual point using the same angle, angle change, velocity change and change of velocity change.\""
+        "\"Successor of 4 Points\"": "\"四点后继点\"",
+        "\"Takes 4 virtual points and calculates the next virtual point using the same angle, angle change, velocity change and change of velocity change.\"": "\"选取四个辅助点，按前一个点到后一个点的相同角度、角度变化、速度变化和加速度变化作后续辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\ScaleRotateGenerator.cs": {
-        "\"Scale & Rotate around a Fixed Point\"": "\"Scale & Rotate around a Fixed Point\"",
-        "\"Spins and scales any virtual object around a fixed point by a specified angle and scalar. In the settings you can set the angle, scalar and extra rules for selecting the fixed point.\"": "\"Spins and scales any virtual object around a fixed point by a specified angle and scalar. In the settings you can set the angle, scalar and extra rules for selecting the fixed point.\""
+        "\"Scale & Rotate around a Fixed Point\"": "\"围绕固定点缩放&旋转\"",
+        "\"Spins and scales any virtual object around a fixed point by a specified angle and scalar. In the settings you can set the angle, scalar and extra rules for selecting the fixed point.\"": "\"围绕固定点旋转和缩放选中辅助对象。在设置中修改角度、缩放量以及选择固定点的额外规则。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SinglePointCircleGenerator.cs": {
-        "\"Circle from Single Point\"": "\"Circle from Single Point\"",
-        "\"Generates circles with a specified radius on every virtual point.\"": "\"Generates circles with a specified radius on every virtual point.\""
+        "\"Circle from Single Point\"": "\"以点作圆\"",
+        "\"Generates circles with a specified radius on every virtual point.\"": "\"以每个选取的辅助点为圆心，按设置的半径分别作圆。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SliderEndGenerator.cs": {
-        "\"Points on Slider Ends\"": "\"Points on Slider Ends\"",
-        "\"Generates virtual points on the actual ends of sliders.\"": "\"Generates virtual points on the actual ends of sliders.\""
+        "\"Points on Slider Ends\"": "\"滑条尾作点\"",
+        "\"Generates virtual points on the actual ends of sliders.\"": "\"在滑条尾作辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SliderPathGenerator.cs": {
-        "\"Points on Slider Paths\"": "\"Points on Slider Paths\"",
-        "\"Generates many virtual points on the paths of sliders. The density of generated points is configurable.\"": "\"Generates many virtual points on the paths of sliders. The density of generated points is configurable.\""
+        "\"Points on Slider Paths\"": "\"滑条路径点\"",
+        "\"Generates many virtual points on the paths of sliders. The density of generated points is configurable.\"": "\"在滑条路径上生成大量辅助点。可以自定义生成的辅助点密度。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SquareGenerator.cs": {
-        "\"Square from Two Points (Type I)\"": "\"Square from Two Points (Type I)\"",
-        "\"Takes a pair of virtual points and generates a virtual point on each side to make a single square.\"": "\"Takes a pair of virtual points and generates a virtual point on each side to make a single square.\""
+        "\"Square from Two Points (Type I)\"": "\"两点作正方形（对角线）\"",
+        "\"Takes a pair of virtual points and generates a virtual point on each side to make a single square.\"": "\"选取两个辅助点作为正方形对角线，生成正方形的其他两个点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SquareGenerator2.cs": {
-        "\"Square from Two Points (Type II)\"": "\"Square from Two Points (Type II)\"",
-        "\"Takes a pair of virtual points and generates a pair of virtual points on each side to make two squares in total.\"": "\"Takes a pair of virtual points and generates a pair of virtual points on each side to make two squares in total.\""
+        "\"Square from Two Points (Type II)\"": "\"两点作正方形（边）\"",
+        "\"Takes a pair of virtual points and generates a pair of virtual points on each side to make two squares in total.\"": "\"选取两个辅助点作为正方形的一条边，生成其余点补全两个正方形。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\StartPointGenerator.cs": {
-        "\"Points on Circles and Slider Heads\"": "\"Points on Circles and Slider Heads\"",
-        "\"Generates virtual points on slider heads and circles.\"": "\"Generates virtual points on slider heads and circles.\""
+        "\"Points on Circles and Slider Heads\"": "\"圆圈和滑条头作点\"",
+        "\"Generates virtual points on slider heads and circles.\"": "\"在圆圈和滑条头位置作辅助点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SymmetryGenerator.cs": {
-        "\"Reflection across a Line\"": "\"Reflection across a Line\"",
-        "\"Mirrors any virtual object over a virtual line where the virtual line is the symmetry axis. In the settings you can set extra rules for selecting the symmetry axis.\"": "\"Mirrors any virtual object over a virtual line where the virtual line is the symmetry axis. In the settings you can set extra rules for selecting the symmetry axis.\""
+        "\"Reflection across a Line\"": "\"镜像\"",
+        "\"Mirrors any virtual object over a virtual line where the virtual line is the symmetry axis. In the settings you can set extra rules for selecting the symmetry axis.\"": "\"将辅助线作为对称轴，作选中辅助对象的镜像。在设置中修改选择对称轴的额外规则。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TangentCircleGenerator.cs": {
-        "\"Tangent Circles on Circle\"": "\"Tangent Circles on Circle\"",
-        "\"Takes a virtual circle and two points and generates virtual circles which intersect the circle in exactly one point.\"": "\"Takes a virtual circle and two points and generates virtual circles which intersect the circle in exactly one point.\""
+        "\"Tangent Circles on Circle\"": "\"过两点作相切圆\"",
+        "\"Takes a virtual circle and two points and generates virtual circles which intersect the circle in exactly one point.\"": "\"选取一个辅助圆和两个辅助点，过两个辅助点作圆的内切和外切圆。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TriangleGenerator.cs": {
-        "\"Equilateral Triangle from Two Points (Type I)\"": "\"Equilateral Triangle from Two Points (Type I)\"",
-        "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\"": "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\""
+        "\"Equilateral Triangle from Two Points (Type I)\"": "\"两点作等边三角形（边）\"",
+        "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\"": "\"选取两个辅助点作为等边三角形的一条边，生成其余点补全等边三角形。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TriangleGenerator2.cs": {
-        "\"Equilateral Triangle from Two Points (Type II)\"": "\"Equilateral Triangle from Two Points (Type II)\"",
-        "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\"": "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\""
+        "\"Equilateral Triangle from Two Points (Type II)\"": "\"两点作等边三角形（对角线）\"",
+        "\"Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.\"": "\"选取两个辅助点作为60°内角菱形的对角线，生成其余点补全两个等边三角形。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\GeneratorSettings.cs": {
         "\"Active\"": "\"Active\"",
         "\"Active generators can generate virtual objects from hit objects or other virtual objects.\"": "\"Active generators can generate virtual objects from hit objects or other virtual objects.\"",
-        "\"Sequential\"": "\"Sequential\"",
-        "\"Sequential generators will only take sequential objects as input.\"": "\"Sequential generators will only take sequential objects as input.\"",
+        "\"Sequential\"": "\"有序\"",
+        "\"Sequential generators will only take sequential objects as input.\"": "\"有序的生成器只能将带有时间的物件作为输入。\"",
         "\"Deep\"": "\"Deep\"",
         "\"Deep generators can take objects as input not only from the previous layer, but all previous layers.\"": "\"Deep generators can take objects as input not only from the previous layer, but all previous layers.\"",
         "\"Relevancy Ratio\"": "\"Relevancy Ratio\"",
@@ -2269,18 +2269,18 @@
         "ToolTip=\"Search for a generator.\"": "ToolTip=\"Search for a generator.\"",
         "ToolTip=\"Generator settings...\"": "ToolTip=\"Generator settings...\"",
         "ToolTip=\"{Binding Tooltip}\"": "ToolTip=\"{Binding Tooltip}\"",
-        "Header=\"Active\"": "Header=\"Active\"",
-        "Header=\"Settings\"": "Header=\"Settings\"",
-        "Header=\"Name\"": "Header=\"Name\"",
-        "Header=\"Sequential\"": "Header=\"Sequential\"",
+        "Header=\"Active\"": "Header=\"启用\"",
+        "Header=\"Settings\"": "Header=\"设置\"",
+        "Header=\"Name\"": "Header=\"名称\"",
+        "Header=\"Sequential\"": "Header=\"有序\"",
         "Header=\"Relevancy\"": "Header=\"Relevancy\"",
-        "Text=\"Geometry Dashboard\"": "Text=\"Geometry Dashboard\"",
-        "Text=\"Search\"": "Text=\"Search\"",
+        "Text=\"Geometry Dashboard\"": "Text=\"几何仪表盘（Geometry Dashboard）\"",
+        "Text=\"Search\"": "Text=\"搜索\"",
         "Text=\"{Binding Filter, UpdateSourceTrigger=PropertyChanged}\"": "Text=\"{Binding Filter, UpdateSourceTrigger=PropertyChanged}\"",
         "Text=\"{Binding Name}\"": "Text=\"{Binding Name}\"",
         "Text=\"{Binding Settings.RelevancyRatio, Converter={StaticResource DoubleToStringConverter}}\"": "Text=\"{Binding Settings.RelevancyRatio, Converter={StaticResource DoubleToStringConverter}}\"",
         "Text=\"{Binding ItemCount}\"": "Text=\"{Binding ItemCount}\"",
-        "Text=\" item(s)\"": "Text=\" item(s)\"",
+        "Text=\" item(s)\"": "Text=\" 个项目\"",
         "Text=\"Made by OliBomby\"": "Text=\"由 OliBomby 制作\"",
         "You can then snap your mouse to those virtual points, lines and circles using a hotkey, so you can use the geometry in your map.": "You can then snap your mouse to those virtual points, lines and circles using a hotkey, so you can use the geometry in your map.",
         "There are also hotkeys for selecting, locking and toggling usability on virtual objects. Locked objects don't disappear on themselves and non-usable objects always get ignored by generators.": "There are also hotkeys for selecting, locking and toggling usability on virtual objects. Locked objects don't disappear on themselves and non-usable objects always get ignored by generators.",
@@ -2298,7 +2298,7 @@
         "Configure": "Configure"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml.cs": {
-        "\"Geometry Dashboard\"": "\"Geometry Dashboard\"",
+        "\"Geometry Dashboard\"": "\"几何仪表盘\"",
         "\"Generates and keeps track of a list virtual objects that are geometrically relevant to the objects visible on your screen. Press and hold the Activation Key to let your cursor snap to the closest virtual object.{Environment.NewLine}⚠ You must specify your user config file in the Preferences for this tool to function.\"": "\"Generates and keeps track of a list virtual objects that are geometrically relevant to the objects visible on your screen. Press and hold the Activation Key to let your cursor snap to the closest virtual object.{Environment.NewLine}⚠ You must specify your user config file in the Preferences for this tool to function.\"",
         "\"geometrydashboardproject.json\"": "\"geometrydashboardproject.json\"",
         "\"Geometry Dashboard Projects\"": "\"Geometry Dashboard Projects\"",

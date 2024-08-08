@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class TriangleGenerator2 : RelevantObjectsGenerator {
-        public override string Name => "Equilateral Triangle from Two Points (Type II)";
-        public override string Tooltip => "Takes a pair of virtual points and generates a virtual point on each side to make two equilateral triangles.";
+        public override string Name => "两点作等边三角形（对角线）";
+        public override string Tooltip => "选取两个辅助点作为60°内角菱形的对角线，生成其余点补全两个等边三角形。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public TriangleGenerator2() {

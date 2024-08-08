@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class PointBisectorGenerator : RelevantObjectsGenerator {
-        public override string Name => "Bisector of Two Points";
-        public override string Tooltip => "Takes a pair virtual points and generates the bisector of those points.";
+        public override string Name => "两点垂直平分线";
+        public override string Tooltip => "选取一对辅助点，生成垂直平分线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public PointBisectorGenerator() {

@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class ParallelismGenerator : RelevantObjectsGenerator {
-        public override string Name => "Parallel Lines";
-        public override string Tooltip => "Takes a pair of line and point and generates a virtual line across the point that is parallel to the line.";
+        public override string Name => "平行线";
+        public override string Tooltip => "选取一条辅助线和一个辅助点，过辅助点作直线的平行线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public ParallelismGenerator() {

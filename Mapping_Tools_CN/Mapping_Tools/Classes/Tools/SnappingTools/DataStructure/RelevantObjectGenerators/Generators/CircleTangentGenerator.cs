@@ -7,8 +7,8 @@ using System;
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class CircleTangentGenerator : RelevantObjectsGenerator {
-        public override string Name => "Tangent Lines on Circle";
-        public override string Tooltip => "Takes a pair of virtual circle and point and generates virtual lines that stretch to the sides of the circle and pass through the point.";
+        public override string Name => "过点作圆切线";
+        public override string Tooltip => "选取一个辅助圆和一个辅助点，从辅助点作圆的切线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public CircleTangentGenerator() {

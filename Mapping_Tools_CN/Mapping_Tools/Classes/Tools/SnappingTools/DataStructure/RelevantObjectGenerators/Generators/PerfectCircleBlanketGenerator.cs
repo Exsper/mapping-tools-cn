@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class PerfectCircleBlanketGenerator : RelevantObjectsGenerator {
-        public override string Name => "Points on Blanket Centers";
-        public override string Tooltip => "Takes a circular arc slider and generates a virtual point on its blanket center.";
+        public override string Name => "包裹（Blanket）中心点";
+        public override string Tooltip => "选取一个弧形滑条，生成包裹（Blanket）中心点。";
         public override GeneratorType GeneratorType => GeneratorType.Basic;
 
         public PerfectCircleBlanketGenerator() {

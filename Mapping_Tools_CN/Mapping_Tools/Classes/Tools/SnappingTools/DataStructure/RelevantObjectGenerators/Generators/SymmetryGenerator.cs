@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SymmetryGenerator : RelevantObjectsGenerator {
-        public override string Name => "Reflection across a Line";
-        public override string Tooltip => "Mirrors any virtual object over a virtual line where the virtual line is the symmetry axis. In the settings you can set extra rules for selecting the symmetry axis.";
+        public override string Name => "镜像";
+        public override string Tooltip => "将辅助线作为对称轴，作选中辅助对象的镜像。在设置中修改选择对称轴的额外规则。";
         public override GeneratorType GeneratorType => GeneratorType.Advanced;
 
         private SymmetryGeneratorSettings MySettings => (SymmetryGeneratorSettings) Settings;

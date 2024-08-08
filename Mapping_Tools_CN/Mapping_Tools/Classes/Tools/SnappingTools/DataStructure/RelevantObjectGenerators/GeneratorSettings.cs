@@ -37,8 +37,8 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
         }
 
         private bool isSequential;
-        [DisplayName("Sequential")]
-        [Description("Sequential generators will only take sequential objects as input.")]
+        [DisplayName("有序")]
+        [Description("有序的生成器只能将带有时间的物件作为输入。")]
         public bool IsSequential {
             get => isSequential;
             set => Set(ref isSequential, value);

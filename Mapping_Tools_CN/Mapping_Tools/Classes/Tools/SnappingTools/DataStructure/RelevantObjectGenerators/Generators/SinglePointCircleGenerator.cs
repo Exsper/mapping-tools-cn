@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SinglePointCircleGenerator : RelevantObjectsGenerator {
-        public override string Name => "Circle from Single Point";
-        public override string Tooltip => "Generates circles with a specified radius on every virtual point.";
+        public override string Name => "以点作圆";
+        public override string Tooltip => "以每个选取的辅助点为圆心，按设置的半径分别作圆。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         private SinglePointCircleGeneratorSettings MySettings => (SinglePointCircleGeneratorSettings) Settings;

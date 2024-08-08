@@ -8,8 +8,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class IntersectionGenerator : RelevantObjectsGenerator {
-        public override string Name => "Intersection Points";
-        public override string Tooltip => "Takes a pair of virtual lines or circles and generates a virtual point on each of their intersections.";
+        public override string Name => "直线交点";
+        public override string Tooltip => "选取两条辅助线，生成交点。";
         public override GeneratorType GeneratorType => GeneratorType.Advanced;
 
         public IntersectionGenerator() {

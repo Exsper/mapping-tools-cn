@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class LineGenerator : RelevantObjectsGenerator {
-        public override string Name => "Lines by Two Points";
-        public override string Tooltip => "Takes a pair of virtual points and generates a virtual line that connects the two.";
+        public override string Name => "两点直线";
+        public override string Tooltip => "选取两个辅助点作直线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public LineGenerator() {

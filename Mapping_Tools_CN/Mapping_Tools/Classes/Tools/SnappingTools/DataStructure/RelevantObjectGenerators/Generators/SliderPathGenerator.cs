@@ -5,8 +5,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SliderPathGenerator : RelevantObjectsGenerator {
-        public override string Name => "Points on Slider Paths";
-        public override string Tooltip => "Generates many virtual points on the paths of sliders. The density of generated points is configurable.";
+        public override string Name => "滑条路径点";
+        public override string Tooltip => "在滑条路径上生成大量辅助点。可以自定义生成的辅助点密度。";
         public override GeneratorType GeneratorType => GeneratorType.Basic;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.Custom;
 

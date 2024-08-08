@@ -15,7 +15,7 @@ using MaterialDesignThemes.Wpf;
 namespace Mapping_Tools.Views.SnappingTools {
     public partial class SnappingToolsView : ISavable<SnappingToolsProject>, IHaveExtraProjectMenuItems {
 
-        public static readonly string ToolName = "Geometry Dashboard";
+        public static readonly string ToolName = "几何仪表盘";
 
         public static readonly string ToolDescription = $@"Generates and keeps track of a list virtual objects that are geometrically relevant to the objects visible on your screen. Press and hold the Activation Key to let your cursor snap to the closest virtual object.{Environment.NewLine}⚠ You must specify your user config file in the Preferences for this tool to function.";
 

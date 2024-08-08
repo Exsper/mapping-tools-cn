@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class ScaleRotateGenerator : RelevantObjectsGenerator {
-        public override string Name => "Scale & Rotate around a Fixed Point";
-        public override string Tooltip => "Spins and scales any virtual object around a fixed point by a specified angle and scalar. In the settings you can set the angle, scalar and extra rules for selecting the fixed point.";
+        public override string Name => "围绕固定点缩放&旋转";
+        public override string Tooltip => "围绕固定点旋转和缩放选中辅助对象。在设置中修改角度、缩放量以及选择固定点的额外规则。";
         public override GeneratorType GeneratorType => GeneratorType.Advanced;
 
         private ScaleRotateGeneratorSettings MySettings => (ScaleRotateGeneratorSettings) Settings;

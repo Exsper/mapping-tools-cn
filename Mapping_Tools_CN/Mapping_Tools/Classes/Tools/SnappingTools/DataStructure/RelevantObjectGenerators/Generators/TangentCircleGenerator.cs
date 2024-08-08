@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class TangentCircleGenerator : RelevantObjectsGenerator {
-        public override string Name => "Tangent Circles on Circle";
-        public override string Tooltip => "Takes a virtual circle and two points and generates virtual circles which intersect the circle in exactly one point.";
+        public override string Name => "过两点作相切圆";
+        public override string Tooltip => "选取一个辅助圆和两个辅助点，过两个辅助点作圆的内切和外切圆。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public TangentCircleGenerator() {

@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class EqualSpacingGenerator : RelevantObjectsGenerator {
-        public override string Name => "Circles by Two Points";
-        public override string Tooltip => "Takes a pair of virtual points and generates a pair of virtual circles with their centers on each point. Their radius is equal to the spacing between the two.";
+        public override string Name => "两点作相交圆";
+        public override string Tooltip => "选取两个辅助点，分别作以自己为中心，到对方的距离为半径的圆。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public EqualSpacingGenerator() {

@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class AngleBisectorGenerator : RelevantObjectsGenerator {
-        public override string Name => "Bisectors of Angles";
-        public override string Tooltip => "Takes a pair virtual lines and generates the bisector of the angle between those lines at the point of the intersection.";
+        public override string Name => "角平分线";
+        public override string Tooltip => "选取一对辅助线，在交点处生成角平分线。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public AngleBisectorGenerator() {

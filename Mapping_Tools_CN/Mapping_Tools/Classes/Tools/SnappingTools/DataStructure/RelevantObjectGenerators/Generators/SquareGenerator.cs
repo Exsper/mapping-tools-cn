@@ -7,8 +7,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SquareGenerator : RelevantObjectsGenerator {
-        public override string Name => "Square from Two Points (Type I)";
-        public override string Tooltip => "Takes a pair of virtual points and generates a virtual point on each side to make a single square.";
+        public override string Name => "两点作正方形（对角线）";
+        public override string Tooltip => "选取两个辅助点作为正方形对角线，生成正方形的其他两个点。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public SquareGenerator() {

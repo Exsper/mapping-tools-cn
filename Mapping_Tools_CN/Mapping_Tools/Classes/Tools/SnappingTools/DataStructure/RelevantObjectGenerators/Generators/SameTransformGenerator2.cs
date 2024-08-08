@@ -6,8 +6,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class SameTransformGenerator2 : RelevantObjectsGenerator {
-        public override string Name => "Successor of 2 Points";
-        public override string Tooltip => "Takes 2 virtual points and calculates the next virtual point using the same velocity.";
+        public override string Name => "两点后继点";
+        public override string Tooltip => "选取两个辅助点，按前一个点到后一个点的速度作后续辅助点。";
         public override GeneratorType GeneratorType => GeneratorType.Advanced;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.After;
 

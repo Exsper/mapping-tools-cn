@@ -5,8 +5,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.Generators {
     public class AveragePointGenerator3 : RelevantObjectsGenerator {
-        public override string Name => "Average of Three Points";
-        public override string Tooltip => "Takes three virtual points and calculates the average of the points.";
+        public override string Name => "三点中心点";
+        public override string Tooltip => "选取三个辅助点，生成中心点。";
         public override GeneratorType GeneratorType => GeneratorType.Intermediate;
 
         public AveragePointGenerator3() {
