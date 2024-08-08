@@ -177,12 +177,29 @@ async function buildTemplate(orgfolder, skipPaths = [], skipTexts = []) {
 /**
  * @param {string} orgfolder 
  * @param {string} outputPath 
+ * @param {Array<{filePath:string, extraText:Array<string>}>} extraTemplate 额外翻译内容 [ {filePath: 翻译文本所在文件， extraText: [需要翻译的文本, ...] }, ...]
  * @param {Array<string>} skipPaths 忽略翻译的文件（夹）路径
  * @param {Array<{filePath:string, skipText:string}>} skipTexts [{filePath: 忽略文本所在文件，不提供则默认所有文件, skipText: 忽略文本，filePath中出现该文本则不加入翻译Json}, ...]
  */
-async function createTemplate(orgfolder, outputPath, skipPaths = [], skipTexts = []) {
+async function createTemplate(orgfolder, outputPath, extraTemplate = [], skipPaths = [], skipTexts = []) {
     let template = await buildTemplate(orgfolder, skipPaths, skipTexts);
     let fileExist = false;
+    // 融合extraTemplate
+    for (let i = 0; i < extraTemplate.length; i++) {
+        let key = extraTemplate[i].filePath;
+        if (template[key] === undefined) {
+            template[key] = {};
+        }
+        for (let j = 0; j < extraTemplate[i].extraText.length; j++) {
+            let subkey = extraTemplate[i].extraText[j];
+            if (template[key][subkey] === undefined) {
+                template[key][subkey] = subkey;
+            }
+            else {
+                console.warn("文件 " + key + " 中的额外翻译条目 " + subkey + " 已被自动提取，不需要手动添加。")
+            }
+        }
+    }
     try {
         // 继承旧翻译
         fileExist = await fs.access(outputPath, fs.constants.F_OK);
