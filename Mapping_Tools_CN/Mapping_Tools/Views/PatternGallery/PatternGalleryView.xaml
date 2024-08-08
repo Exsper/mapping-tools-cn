@@ -31,7 +31,7 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                  <Run Text="Pattern展览馆（Pattern Gallery）"/>
+                  <Run Text="Pattern 展览馆（Pattern Gallery）"/>
                 </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                   <materialDesign:PopupBox.ToggleContent>

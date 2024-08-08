@@ -168,11 +168,11 @@
                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Source path"
                                     ToolTip="The source of this hitsound layer."/>
                                 <Button Grid.Column="1" Cursor="Hand" Click="SelectedImportPathLoad_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                        ToolTip="Fetch the selected beatmap from your osu! client.">
+                                        ToolTip="从osu!客户端获取当前选中谱面。">
                                     <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>                             
                                 </Button >
                                 <Button Grid.Column="3" Cursor="Hand" Click="SelectedImportPathBrowse_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                        ToolTip="Select beatmaps with File Explorer.">
+                                        ToolTip="在文件浏览器中选择谱面。">
                                     <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                                 </Button >
                             </Grid>
@@ -228,7 +228,7 @@
                                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Sample path"
                                         ToolTip="Unique sample which this layer imported from the source beatmap."/>
                                     <Button Grid.Column="1" Cursor="Hand" Click="SelectedImportSamplePathBrowse_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                            ToolTip="Select beatmaps with File Explorer.">
+                                            ToolTip="在文件浏览器中选择谱面。">
                                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                                     </Button >
                                 </Grid>
@@ -346,11 +346,11 @@
                              <TextBox Grid.Column="1" x:Name="BaseBeatmapPathBox" Text="{Binding BaseBeatmap, Mode=TwoWay}" Margin="5,0,5,0"
                                       ToolTip="Path to the base beatmap. This beatmap serves as the base for exported hitsounds diff. Timing, volumes, and metadata will all come from this beatmap."/>
                              <Button Grid.Column="2" Cursor="Hand" Click="BaseBeatmapLoad_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                     ToolTip="Fetch the selected beatmap from your osu! client.">
+                                     ToolTip="从osu!客户端获取当前选中谱面。">
                                  <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                              </Button >
                              <Button Grid.Column="4" Cursor="Hand" Click="BaseBeatmapBrowse_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                                     ToolTip="Select beatmaps with File Explorer.">
+                                     ToolTip="在文件浏览器中选择谱面。">
                                  <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                              </Button >
                          </Grid>

@@ -62,7 +62,7 @@ async function create() {
         {skipText: "\"<Current Tool>\""},
         {filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs", skipText: "\"config.json\""},
         {skipText: "\"RootDialog\""},
-
+        {skipText: "\"ToggleButton\""},
 
 
 

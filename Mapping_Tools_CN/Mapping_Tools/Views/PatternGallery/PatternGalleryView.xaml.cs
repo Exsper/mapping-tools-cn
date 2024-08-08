@@ -31,7 +31,7 @@ namespace Mapping_Tools.Views.PatternGallery {
 
         public string ExtraAutoSavePath => Path.Combine(ViewModel.FileHandler.GetCollectionFolderPath(), "project.json");
 
-        public static readonly string ToolName = "Pattern展览馆";
+        public static readonly string ToolName = "Pattern 展览馆";
         public static readonly string ToolDescription =
             $@"导入导出谱面的Pattern，制作成Pattern收藏夹并与其他人分享。"+Environment.NewLine+ 
             @"使用底部按钮添加或删除Pattern。"+Environment.NewLine+ 

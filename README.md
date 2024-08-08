@@ -1,8 +1,8 @@
 # mapping-tools-cn
 
-翻译进度：![翻译进度](https://geps.dev/progress/36)
+翻译进度：![翻译进度](https://geps.dev/progress/38)
 
-🚧**本汉化项目尚未完成，目前翻译进度：745个条目（36.24%），剩余 1311 个条目未翻译**🚧
+🚧**本汉化项目尚未完成，目前翻译进度：782个条目（38.11%），剩余 1270 个条目未翻译**🚧
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目
 

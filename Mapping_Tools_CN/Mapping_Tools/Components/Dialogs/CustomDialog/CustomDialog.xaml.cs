@@ -232,7 +232,7 @@ namespace Mapping_Tools.Components.Dialogs.CustomDialog {
                 Cursor = Cursors.Hand,
                 Style = Application.Current.FindResource("IconButton") as Style,
                 VerticalAlignment = VerticalAlignment.Bottom,
-                ToolTip = @"Select files with File Explorer.",
+                ToolTip = @"在文件浏览器中选择文件。",
                 Content = new PackIcon {
                     Kind = PackIconKind.Folder, Width = 30, Height = 30, Cursor = Cursors.Hand,
                     Foreground = Application.Current.FindResource("PrimaryHueMidBrush") as Brush
@@ -271,7 +271,7 @@ namespace Mapping_Tools.Components.Dialogs.CustomDialog {
                 Cursor = Cursors.Hand,
                 Style = Application.Current.FindResource("IconButton") as Style,
                 VerticalAlignment = VerticalAlignment.Bottom,
-                ToolTip = @"Fetch the selected beatmap from your osu! client.",
+                ToolTip = @"从osu!客户端获取当前选中谱面。",
                 Content = new PackIcon {
                     Kind = PackIconKind.RestoreFromTrash, Width = 30, Height = 30, Cursor = Cursors.Hand,
                     Foreground = Application.Current.FindResource("PrimaryHueMidBrush") as Brush
@@ -294,7 +294,7 @@ namespace Mapping_Tools.Components.Dialogs.CustomDialog {
                 Cursor = Cursors.Hand,
                 Style = Application.Current.FindResource("IconButton") as Style,
                 VerticalAlignment = VerticalAlignment.Bottom,
-                ToolTip = @"Select beatmaps with File Explorer.",
+                ToolTip = @"在文件浏览器中选择谱面。",
                 Content = new PackIcon {
                     Kind = PackIconKind.Folder, Width = 30, Height = 30, Cursor = Cursors.Hand,
                     Foreground = Application.Current.FindResource("PrimaryHueMidBrush") as Brush

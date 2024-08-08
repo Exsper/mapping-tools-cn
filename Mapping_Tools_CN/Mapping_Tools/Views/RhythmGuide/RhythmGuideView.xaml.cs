@@ -13,12 +13,12 @@ namespace Mapping_Tools.Views.RhythmGuide {
     /// </summary>
     [VerticalContentScroll]
     public partial class RhythmGuideView : ISavable<RhythmGuideVm> {
-        public static readonly string ToolName = "Rhythm Guide";
+        public static readonly string ToolName = "节奏向导";
 
         public static readonly string ToolDescription =
-            $@"Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding." +
-            $@"{Environment.NewLine}You can add the circles to an existing map or make a new map with the circles." +
-            $@"{Environment.NewLine}Use the browse button to choose multiple maps at the same time.";
+            $@"根据多张谱面的节奏制作包含圆圈的谱面，为下音效作参考。" +
+            $@"{Environment.NewLine}您可以添加这些圆圈到已有谱面或制作新的谱面。" +
+            $@"{Environment.NewLine}使用文件浏览器选择谱面时可以同时选择多个谱面。";
 
         /// <summary>
         /// 

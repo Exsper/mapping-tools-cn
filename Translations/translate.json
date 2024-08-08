@@ -585,8 +585,8 @@
         "\"End node has to be part of the provided path.\"": "\"End node has to be part of the provided path.\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\BeatmapImportDialog.xaml": {
-        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"Fetch the selected beatmap from your osu! client.\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"Select beatmaps with File Explorer.\"",
+        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ACCEPT": "ACCEPT",
         "CANCEL": "CANCEL"
     },
@@ -597,10 +597,10 @@
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\CustomDialog\\CustomDialog.xaml.cs": {
         "\"MaterialDesignFloatingHintTextBox\"": "\"MaterialDesignFloatingHintTextBox\"",
         "\"IconButton\"": "\"IconButton\"",
-        "\"Select files with File Explorer.\"": "\"Select files with File Explorer.\"",
+        "\"Select files with File Explorer.\"": "\"在文件浏览器中选择文件。\"",
         "\"PrimaryHueMidBrush\"": "\"PrimaryHueMidBrush\"",
-        "\"Fetch the selected beatmap from your osu! client.\"": "\"Fetch the selected beatmap from your osu! client.\"",
-        "\"Select beatmaps with File Explorer.\"": "\"Select beatmaps with File Explorer.\""
+        "\"Fetch the selected beatmap from your osu! client.\"": "\"从osu!客户端获取当前选中谱面。\"",
+        "\"Select beatmaps with File Explorer.\"": "\"在文件浏览器中选择谱面。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\MessageDialog.xaml": {
         "OK": "OK",
@@ -911,8 +911,7 @@
         "\"Karoo13\"": "\"Karoo13\"",
         "\"Coppertine\"": "\"Coppertine\"",
         "\"JPK314\"": "\"JPK314\"",
-        "\"Info\"": "\"信息\"",
-        "\"ToggleButton\"": "\"ToggleButton\""
+        "\"Info\"": "\"信息\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Properties\\Annotations.cs": {
         "\"Software\"": "\"Software\"",
@@ -1104,7 +1103,7 @@
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
         "ToolTip=\"Hitsounds get copied from this map.\"": "ToolTip=\"从该谱面获取音效。\"",
         "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"从文件浏览器中选择谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ToolTip=\"Hitsounds get copied to these maps. You can input multiple maps separated with '|'.\"": "ToolTip=\"将音效复制给这些谱面。您可以用 '|' 字符分隔多个谱面。\"",
         "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。\"",
         "ToolTip=\"'Overwrite everything' works like traditional hitsound copiers and 'Overwrite only defined' will only copy over hitsounds from the source beatmap and keep all the other hitsounds intact.\"": "ToolTip=\"“完全覆盖”类似于传统音效复制器。“对应覆盖”仅复制源谱面音效，而保留目标谱面的其他音效。\"",
@@ -1226,8 +1225,8 @@
         "ToolTip=\"The path to the sound sample of the new hitsound layer.\"": "ToolTip=\"The path to the sound sample of the new hitsound layer.\"",
         "ToolTip=\"Select files with File Explorer.\"": "ToolTip=\"Select files with File Explorer.\"",
         "ToolTip=\"The source beatmap to import the hitsound stack from.\"": "ToolTip=\"The source beatmap to import the hitsound stack from.\"",
-        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"Fetch the selected beatmap from your osu! client.\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"Select beatmaps with File Explorer.\"",
+        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ToolTip=\"The X coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"": "ToolTip=\"The X coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"",
         "ToolTip=\"The Y coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"": "ToolTip=\"The Y coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"",
         "ToolTip=\"The name of the new hitsound layers.\"": "ToolTip=\"The name of the new hitsound layers.\"",
@@ -1289,8 +1288,7 @@
         "$\"Layer {index + 1}\"": "$\"Layer {index + 1}\"",
         "$\"{NameBox2.Text}: {o.Name}\"": "$\"{NameBox2.Text}: {o.Name}\"",
         "$\"{NameBox3.Text}: {o.Name}\"": "$\"{NameBox3.Text}: {o.Name}\"",
-        "$\"{NameBox4.Text}: {o.Name}\"": "$\"{NameBox4.Text}: {o.Name}\"",
-        "\"ToggleButton\"": "\"ToggleButton\""
+        "$\"{NameBox4.Text}: {o.Name}\"": "$\"{NameBox4.Text}: {o.Name}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundStudio\\HitsoundStudioExportDialog.xaml": {
         "ToolTip=\"The folder to export the hitsound beatmap and hitsound samples to. Original items in this folder could be deleted.\"": "ToolTip=\"The folder to export the hitsound beatmap and hitsound samples to. Original items in this folder could be deleted.\"",
@@ -1350,8 +1348,8 @@
         "ToolTip=\"Holds all the info from importing such that the layer can be re-imported with the same result.\"": "ToolTip=\"Holds all the info from importing such that the layer can be re-imported with the same result.\"",
         "ToolTip=\"How to import the source of this hitsound layer.\"": "ToolTip=\"How to import the source of this hitsound layer.\"",
         "ToolTip=\"The source of this hitsound layer.\"": "ToolTip=\"The source of this hitsound layer.\"",
-        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"Fetch the selected beatmap from your osu! client.\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"Select beatmaps with File Explorer.\"",
+        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ToolTip=\"The X coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"": "ToolTip=\"The X coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"",
         "ToolTip=\"The Y coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"": "ToolTip=\"The Y coordinate of the stack in the source beatmap which dictates all the times when the sound has to be played.\"",
         "ToolTip=\"Unique sample which this layer imported from the source beatmap.\"": "ToolTip=\"Unique sample which this layer imported from the source beatmap.\"",
@@ -1557,11 +1555,11 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\MetadataManager\\MetadataManagerView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
         "ToolTip=\"Beatmap to import metadata from. This is optional.\"": "ToolTip=\"Beatmap to import metadata from. This is optional.\"",
-        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"Fetch the selected beatmap from your osu! client.\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"Select beatmaps with File Explorer.\"",
+        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ToolTip=\"Import metadata from the specified beatmap. This is optional.\"": "ToolTip=\"Import metadata from the specified beatmap. This is optional.\"",
-        "ToolTip=\"Beatmap(s) to export the metadata to. You can input multiple map paths seperated by '|'.\"": "ToolTip=\"Beatmap(s) to export the metadata to. You can input multiple map paths seperated by '|'.\"",
-        "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"",
+        "ToolTip=\"Beatmap(s) to export the metadata to. You can input multiple map paths seperated by '|'.\"": "ToolTip=\"将元数据（metadata）复制给这些谱面。您可以用 '|' 字符分隔多个谱面。\"",
+        "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。\"",
         "ToolTip=\"Reset the BeatmapID and BeatmapSetID on all beatmaps. This might fix the 'The beatmap you're trying to submit isn't yours!' issue.\"": "ToolTip=\"Reset the BeatmapID and BeatmapSetID on all beatmaps. This might fix the 'The beatmap you're trying to submit isn't yours!' issue.\"",
         "ToolTip=\"Choose to export combo colours. You can disable this to have different colours between maps.\"": "ToolTip=\"Choose to export combo colours. You can disable this to have different colours between maps.\"",
         "ToolTip=\"Add a new combo colour.\"": "ToolTip=\"Add a new combo colour.\"",
@@ -1845,38 +1843,38 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
-        "ToolTip=\"Beatmap(s) to import rhythm from. You can input multiple beatmap paths seperated by '|'.\"": "ToolTip=\"Beatmap(s) to import rhythm from. You can input multiple beatmap paths seperated by '|'.\"",
-        "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"",
-        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"Fetch the selected beatmap from your osu! client.\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"Select beatmaps with File Explorer.\"",
-        "ToolTip=\"Where to save the rhythm guide map. Can also be an existing beatmap.\"": "ToolTip=\"Where to save the rhythm guide map. Can also be an existing beatmap.\"",
-        "ToolTip=\"Choose to either generate a completely new map or add the rhythm guide onto what's already in the map in the export field.\"": "ToolTip=\"Choose to either generate a completely new map or add the rhythm guide onto what's already in the map in the export field.\"",
-        "ToolTip=\"The game mode of the rhythm guide. Only works in NewMap mode.\"": "ToolTip=\"The game mode of the rhythm guide. Only works in NewMap mode.\"",
-        "ToolTip=\"The difficulty name of the rhythm guide. Only works in NewMap mode.\"": "ToolTip=\"The difficulty name of the rhythm guide. Only works in NewMap mode.\"",
-        "ToolTip=\"Select which events should be included in the rhythm guide map.\"": "ToolTip=\"Select which events should be included in the rhythm guide map.\"",
+        "ToolTip=\"Beatmap(s) to import rhythm from. You can input multiple beatmap paths seperated by '|'.\"": "ToolTip=\"从这些谱面获取节奏。您可以用 '|' 字符分隔多个谱面。\"",
+        "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。\"",
+        "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
+        "ToolTip=\"Where to save the rhythm guide map. Can also be an existing beatmap.\"": "ToolTip=\"将节奏参考谱面保存到哪里。可以选择已经存在的谱面。\"",
+        "ToolTip=\"Choose to either generate a completely new map or add the rhythm guide onto what's already in the map in the export field.\"": "ToolTip=\"选择生成新的谱面还是将节奏参考添加到设定的输出文件中。\"",
+        "ToolTip=\"The game mode of the rhythm guide. Only works in NewMap mode.\"": "ToolTip=\"新谱面游戏模式。只对生成新谱面有效。\"",
+        "ToolTip=\"The difficulty name of the rhythm guide. Only works in NewMap mode.\"": "ToolTip=\"新谱面难度名。只对生成新谱面有效。\"",
+        "ToolTip=\"Select which events should be included in the rhythm guide map.\"": "ToolTip=\"节奏参考谱面应包含哪些事件。\"",
         "ToolTip=\"Run this tool.\"": "ToolTip=\"运行该工具。\"",
-        "Text=\"Rhythm Guide\"": "Text=\"Rhythm Guide\"",
+        "Text=\"Rhythm Guide\"": "Text=\"节奏向导（Rhythm Guide）\"",
         "Text=\"{Binding GuideGeneratorArgs.Paths, Converter={StaticResource Sa2SConverter}}\"": "Text=\"{Binding GuideGeneratorArgs.Paths, Converter={StaticResource Sa2SConverter}}\"",
         "Text=\"{Binding ElementName=ImportPathBox, Path=Text, Converter={StaticResource MapPathStringToCountStringConverter}}\"": "Text=\"{Binding ElementName=ImportPathBox, Path=Text, Converter={StaticResource MapPathStringToCountStringConverter}}\"",
         "Text=\"{Binding GuideGeneratorArgs.ExportPath}\"": "Text=\"{Binding GuideGeneratorArgs.ExportPath}\"",
         "Text=\"{Binding GuideGeneratorArgs.OutputName}\"": "Text=\"{Binding GuideGeneratorArgs.OutputName}\"",
         "Text=\"Made by OliBomby\"": "Text=\"由 OliBomby 制作\"",
-        "Content=\"NC everything\"": "Content=\"NC everything\"",
-        "materialDesign:HintAssist.Hint=\"Copy rhythm from\"": "materialDesign:HintAssist.Hint=\"Copy rhythm from\"",
-        "materialDesign:HintAssist.Hint=\"Copy rhythm to\"": "materialDesign:HintAssist.Hint=\"Copy rhythm to\"",
-        "materialDesign:HintAssist.Hint=\"Export mode\"": "materialDesign:HintAssist.Hint=\"Export mode\"",
-        "materialDesign:HintAssist.Hint=\"Export map game mode\"": "materialDesign:HintAssist.Hint=\"Export map game mode\"",
-        "materialDesign:HintAssist.Hint=\"Export map diff name\"": "materialDesign:HintAssist.Hint=\"Export map diff name\"",
-        "materialDesign:HintAssist.Hint=\"Selection mode\"": "materialDesign:HintAssist.Hint=\"Selection mode\"",
-        "Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.": "Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.",
-        "You can add the circles to an existing map or make a new map with the circles.": "You can add the circles to an existing map or make a new map with the circles.",
-        "Use the browse button to choose mutliple maps at the same time.": "Use the browse button to choose mutliple maps at the same time."
+        "Content=\"NC everything\"": "Content=\"所有物件均为新Combo\"",
+        "materialDesign:HintAssist.Hint=\"Copy rhythm from\"": "materialDesign:HintAssist.Hint=\"节奏来源从\"",
+        "materialDesign:HintAssist.Hint=\"Copy rhythm to\"": "materialDesign:HintAssist.Hint=\"节奏复制到\"",
+        "materialDesign:HintAssist.Hint=\"Export mode\"": "materialDesign:HintAssist.Hint=\"导出模式\"",
+        "materialDesign:HintAssist.Hint=\"Export map game mode\"": "materialDesign:HintAssist.Hint=\"导出谱面的游戏模式\"",
+        "materialDesign:HintAssist.Hint=\"Export map diff name\"": "materialDesign:HintAssist.Hint=\"导出谱面的难度名\"",
+        "materialDesign:HintAssist.Hint=\"Selection mode\"": "materialDesign:HintAssist.Hint=\"选择模式\"",
+        "Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.": "根据多张谱面的节奏制作包含圆圈的谱面，为下音效作参考。",
+        "You can add the circles to an existing map or make a new map with the circles.": "您可以添加这些圆圈到已有谱面或制作新的谱面。",
+        "Use the browse button to choose mutliple maps at the same time.": "使用文件浏览器选择谱面时可以同时选择多个谱面。"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideView.xaml.cs": {
-        "\"Rhythm Guide\"": "\"Rhythm Guide\"",
-        "\"Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.\"": "\"Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.\"",
-        "\"{Environment.NewLine}You can add the circles to an existing map or make a new map with the circles.\"": "\"{Environment.NewLine}You can add the circles to an existing map or make a new map with the circles.\"",
-        "\"{Environment.NewLine}Use the browse button to choose multiple maps at the same time.\"": "\"{Environment.NewLine}Use the browse button to choose multiple maps at the same time.\"",
+        "\"Rhythm Guide\"": "\"节奏向导\"",
+        "\"Make a beatmap with circles from the rhythm of multiple maps, so you have a reference for hitsounding.\"": "\"根据多张谱面的节奏制作包含圆圈的谱面，为下音效作参考。\"",
+        "\"{Environment.NewLine}You can add the circles to an existing map or make a new map with the circles.\"": "\"{Environment.NewLine}您可以添加这些圆圈到已有谱面或制作新的谱面。\"",
+        "\"{Environment.NewLine}Use the browse button to choose multiple maps at the same time.\"": "\"{Environment.NewLine}使用文件浏览器选择谱面时可以同时选择多个谱面。\"",
         "\"Done!\"": "\"完成！\"",
         "\"rhythmguideproject.json\"": "\"rhythmguideproject.json\"",
         "\"Rhythm Guide Projects\"": "\"Rhythm Guide Projects\""
@@ -1884,9 +1882,6 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideWindow.xaml": {
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "Content=\"{Binding}\"": "Content=\"{Binding}\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideWindow.xaml.cs": {
-        "\"ToggleButton\"": "\"ToggleButton\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -2321,8 +2316,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\MessageWindow.xaml.cs": {
         "\"Error\"": "\"Error\"",
-        "\"Success\"": "\"Success\"",
-        "\"ToggleButton\"": "\"ToggleButton\""
+        "\"Success\"": "\"Success\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\StandardView.xaml": {
         "ToolTip=\"Double-click any selection of items to set them as the current beatmap.\"": "ToolTip=\"双击下列项目，将其设置为当前谱面。\"",
@@ -2350,7 +2344,7 @@
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
         "ToolTip=\"Path to the beatmap to copy timing from.\"": "ToolTip=\"timing来源谱面的地址。\"",
         "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
-        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"从文件浏览器中选择谱面。\"",
+        "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
         "ToolTip=\"Beatmap(s) to copy timing to. You can input multiple beatmap paths seperated with '|'.\"": "ToolTip=\"将timing复制给这些谱面。您可以用 '|' 字符分隔多个谱面。\"",
         "ToolTip=\"Multiple beatmaps can be inputted in this field. Separate the paths with the '|' character.\"": "ToolTip=\"该区域可以填入多个谱面。各谱面路径用 '|' 字符分隔。\"",
         "ToolTip=\"Choose how to move hit objects to the new timing.\"": "ToolTip=\"选择如何移动物件到新timing。\"",
