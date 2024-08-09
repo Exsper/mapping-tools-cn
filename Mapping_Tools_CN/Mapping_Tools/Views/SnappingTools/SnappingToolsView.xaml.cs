@@ -17,7 +17,7 @@ namespace Mapping_Tools.Views.SnappingTools {
 
         public static readonly string ToolName = "几何仪表盘";
 
-        public static readonly string ToolDescription = $@"Generates and keeps track of a list virtual objects that are geometrically relevant to the objects visible on your screen. Press and hold the Activation Key to let your cursor snap to the closest virtual object.{Environment.NewLine}⚠ You must specify your user config file in the Preferences for this tool to function.";
+        public static readonly string ToolDescription = $@"在编辑器当前屏幕上，根据显示的物件位置实时生成几何相关的辅助物件。长按快捷键（默认为M）使光标吸附到最近的辅助物件上。{Environment.NewLine}⚠ 必须先在首选项中指定osu!用户配置文件地址，工具才能正常运行。";
 
         private double scrollOffset;
         private bool resetScroll = true;
@@ -121,14 +121,14 @@ namespace Mapping_Tools.Views.SnappingTools {
 
         public MenuItem[] GetMenuItems() {
             var saveObjects = new MenuItem {
-                Header = "_Save virtual objects", Icon = new PackIcon { Kind = PackIconKind.ContentSaveOutline },
-                ToolTip = "Save locked virtual objects to a file."
+                Header = "保存辅助物件（_S）", Icon = new PackIcon { Kind = PackIconKind.ContentSaveOutline },
+                ToolTip = "保存已锁定的辅助物件到文件。"
             };
             saveObjects.Click += SaveLockedRelevantObjectsFromFile;
 
             var loadObjects = new MenuItem {
-                Header = "_Load virtual objects", Icon = new PackIcon { Kind = PackIconKind.FolderOpenOutline },
-                ToolTip = "Load locked virtual objects from a save file."
+                Header = "加载辅助物件（_L）", Icon = new PackIcon { Kind = PackIconKind.FolderOpenOutline },
+                ToolTip = "从文件导入已锁定的辅助物件。"
             };
             loadObjects.Click += LoadLockedRelevantObjectsFromFile;
 
@@ -139,7 +139,7 @@ namespace Mapping_Tools.Views.SnappingTools {
             try {
                 ProjectManager.SaveToolFile(this, ViewModel.GetLockedObjects(), true);
 
-                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully saved locked virtual objects!"));
+                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功保存已锁定的辅助物件！"));
             } catch (ArgumentException) { } catch (Exception ex) {
                 ex.Show();
             }
@@ -150,7 +150,7 @@ namespace Mapping_Tools.Views.SnappingTools {
                 var objects = ProjectManager.LoadToolFile<SnappingToolsProject, RelevantObjectCollection>(this, true);
                 ViewModel.SetLockedObjects(objects);
 
-                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully loaded locked virtual objects!"));
+                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功加载已锁定的辅助物件！"));
             } catch (ArgumentException) { } catch (Exception ex) {
                 ex.Show();
             }

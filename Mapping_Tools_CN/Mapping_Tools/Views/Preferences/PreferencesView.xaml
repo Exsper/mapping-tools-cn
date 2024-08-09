@@ -50,8 +50,8 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="OsuConfigPathBox" Text="{Binding OsuConfigPath, Mode=TwoWay}" MinWidth="220" Margin="0,0,5,0"
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="osu!用户设置文件"
-                         ToolTip="选择osu!用户设置文件路径。该文件名通常会包含您的电脑账户名。"/>
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="osu!用户配置文件"
+                         ToolTip="选择osu!用户配置文件路径。该文件名通常会包含您的电脑账户名。"/>
                 <Button Grid.Column="1" Cursor="Hand" Click="Button_LoadConfigImport_Click" Style="{StaticResource IconButton}" VerticalAlignment="Bottom">
                     <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                 </Button >

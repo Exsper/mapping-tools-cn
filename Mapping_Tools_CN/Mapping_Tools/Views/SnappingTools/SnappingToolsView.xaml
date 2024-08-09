@@ -35,24 +35,24 @@
                                 <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
                             <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="10" xml:space="preserve">该工具可以在编辑器之上显示（overlay）打击物件的辅助点、辅助线和辅助圆。
-按快捷键（默认为“M”）使光标吸附到这些辅助物件上。
+长按快捷键（默认为M）使光标吸附到这些辅助物件上。
 <LineBreak/>
-There are also hotkeys for selecting, locking and toggling usability on virtual objects. Locked objects don't disappear on themselves and non-usable objects always get ignored by generators.
-You can find and configure all the hotkeys in the preferences (top right gear button). You can configure just about everything else too. 
-Hover your mouse over the names of things to probably get a tooltip which gives more explanation. I encourage you to try out everything!
+也可以用快捷键选择（默认为N）、锁定（默认为Shift+N）和切换可用性（默认为Alt+N）。已锁定的辅助物件不会消失，被禁用的辅助物件会被生成器忽略。
+在全局选项（右上角齿轮图标）中寻找并设置快捷键。这里还有其他设置项可以自由设定。 
+将鼠标指向各个项目名称可以显示具体提示。建议每种都试试！
 <LineBreak/>
-Virtual objects are generated in layers. The first layer has the hit objects of your editor, the second layer has virtual objects derived from those hit objects, the third layer has virtual objects derived from the previous virtual objects, etc.
-You can specify the number of layers in the preferences. More layers generally results in exponentially more virtual objects.
+辅助物件在图层上生成。第一层是编辑器的打击物件，第二层是由这些打击物件生成的辅助物件，第三层是由上一层的辅助物件生成的辅助物件，以此类推。
+在全局选项中可以指定图层数。辅助物件数量通常会随着图层数增加而以指数级增长。
 <LineBreak/>
-In the big list below are all the generators. These generators generate new virtual objects from previous virtual objects or hit objects.
-All the generators in the basic section only take hit objects as an input, so when activating one of them you can instantly see the effect.
-The more advanced generators all take virtual objects as input, so you need to activate at least one basic generator active for them to work.
+下方列表包含了所有生成器。这些生成器根据打击物件或已有辅助物件生成新的辅助物件。
+“基本”组内的生成器仅以打击物件作为输入，激活其中一个后可以立即看见效果。
+后面更高级一点的生成器都以辅助物件作为输入，所以在使用它们之前必须先启用至少一个基本生成器。
 <LineBreak/>
-Every generator also has it's own settings. You can access those settings by clicking the 'Configure' button on each generator.
-In these generator settings you can do thing like customize what virtual objects the generator accepts as input or change the properties of the output of the generator.
+每个生成器都有各自的选项，点击“配置”按钮打开选项框。
+生成器选项包含诸如选择哪些辅助物件作为输入，或改变生成器输出物件的属性，等个性化设置。
 <LineBreak/>
-Lastly there are savestates which you can use to quickly change out preferences and generator settings using hotkeys. As an advanced user this can save lots of time continuously changing generators and stuff.
-The savestates window is opened by clicking the button next to the preferences button.
+最后还有保存状态功能，可以快速切换各生成器选项和快捷键。对于有经验的用户，可以快速更换生成器及其设置，以节省大量时间。
+打开全局选项左边的保存按钮打开保存状态对话框。
 <LineBreak/>
 ⚠ You must specify your user config file in the Mapping Tools Preferences (Options -> Preferences) for this tool to function.</TextBlock>
                         </materialDesign:PopupBox>
@@ -69,32 +69,32 @@ The savestates window is opened by clicking the button next to the preferences b
                         </Grid.ColumnDefinitions>
                         
                         <StackPanel Grid.Column="2" Orientation="Horizontal">
-                            <Button x:Name="SelectionButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Toggle selection on all virtual objects. Hold shift for enable all, hold ctrl for disable all."
+                            <Button x:Name="SelectionButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="切换所有辅助物件的选择状态，按住shift全选，按住ctrl全不选。"
                                     Command="{Binding SelectedToggleCommand}" Margin="0 0 8 0">
                                 <materialDesign:PackIcon Kind="SelectAll" Height="24" Width="24" />
                             </Button>
-                            <Button x:Name="LockedButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Toggle locked on all virtual objects. Hold shift for enable all, hold ctrl for disable all."
+                            <Button x:Name="LockedButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="切换所有辅助物件的锁定状态，按住shift全部锁定，按住ctrl全部解锁。"
                                     Command="{Binding LockedToggleCommand}" Margin="0 0 8 0">
                                 <materialDesign:PackIcon Kind="Lock" Height="24" Width="24" />
                             </Button>
-                            <Button x:Name="InheritableButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Toggle usability on all virtual objects. Hold shift for enable all, hold ctrl for disable all."
+                            <Button x:Name="InheritableButton" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="切换所有辅助物件的可用状态，按住shift全部可用，按住ctrl全部禁用。"
                                     Command="{Binding InheritableToggleCommand}" Margin="0 0 28 0">
                                 <materialDesign:PackIcon Kind="Pizza" Height="24" Width="24" />
                             </Button>
 
-                            <Button x:Name="ProjectsButton" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="Savestates..."
+                            <Button x:Name="ProjectsButton" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="保存状态..."
                                     Click="ProjectsButton_Click" Margin="0 0 8 0">
                                 <materialDesign:PackIcon Kind="ContentSaveAll" Height="24" Width="24" />
                             </Button>
 
-                            <Button x:Name="PreferencesButton" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="Preferences..."
+                            <Button x:Name="PreferencesButton" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" ToolTip="全局选项..."
                                 Click="PreferencesButton_Click">
                                 <materialDesign:PackIcon Kind="SettingsOutline" Height="24" Width="24" />
                             </Button>
                         </StackPanel>
                         
                         <TextBlock x:Name="FilterTextBlock" Grid.Column="0" Text="搜索" VerticalAlignment="Center" Margin="10,0"/>
-                        <TextBox Grid.Column="1" Margin="0,0,10,10" Name="TxtFilter" ToolTip="Search for a generator." Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Margin="0,0,10,10" Name="TxtFilter" ToolTip="搜索生成器。" Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}"/>
                     </Grid>
                 </StackPanel>
 
@@ -113,8 +113,8 @@ The savestates window is opened by clicking the button next to the preferences b
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <Viewbox Width="100" Height="30" Margin="-5,-5,15,-5">
-                                            <Button ToolTip="Generator settings..." Command="{Binding GeneratorSettingsCommand}" materialDesign:ButtonAssist.CornerRadius="7">
-                                                Configure
+                                            <Button ToolTip="生成器选项..." Command="{Binding GeneratorSettingsCommand}" materialDesign:ButtonAssist.CornerRadius="7">
+                                                配置
                                             </Button>
                                         </Viewbox>
                                     </DataTemplate>
