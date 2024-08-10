@@ -50,7 +50,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
             var methods = GetType().GetMethods().Where(m => CustomAttributeExtensions.GetCustomAttribute<RelevantObjectsGeneratorMethodAttribute>((MemberInfo) m) != null)
                 .ToArray();
             if (methods.Length == 0) {
-                throw new InvalidOperationException($@"Type {GetType()} does not have any generator method.");
+                throw new InvalidOperationException($@"类型 {GetType()} 不包含任何生成方式。");
             }
 
             generatorMethods = methods;

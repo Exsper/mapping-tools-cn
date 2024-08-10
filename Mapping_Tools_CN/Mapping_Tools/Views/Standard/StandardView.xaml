@@ -87,7 +87,7 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" FontSize="32" Foreground="{DynamicResource PrimaryHueMidBrush}"><Run Text="最近打开"/></TextBlock>
             <ListView Grid.Row="1" x:Name="RecentList" MouseDoubleClick="RecentList_MouseDoubleClick"
-                      ToolTip="双击下列项目，将其设置为当前谱面。">
+                      ToolTip="双击列表中的项目，将其设置为当前谱面。">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="路径" DisplayMemberBinding="{Binding Path, Converter={StaticResource MapPathStringJustFilenameConverter}, Mode=OneWay}"/>

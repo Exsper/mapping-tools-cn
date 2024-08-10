@@ -200,11 +200,11 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating {
             double startTemplateT, double endTemplateT, double tumourStart, double tumourEnd, bool otherSide, double initialLength) {
             var path = pathWithHints.Path;
             if (start.List != path) {
-                throw new ArgumentException(@"Start node has to be part of the provided path.", nameof(start));
+                throw new ArgumentException(@"起点必须在给定路线上。", nameof(start));
             }
 
             if (end.List != path) {
-                throw new ArgumentException(@"End node has to be part of the provided path.", nameof(end));
+                throw new ArgumentException(@"终点必须在给定路线上。", nameof(end));
             }
 
             var startPoint = start.Value;

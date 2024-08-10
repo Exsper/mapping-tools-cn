@@ -134,7 +134,7 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Relevancy">
+                            <GridViewColumn Header="关联度">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate DataType="relevantObjectGenerators:RelevantObjectsGenerator">
                                         <TextBox Width="50" Text="{Binding Settings.RelevancyRatio, Converter={StaticResource DoubleToStringConverter}}" Cursor="Hand"/>

@@ -40,9 +40,9 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel>
-                <TextBlock x:Name="MessageText"  HorizontalAlignment="Left" Margin="5,5,0,0" FontSize="18" FontWeight="Light" TextWrapping="Wrap" Text="Informational Message Here Because nothing else would appear if there isn't anything that would show right?" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
+                <TextBlock x:Name="MessageText"  HorizontalAlignment="Left" Margin="5,5,0,0" FontSize="18" FontWeight="Light" TextWrapping="Wrap" Text="这里是放消息的地方。如果不显示消息，就没有消息会显示。我说得对吗？" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
 
-                <Expander x:Name="ErrorExpander" Header="Show Error Details"  VerticalAlignment="Top" HorizontalAlignment="Left" IsExpanded="False" FontSize="10" Style="{StaticResource MainViewExpander}" Foreground="White">
+                <Expander x:Name="ErrorExpander" Header="显示错误详情"  VerticalAlignment="Top" HorizontalAlignment="Left" IsExpanded="False" FontSize="10" Style="{StaticResource MainViewExpander}" Foreground="White">
                     <TextBlock x:Name="ExceptionDetails" Background="LightSlateGray" Height="Auto" Width="Auto" TextWrapping="Wrap">
 
                     </TextBlock>

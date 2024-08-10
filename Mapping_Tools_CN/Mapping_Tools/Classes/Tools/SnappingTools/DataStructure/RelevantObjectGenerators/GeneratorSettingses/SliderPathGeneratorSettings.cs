@@ -4,8 +4,8 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.GeneratorSettingses {
     public class SliderPathGeneratorSettings : GeneratorSettings {
         private double pointDensity;
-        [DisplayName("Point Density")]
-        [Description("Specifies how many points will be generated per osu! pixel of sliderpath.")]
+        [DisplayName("辅助点密度")]
+        [Description("滑条路径上的每个osu!像素生成多少辅助点。")]
         public double PointDensity {
             get => pointDensity;
             set => Set(ref pointDensity, value);

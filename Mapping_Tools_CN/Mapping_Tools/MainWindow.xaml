@@ -80,7 +80,7 @@
                                 Height="35"
                                 IsChecked="{Binding DrawerOpen}"
                                 AutomationProperties.Name="HamburgerToggleButton"
-                                ToolTip="Use Ctrl+K to use this toggle anywhere in the program.">
+                                ToolTip="按快捷键 Ctrl+K 可以在程序的任何位置使用此切换。">
                                 <ToggleButton.Content>
                                     <materialDesign:PackIcon Width="28" Height="28" Kind="Menu" Foreground="{StaticResource MaterialDesignBodyLight}"/>
                                 </ToggleButton.Content>
@@ -96,16 +96,16 @@
                                 <MenuItem Header="文件（_F）" MinWidth="50" Height="35">
                                     <MenuItem Header="打开谱面（_O）" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Select the current beatmap with File Explorer." />
+                                              ToolTip="使用文件浏览器选择当前谱面。" />
                                     <MenuItem Header="打开当前谱面（_O）" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Set the current beatmap to the selected beatmap in your osu! client." />
+                                              ToolTip="将osu!客户端中当前选择的谱面作为当前谱面。" />
                                     <MenuItem Header="生成备份（_G）" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Save a backup of the current beatmap to the backups folder." />
+                                              ToolTip="备份当前谱面到文件。" />
                                     <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Load a backup from the backups folder into the current beatmap." />
+                                              ToolTip="加载备份的谱面文件到当前谱面。" />
                                     <MenuItem Header="使用优化存储（BetterSave™）保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="保存当前osu!编辑器打开的谱面。优化存储（BetterSave™）和原版编辑器一样保存谱面，但小数使用四舍五入的方式保存，取代原先截取的方式。" />
@@ -114,22 +114,22 @@
                                 <MenuItem Header="关于（_A）" MinWidth="67" Height="35">
                                     <MenuItem Header="打开程序文件夹（_O）" Click="OpenConfig" Icon="{materialDesign:PackIcon FolderOpen}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="Open the Mapping Tools folder." />
+                                        ToolTip="打开Mapping Tools配置文件夹。" />
                                     <MenuItem Header="打开备份文件夹（_O）" Click="OpenBackups" Icon="{materialDesign:PackIcon FolderOpen}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="Open the backups folder." />
+                                        ToolTip="打开备份文件夹。" />
                                     <MenuItem Header="检查更新（_C）" Click="MenuItem_OnClick" Icon="{materialDesign:PackIcon Update}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="Check if there are updates available." />
+                                        ToolTip="检查当前是否有更新。" />
                                     <MenuItem Header="网站（_W）" Click="OpenWebsite" Icon="{materialDesign:PackIcon OpenInBrowser}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="Open the official Mapping Tools website in your browser." />
+                                        ToolTip="用浏览器打开Mapping Tools官网（英文）。" />
                                     <MenuItem Header="Github（_G）" Click="OpenGitHub" Icon="{materialDesign:PackIcon Github}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="Go to the Mapping Tools Github." />
+                                        ToolTip="打开Github上的Mapping Tools项目（英文）。" />
                                     <MenuItem Header="捐赠（_D）" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                              ToolTip="Support Mapping Tools." />
+                                              ToolTip="支持Mapping Tools的原开发者。" />
                                     <MenuItem Header="关于（_A）" Click="OpenInfo" Icon="{materialDesign:PackIcon InfoCircle}"
                                               Foreground="{DynamicResource MaterialDesignBody}"/>
                                 </MenuItem>
@@ -161,7 +161,7 @@
                                 <Button.ContextMenu>
                                     <ContextMenu>
                                         <MenuItem Header="不保存并退出（_E）" Click="CloseWinNoSave"
-                                            ToolTip="Exits the program without saving any preferences or tool settings." />
+                                            ToolTip="直接退出程序，不保存首选项和工具设置。" />
                                     </ContextMenu>
                                 </Button.ContextMenu>
                             </Button>
@@ -179,13 +179,13 @@
                             <materialDesign:ColorZone.ContextMenu>
                                 <ContextMenu>
                                     <MenuItem Header="打开谱面（_O）" Click="OpenBeatmap" Icon="{materialDesign:PackIcon Folder}"
-                                        ToolTip="Select the current beatmap with File Explorer." />
+                                        ToolTip="使用文件浏览器选择当前谱面。" />
                                     <MenuItem Header="打开当前谱面（_O）" Click="OpenGetCurrentBeatmap" Icon="{materialDesign:PackIcon RestoreFromTrash}"
-                                        ToolTip="Set the current beatmap to the selected beatmap in your osu! client." />
+                                        ToolTip="将osu!客户端中当前选择的谱面作为当前谱面。" />
                                     <MenuItem Header="生成备份（_G）" Click="SaveBackup" Icon="{materialDesign:PackIcon Backup}"
-                                        ToolTip="Save a backup of the current beatmap to the backups folder." />
+                                        ToolTip="备份当前谱面到文件。" />
                                     <MenuItem Header="载入备份（_L）" Click="LoadBackup" Icon="{materialDesign:PackIcon BackupRestore}"
-                                        ToolTip="Load a backup from the backups folder into the current beatmap." />
+                                        ToolTip="加载备份的谱面文件到当前谱面。" />
                                     <MenuItem Header="使用优化存储（BetterSave™）保存当前谱面（_B）" Click="CoolSave" Icon="{materialDesign:PackIcon ContentSave}"
                                         ToolTip="保存当前osu!编辑器打开的谱面。优化存储（BetterSave™）和原版编辑器一样保存谱面，但小数使用四舍五入的方式保存，取代原先截取的方式。" />
                                 </ContextMenu>

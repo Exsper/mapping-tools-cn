@@ -117,7 +117,7 @@ namespace Mapping_Tools {
                 var skipVersion = SettingsManager.Settings.SkipVersion;
                 if (allowSkip && skipVersion != null && !(updateManager.UpdatesResult.LastVersion > skipVersion)) {
                     if (notifyUser)
-                        MessageQueue.Enqueue($"Version {updateManager.UpdatesResult.LastVersion} skipped because of user config.");
+                        MessageQueue.Enqueue($"版本 {updateManager.UpdatesResult.LastVersion} 因用户设置被跳过。");
                     return;
                 }
 
@@ -316,7 +316,7 @@ namespace Mapping_Tools {
             try {
                 var paths = GetCurrentMaps();
                 if (paths.Length > 1) {
-                    throw new Exception($"Can't load backup into multiple beatmaps. You currently have {paths.Length} beatmaps selected.");
+                    throw new Exception($"无法将备份载入到多个谱面中。当前已选择 {paths.Length} 张谱面。");
                 }
                 var backupPaths = IOHelper.BeatmapFileDialog(SettingsManager.GetBackupsPath(), false);
                 if (backupPaths.Length == 1) {
@@ -328,7 +328,7 @@ namespace Mapping_Tools {
                             return;
                         }
 
-                        var result = MessageBox.Show("Do you want to load the backup anyways?", "Load backup",
+                        var result = MessageBox.Show("是否仍要加载备份？", "加载备份",
                             MessageBoxButton.YesNo);
                         if (result == MessageBoxResult.Yes) {
                             await Task.Run(() => BackupManager.LoadMapBackup(backupPaths[0], paths[0], true));

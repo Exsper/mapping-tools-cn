@@ -4,16 +4,16 @@ using Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGene
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.GeneratorSettingses {
     public class SymmetryGeneratorSettings : GeneratorSettings {
         private SelectionPredicateCollection axisInputPredicate;
-        [DisplayName("Axis Input Selection")]
-        [Description("Specifies extra rules that virtual lines need to obey to be used as the axis by this generator.")]
+        [DisplayName("对称轴规则")]
+        [Description("选取对称轴需要遵守的额外规则。")]
         public SelectionPredicateCollection AxisInputPredicate {
             get => axisInputPredicate;
             set => Set(ref axisInputPredicate, value);
         }
         
         private SelectionPredicateCollection otherInputPredicate;
-        [DisplayName("Other Input Selection")]
-        [Description("Specifies extra rules that virtual objects need to obey to get mirrored by this generator.")]
+        [DisplayName("其他输入规则")]
+        [Description("需要被镜像的辅助物件需要遵守的额外规则。")]
         public SelectionPredicateCollection OtherInputPredicate {
             get => otherInputPredicate;
             set => Set(ref otherInputPredicate, value);

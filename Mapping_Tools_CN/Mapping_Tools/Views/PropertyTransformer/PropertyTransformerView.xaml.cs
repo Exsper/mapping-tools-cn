@@ -20,9 +20,9 @@ namespace Mapping_Tools.Views.PropertyTransformer {
     [VerticalContentScroll]
     [HorizontalContentScroll]
     public partial class PropertyTransformerView : ISavable<PropertyTransformerVm> {
-        public static readonly string ToolName = "Property Transformer";
+        public static readonly string ToolName = "属性修改器";
 
-        public static readonly string ToolDescription = $@"Multiple and add to properties of all the timingpoints, hitobjects, bookmarks and storyboarded samples of the current map.{Environment.NewLine}The new value is the old value times the multiplier plus the offset. The multiplier is the left textbox and the offset is the right textbox. The multiplier gets done first.{Environment.NewLine}Resulting values get rounded if they have to be integer.";
+        public static readonly string ToolDescription = $@"修改当前谱面的时间线、打击物件、书签和故事板音效的属性，将各属性值乘以或加上自定义数值。{Environment.NewLine}新数值是在旧数值基础上乘以乘数并加上偏移。左边的文本框是乘数，右边的文本框是偏移。先做乘法再做加法。{Environment.NewLine}如果数值需要为整数，结果会自动四舍五入。";
 
         public PropertyTransformerView() {
             InitializeComponent();

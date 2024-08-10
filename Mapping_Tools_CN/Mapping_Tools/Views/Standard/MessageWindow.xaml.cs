@@ -46,7 +46,7 @@ namespace Mapping_Tools.Views.Standard
 
         private void LoadErrorWindow(RunWorkerCompletedEventArgs e)
         {
-            MessageTitle.Content = "Error";
+            MessageTitle.Content = "错误";
             MessageText.Text = e.Error.Message;
             ExceptionDetails.Text = e.Error.StackTrace;
         }
@@ -56,7 +56,7 @@ namespace Mapping_Tools.Views.Standard
             //Since we are only showing the Success of an event, we don't need the Expander
             ErrorExpander.Visibility = Visibility.Hidden;
 
-            MessageTitle.Content = "Success";
+            MessageTitle.Content = "成功";
             MessageText.Text = message;
         }
 

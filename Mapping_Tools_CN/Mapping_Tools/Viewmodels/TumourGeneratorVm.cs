@@ -246,7 +246,7 @@ namespace Mapping_Tools.Viewmodels {
                 _ => {
                     try {
                         var newLayer = TumourLayer.GetDefaultLayer();
-                        newLayer.Name = "Layer " + (TumourLayers.Count + 1);
+                        newLayer.Name = "层级 " + (TumourLayers.Count + 1);
                         newLayer.TumourEnd = layerRangeSliderMaxes.Count > 0 ? layerRangeSliderMaxes.LastOrDefault() : PreviewHitObject.PixelLength;
                         TumourLayers.Insert(CurrentLayerIndex + 1, newLayer);
                         CurrentLayerIndex++;
@@ -257,7 +257,7 @@ namespace Mapping_Tools.Viewmodels {
                 _ => {
                     try {
                         var copy = TumourLayers[CurrentLayerIndex].Copy();
-                        copy.Name = $"{copy.Name} (Copy)";
+                        copy.Name = $"{copy.Name} (副本)";
                         TumourLayers.Insert(CurrentLayerIndex + 1, copy);
                         CurrentLayerIndex++;
                         RegeneratePreview();
@@ -299,7 +299,7 @@ namespace Mapping_Tools.Viewmodels {
                 Editor_Reader.EditorReader reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
                 if (ImportModeSetting == ImportMode.Selected && editorReaderException1 != null) {
-                    throw new Exception("Could not fetch selected hit objects.", editorReaderException1);
+                    throw new Exception("无法获取选中物件。", editorReaderException1);
                 }
 
                 BeatmapEditor editor;
@@ -310,7 +310,7 @@ namespace Mapping_Tools.Viewmodels {
                         editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                         if (editorReaderException2 != null) {
-                            throw new Exception("Could not fetch selected hit objects.", editorReaderException2);
+                            throw new Exception("无法获取选中物件。", editorReaderException2);
                         }
 
                         markedObjects = selected;
@@ -330,13 +330,13 @@ namespace Mapping_Tools.Viewmodels {
                 }
 
                 if (markedObjects is null || !markedObjects.Any(o => o.IsSlider)) {
-                    Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue(@"Could not find any sliders in imported hit objects."));
+                    Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue(@"导入的物件中不存在滑条。"));
                     return;
                 }
 
                 PreviewHitObject = markedObjects.First(s => s.IsSlider);
                 CircleSize = editor.Beatmap.Difficulty["CircleSize"].DoubleValue;
-                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue(@"Successfully imported slider."));
+                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue(@"导入滑条成功。"));
             } catch (Exception ex) {
                 ex.Show();
             }

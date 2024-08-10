@@ -140,7 +140,7 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating.Options {
                 TumourTemplateEnum = Enums.TumourTemplate.Triangle,
                 WrappingMode = WrappingMode.Simple,
                 IsActive = true,
-                Name = "Layer",
+                Name = "层级",
                 TumourCount = 0,
                 TumourStart = 0,
                 TumourEnd = 256,

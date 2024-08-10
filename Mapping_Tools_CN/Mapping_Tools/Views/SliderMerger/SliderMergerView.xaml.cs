@@ -75,14 +75,14 @@ namespace Mapping_Tools.Views.SliderMerger {
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
             if (arg.ImportModeSetting == 0 && editorReaderException1 != null) {
-                throw new Exception("无法获取选中的打击物件。", editorReaderException1);
+                throw new Exception("无法获取选中物件。", editorReaderException1);
             }
 
             foreach (var path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                 if (arg.ImportModeSetting == SliderMergerVm.ImportMode.Selected && editorReaderException2 != null) {
-                    throw new Exception("无法获取选中的打击物件。", editorReaderException2);
+                    throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
                 var beatmap = editor.Beatmap;

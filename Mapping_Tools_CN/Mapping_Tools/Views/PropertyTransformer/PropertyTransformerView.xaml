@@ -23,18 +23,18 @@
         <Grid Name="TitleGrid" Grid.Row="0">
           <StackPanel Orientation="Horizontal">
             <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-              <Run Text="Property Transformer"/>
+              <Run Text="属性修改器（Property Transformer）"/>
             </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
               <materialDesign:PopupBox.ToggleContent>
                 <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
               </materialDesign:PopupBox.ToggleContent>
               <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                Multiply and add to properties of all the timingpoints, hitobjects, bookmarks and storyboarded samples of the current map.
+                修改当前谱面的时间线、打击物件、书签和故事板音效的属性，将各属性值乘以或加上自定义数值。
                 <LineBreak/>
-                The new value is the old value times the multiplier plus the offset. The multiplier is the left textbox and the offset is the right textbox. The multiplier gets done first.
+                新数值是在旧数值基础上乘以乘数并加上偏移。左边的文本框是乘数，右边的文本框是偏移。先做乘法再做加法。
                 <LineBreak/>
-                Resulting values get rounded if they have to be integer.
+                如果数值需要为整数，结果会自动四舍五入。
               </TextBlock>
             </materialDesign:PopupBox>
           </StackPanel>
@@ -45,10 +45,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <GroupBox Header="Timing points" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
+                <GroupBox Header="时间线" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Offset" MinWidth="150"/>
+                            <TextBlock Text="偏移（Offset）" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="TpOffsetMultiplierBox" Text="{Binding Path=TimingpointOffsetMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
@@ -62,21 +62,21 @@
                             <TextBox x:Name="TpbpmOffsetBox" Text="{Binding Path=TimingpointBpmOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Slider Velocity" MinWidth="150"/>
+                            <TextBlock Text="滑条速度（SV）" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="TpsvMultiplierBox" Text="{Binding Path=TimingpointSvMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="TpsvOffsetBox" Text="{Binding Path=TimingpointSvOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Custom index" MinWidth="150"/>
+                            <TextBlock Text="自定义音效组索引" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="TpIndexMultiplierBox" Text="{Binding Path=TimingpointIndexMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="TpIndexOffsetBox" Text="{Binding Path=TimingpointIndexOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Volume" MinWidth="150"/>
+                            <TextBlock Text="音量" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="TpVolumeMultiplierBox" Text="{Binding Path=TimingpointVolumeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
@@ -85,24 +85,24 @@
                     </StackPanel>
                 </GroupBox>
 
-                <GroupBox Header="Storyboard" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
+                <GroupBox Header="故事板" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Event time" MinWidth="150"/>
+                            <TextBlock Text="事件时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="SbEventTimeMultiplierBox" Text="{Binding Path=SbEventTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="SbEventTimeOffsetBox" Text="{Binding Path=SbEventTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Sample time" MinWidth="150"/>
+                            <TextBlock Text="音效时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="SbSampleTimeMultiplierBox" Text="{Binding Path=SbSampleTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="SbSampleTimeOffsetBox" Text="{Binding Path=SbSampleTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Sample volume" MinWidth="150"/>
+                            <TextBlock Text="音效音量" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="SbSampleVolumeMultiplierBox" Text="{Binding Path=SbSampleVolumeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
@@ -111,45 +111,45 @@
                     </StackPanel>
                 </GroupBox>
                 
-                <GroupBox Header="Other" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
+                <GroupBox Header="其他" Margin="0 10 0 0" MaxWidth="600" HorizontalAlignment="Left">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Hitobject time" MinWidth="150"/>
+                            <TextBlock Text="物件时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="HoTimeMultiplierBox" Text="{Binding Path=HitObjectTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="HoTimeOffsetBox" Text="{Binding Path=HitObjectTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Hitobject volume" MinWidth="150"/>
+                            <TextBlock Text="物件音量" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="HoVolumeMultiplierBox" Text="{Binding Path=HitObjectVolumeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="HoVolumeOffsetBox" Text="{Binding Path=HitObjectVolumeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Bookmark time" MinWidth="150"/>
+                            <TextBlock Text="书签时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="BookTimeMultiplierBox" Text="{Binding Path=BookmarkTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="BookTimeOffsetBox" Text="{Binding Path=BookmarkTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Break time" MinWidth="150"/>
+                            <TextBlock Text="休息时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="BreakTimeMultiplierBox" Text="{Binding Path=BreakTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="BreakTimeOffsetBox" Text="{Binding Path=BreakTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Video time" MinWidth="150"/>
+                            <TextBlock Text="视频时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="VideoTimeMultiplierBox" Text="{Binding Path=VideoTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
                             <TextBox x:Name="VideoTimeOffsetBox" Text="{Binding Path=VideoTimeOffset, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=0, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Preview time" MinWidth="150"/>
+                            <TextBlock Text="预览时间" MinWidth="150"/>
                             <TextBlock Text="x "/>
                             <TextBox x:Name="PreviewTimeMultiplierBox" Text="{Binding Path=PreviewTimeMultiplier, Mode=TwoWay, Converter={StaticResource D2SConverter}, ConverterParameter=1, UpdateSourceTrigger=LostFocus}" MinWidth="120"/>
                             <TextBlock Text=" + "/>
@@ -160,43 +160,43 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
                     <ToggleButton IsChecked="{Binding SyncTimeFields}" Margin="5 0 0 0"
-                                  ToolTip="Enable this to synchronize the fields of all time-related elements."/>
-                    <TextBlock Text="Synchronize time fields" VerticalAlignment="Center" Margin="5 0 0 0"
-                               ToolTip="Enable this to synchronize the fields of all time-related elements."/>
+                                  ToolTip="调整与时间相关的所有项目为统一数值。"/>
+                    <TextBlock Text="时间项目同步调整" VerticalAlignment="Center" Margin="5 0 0 0"
+                               ToolTip="调整与时间相关的所有项目为统一数值。"/>
                     <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Margin="200 0 0 0"
-                            ToolTip="Reset all multipliers and offsets." Command="{Binding ResetCommand}">
+                            ToolTip="重置所有乘数和偏移。" Command="{Binding ResetCommand}">
                         <materialDesign:PackIcon Kind="Rocket" Height="24" Width="24" />
                     </Button>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Margin="0 10 0 0">
-                <CheckBox x:Name="ClipBox" Content="Clip properties" 
-                              ToolTip="Clips the parameters to stay within bounds. (Volume: 5-100 etc)"
+                <CheckBox x:Name="ClipBox" Content="边界限制" 
+                              ToolTip="修正数值以保持在界限内。（例如限制音量在5-100）"
                         IsChecked="{Binding Path=ClipProperties, Mode=TwoWay}"/>
-                <CheckBox x:Name="FiltersBox" Content="Enable filters" IsChecked="{Binding Path=EnableFilters, Mode=TwoWay}"
+                <CheckBox x:Name="FiltersBox" Content="启用筛选器" IsChecked="{Binding Path=EnableFilters, Mode=TwoWay}"
                         HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                        ToolTip="Enable filtering to control which objects get transformed."/>
+                        ToolTip="筛选哪些物件可以被修改。"/>
                 <StackPanel Visibility="{Binding Path=EnableFilters, UpdateSourceTrigger=PropertyChanged,  
                                  Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}">
                     <TextBox x:Name="MatchBox" Text="{Binding Path=MatchFilter, Mode=TwoWay, Converter={StaticResource Da2SConverter}, ConverterParameter=-1}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             materialDesign:HintAssist.Hint="Whitelist"
-                            ToolTip="Parameters must match this value to be eligible for change." HorizontalAlignment="Left" Width="259"/>
+                             materialDesign:HintAssist.Hint="白名单"
+                            ToolTip="只有等于该数值的属性才能被修改。（以半角逗号分隔）" HorizontalAlignment="Left" Width="259"/>
                     <TextBox x:Name="UnmatchBox" Text="{Binding Path=UnmatchFilter, Mode=TwoWay, Converter={StaticResource Da2SConverter}, ConverterParameter=-1}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             materialDesign:HintAssist.Hint="Blacklist"
-                             ToolTip="Parameters must NOT match this value to be eligible for change." HorizontalAlignment="Left" Width="259"/>
+                             materialDesign:HintAssist.Hint="黑名单"
+                             ToolTip="只有不等于该数值的属性才能被修改。（以半角逗号分隔）" HorizontalAlignment="Left" Width="259"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBox x:Name="MinBox" Text="{Binding Path=MinTimeFilter, Mode=TwoWay, Converter={StaticResource TimeToStringConverter}, ConverterParameter=-1}"
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 materialDesign:HintAssist.Hint="Start time"
-                                ToolTip="Minimum time in milliseconds of the object for the parameters to be changed." MinWidth="120"/>
-                        <TextBlock Text=" to " VerticalAlignment="Center"/>
+                                 materialDesign:HintAssist.Hint="开始时间"
+                                ToolTip="需要修改属性的物件的最早时间（毫秒）。" MinWidth="120"/>
+                        <TextBlock Text="  到  " VerticalAlignment="Center"/>
                         <TextBox x:Name="MaxBox" Text="{Binding Path=MaxTimeFilter, Mode=TwoWay, Converter={StaticResource TimeToStringConverter}, ConverterParameter=-1}"
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 materialDesign:HintAssist.Hint="End time"
-                                ToolTip="Maximum time in milliseconds of the object for the parameters to be changed." MinWidth="120"/>
+                                 materialDesign:HintAssist.Hint="结束时间"
+                                ToolTip="需要修改属性的物件的最晚时间（毫秒）。" MinWidth="120"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
