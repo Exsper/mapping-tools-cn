@@ -25,15 +25,15 @@ namespace Mapping_Tools.Views.SliderCompletionator {
     public partial class SliderCompletionatorView : IQuickRun, ISavable<SliderCompletionatorVm> {
         public event EventHandler RunFinished;
 
-        public static readonly string ToolName = "Slider Completionator";
+        public static readonly string ToolName = "滑条补完器";
 
-        public static readonly string ToolDescription = "Change the length and duration of selected sliders and this tool will automatically handle the slider velocity for you." +
+        public static readonly string ToolDescription = "修改选中滑条的长度和时长，本工具会自动帮您处理滑条速度。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "Input a value of -1 anywhere to indicate that you want to keep that variable unchanged." +
+                                                        "任何数值输入-1表示不改变该数值。" +
                                                         Environment.NewLine +
-                                                        "For example, 1 duration and -1 length will change the duration to 1 beat while keeping the length the same." +
+                                                        "例如，时长设为1，长度设为-1，将改变时长到1拍，但维持长度不变。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "Check the tooltips for more information about extra features.";
+                                                        "检查工具提示以获取其他功能的信息。";
 
         /// <inheritdoc />
         public SliderCompletionatorView() {
@@ -85,12 +85,12 @@ namespace Mapping_Tools.Views.SliderCompletionator {
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
             if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.Selected && editorReaderException1 != null) {
-                throw new Exception("Could not fetch selected hit objects.", editorReaderException1);
+                throw new Exception("无法获取选中物件。", editorReaderException1);
             }
 
             if (arg.UseCurrentEditorTime && arg.UseEndTime) {
                 if (editorReaderException1 != null)
-                    throw new Exception("Could not fetch current editor time.", editorReaderException1);
+                    throw new Exception("无法获取当前编辑器时间。", editorReaderException1);
 
                 endTime = reader.EditorTime();
             }
@@ -99,7 +99,7 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                 if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.Selected && editorReaderException2 != null) {
-                    throw new Exception("Could not fetch selected hit objects.", editorReaderException2);
+                    throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
                 Beatmap beatmap = editor.Beatmap;
@@ -110,7 +110,7 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                     SliderCompletionatorVm.ImportMode.Bookmarked => beatmap.GetBookmarkedObjects(),
                     SliderCompletionatorVm.ImportMode.Time => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
                     SliderCompletionatorVm.ImportMode.Everything => beatmap.HitObjects,
-                    _ => throw new ArgumentException("Unexpected import mode.")
+                    _ => throw new ArgumentException("意料外的导入模式。")
                 };
 
                 for (int i = 0; i < markedObjects.Count; i++) {
@@ -139,15 +139,15 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                                 newLength = -10000 * timing.SliderMultiplier * newDuration / (newSv * mpb);
                                 break;
                             default:
-                                throw new ArgumentException("Unexpected free variable setting.");
+                                throw new ArgumentException("意料外的自由变量设置。");
                         }
 
                         if (double.IsNaN(newSv)) {
-                            throw new Exception("Encountered NaN slider velocity. Make sure none of the inputs are zero.");
+                            throw new Exception("计算滑条速度为NaN。请确保输入数值均不为0。");
                         }
 
                         if (newDuration < 0) {
-                            throw new Exception("Encountered slider with negative duration. Make sure the end time is greater than the end time of all selected sliders.");
+                            throw new Exception("计算滑条时长为负值。请确保结束时间大于所有被选中滑条的结束时间。");
                         }
 
                         ho.SliderVelocity = newSv;
@@ -222,11 +222,11 @@ namespace Mapping_Tools.Views.SliderCompletionator {
             string message = "";
             if (Math.Abs(slidersCompleted) == 1)
             {
-                message += "Successfully completed " + slidersCompleted + " slider!";
+                message += "成功补完 " + slidersCompleted + " 个滑条！";
             }
             else
             {
-                message += "Successfully completed " + slidersCompleted + " sliders!";
+                message += "成功补完 " + slidersCompleted + " 个滑条！";
             }
             return arg.Quick ? "" : message;
         }

@@ -357,7 +357,7 @@ namespace Mapping_Tools.Viewmodels {
             if (newIndex < LoadedHitObjects.Count) {
                 VisibleHitObjectIndex = newIndex;
             } else {
-                MessageBox.Show("You've reached the end of the slider list.");
+                MessageBox.Show("已到达滑条列表末尾。");
             }
         }
 
@@ -366,7 +366,7 @@ namespace Mapping_Tools.Viewmodels {
             if (newIndex >= 0) {
                 VisibleHitObjectIndex = newIndex;
             } else {
-                MessageBox.Show("You've reached the start of the slider list.");
+                MessageBox.Show("已到达滑条列表开头。");
             }
         }
 
@@ -375,7 +375,7 @@ namespace Mapping_Tools.Viewmodels {
                 EditorReader reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
                 
                 if (ImportModeSetting == ImportMode.Selected && editorReaderException1 != null) {
-                    throw new Exception("Could not fetch selected hit objects.", editorReaderException1);
+                    throw new Exception("无法获取选中物件。", editorReaderException1);
                 }
 
                 BeatmapEditor editor = null;
@@ -386,7 +386,7 @@ namespace Mapping_Tools.Viewmodels {
                         editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                         if (editorReaderException2 != null) {
-                            throw new Exception("Could not fetch selected hit objects.", editorReaderException2);
+                            throw new Exception("无法获取选中物件。", editorReaderException2);
                         }
 
                         markedObjects = selected;
