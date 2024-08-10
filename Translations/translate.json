@@ -913,26 +913,6 @@
         "\"JPK314\"": "\"JPK314\"",
         "\"Info\"": "\"信息\""
     },
-    "./Mapping_Tools\\Mapping_Tools\\Properties\\Annotations.cs": {
-        "\"Software\"": "\"Software\"",
-        "\"AS IS\"": "\"AS IS\"",
-        "\"Use [ContractAnnotation('=> halt')] instead\"": "\"Use [ContractAnnotation('=> halt')] instead\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Properties\\Resources.Designer.cs": {
-        "\"System.Resources.Tools.StronglyTypedResourceBuilder\"": "\"System.Resources.Tools.StronglyTypedResourceBuilder\"",
-        "\"16.0.0.0\"": "\"16.0.0.0\"",
-        "\"Microsoft.Performance\"": "\"Microsoft.Performance\"",
-        "\"CA1811:AvoidUncalledPrivateCode\"": "\"CA1811:AvoidUncalledPrivateCode\"",
-        "\"Mapping_Tools.Properties.Resources\"": "\"Mapping_Tools.Properties.Resources\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Properties\\Settings.Designer.cs": {
-        "\"Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator\"": "\"Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator\"",
-        "\"16.10.0.0\"": "\"16.10.0.0\""
-    },
-    "./Mapping_Tools\\Mapping_Tools\\Properties\\Settings.settings": {
-        "\"uri:settings\"": "\"uri:settings\"",
-        "\"(Default)\"": "\"(Default)\""
-    },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdateManager.cs": {
         "\"Do not call this method before fetching updates!\"": "\"Do not call this method before fetching updates!\"",
         "\"Do not call this method if there are no updates!\"": "\"Do not call this method if there are no updates!\"",

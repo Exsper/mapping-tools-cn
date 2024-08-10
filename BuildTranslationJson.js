@@ -13,6 +13,11 @@ async function create() {
         ".sln", ".DotSettings", ".iss", ".resx", ".csproj", ".config",
         "Mapping_Tools_Tests", "Mapping_Tools\\Data", "Mapping_Tools\\Classes\\MathUtil",
 
+        "Mapping_Tools\\Mapping_Tools\\Properties\\Annotations.cs",
+        "Mapping_Tools\\Mapping_Tools\\Properties\\Resources.Designer.cs",
+        "Mapping_Tools\\Mapping_Tools\\Properties\\Settings.Designer.cs",
+        "Mapping_Tools\\Mapping_Tools\\Properties\\Settings.settings",
+
         "Mapping_Tools\\Classes\\BeatmapHelper\\Beatmap.cs",
         "Mapping_Tools\\Classes\\BeatmapHelper\\BeatDivisors\\RationalBeatDivisor.cs",
         "Mapping_Tools\\Classes\\BeatmapHelper\\BeatmapEditor.cs",
