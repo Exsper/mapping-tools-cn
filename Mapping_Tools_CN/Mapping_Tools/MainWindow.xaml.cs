@@ -376,7 +376,7 @@ namespace Mapping_Tools {
 
         //Open project in browser
         private void OpenGitHub(object sender, RoutedEventArgs e) {
-            System.Diagnostics.Process.Start("explorer.exe", "https://github.com/OliBomby/Mapping_Tools");
+            System.Diagnostics.Process.Start("explorer.exe", "https://github.com/Exsper/mapping-tools-cn");
         }
 
         //Open project in browser

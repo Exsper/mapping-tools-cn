@@ -126,7 +126,7 @@
                                         ToolTip="用浏览器打开Mapping Tools官网（英文）。" />
                                     <MenuItem Header="Github（_G）" Click="OpenGitHub" Icon="{materialDesign:PackIcon Github}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
-                                        ToolTip="打开Github上的Mapping Tools项目（英文）。" />
+                                        ToolTip="打开Github上的Mapping Tools汉化项目。" />
                                     <MenuItem Header="捐赠（_D）" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="支持Mapping Tools的原开发者。" />

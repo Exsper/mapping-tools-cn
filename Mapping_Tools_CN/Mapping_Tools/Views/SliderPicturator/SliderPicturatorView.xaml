@@ -25,14 +25,14 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontSize="40" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                            <Run Text="Slider Picturator"/>
+                            <Run Text="滑条绘图器（Slider Picturator）"/>
                         </TextBlock>
                         <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                             <materialDesign:PopupBox.ToggleContent>
                                 <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                             </materialDesign:PopupBox.ToggleContent>
                             <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                                Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.
+                                程序将导入的图像转变为滑条！要开始，点击浏览按钮选择一个图像，然后调节颜色和设置直到显示满意。点击运行按钮输出滑条到指定的时间和位置。
                             </TextBlock>
                         </materialDesign:PopupBox>
                         <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
@@ -45,10 +45,10 @@
                         </materialDesign:PopupBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Width="531" HorizontalAlignment="Left" Height="40">
-                        <Label Margin="10,0,0,0" Height="23" Content="Current File:" Name="Label1" FontFamily="Segoe UI" FontSize="12 px" Foreground="White">
+                        <Label Margin="10,0,0,0" Height="23" Content="当前文件：" Name="Label1" FontFamily="Segoe UI" FontSize="12 px" Foreground="White">
                         </Label>
                         <Label Margin="5,0,0,0" Height="25" Name="FileNameLabel" Width="300" FontFamily="Segoe UI" FontSize="12 px" Foreground="White" Content="{Binding PictureFile}"/>
-                        <Button Margin="5,0,0,0" Width="100" Height="32" Content="Browse" Name="BrowseButton" Command="{Binding Path=UploadFileCommand}">
+                        <Button Margin="5,0,0,0" Width="100" Height="32" Content="浏览" Name="BrowseButton" Command="{Binding Path=UploadFileCommand}">
                         </Button>
                     </StackPanel>
                 </StackPanel>
@@ -57,9 +57,9 @@
                     <StackPanel Width="350" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical" Margin="15,0,0,0" HorizontalAlignment="Left">
                             <ComboBox x:Name="SelectionViewportBox" Cursor="Hand" Width="258"
-                            Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="GPU Max Viewport Size"
+                            Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="GPU最大视口数量"
                             ItemsSource="{Binding ViewportSizes}" SelectedItem="{Binding ViewportSize}"
-                            ToolTip="It's difficult to know which to pick. Try one and see if it works. If not, try the other.">
+                            ToolTip="不知道应该选哪个的话，先试着选一个看看能不能正常工作，如果不能就换一个。">
                             </ComboBox>
                             <Grid Margin="5 10 0 0">
                                 <Grid.ColumnDefinitions>
@@ -68,12 +68,12 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBox Grid.Column="0" Width="75" Text="{Binding TimeCode, Converter={StaticResource TimeToStringConverter}}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Time"
-                                ToolTip="Input the number of ms into the map that the slider should appear."/>
-                                <TextBox Grid.Column="1" Width="75" Text="{Binding Duration, Converter={StaticResource DoubleToStringConverter}}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Duration"
-                                ToolTip="Input the number of ms for which the slider should appear."/>
-                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y Resolution" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The height of the resolution of your osu! window.">
+                                <TextBox Grid.Column="0" Width="75" Text="{Binding TimeCode, Converter={StaticResource TimeToStringConverter}}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="时间"
+                                ToolTip="输入滑条在谱面中出现的时间（毫秒）。"/>
+                                <TextBox Grid.Column="1" Width="75" Text="{Binding Duration, Converter={StaticResource DoubleToStringConverter}}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="时长"
+                                ToolTip="输入滑条时长（毫秒）。"/>
+                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y轴分辨率" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="osu!窗口的高度分辨率。">
                                     <TextBox.Text>
                                         <Binding Path="YResolution" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -97,9 +97,9 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="Slider Pos" VerticalAlignment="Center"/>
-                                <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X Position" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The x coordinate (in osupx) you want your slider head to appear on.">
+                                <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="滑条位置" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="滑条头的横坐标（以osu!像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="SliderStartX" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -115,8 +115,8 @@
                                         </Binding>
                                     </TextBox.Text>
                                 </TextBox>
-                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y Position" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The y coordinate (in osupx) you want your slider head to appear on.">
+                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="滑条头的纵坐标（以osu!像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="SliderStartY" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -140,9 +140,9 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="Image Pos" VerticalAlignment="Center"/>
-                                <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X Position" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The x coordinate (in osupx) you want for the top left pixel of your image.">
+                                <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="图像位置" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="图像左上角的横坐标（以osu!像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="ImageStartX" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -158,8 +158,8 @@
                                         </Binding>
                                     </TextBox.Text>
                                 </TextBox>
-                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y Position" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="The y coordinate (in osupx) you want for the top left pixel of your image.">
+                                <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                 ToolTip="图像左上角的纵坐标（以osu!像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="ImageStartY" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -188,68 +188,68 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <CheckBox Grid.Row="0" Grid.ColumnSpan="2" x:Name="UseMapComboColors" Content="Use Map Combo Colors"
+                                <CheckBox Grid.Row="0" Grid.ColumnSpan="2" x:Name="UseMapComboColors" Content="使用谱面Combo颜色"
                                           IsChecked="{Binding UseMapComboColors}"
-                                          ToolTip="Pick slider track base color using the map's custom combo colors, or the override if defined in the map's .osu file."/>
+                                          ToolTip="从谱面设置的combo颜色中选择，还是用.osu文件中的设置（SliderTrackOverride）来确定滑条轨道基本颜色。"/>
 
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Track Color:" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="滑条轨道颜色：" VerticalAlignment="Center"/>
                                 <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
                                     <ComboBox x:Name="SelectionComboColorBox" Cursor="Hand" Width="106" Margin="10,0,25,0"
-                                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Track Color"
+                                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="轨道颜色"
                                               ItemsSource="{Binding AvailableColors}" SelectedItem="{Binding ComboColor}" Visibility="{Binding ShouldShowCcPicker}"
-                                              ToolTip="Pick the combo color to be used in the picture.">
+                                              ToolTip="选取图片使用的combo颜色。">
                                     </ComboBox>
                                     <Rectangle Width="30" Height="30" Visibility="{Binding ShouldShowCCPicker}" Fill="{Binding PickedComboColor}" />
                                 </StackPanel>
                                 <xctk:ColorPicker Grid.Row="1" Grid.Column="1" Name="ClrPckerTrack" SelectedColor="{Binding TrackColorPickerColor}" Visibility="{Binding ShouldShowPalette}" Margin="10,3,0,3"></xctk:ColorPicker>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Border Color:" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="滑条边缘颜色：" VerticalAlignment="Center"/>
                                 <xctk:ColorPicker Grid.Row="2" Grid.Column="1" Name="ClrPckerBorder" SelectedColor="{Binding BorderColor}" Margin="10,3,0,3"></xctk:ColorPicker>
                             </Grid>
                         </StackPanel>
 
-                        <CheckBox x:Name="BlackOnBox" Margin="0,20,0,0" Content="Use transparent black"
+                        <CheckBox x:Name="BlackOnBox" Margin="0,20,0,0" Content="使用透明黑色"
                         IsChecked="{Binding BlackOn}"
-                        ToolTip="Use transparent black if black is the color closest to the pixel color."/>
+                        ToolTip="当黑色接近像素颜色时使用透明黑色。"/>
 
-                        <CheckBox x:Name="BorderOnBox" Content="Use border color"
+                        <CheckBox x:Name="BorderOnBox" Content="使用边缘颜色"
                         IsChecked="{Binding BorderOn}"
-                        ToolTip="Use the slider border color if it is the color closest to the pixel color."/>
+                        ToolTip="当滑条边缘颜色接近像素颜色时使用滑条边缘颜色。"/>
 
-                        <CheckBox x:Name="RedOnBox" Content="Use image R"
+                        <CheckBox x:Name="RedOnBox" Content="使用图像红色通道"
                         IsChecked="{Binding RedOn}"
-                        ToolTip="Use the image's Red channel when determining closest pixel color."/>
+                        ToolTip="分析图像像素颜色时使用图像的红色通道。"/>
 
-                        <CheckBox x:Name="GreenOnBox" Content="Use image G"
+                        <CheckBox x:Name="GreenOnBox" Content="使用图像绿色通道"
                         IsChecked="{Binding GreenOn}"
-                        ToolTip="Use the image's Green channel when determining closest pixel color."/>
+                        ToolTip="分析图像像素颜色时使用图像的绿色通道。"/>
 
-                        <CheckBox x:Name="BlueOnBox" Content="Use image B"
+                        <CheckBox x:Name="BlueOnBox" Content="使用图像蓝色通道"
                         IsChecked="{Binding BlueOn}"
-                        ToolTip="Use the image's Blue channel when determining closest pixel color."/>
+                        ToolTip="分析图像像素颜色时使用图像的蓝色通道。"/>
 
-                        <CheckBox x:Name="AlphaOnBox" Content="Use image A"
+                        <CheckBox x:Name="AlphaOnBox" Content="使用图像透明通道"
                         IsChecked="{Binding AlphaOn}"
-                        ToolTip="Use the image's Alpha channel when determining closest pixel color."/>
+                        ToolTip="分析图像像素颜色时使用图像的透明通道。"/>
 
-                        <CheckBox Content="Set beatmap colors"
+                        <CheckBox Content="设置谱面颜色"
                                   IsChecked="{Binding SetBeatmapColors}"
-                                  ToolTip="Whether to set the beatmap's slider track and border color to the specified colors."/>
+                                  ToolTip="将谱面的滑条轨道颜色和滑条边缘颜色设置为特定颜色。"/>
                         
                         <Slider Value="{Binding Quality}" Margin="5 10 15 10"
                                 Style="{StaticResource MaterialDesignDiscreteSlider}"
                                 TickPlacement="BottomRight" TickFrequency="10"
                                 Minimum="1" Maximum="101" SmallChange="1" LargeChange="10"
-                                ToolTip="Image Quality"/>
-                        <TextBlock Text="{Binding Path=SegmentCount, StringFormat='Segment Count: {0}'}" Margin="5"
-                                   ToolTip="The approximate number of slider segments required for this picture. Lower is better."/>
+                                ToolTip="图像质量"/>
+                        <TextBlock Text="{Binding Path=SegmentCount, StringFormat='物件数： {0}'}" Margin="5"
+                                   ToolTip="应用该图像预估需要添加多少滑条物件。该值越小越好。"/>
                         <StackPanel Orientation="Horizontal" >
                             <Button Style="{StaticResource MaterialDesignRaisedButton}" Command="{Binding RemoveCommand}" Margin="5"
-                                    ToolTip="Remove the slider being used for its sliderball path." HorizontalAlignment="Left" VerticalAlignment="Top">
-                                Remove slider
+                                    ToolTip="移除使用中的滑条的滑条球轨迹。" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                移除滑条
                             </Button>
                             <Button Style="{StaticResource MaterialDesignRaisedButton}" Command="{Binding ImportCommand}" Margin="5"
-                                ToolTip="Import a slider for its sliderball path. This imports the slider you have selected in the editor." HorizontalAlignment="Right" VerticalAlignment="Top">
-                                Import slider
+                                ToolTip="导入编辑器当前选中的滑条，获取其滑条球轨迹。" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                导入滑条
                             </Button>
                         </StackPanel>
                     </StackPanel>

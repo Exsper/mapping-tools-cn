@@ -24,9 +24,9 @@ namespace Mapping_Tools.Views.SliderPicturator {
     public partial class SliderPicturatorView : IQuickRun, ISavable<SliderPicturatorVm> {
         public event EventHandler RunFinished;
 
-        public static readonly string ToolName = "Slider Picturator";
+        public static readonly string ToolName = "滑条绘图器";
 
-        public static readonly string ToolDescription = $@"Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.";
+        public static readonly string ToolDescription = $@"程序将导入的图像转变为滑条！要开始，点击浏览按钮选择一个图像，然后调节颜色和设置直到显示满意。点击运行按钮输出滑条到指定的时间和位置。";
 
         /// <inheritdoc />
         public SliderPicturatorView()
@@ -71,14 +71,14 @@ namespace Mapping_Tools.Views.SliderPicturator {
 
         private string Picturate(SliderPicturatorVm arg, BackgroundWorker worker, DoWorkEventArgs _) {
             if (arg.PictureFile == null) {
-                throw new Exception("No image file selected.");
+                throw new Exception("未选择图像文件。");
             }
 
             Bitmap img;
             try {
                 img = new Bitmap(arg.PictureFile);
             } catch {
-                throw new Exception("Not a valid image file.");
+                throw new Exception("不是合法的图像文件。");
             }
 
             // Get the latest version of the beatmap

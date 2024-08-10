@@ -192,7 +192,7 @@
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  materialDesign:HintAssist.Hint="开始时间"
                                 ToolTip="需要修改属性的物件的最早时间（毫秒）。" MinWidth="120"/>
-                        <TextBlock Text="  到  " VerticalAlignment="Center"/>
+                        <TextBlock Text=" 到 " VerticalAlignment="Center"/>
                         <TextBox x:Name="MaxBox" Text="{Binding Path=MaxTimeFilter, Mode=TwoWay, Converter={StaticResource TimeToStringConverter}, ConverterParameter=-1}"
                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  materialDesign:HintAssist.Hint="结束时间"
