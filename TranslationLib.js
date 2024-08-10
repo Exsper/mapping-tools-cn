@@ -52,16 +52,31 @@ function getContentInXaml(str) {
     let quoteRegex = /ToolTip="([^"]*)"/g;
     let results = str.match(quoteRegex);
     if (results) match.push(...results);
+    quoteRegex = /ToolTip = "([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
+    quoteRegex = /ToolTip => "([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
     // Header
     quoteRegex = /Header="([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
+    quoteRegex = /Header = "([^"]*)"/g;
     results = str.match(quoteRegex);
     if (results) match.push(...results);
     // Text
     quoteRegex = /Text="([^"]*)"/g;
     results = str.match(quoteRegex);
     if (results) match.push(...results);
+    quoteRegex = /Text = "([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
     // ComboBoxItem Content
     quoteRegex = /Content="([^"]*)"/g;
+    results = str.match(quoteRegex);
+    if (results) match.push(...results);
+    quoteRegex = /Content = "([^"]*)"/g;
     results = str.match(quoteRegex);
     if (results) match.push(...results);
     // materialDesign:HintAssist.Hint
