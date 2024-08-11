@@ -51,7 +51,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Column="0" Text="{Binding ImportPath}" Margin="0,0,5,0"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="timing来源从"
-                        ToolTip="timing来源谱面的地址。"/>
+                        ToolTip="从该地址的谱面导入timing。"/>
                     <Button Grid.Column="1" Cursor="Hand" Command="{Binding ImportLoadCommand}" Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
                             ToolTip="从osu!客户端获取当前选中谱面。">
                         <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="RestoreFromTrash" Foreground="{DynamicResource PrimaryHueMidBrush}"/>

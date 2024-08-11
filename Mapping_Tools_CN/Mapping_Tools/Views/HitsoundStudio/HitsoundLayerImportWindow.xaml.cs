@@ -31,7 +31,7 @@ namespace Mapping_Tools.Views.HitsoundStudio {
             InitializeComponent();
             HitsoundLayers = new List<HitsoundLayer>();
             index = i;
-            var suggestedName = $"Layer {index + 1}";
+            var suggestedName = $"层级 {index + 1}";
             NameBox0.Text = suggestedName;
             NameBox.Text = suggestedName;
             NameBox2.Text = suggestedName;

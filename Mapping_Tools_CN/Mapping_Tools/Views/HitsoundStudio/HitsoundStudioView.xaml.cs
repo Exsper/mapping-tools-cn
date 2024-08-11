@@ -41,9 +41,9 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Hitsound Studio Projects");
 
-        public static readonly string ToolName = "Hitsound Studio";
+        public static readonly string ToolName = "音效工作室";
 
-        public static readonly string ToolDescription = $@"Hitsound Studio is the tool that lets you import data from multiple outside sources and convert them to osu! standard hitsounds in the form of a hitsounding difficulty that can you copy to other beatmaps.{Environment.NewLine}It represents hitsounds as a list of layers (hitsound layers). One layer contains a unique sound, the sampleset and hitsound that accompany that sound and a list of times that sound has to be played.";
+        public static readonly string ToolDescription = $@"音效工作室可以从多个外部源文件导入数据并转换成osu!Std音效专用谱面，之后可以复制给其他谱面。{Environment.NewLine}它把音效表示为一系列音效层，每一层包含一个独特的声音、音效组和打击音效，以及表示声音在何时播放的时间列表。";
 
         public HitsoundStudioView()
         {
@@ -123,8 +123,8 @@ namespace Mapping_Tools.Views.HitsoundStudio
                         greenlines++;
                     }
 
-                    result = $"Number of sample indices: {completeHitsounds.CustomIndices.Count}, " +
-                             $"Number of samples: {samples}, Number of greenlines: {greenlines}";
+                    result = $"音效组数量：{completeHitsounds.CustomIndices.Count}，" +
+                             $"音效数量：{samples}，绿线数量：{greenlines}";
                 }
 
                 if (arg.DeleteAllInExportFirst && (arg.ExportSamples || arg.ExportMap)) {
@@ -175,8 +175,8 @@ namespace Mapping_Tools.Views.HitsoundStudio
                 UpdateProgressBar(worker, 50);
 
                 if (arg.ShowResults) {
-                    result = "Number of sample indices: 0, " +
-                             $"Number of samples: {loadedSamples.Count}, Number of greenlines: 0";
+                    result = "音效组数量：0，" +
+                             $"音效数量：{loadedSamples.Count}，绿线数量：0";
                 }
 
                 if (arg.DeleteAllInExportFirst && (arg.ExportSamples || arg.ExportMap)) {
@@ -220,8 +220,8 @@ namespace Mapping_Tools.Views.HitsoundStudio
                 UpdateProgressBar(worker, 50);
 
                 if (arg.ShowResults) {
-                    result = "Number of sample indices: 0, " +
-                             $"Number of samples: {loadedSamples.Count}, Number of greenlines: 0";
+                    result = "音效组数量：0，" +
+                             $"音效数量：{loadedSamples.Count}，绿线数量：0";
                 }
 
                 if (arg.DeleteAllInExportFirst && (arg.ExportSamples || arg.ExportMap)) {
@@ -247,8 +247,8 @@ namespace Mapping_Tools.Views.HitsoundStudio
                 var beatmap = EditorReaderStuff.GetNewestVersionOrNot(arg.BaseBeatmap).Beatmap;
 
                 if (arg.ShowResults) {
-                    result = $"Number of notes: {samplePackages.SelectMany(o => o.Samples).Count()}, " +
-                             $"Number of volume changes: {(arg.AddGreenLineVolumeToMidi ? beatmap.BeatmapTiming.TimingPoints.Count : 0)}";
+                    result = $"物件（Note）数量：{samplePackages.SelectMany(o => o.Samples).Count()}，" +
+                             $"音量调整次数：{(arg.AddGreenLineVolumeToMidi ? beatmap.BeatmapTiming.TimingPoints.Count : 0)}";
                 }
 
                 UpdateProgressBar(worker, 20);
@@ -292,7 +292,7 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
             if (string.IsNullOrWhiteSpace(settings.BaseBeatmap))
             {
-                MessageBox.Show("Please select a base beatmap first.");
+                MessageBox.Show("请先选择一个基准谱面。");
                 return;
             }
 
