@@ -19,9 +19,9 @@ namespace Mapping_Tools.Views.MetadataManager {
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Metadata Manager Projects");
 
-        public static readonly string ToolName = "Metadata Manager";
+        public static readonly string ToolName = "元数据管理器";
 
-        public static readonly string ToolDescription = $@"To save you the time of editing metadata on every individual difficulty, edit metadata in this tool and copy it to multiple diffs anytime.{Environment.NewLine}You can also import metadata from beatmaps, so you can copy metadata from A to B.{Environment.NewLine}Save and load metadata configurations, so you can work on multiple mapsets without hassle.";
+        public static readonly string ToolDescription = $@"为一一编辑每个难度的元数据节省时间，可以在本工具中编辑元数据，之后随时复制到多个难度。{Environment.NewLine}您也可以从谱面A中导入元数据，然后复制给谱面B。{Environment.NewLine}利用保存和加载项目设置，可以轻松处理多个谱面集。";
 
         public MetadataManagerView() {
             InitializeComponent();
@@ -92,7 +92,7 @@ namespace Mapping_Tools.Views.MetadataManager {
             }
 
             // Make an accurate message
-            var message = $"Successfully exported metadata to {mapsDone} {(mapsDone == 1 ? "beatmap" : "beatmaps")}!";
+            var message = $"成功导出元数据到 {mapsDone} 张{(mapsDone == 1 ? "谱面" : "谱面")}！";
             return message;
         }
 
