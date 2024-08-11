@@ -21,39 +21,39 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="ExportFolderBox" Text="{Binding ExportFolder, Mode=TwoWay}" MinWidth="220" Margin="0,0,5,0"
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Export folder"
-                         ToolTip="The folder to export the hitsound beatmap and hitsound samples to. Original items in this folder could be deleted."/>
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="导出文件夹"
+                         ToolTip="导出音效谱面和音效采样到哪个文件夹。该文件夹内的原有文件可能会被删除。"/>
                 <Button x:Name="ExportFolderBrowseButton" Grid.Column="1" Cursor="Hand" Click="ExportFolderBrowseButton_OnClick"
                         Style="{StaticResource IconButton}" VerticalAlignment="Bottom"
-                        ToolTip="Select folder with File Explorer.">
+                        ToolTip="使用文件浏览器选择文件夹。">
                     <materialDesign:PackIcon Width="30" Height="30" Cursor="Hand" Kind="Folder" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
                 </Button >
             </Grid>
             <TextBox x:Name="HitsoundDiffNameBox" Text="{Binding HitsoundDiffName, Mode=TwoWay}" Margin="0,0,5,0"
-                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Hitsound map name"
-                     ToolTip="The folder to export the hitsound beatmap and hitsound samples to. Original items in this folder could be deleted."/>
-            <CheckBox Content="Export hitsound map" IsChecked="{Binding ExportMap}" Margin="0 15 0 0"
-                      ToolTip="Check this to export the hitsound beatmap."/>
-            <CheckBox Content="Export hitsound samples" IsChecked="{Binding ExportSamples}"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="音效谱面名"
+                     ToolTip="导出音效谱面和音效采样到哪个文件夹。该文件夹内的原有文件可能会被删除。"/>
+            <CheckBox Content="导出音效谱面" IsChecked="{Binding ExportMap}" Margin="0 15 0 0"
+                      ToolTip="勾选此项以导出音效谱面。"/>
+            <CheckBox Content="导出音效采样" IsChecked="{Binding ExportSamples}"
                       Visibility="{Binding SampleExportSettingsVisibility}"
-                      ToolTip="Check this to export the custom hitsound samples."/>
-            <CheckBox Content="Show results" IsChecked="{Binding ShowResults}"
-                      ToolTip="Check this to see the resulting number of custom indices, hitsound samples, and index changes."/>
-            <CheckBox Content="Delete all files in export folder" IsChecked="{Binding DeleteAllInExportFirst}"
-                      ToolTip="Check this to automatically delete all files in the export folder before exporting. When using this be sure there aren't any important files in your export folder."/>
-            <CheckBox Name="UsePreviousSampleSchemaBox" Content="Use previous sample schema" IsChecked="{Binding UsePreviousSampleSchema}"
-                      ToolTip="Check this to use the same samples as the previous export."
+                      ToolTip="勾选此项以导出自定义音效采样。"/>
+            <CheckBox Content="显示结果" IsChecked="{Binding ShowResults}"
+                      ToolTip="勾选此项以显示生成多少音效组、音效采样和索引更改。"/>
+            <CheckBox Content="删除导出文件夹内所有文件" IsChecked="{Binding DeleteAllInExportFirst}"
+                      ToolTip="在导出前自动删除导出文件夹内的所有文件。使用前请确保导出文件夹内不存在任何重要文件。"/>
+            <CheckBox Name="UsePreviousSampleSchemaBox" Content="使用上次采样规划" IsChecked="{Binding UsePreviousSampleSchema}"
+                      ToolTip="使用与上次导出一致的采样。"
                       Visibility="{Binding SampleExportSettingsVisibility}"/>
-            <CheckBox Content="Allow growth of previous sample schema" IsChecked="{Binding AllowGrowthPreviousSampleSchema}"
+            <CheckBox Content="允许扩展上次采样规划" IsChecked="{Binding AllowGrowthPreviousSampleSchema}"
                       IsEnabled="{Binding ElementName=UsePreviousSampleSchemaBox, Path=IsChecked}"
                       Visibility="{Binding SampleExportSettingsVisibility}"
-                      ToolTip="Alows expansion of the previous sample schema to always fit the need of the current export. If you dont check this, then the sample schema of this export needs to be a subset of the previous sample schema."/>
+                      ToolTip="允许在上次采样规划的基础上进行扩展，以适应本次导出需求。如果不启用该项，请确保本次导出的采样规划是前一次导出的子集。"/>
             <ComboBox Margin="0 20 0 0" ItemsSource="{Binding HitsoundExportModes}" SelectedItem="{Binding HitsoundExportModeSetting}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Export mode"
-                      ToolTip="Choose which format to export the hitsounds as. The 'Standard' option will generate hitsounds that can be copied to osu! standard beatmaps. The 'Coinciding' option combined with the osu! mania gamemode will export a lossless representation of the hitsound layers. The 'Midi' option will export a single MIDI file with all the MIDI information of the hitsound layers."/>
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="导出模式"
+                      ToolTip="选择导出音效的格式。选择'Standard'会生成可以复制到osu!std谱面中的音效。选择'Coinciding'且输出游戏模式为mania时会生成混合音效层的无损音效。选择'Midi'会生成一个带有所有音效层MIDI信息的MIDI文件。"/>
             <TextBox Margin="0,5,0,0"
-                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Note grouping leniency"
-                     ToolTip="Maximum time in millisecond that can be between two hitsounds while treated as being at the same time."
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="物件组合允许误差"
+                     ToolTip="两个音效之间的间隔在最大时间（毫秒）内可认作为同一时间。"
                      Visibility="{Binding StandardExtraSettingsVisibility}">
                 <TextBox.Text>
                     <Binding Path="ZipLayersLeniency" Mode="TwoWay" NotifyOnValidationError="True">
@@ -71,8 +71,8 @@
                 </TextBox.Text>
             </TextBox>
             <TextBox Margin="0,5,5,0"
-                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="First custom index"
-                     ToolTip="The index of the first custom index of custom indices that get generated."
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="自定义起始索引"
+                     ToolTip="生成的自定义音效组的起始索引。"
                      Visibility="{Binding StandardExtraSettingsVisibility}">
                 <TextBox.Text>
                     <Binding Path="FirstCustomIndex" Mode="TwoWay" NotifyOnValidationError="True" ConverterParameter="1">
@@ -89,25 +89,25 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <CheckBox Content="Add regular hitsounds" IsChecked="{Binding AddCoincidingRegularHitsounds}" Margin="0 5 0 0"
+            <CheckBox Content="加入普通音效" IsChecked="{Binding AddCoincidingRegularHitsounds}" Margin="0 5 0 0"
                       Visibility="{Binding CoincidingExtraSettingsVisibility}"
-                      ToolTip="Check this to add whistles, claps, finishes, and samplesets ontop of the filename hitsounding used by coinciding export."/>
-            <CheckBox Content="Add green line volume" IsChecked="{Binding AddGreenLineVolumeToMidi}" Margin="0 5 0 0"
+                      ToolTip="在'coinciding'导出模式下，勾选此选项以加入whistles、claps、finishes和音效组本体音效文件名"/>
+            <CheckBox Content="加入绿线音量" IsChecked="{Binding AddGreenLineVolumeToMidi}" Margin="0 5 0 0"
                       Visibility="{Binding MidiExtraSettingsVisibility}"
-                      ToolTip="Check this to add a track to the MIDI with volume changes from timing points."/>
+                      ToolTip="将体现时间轴中音量改变的音轨加入到MIDI文件。"/>
             <ComboBox Margin="0 10 0 0" ItemsSource="{Binding HitsoundExportGameModes}" SelectedItem="{Binding HitsoundExportGameMode}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Export gamemode"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="导出游戏模式"
                       Visibility="{Binding SampleExportSettingsVisibility}"
-                      ToolTip="Choose the gamemode for the exported hitsound map."/>
+                      ToolTip="选择导出音效谱面的游戏模式。"/>
 
             <ComboBox Margin="0 15 0 0" ItemsSource="{Binding SampleExportFormatDisplayNames}" SelectedItem="{Binding SingleSampleExportFormatDisplay}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Sample file format"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="采样文件格式"
                       Visibility="{Binding SampleExportSettingsVisibility}"
-                      ToolTip="Choose the file format for exported sound samples. Default will match the encoding of the source files."/>
+                      ToolTip="选择导出音效采样的文件格式。默认匹配原文件格式。"/>
             <ComboBox Margin="0 5 0 0" ItemsSource="{Binding SampleExportFormatDisplayNames}" SelectedItem="{Binding MixedSampleExportFormatDisplay}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Mixed sample file format"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="混合采样文件格式"
                       Visibility="{Binding SampleExportSettingsVisibility}"
-                      ToolTip="Choose the file format for mixed exported sound samples. Mixing only occurs in the Standard hitsound export mode."/>
+                      ToolTip="选择混合导出音效采样的文件格式。混合仅发生在导出模式为'Standard'时。"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1"
