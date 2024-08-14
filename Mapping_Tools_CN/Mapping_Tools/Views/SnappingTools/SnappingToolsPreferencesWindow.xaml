@@ -47,7 +47,7 @@
                         <ImageBrush ImageSource="/Data/mt_logo_white_24.png"/>
                     </materialDesign:ColorZone.OpacityMask>
                 </materialDesign:ColorZone>
-                <TextBlock Name="Header" Text="Preferences" Foreground="{DynamicResource MaterialDesignBody}" Margin="8,11,0,0" FontWeight="Normal"/>
+                <TextBlock Name="Header" Text="全局选项" Foreground="{DynamicResource MaterialDesignBody}" Margin="8,11,0,0" FontWeight="Normal"/>
             </StackPanel>
             
             <StackPanel WindowChrome.IsHitTestVisibleInChrome="true" HorizontalAlignment="Right" Orientation="Horizontal">
@@ -61,135 +61,135 @@
                     <Border Padding="5 10">
                         <StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Text="Snap key" VerticalAlignment="Bottom" Margin="0 0 0 6" 
-                                           ToolTip="Press and hold this key to snap your cursor to the closest virtual object."/>
+                                <TextBlock Width="100" Text="吸附键" VerticalAlignment="Bottom" Margin="0 0 0 6" 
+                                           ToolTip="长按该键将光标吸附到最近的辅助物件上。"/>
                                 <components1:HotkeyEditorControl Width="150" VerticalAlignment="Bottom" Hotkey="{Binding SnapHotkey, UpdateSourceTrigger=LostFocus}"
-                                                                 ToolTip="Press and hold this key to snap your cursor to the closest virtual object."/>
-                                <TextBlock Width="100" Text="Select key" VerticalAlignment="Bottom" Margin="10 0 0 6" 
-                                           ToolTip="Press or hold this key to select virtual objects."/>
+                                                                 ToolTip="长按该键将光标吸附到最近的辅助物件上。"/>
+                                <TextBlock Width="100" Text="选取键" VerticalAlignment="Bottom" Margin="10 0 0 6" 
+                                           ToolTip="按下或长按该键以选取辅助物件。"/>
                                 <components1:HotkeyEditorControl Width="150" VerticalAlignment="Bottom" Hotkey="{Binding SelectHotkey, UpdateSourceTrigger=LostFocus}"
-                                                                 ToolTip="Press or hold this key to select virtual objects."/>
+                                                                 ToolTip="按下或长按该键以选取辅助物件。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Text="Lock key" VerticalAlignment="Bottom" Margin="0 0 0 6" 
-                                           ToolTip="Press or hold this key to lock virtual objects."/>
+                                <TextBlock Width="100" Text="锁定键" VerticalAlignment="Bottom" Margin="0 0 0 6" 
+                                           ToolTip="按下或长按该键以锁定辅助物件。"/>
                                 <components1:HotkeyEditorControl Width="150" VerticalAlignment="Bottom" Hotkey="{Binding LockHotkey, UpdateSourceTrigger=LostFocus}"
-                                                                 ToolTip="Press or hold this key to lock virtual objects."/>
-                                <TextBlock Width="100" Text="Usability key" VerticalAlignment="Bottom" Margin="10 0 0 6" 
-                                           ToolTip="Press or hold this key to select which virtual objects can get used by generators."/>
+                                                                 ToolTip="按下或长按该键以锁定辅助物件。"/>
+                                <TextBlock Width="100" Text="启用键" VerticalAlignment="Bottom" Margin="10 0 0 6" 
+                                           ToolTip="按下或长按该键以切换选中的辅助物件能否被生成器使用。"/>
                                 <components1:HotkeyEditorControl Width="150" VerticalAlignment="Bottom" Hotkey="{Binding InheritHotkey, UpdateSourceTrigger=LostFocus}"
-                                                                 ToolTip="Press or hold this key to select which virtual objects can get used by generators."/>
+                                                                 ToolTip="按下或长按该键以切换选中的辅助物件能否被生成器使用。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Text="Refresh key" VerticalAlignment="Bottom" Margin="0 0 0 6"
-                                           ToolTip="Press or hold this key to continuously refresh the hit objects in the root layer of the object tree."/>
+                                <TextBlock Width="100" Text="刷新键" VerticalAlignment="Bottom" Margin="0 0 0 6"
+                                           ToolTip="按下或长按该键以持续刷新根图层上的击打物件。"/>
                                 <components1:HotkeyEditorControl Width="150" VerticalAlignment="Bottom" Hotkey="{Binding RefreshHotkey, UpdateSourceTrigger=LostFocus}"
-                                                                 ToolTip="Press or hold this key to continuously refresh the hit objects in the root layer of the object tree."/>
+                                                                 ToolTip="按下或长按该键以持续刷新根图层上的击打物件。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Offset" VerticalAlignment="Bottom" ToolTip="Offsets the overlay box. Use this field when the automatic editor-to-screen coordinate conversion seems to fail. Enable Debug mode to see the overlay box."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="偏移" VerticalAlignment="Bottom" ToolTip="悬浮框（overlay box）的偏移。当自动转换编辑器坐标失败时使用该选项。启用Debug模式时显示悬浮框。"/>
                                 <TextBox Text="{Binding OffsetLeft, Converter={StaticResource DoubleToStringConverter}}" Width="95" VerticalAlignment="Bottom" 
-                                         materialDesign:HintAssist.Hint="Left offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
-                                         ToolTip="Input the offset for the left side of the overlay."/>
+                                         materialDesign:HintAssist.Hint="左偏移" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
+                                         ToolTip="输入悬浮框的左侧偏移量。"/>
                                 <TextBox Text="{Binding OffsetTop, Converter={StaticResource DoubleToStringConverter}}" Width="95" VerticalAlignment="Bottom" 
-                                         materialDesign:HintAssist.Hint="Top offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
-                                         ToolTip="Input the offset for the top side of the overlay."/>
+                                         materialDesign:HintAssist.Hint="上偏移" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
+                                         ToolTip="输入悬浮框的顶部偏移量。"/>
                                 <TextBox Text="{Binding OffsetRight, Converter={StaticResource DoubleToStringConverter}}" Width="95" VerticalAlignment="Bottom" 
-                                         materialDesign:HintAssist.Hint="Right offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
-                                         ToolTip="Input the offset for the right side of the overlay."/>
+                                         materialDesign:HintAssist.Hint="右偏移" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 10 0"
+                                         ToolTip="输入悬浮框的右侧偏移量。"/>
                                 <TextBox Text="{Binding OffsetBottom, Converter={StaticResource DoubleToStringConverter}}" Width="95" VerticalAlignment="Bottom" 
-                                         materialDesign:HintAssist.Hint="Bottom offset" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                         ToolTip="Input the offset for the bottom side of the overlay."/>
+                                         materialDesign:HintAssist.Hint="下偏移" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         ToolTip="输入悬浮框的底部偏移量。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Complexity" VerticalAlignment="Bottom" 
-                                           ToolTip="Specifies how many layers of virtual objects can be used. More layers means more recursion of generating virtual objects."/>
-                                <TextBox Text="{Binding InceptionLevel, Converter={StaticResource IntToStringConverter}}" Width="120" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Inception level" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                         ToolTip="Specifies how many layers of virtual objects can be used. More layers means more recursion of generating virtual objects. It is recommended to use between 2 and 10 layers."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="复杂度" VerticalAlignment="Bottom" 
+                                           ToolTip="设置可使用多少个辅助物件图层。图层越多，生成辅助物件的递归次数越多。"/>
+                                <TextBox Text="{Binding InceptionLevel, Converter={StaticResource IntToStringConverter}}" Width="120" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="启用层级" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                                         ToolTip="设置可使用多少个辅助物件图层。图层越多，生成辅助物件的递归次数越多。推荐设置为2到10层。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Downkey" VerticalAlignment="Center"
-                                           ToolTip="Customize what gets displayed while the Snap Key is pressed."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="按下" VerticalAlignment="Center"
+                                           ToolTip="设置当吸附键按下时的显示。"/>
                                 <ListBox SelectionMode="Extended" SelectionChanged="KeyDownViewModeSelector_OnSelectionChanged"
                                     Style="{StaticResource MaterialDesignToolToggleListBox}">
-                                    <ListBoxItem ToolTip="Everything" Tag="{x:Static serialization:ViewMode.Everything}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Everything}}">
+                                    <ListBoxItem ToolTip="所有物件" Tag="{x:Static serialization:ViewMode.Everything}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Everything}}">
                                         <materialDesign:PackIcon Kind="AllInclusive"/>
                                     </ListBoxItem>
-                                    <ListBoxItem ToolTip="Parents and parents of parents" Tag="{x:Static serialization:ViewMode.Parents}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Parents}}">
+                                    <ListBoxItem ToolTip="父物件和父物件的父物件" Tag="{x:Static serialization:ViewMode.Parents}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Parents}}">
                                         P
                                     </ListBoxItem>
-                                    <ListBoxItem ToolTip="Direct parents" Tag="{x:Static serialization:ViewMode.DirectParents}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.DirectParents}}">
+                                    <ListBoxItem ToolTip="父物件" Tag="{x:Static serialization:ViewMode.DirectParents}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.DirectParents}}">
                                         DP
                                     </ListBoxItem>
-                                    <ListBoxItem ToolTip="Children and children of children"  Tag="{x:Static serialization:ViewMode.Children}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Children}}">
+                                    <ListBoxItem ToolTip="子物件和子物件的子物件"  Tag="{x:Static serialization:ViewMode.Children}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Children}}">
                                         C
                                     </ListBoxItem>
-                                    <ListBoxItem ToolTip="Direct children"  Tag="{x:Static serialization:ViewMode.DirectChildren}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.DirectChildren}}">
+                                    <ListBoxItem ToolTip="子物件"  Tag="{x:Static serialization:ViewMode.DirectChildren}" IsSelected="{Binding KeyDownViewMode, Mode=OneTime, Converter={StaticResource FlagToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.DirectChildren}}">
                                         DC
                                     </ListBoxItem>
                                 </ListBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Upkey" VerticalAlignment="Center" 
-                                           ToolTip="Customize what gets displayed while the Snap Key is not pressed."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="未按下" VerticalAlignment="Center" 
+                                           ToolTip="设置当吸附键未按下时的显示。"/>
                                 <StackPanel>
                                     <RadioButton IsChecked="{Binding KeyUpViewMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Everything}}"
-                                                 Content="Everything" ToolTip="Default behavior. Display all virtual objects even if the Activation Key is not pressed."/>
+                                                 Content="所有" ToolTip="默认行为。无论是否按下按键都总是显示所有辅助物件。"/>
                                     <RadioButton IsChecked="{Binding KeyUpViewMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:ViewMode.Nothing}}"
-                                                 Content="Nothing" ToolTip="Do not display anything if the Activation Key is not pressed."/>
+                                                 Content="无" ToolTip="当按下按键时才显示辅助物件。"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Selection" VerticalAlignment="Center" 
-                                           ToolTip="Customize which hit objects get used for generating virtual objects."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="选择" VerticalAlignment="Center" 
+                                           ToolTip="设置用哪些物件生成辅助物件。"/>
                                 <StackPanel>
                                     <RadioButton IsChecked="{Binding SelectedHitObjectMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:SelectedHitObjectMode.AllwaysAllVisible}}"
-                                                 Content="All visible" ToolTip="Use the visible hit objects regardless of selection."/>
+                                                 Content="所有可见的" ToolTip="使用可见的辅助物件，不考虑已选中的。"/>
                                     <RadioButton IsChecked="{Binding SelectedHitObjectMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:SelectedHitObjectMode.VisibleOrSelected}}"
-                                                 Content="Visible or selected" ToolTip="Use the visible hit objects, or use the selected hit objects if there are any selected."/>
+                                                 Content="可见的或选取的" ToolTip="使用可见的和已选中的辅助物件。"/>
                                     <RadioButton IsChecked="{Binding SelectedHitObjectMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:SelectedHitObjectMode.OnlySelected}}"
-                                                 Content="Selected only" ToolTip="Exclusively use selected hit objects."/>
+                                                 Content="仅选取的" ToolTip="只使用已选择的辅助物件。"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Updating" VerticalAlignment="Center" 
-                                           ToolTip="Customize on which events the virtual objects get updated."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="更新" VerticalAlignment="Center" 
+                                           ToolTip="设置何时更新辅助物件。"/>
                                 <StackPanel>
                                     <RadioButton IsChecked="{Binding UpdateMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:UpdateMode.AnyChange}}"
-                                                 Content="Any change" ToolTip="Update whenever used hit objects get changed."/>
+                                                 Content="任何改变" ToolTip="只要打击物件变动就更新。"/>
                                     <RadioButton IsChecked="{Binding UpdateMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:UpdateMode.TimeChange}}"
-                                                 Content="Time change" ToolTip="Update whenever the editor changes time."/>
+                                                 Content="时间变化" ToolTip="编辑器改变时间时更新。"/>
                                     <RadioButton IsChecked="{Binding UpdateMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:UpdateMode.OsuActivated}}"
-                                                 Content="osu! activated" ToolTip="Update whenever the osu! window goes from an inactive state to an active state."/>
+                                                 Content="osu!获得焦点" ToolTip="osu!窗口从后台切入前台时更新。"/>
                                     <RadioButton IsChecked="{Binding UpdateMode, Converter={StaticResource EnumToBoolConverter}, ConverterParameter={x:Static serialization:UpdateMode.HotkeyDown}}"
-                                                 Content="Hotkey down" ToolTip="Update only when the refresh hotkey is down."/>
+                                                 Content="按下快捷键" ToolTip="仅在按下刷新键时更新。"/>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Minimal diff" VerticalAlignment="Bottom" 
-                                           ToolTip="Similar virtual objects get merged together to reduce clutter. This field sets the minimal difference that two objects must have to not get merged together."></TextBlock>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="最小区分" VerticalAlignment="Bottom" 
+                                           ToolTip="为减少混乱，合并相似辅助物件。该项设置避免两个物件合并的最小差别。"></TextBlock>
                                 <TextBox Text="{Binding AcceptableDifference, Converter={StaticResource DoubleToStringConverter}}" Width="150" 
-                                         VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Minimal difference" 
+                                         VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="最小区分" 
                                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                         ToolTip="Similar virtual objects get merged together to reduce clutter. This field sets the minimal difference that two objects must have to not get merged together."/>
+                                         ToolTip="为减少混乱，合并相似辅助物件。该项设置避免两个物件合并的最小差别。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="Keep running" VerticalAlignment="Center" 
-                                           ToolTip="Keeps Geometry Dashboard running in the background while other tools are open."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="保持运行" VerticalAlignment="Center" 
+                                           ToolTip="在打开其他工具时保持本工具在后台运行。"/>
                                 <ToggleButton IsChecked="{Binding KeepRunning}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignSwitchToggleButton}"
-                                              ToolTip="Keeps Geometry Dashboard running in the background while other tools are open."/>
+                                              ToolTip="在打开其他工具时保持本工具在后台运行。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
-                                <TextBlock Width="100" Margin="0 0 0 6" Text="See playfield" VerticalAlignment="Center" 
-                                           ToolTip="Visualize boundary of the play area on the overlay."/>
+                                <TextBlock Width="100" Margin="0 0 0 6" Text="显示游玩区域" VerticalAlignment="Center" 
+                                           ToolTip="在悬浮框上显示游玩区域的边界。"/>
                                 <ToggleButton IsChecked="{Binding VisiblePlayfieldBoundary}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignSwitchToggleButton}"
-                                              ToolTip="Visualize boundary of the play area on the overlay."/>
+                                              ToolTip="在悬浮框上显示游玩区域的边界。"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10">
                                 <TextBlock Width="100" Margin="0 0 0 6" Text="Debug" VerticalAlignment="Center" 
-                                           ToolTip="Visualize boundaries of the overlay box for debugging purposes."/>
+                                           ToolTip="显示悬浮框的边界以便debug。"/>
                                 <ToggleButton IsChecked="{Binding DebugEnabled}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignSwitchToggleButton}"
-                                              ToolTip="Visualize boundaries of the overlay box for debugging purposes."/>
+                                              ToolTip="显示悬浮框的边界以便debug。"/>
                             </StackPanel>
                         </StackPanel>
                     </Border>
@@ -202,30 +202,30 @@
                                         <StackPanel Margin="20">
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBox Text="{Binding Color, ElementName=ColorPicker, Converter={StaticResource ColorToStringConverter}}"
-                                                             Style="{StaticResource MaterialDesignFilledTextBox}" materialDesign:HintAssist.Hint="HEX value"
+                                                             Style="{StaticResource MaterialDesignFilledTextBox}" materialDesign:HintAssist.Hint="HEX值"
                                                              Width="100" Margin="2,0,10,2" Height="50" VerticalAlignment="Top"/>
                                                 <materialDesign:ColorPicker Color="{Binding Value.Color}" x:Name="ColorPicker" Width="300" Height="100"/>
                                             </StackPanel>
 
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="Opacity" Width="120" VerticalAlignment="Center"/>
+                                                <TextBlock Text="不透明度" Width="120" VerticalAlignment="Center"/>
                                                 <Slider x:Name="OpacitySlider" Width="300" TickFrequency="0.01" Orientation="Horizontal" Minimum="0" Maximum="1" Value="{Binding Value.Opacity, UpdateSourceTrigger=PropertyChanged}" Margin="5, 0" Style="{StaticResource MaterialDesignDiscreteSlider}"/>
                                                 <TextBox x:Name="OpacityTextbox" Width="40" Text="{Binding ElementName=OpacitySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
                                             </StackPanel>
 
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="Thickness" Width="120" VerticalAlignment="Center"/>
+                                                <TextBlock Text="厚度" Width="120" VerticalAlignment="Center"/>
                                                 <Slider x:Name="ThicknessSlider" Width="300" TickFrequency="1" Orientation="Horizontal" Minimum="1" Maximum="10" Value="{Binding Value.Thickness, UpdateSourceTrigger=PropertyChanged}" Margin="5, 0" Style="{StaticResource MaterialDesignDiscreteSlider}"/>
                                                 <TextBox x:Name="ThicknessTextbox" Width="40" Text="{Binding ElementName=ThicknessSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
                                             </StackPanel>
 
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="DashStyle" Width="120" VerticalAlignment="Center"/>
+                                                <TextBlock Text="线形" Width="120" VerticalAlignment="Center"/>
                                                 <ComboBox x:Name="DashStyleCombobox" Width="300" Margin="11,0" ItemsSource="{Binding Value.DashStylesEnumerable}" SelectedItem="{Binding Value.Dashstyle}"/>
                                             </StackPanel>
 
                                             <StackPanel Orientation="Horizontal" Visibility="{Binding Value.HasSizeOption, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                <TextBlock Text="Size" Width="120" VerticalAlignment="Center"/>
+                                                <TextBlock Text="大小" Width="120" VerticalAlignment="Center"/>
                                                 <Slider x:Name="SizeSlider" Width="300" TickFrequency="1" Orientation="Horizontal" Minimum="1" Maximum="10" Value="{Binding Value.Size, UpdateSourceTrigger=PropertyChanged}" Margin="5, 0" Style="{StaticResource MaterialDesignDiscreteSlider}"/>
                                                 <TextBox x:Name="SizeTextbox" Width="40" Text="{Binding ElementName=SizeSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
                                             </StackPanel>
@@ -247,8 +247,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Width="200" materialDesign:ButtonAssist.CornerRadius="10" x:Name="ApplyButton" Content="Apply" Click="ApplyButton_Click"/>
-                <Button Grid.Column="1" Width="200" materialDesign:ButtonAssist.CornerRadius="10" x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click"/>
+                <Button Grid.Column="0" Width="200" materialDesign:ButtonAssist.CornerRadius="10" x:Name="ApplyButton" Content="应用" Click="ApplyButton_Click"/>
+                <Button Grid.Column="1" Width="200" materialDesign:ButtonAssist.CornerRadius="10" x:Name="CancelButton" Content="取消" Click="CancelButton_Click"/>
             </Grid>
         </Border>
 

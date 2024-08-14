@@ -114,8 +114,8 @@ namespace Mapping_Tools.Views.SnappingTools {
                     var list = new ListView {Width = 270, ItemsSource = c.Predicates};
                     list.ItemTemplate = FindResource("SelectionPredicateTemplate") as DataTemplate;
                     var cm = new ContextMenu();
-                    cm.Items.Add(new MenuItem {Header = "Duplicate", 
-                        ToolTip = "Duplicate selected predicates.",
+                    cm.Items.Add(new MenuItem {Header = "复制", 
+                        ToolTip = "复制选中的规则。",
                         Command = new CommandImplementation(_ => {
                                 var itemsToDupe = new SelectionPredicate[list.SelectedItems.Count];
                                 var i = 0;
@@ -126,22 +126,22 @@ namespace Mapping_Tools.Views.SnappingTools {
                                     c.Predicates.Insert(list.Items.IndexOf(listSelectedItem)+1, (SelectionPredicate)listSelectedItem.Clone());
                                 }
                         })});
-                    cm.Items.Add(new MenuItem {Header = "Remove",
-                        ToolTip = "Remove all selected predicates",
+                    cm.Items.Add(new MenuItem {Header = "删除",
+                        ToolTip = "删除选中的所有规则。",
                         Command = new CommandImplementation(_ =>
                             c.Predicates.RemoveAll(o => list.SelectedItems.Contains(o)))
                     });
                     list.ContextMenu = cm;
 
                     var addButton = new Button {Style = FindResource("MaterialDesignFloatingActionMiniLightButton") as Style,
-                        ToolTip = "Add a new selection predicate.",
+                        ToolTip = "添加新的匹配规则。",
                         VerticalAlignment = VerticalAlignment.Bottom,
                         Content = new PackIcon {Kind = PackIconKind.Plus, Width = 24, Height = 24},
                         Margin = new Thickness(5),
                         Command = new CommandImplementation(_ => c.Predicates.Add(new SelectionPredicate()))};
 
                     var removeButton = new Button {Style = FindResource("MaterialDesignFloatingActionMiniLightButton") as Style,
-                        ToolTip = "Remove all selected predicates or the last predicate if nothing is selected.",
+                        ToolTip = "删除选中的所有规则，若没有选中规则就删除最后一个规则。",
                         VerticalAlignment = VerticalAlignment.Bottom,
                         Content = new PackIcon {Kind = PackIconKind.Minus, Width = 24, Height = 24},
                         Margin = new Thickness(5),
