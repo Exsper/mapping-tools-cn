@@ -2216,18 +2216,18 @@
         "DC": "DC"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml": {
-        "ToolTip=\"Duplicate selected saves.\"": "ToolTip=\"Duplicate selected saves.\"",
-        "ToolTip=\"Remove all selected saves.\"": "ToolTip=\"Remove all selected saves.\"",
-        "ToolTip=\"Save current settings to this slot.\"": "ToolTip=\"Save current settings to this slot.\"",
-        "ToolTip=\"Load settings from this slot.\"": "ToolTip=\"Load settings from this slot.\"",
-        "ToolTip=\"Re-register hotkeys in case something broke.\"": "ToolTip=\"Re-register hotkeys in case something broke.\"",
-        "ToolTip=\"Add a new save slot.\"": "ToolTip=\"Add a new save slot.\"",
-        "ToolTip=\"Remove all selected saves or the last save if nothing is selected.\"": "ToolTip=\"Remove all selected saves or the last save if nothing is selected.\"",
-        "Header=\"Duplicate\"": "Header=\"Duplicate\"",
-        "Header=\"Remove\"": "Header=\"Remove\"",
-        "Header=\"Name\"": "Header=\"Name\"",
-        "Header=\"Hotkey\"": "Header=\"Hotkey\"",
-        "Text=\"Savestates\"": "Text=\"Savestates\"",
+        "ToolTip=\"Duplicate selected saves.\"": "ToolTip=\"复制选中存档。\"",
+        "ToolTip=\"Remove all selected saves.\"": "ToolTip=\"删除所有选中存档。\"",
+        "ToolTip=\"Save current settings to this slot.\"": "ToolTip=\"保存当前设置到该存档。\"",
+        "ToolTip=\"Load settings from this slot.\"": "ToolTip=\"加载该存档的设置。\"",
+        "ToolTip=\"Re-register hotkeys in case something broke.\"": "ToolTip=\"重新注册快捷键，尝试修复可能遇到的问题。\"",
+        "ToolTip=\"Add a new save slot.\"": "ToolTip=\"添加一个存档位。\"",
+        "ToolTip=\"Remove all selected saves or the last save if nothing is selected.\"": "ToolTip=\"删除所有选中存档，若当前无选中条目，则删除最后的存档。\"",
+        "Header=\"Duplicate\"": "Header=\"复制\"",
+        "Header=\"Remove\"": "Header=\"删除\"",
+        "Header=\"Name\"": "Header=\"名称\"",
+        "Header=\"Hotkey\"": "Header=\"快捷键\"",
+        "Text=\"Savestates\"": "Text=\"保存状态\"",
         "Text=\"{Binding Name, UpdateSourceTrigger=PropertyChanged}\"": "Text=\"{Binding Name, UpdateSourceTrigger=PropertyChanged}\"",
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "materialDesign:HintAssist.Hint=\"Name\"": "materialDesign:HintAssist.Hint=\"Name\"",
@@ -2236,8 +2236,8 @@
         "Load": "Load"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml.cs": {
-        "$\"Save {Project.SaveSlots.Count + 1}\"": "$\"Save {Project.SaveSlots.Count + 1}\"",
-        "\" - Copy\"": "\" - Copy\""
+        "$\"Save {Project.SaveSlots.Count + 1}\"": "$\"存档 {Project.SaveSlots.Count + 1}\"",
+        "\" - Copy\"": "\" - 副本\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
