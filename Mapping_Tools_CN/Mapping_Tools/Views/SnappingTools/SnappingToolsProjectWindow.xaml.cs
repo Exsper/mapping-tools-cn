@@ -21,7 +21,7 @@ namespace Mapping_Tools.Views.SnappingTools {
             DataContext = this;
 
             AddCommand = new CommandImplementation(_ => {
-                var newSave = new SnappingToolsSaveSlot {Name = $"Save {Project.SaveSlots.Count + 1}"};
+                var newSave = new SnappingToolsSaveSlot {Name = $"存档 {Project.SaveSlots.Count + 1}"};
                 Project.SaveToSlot(newSave, false);
                 newSave.Activate();
                 Project.SaveSlots.Add(newSave);
@@ -42,7 +42,7 @@ namespace Mapping_Tools.Views.SnappingTools {
                 }
                 foreach (var listSelectedItem in itemsToDupe) {
                     var clone = (SnappingToolsSaveSlot) listSelectedItem.Clone();
-                    clone.Name += " - Copy";
+                    clone.Name += " - 副本";
                     Project.SaveSlots.Insert(SaveSlotsGrid.Items.IndexOf(listSelectedItem) + 1, clone);
                 }
             });

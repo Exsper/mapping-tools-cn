@@ -575,7 +575,7 @@
         "$\"Successfully loaded settings from {saveSlot.Name}!\"": "$\"成功载入设置从 {saveSlot.Name}!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\Serialization\\SnappingToolsSaveSlot.cs": {
-        "$\"SaveSlot - {number}\"": "$\"SaveSlot - {number}\""
+        "$\"SaveSlot - {number}\"": "$\"存档 - {number}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Options\\TumourLayer.cs": {
         "\"Layer\"": "\"层级\""
@@ -587,12 +587,12 @@
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\BeatmapImportDialog.xaml": {
         "ToolTip=\"Fetch the selected beatmap from your osu! client.\"": "ToolTip=\"从osu!客户端获取当前选中谱面。\"",
         "ToolTip=\"Select beatmaps with File Explorer.\"": "ToolTip=\"在文件浏览器中选择谱面。\"",
-        "ACCEPT": "ACCEPT",
-        "CANCEL": "CANCEL"
+        "    ACCEPT": "    确定",
+        "    CANCEL": "    取消"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\CustomDialog\\CustomDialog.xaml": {
-        "ACCEPT": "ACCEPT",
-        "CANCEL": "CANCEL"
+        "    ACCEPT": "    确定",
+        "    CANCEL": "    取消"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\CustomDialog\\CustomDialog.xaml.cs": {
         "\"MaterialDesignFloatingHintTextBox\"": "\"MaterialDesignFloatingHintTextBox\"",
@@ -603,17 +603,17 @@
         "\"Select beatmaps with File Explorer.\"": "\"在文件浏览器中选择谱面。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\MessageDialog.xaml": {
-        "OK": "OK",
+        "    OK": "    OK",
         "I WANNA SPEAK TO YOUR MANAGER": "I WANNA SPEAK TO YOUR MANAGER"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\SampleDialog\\SampleDialog.xaml": {
-        "ACCEPT": "ACCEPT",
-        "CANCEL": "CANCEL"
+        "    ACCEPT": "    确定",
+        "    CANCEL": "    取消"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\TypeValueDialog.xaml": {
         "materialDesign:HintAssist.Hint=\"Value\"": "materialDesign:HintAssist.Hint=\"Value\"",
-        "ACCEPT": "ACCEPT",
-        "CANCEL": "CANCEL"
+        "    ACCEPT": "    确定",
+        "    CANCEL": "    取消"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\BeatDivisorArrayToStringConverter.cs": {
         "\", \"": "\", \"",
@@ -1305,8 +1305,8 @@
         "materialDesign:HintAssist.Hint=\"Export gamemode\"": "materialDesign:HintAssist.Hint=\"导出游戏模式\"",
         "materialDesign:HintAssist.Hint=\"Sample file format\"": "materialDesign:HintAssist.Hint=\"采样文件格式\"",
         "materialDesign:HintAssist.Hint=\"Mixed sample file format\"": "materialDesign:HintAssist.Hint=\"混合采样文件格式\"",
-        "ACCEPT": "确认",
-        "CANCEL": "取消"
+        "    ACCEPT": "    确定",
+        "    CANCEL": "    取消"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundStudio\\HitsoundStudioView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -2212,8 +2212,8 @@
         "materialDesign:HintAssist.Hint=\"Minimal difference\"": "materialDesign:HintAssist.Hint=\"最小区分\"",
         "materialDesign:HintAssist.Hint=\"HEX value\"": "materialDesign:HintAssist.Hint=\"HEX值\"",
         "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"": "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"",
-        "DP": "DP",
-        "DC": "DC"
+        "    DP": "    DP",
+        "    DC": "    DC"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml": {
         "ToolTip=\"Duplicate selected saves.\"": "ToolTip=\"复制选中存档。\"",
@@ -2232,8 +2232,8 @@
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "materialDesign:HintAssist.Hint=\"Name\"": "materialDesign:HintAssist.Hint=\"Name\"",
         "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"": "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"",
-        "Save": "Save",
-        "Load": "Load"
+        "    Save": "    保存",
+        "    Load": "    加载"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml.cs": {
         "$\"Save {Project.SaveSlots.Count + 1}\"": "$\"存档 {Project.SaveSlots.Count + 1}\"",
@@ -2275,7 +2275,7 @@
         "In these generator settings you can do thing like customize what virtual objects the generator accepts as input or change the properties of the output of the generator.": "生成器选项包含诸如选择哪些辅助物件作为输入，或改变生成器输出物件的属性，等个性化设置。",
         "Lastly there are savestates which you can use to quickly change out preferences and generator settings using hotkeys. As an advanced user this can save lots of time continuously changing generators and stuff.": "最后还有保存状态功能，可以快速切换各生成器选项和快捷键。对于有经验的用户，可以快速更换生成器及其设置，以节省大量时间。",
         "The savestates window is opened by clicking the button next to the preferences button.": "打开全局选项左边的保存按钮打开保存状态对话框。",
-        "Configure": "配置",
+        "    Configure": "    配置",
         "This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. ": "该工具可以在编辑器之上显示（overlay）打击物件的辅助点、辅助线和辅助圆。"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml.cs": {

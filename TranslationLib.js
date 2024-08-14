@@ -11,7 +11,7 @@ function getContentBetweenQuotes(str) {
 
 
     let match = [];
-    lines.map((line) => {
+    lines.map((line, index) => {
         // 匹配 $"...{}..." 使用贪婪匹配模式
         let quoteRegex1 = /\$"(.*)"|`(.*)`/g;
         let m1 = line.match(quoteRegex1);
@@ -71,6 +71,15 @@ function getContentInXaml(str) {
     // TextBlock
     results = str.split("\n").map((line) => line.trim()).filter((line) => /^[^<](.*)[^>]$/.test(line)).filter((line) => !/[a-zA-Z]+="(.+)"/.test(line));
     if (results.length > 0) match.push(...results);
+
+    // 当文字长度过短而且没有引号和空格时，为了防止误替换，附带前面几个空格
+    match = match.map((text) => {
+        if (text.indexOf("`") < 0 && text.indexOf("\"") < 0 && text.length < 10) {
+            return "    " + text;
+        }
+        else return text;
+    });
+
     return Array.from(new Set(match));
 }
 

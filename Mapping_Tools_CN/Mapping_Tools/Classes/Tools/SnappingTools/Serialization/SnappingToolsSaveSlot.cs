@@ -83,10 +83,10 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.Serialization {
 
         private static string GenerateActiveHotkeyHandle() {
             var number = RNG.Next();
-            while (MainWindow.AppWindow.ListenerManager.ActiveHotkeys.ContainsKey($"SaveSlot - {number}")) {
+            while (MainWindow.AppWindow.ListenerManager.ActiveHotkeys.ContainsKey($"存档 - {number}")) {
                 number = RNG.Next();
             }
-            return $"SaveSlot - {number}";
+            return $"存档 - {number}";
         }
 
         public void Activate() {
