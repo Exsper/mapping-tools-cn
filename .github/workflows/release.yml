@@ -70,7 +70,7 @@ jobs:
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
-        title: Release version ${{ steps.get_version.outputs.version-without-v }}
+        title: 发布版本 ${{ steps.get_version.outputs.version-without-v }}
         files: |
           Mapping_Tools_CN/Mapping_Tools/bin/x86/Release/net5.0-windows/release.zip
           Mapping_Tools_CN/Mapping_Tools/bin/Release/net5.0-windows/release_x64.zip
