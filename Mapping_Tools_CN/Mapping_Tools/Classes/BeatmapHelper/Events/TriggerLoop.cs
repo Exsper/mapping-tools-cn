@@ -22,11 +22,11 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
 
             if (TryParseDouble(values[2], out double startTime))
                 StartTime = startTime;
-            else throw new BeatmapParsingException("Failed to parse start time of event param.", line);
+            else throw new BeatmapParsingException("转换事件参数的开始时间失败。", line);
 
             if (TryParseDouble(values[3], out double endTime))
                 EndTime = endTime;
-            else throw new BeatmapParsingException("Failed to parse end time of event param.", line);
+            else throw new BeatmapParsingException("转换事件参数的结束时间失败。", line);
         }
     }
 }

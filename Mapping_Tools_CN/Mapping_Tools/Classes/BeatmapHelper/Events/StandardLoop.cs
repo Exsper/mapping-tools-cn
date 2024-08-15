@@ -20,11 +20,11 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
 
             if (TryParseDouble(values[1], out double startTime))
                 StartTime = startTime;
-            else throw new BeatmapParsingException("Failed to parse start time of event param.", line);
+            else throw new BeatmapParsingException("转换事件参数的开始时间失败。", line);
 
             if (TryParseInt(values[2], out int loopCount))
                 LoopCount = loopCount;
-            else throw new BeatmapParsingException("Failed to parse loop count of event param.", line);
+            else throw new BeatmapParsingException("转换事件参数的循环次数失败。", line);
         }
     }
 }

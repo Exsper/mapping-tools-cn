@@ -17,119 +17,119 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Animation.cs": {
         "$\"Animation,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"": "$\"Animation,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"",
-        "\"This line is not an animation.\"": "\"This line is not an animation.\"",
-        "\"Failed to parse layer of animation.\"": "\"Failed to parse layer of animation.\"",
-        "\"Failed to parse origin of animation.\"": "\"Failed to parse origin of animation.\"",
-        "\"Failed to parse X position of animation.\"": "\"Failed to parse X position of animation.\"",
-        "\"Failed to parse Y position of animation.\"": "\"Failed to parse Y position of animation.\"",
-        "\"Failed to parse frame count of animation.\"": "\"Failed to parse frame count of animation.\"",
-        "\"Failed to parse frame delay of animation.\"": "\"Failed to parse frame delay of animation.\"",
-        "\"Failed to parse loop type of animation.\"": "\"Failed to parse loop type of animation.\""
+        "\"This line is not an animation.\"": "\"该行不是一个动画。\"",
+        "\"Failed to parse layer of animation.\"": "\"转换动画行失败。\"",
+        "\"Failed to parse origin of animation.\"": "\"转换动画原点失败。\"",
+        "\"Failed to parse X position of animation.\"": "\"转换动画X轴位置失败。\"",
+        "\"Failed to parse Y position of animation.\"": "\"转换动画Y轴位置失败。\"",
+        "\"Failed to parse frame count of animation.\"": "\"转换动画帧数失败。\"",
+        "\"Failed to parse frame delay of animation.\"": "\"转换动画帧延迟失败。\"",
+        "\"Failed to parse loop type of animation.\"": "\"转换动画循环类型失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Background.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
-        "\"This line is not a background.\"": "\"This line is not a background.\"",
-        "\"Failed to parse start time of background.\"": "\"Failed to parse start time of background.\"",
-        "\"Failed to parse X offset of background.\"": "\"Failed to parse X offset of background.\"",
-        "\"Failed to parse Y offset of background.\"": "\"Failed to parse Y offset of background.\""
+        "\"This line is not a background.\"": "\"该行不是一个背景。\"",
+        "\"Failed to parse start time of background.\"": "\"转换背景起始时间失败。\"",
+        "\"Failed to parse X offset of background.\"": "\"转换背景X轴偏移失败。\"",
+        "\"Failed to parse Y offset of background.\"": "\"转换背景Y轴偏移失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Break.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"",
-        "\"This line is not a break.\"": "\"This line is not a break.\"",
-        "\"Failed to parse start time of break.\"": "\"Failed to parse start time of break.\"",
-        "\"Failed to parse end time of break.\"": "\"Failed to parse end time of break.\""
+        "\"This line is not a break.\"": "\"该行不是一个休息段。\"",
+        "\"Failed to parse start time of break.\"": "\"转换休息段开始时间失败。\"",
+        "\"Failed to parse end time of break.\"": "\"转换休息段结束时间失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\OtherCommand.cs": {
-        "\"Failed to parse easing of command.\"": "\"Failed to parse easing of command.\"",
-        "\"Failed to parse start time of command.\"": "\"Failed to parse start time of command.\"",
-        "\"Failed to parse end time of command.\"": "\"Failed to parse end time of command.\"",
-        "$\"Failed to parse value at position {i} of command.\"": "$\"Failed to parse value at position {i} of command.\""
+        "\"Failed to parse easing of command.\"": "\"转换简化指令失败。\"",
+        "\"Failed to parse start time of command.\"": "\"转换指令的开始时间失败。\"",
+        "\"Failed to parse end time of command.\"": "\"转换指令的结束时间失败。\"",
+        "$\"Failed to parse value at position {i} of command.\"": "$\"转换指令中位于 {i} 的数值失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\ParameterCommand.cs": {
-        "\"Failed to parse easing of command.\"": "\"Failed to parse easing of command.\"",
-        "\"Failed to parse start time of param command.\"": "\"Failed to parse start time of param command.\"",
-        "\"Failed to parse end time of param command.\"": "\"Failed to parse end time of param command.\""
+        "\"Failed to parse easing of command.\"": "\"转换简化指令失败。\"",
+        "\"Failed to parse start time of param command.\"": "\"转换参数指令的开始时间失败。\"",
+        "\"Failed to parse end time of param command.\"": "\"转换参数指令的结束时间失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Sprite.cs": {
         "$\"Sprite,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"Sprite,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
-        "\"This line is not a sprite.\"": "\"This line is not a sprite.\"",
-        "\"Failed to parse layer of sprite.\"": "\"Failed to parse layer of sprite.\"",
-        "\"Failed to parse origin of sprite.\"": "\"Failed to parse origin of sprite.\"",
-        "\"Failed to parse X position of sprite.\"": "\"Failed to parse X position of sprite.\"",
-        "\"Failed to parse Y position of sprite.\"": "\"Failed to parse Y position of sprite.\""
+        "\"This line is not a sprite.\"": "\"该行不是一个精灵图。\"",
+        "\"Failed to parse layer of sprite.\"": "\"转换精灵图的图层失败。\"",
+        "\"Failed to parse origin of sprite.\"": "\"转换精灵图的原点失败。\"",
+        "\"Failed to parse X position of sprite.\"": "\"转换精灵图的X轴坐标失败。\"",
+        "\"Failed to parse Y position of sprite.\"": "\"转换精灵图的Y轴坐标失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StandardLoop.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{LoopCount.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{LoopCount.ToInvariant()}\"",
-        "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
-        "\"Failed to parse loop count of event param.\"": "\"Failed to parse loop count of event param.\""
+        "\"Failed to parse start time of event param.\"": "\"转换事件参数的开始时间失败。\"",
+        "\"Failed to parse loop count of event param.\"": "\"转换事件参数的循环次数失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StoryboardSoundSample.cs": {
         "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"": "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"",
-        "\"This line is not a storyboarded sample.\"": "\"This line is not a storyboarded sample.\"",
-        "\"Failed to parse time of storyboarded sample.\"": "\"Failed to parse time of storyboarded sample.\"",
-        "\"Failed to parse layer of storyboarded sample.\"": "\"Failed to parse layer of storyboarded sample.\"",
-        "\"Failed to parse volume of storyboarded sample.\"": "\"Failed to parse volume of storyboarded sample.\""
+        "\"This line is not a storyboarded sample.\"": "\"该行不是一个故事板音效。\"",
+        "\"Failed to parse time of storyboarded sample.\"": "\"转换故事板音效时间失败。\"",
+        "\"Failed to parse layer of storyboarded sample.\"": "\"转换故事板音效层失败。\"",
+        "\"Failed to parse volume of storyboarded sample.\"": "\"转换故事板音效音量失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\TriggerLoop.cs": {
         "$\"{EventType},{TriggerName},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"": "$\"{EventType},{TriggerName},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"",
-        "\"Failed to parse start time of event param.\"": "\"Failed to parse start time of event param.\"",
-        "\"Failed to parse end time of event param.\"": "\"Failed to parse end time of event param.\""
+        "\"Failed to parse start time of event param.\"": "\"转换事件参数的开始时间失败。\"",
+        "\"Failed to parse end time of event param.\"": "\"转换事件参数的结束时间失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Video.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"",
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
-        "\"This line is not a video.\"": "\"This line is not a video.\"",
-        "\"Failed to parse start time of video.\"": "\"Failed to parse start time of video.\"",
-        "\"Failed to parse X offset of video.\"": "\"Failed to parse X offset of video.\"",
-        "\"Failed to parse Y offset of video.\"": "\"Failed to parse Y offset of video.\""
+        "\"This line is not a video.\"": "\"该行不是一个视频。\"",
+        "\"Failed to parse start time of video.\"": "\"转换视频起始时间失败。\"",
+        "\"Failed to parse X offset of video.\"": "\"转换视频X轴偏移失败。\"",
+        "\"Failed to parse Y offset of video.\"": "\"转换视频Y轴偏移失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\HitObject.cs": {
-        "\"Hit object is missing values.\"": "\"Hit object is missing values.\"",
-        "\"Failed to parse coordinate of hit object.\"": "\"Failed to parse coordinate of hit object.\"",
-        "\"Failed to parse time of hit object.\"": "\"Failed to parse time of hit object.\"",
-        "\"Failed to parse type of hit object.\"": "\"Failed to parse type of hit object.\"",
-        "\"Failed to parse hitsound of hit object.\"": "\"Failed to parse hitsound of hit object.\"",
-        "\"Slider object is missing values.\"": "\"Slider object is missing values.\"",
-        "\"Failed to parse coordinate of slider anchor.\"": "\"Failed to parse coordinate of slider anchor.\"",
-        "\"Failed to parse repeat number of slider.\"": "\"Failed to parse repeat number of slider.\"",
-        "\"Failed to parse pixel length of slider.\"": "\"Failed to parse pixel length of slider.\"",
-        "\"Spinner object is missing values.\"": "\"Spinner object is missing values.\"",
-        "\"Failed to parse end time of spinner.\"": "\"Failed to parse end time of spinner.\"",
+        "\"Hit object is missing values.\"": "\"打击物件数据丢失。\"",
+        "\"Failed to parse coordinate of hit object.\"": "\"转换打击物件的坐标失败。\"",
+        "\"Failed to parse time of hit object.\"": "\"转换打击物件的时间失败。\"",
+        "\"Failed to parse type of hit object.\"": "\"转换打击物件的类型失败。\"",
+        "\"Failed to parse hitsound of hit object.\"": "\"转换打击物件的音效失败。\"",
+        "\"Slider object is missing values.\"": "\"滑条数据丢失。\"",
+        "\"Failed to parse coordinate of slider anchor.\"": "\"转换滑条锚点的坐标失败。\"",
+        "\"Failed to parse repeat number of slider.\"": "\"转换滑条的重复次数失败。\"",
+        "\"Failed to parse pixel length of slider.\"": "\"转换滑条的像素长度失败。\"",
+        "\"Spinner object is missing values.\"": "\"转盘数据丢失。\"",
+        "\"Failed to parse end time of spinner.\"": "\"转换转盘的结束时间失败。\"",
         "$\"{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"": "$\"{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"",
         "$\"|{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"": "$\"|{(SaveWithFloatPrecision ? p.X.ToInvariant() : p.X.ToRoundInvariant())}:{(SaveWithFloatPrecision ? p.Y.ToInvariant() : p.Y.ToRoundInvariant())}\"",
         "$\"|{EdgeSampleSets[i].ToIntInvariant()}:{EdgeAdditionSets[i].ToIntInvariant()}\"": "$\"|{EdgeSampleSets[i].ToIntInvariant()}:{EdgeAdditionSets[i].ToIntInvariant()}\"",
-        "\"This hit object has no type.\"": "\"This hit object has no type.\"",
+        "\"This hit object has no type.\"": "\"该打击物件没有类型。\"",
         "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}-default.wav\"": "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}-default.wav\"",
         "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}.wav\"": "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}.wav\"",
         "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}{index}.wav\"": "$\"{sampleSet.ToString().ToLower()}-slider{sampleName}{index}.wav\"",
-        "\"Failed to parse end time of hold note.\"": "\"Failed to parse end time of hold note.\"",
-        "\"Failed to parse sample set of hit object.\"": "\"Failed to parse sample set of hit object.\"",
-        "\"Failed to parse additional sample set of hit object.\"": "\"Failed to parse additional sample set of hit object.\"",
-        "\"Failed to parse custom index of hit object.\"": "\"Failed to parse custom index of hit object.\"",
-        "\"Failed to parse volume of hit object.\"": "\"Failed to parse volume of hit object.\""
+        "\"Failed to parse end time of hold note.\"": "\"转换长键的结束时间失败。\"",
+        "\"Failed to parse sample set of hit object.\"": "\"转换打击物件的音效组失败。\"",
+        "\"Failed to parse additional sample set of hit object.\"": "\"转换打击物件的额外音效组失败。\"",
+        "\"Failed to parse custom index of hit object.\"": "\"转换打击音效的自定义索引失败。\"",
+        "\"Failed to parse volume of hit object.\"": "\"转换打击物件的音量失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\TimingPoint.cs": {
         "$\"{(SaveWithFloatPrecision ? Offset.ToInvariant() : Offset.ToRoundInvariant())},{MpB.ToInvariant()},{Meter.TempoNumerator.ToInvariant()},{SampleSet.ToIntInvariant()},{SampleIndex.ToInvariant()},{(SaveWithFloatPrecision ? Volume.ToInvariant() : Volume.ToRoundInvariant())},{Convert.ToInt32(Uninherited).ToInvariant()},{style.ToInvariant()}\"": "$\"{(SaveWithFloatPrecision ? Offset.ToInvariant() : Offset.ToRoundInvariant())},{MpB.ToInvariant()},{Meter.TempoNumerator.ToInvariant()},{SampleSet.ToIntInvariant()},{SampleIndex.ToInvariant()},{(SaveWithFloatPrecision ? Volume.ToInvariant() : Volume.ToRoundInvariant())},{Convert.ToInt32(Uninherited).ToInvariant()},{style.ToInvariant()}\"",
-        "\"Failed to parse offset of timing point\"": "\"Failed to parse offset of timing point\"",
-        "\"Failed to parse milliseconds per beat of timing point\"": "\"Failed to parse milliseconds per beat of timing point\"",
-        "\"Failed to parse meter of timing point\"": "\"Failed to parse meter of timing point\"",
-        "\"Failed to parse sampleset of timing point\"": "\"Failed to parse sampleset of timing point\"",
-        "\"Failed to parse sample index of timing point\"": "\"Failed to parse sample index of timing point\"",
-        "\"Failed to parse volume of timing point\"": "\"Failed to parse volume of timing point\"",
-        "\"Failed to style of timing point\"": "\"Failed to style of timing point\""
+        "\"Failed to parse offset of timing point\"": "\"转换时间轴的偏移失败\"",
+        "\"Failed to parse milliseconds per beat of timing point\"": "\"转换时间轴的拍长失败\"",
+        "\"Failed to parse meter of timing point\"": "\"转换时间轴的节拍失败\"",
+        "\"Failed to parse sampleset of timing point\"": "\"转换时间轴的音效组失败\"",
+        "\"Failed to parse sample index of timing point\"": "\"转换时间轴的音效索引失败\"",
+        "\"Failed to parse volume of timing point\"": "\"转换时间轴的音量失败\"",
+        "\"Failed to style of timing point\"": "\"转换时间轴的效果失败\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Exceptions\\BeatmapIncompatibleException.cs": {
-        "\"This beatmap is incompatible with this operation.\"": "\"This beatmap is incompatible with this operation.\""
+        "\"This beatmap is incompatible with this operation.\"": "\"该谱面不适用该操作。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Exceptions\\EditorReaderDisabledException.cs": {
-        "\"You need to enable Editor Reader to use this feature.\"": "\"You need to enable Editor Reader to use this feature.\""
+        "\"You need to enable Editor Reader to use this feature.\"": "\"该功能需要开启编辑器读取器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Exceptions\\InvalidEditorReaderStateException.cs": {
-        "\"Failed to validate Editor Reader state.\"": "\"Failed to validate Editor Reader state.\""
+        "\"Failed to validate Editor Reader state.\"": "\"无法验证编辑器读取器的状态。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\GenericExtensions.cs": {
-        "\"Error\"": "\"Error\"",
-        "\"Inner exception\"": "\"Inner exception\"",
+        "\"Error\"": "\"错误\"",
+        "\"Inner exception\"": "\"内部错误\"",
         "\"\\n\\n\"": "\"\\n\\n\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\Effects\\SoftLimiter.cs": {
@@ -202,13 +202,13 @@
         "\"User-specific configuration could not be saved!\"": "\"User-specific configuration could not be saved!\"",
         "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
         "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
-        "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"": "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"",
+        "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"": "\"无法自动获取osu!安装路径。请在首选项中指定正确的路径。\"",
         "$\"osu!.{Environment.UserName}.cfg\"": "$\"osu!.{Environment.UserName}.cfg\"",
         "\"Backups\"": "\"Backups\"",
         "\"Songs\"": "\"Songs\"",
         "\"DisplayName\"": "\"DisplayName\"",
         "\"UninstallString\"": "\"UninstallString\"",
-        "$\"Could not find registry key with display name \\\"{name}\\\".\"": "$\"Could not find registry key with display name \\\"{name}\\\".\""
+        "$\"Could not find registry key with display name \\\"{name}\\\".\"": "$\"无法获取名称为 \\\"{name}\\\" 的注册快捷键。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ShowSelectedInFileExplorer.cs": {
         "\"000214E6-0000-0000-C000-000000000046\"": "\"000214E6-0000-0000-C000-000000000046\"",
@@ -216,11 +216,11 @@
         "\"shell32.dll\"": "\"shell32.dll\"",
         "\"SHGetDesktopFolder\"": "\"SHGetDesktopFolder\"",
         "\"SHOpenFolderAndSelectItems\"": "\"SHOpenFolderAndSelectItems\"",
-        "$\"The specified file or folder doesn't exists : {fixedPath}\"": "$\"The specified file or folder doesn't exists : {fixedPath}\""
+        "$\"The specified file or folder doesn't exists : {fixedPath}\"": "$\"指定的文件或文件夹不存在： {fixedPath}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\TypeConverters.cs": {
         "\"-?[0-9]*\"": "\"-?[0-9]*\"",
-        "\"Provided timestamp has too many values.\"": "\"Provided timestamp has too many values.\""
+        "\"Provided timestamp has too many values.\"": "\"给定的时间戳存在太多数值。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\EditorReaderStuff.cs": {
         "\".osu\"": "\".osu\"",

@@ -229,31 +229,31 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
             var values = line.Split(',');
 
             if (values.Length <= 4)
-                throw new BeatmapParsingException("Hit object is missing values.", line);
+                throw new BeatmapParsingException("打击物件数据丢失。", line);
 
             if (TryParseDouble(values[0], out var x) && TryParseDouble(values[1], out var y))
                 Pos = new Vector2(x, y);
-            else throw new BeatmapParsingException("Failed to parse coordinate of hit object.", line);
+            else throw new BeatmapParsingException("转换打击物件的坐标失败。", line);
 
             // Let the end position be the same as the start position before changed later for sliders
             EndPos = Pos;
 
             if (TryParseDouble(values[2], out var t))
                 Time = t;
-            else throw new BeatmapParsingException("Failed to parse time of hit object.", line);
+            else throw new BeatmapParsingException("转换打击物件的时间失败。", line);
 
             if (TryParseInt(values[3], out var type))
                 ObjectType = type;
-            else throw new BeatmapParsingException("Failed to parse type of hit object.", line);
+            else throw new BeatmapParsingException("转换打击物件的类型失败。", line);
 
             if (TryParseInt(values[4], out var hitsounds))
                 Hitsounds = hitsounds;
-            else throw new BeatmapParsingException("Failed to parse hitsound of hit object.", line);
+            else throw new BeatmapParsingException("转换打击物件的音效失败。", line);
 
             // Sliders remove extras and edges stuff if there are no hitsounds
             if (IsSlider) {
                 if (values.Length <= 7)
-                    throw new BeatmapParsingException("Slider object is missing values.", line);
+                    throw new BeatmapParsingException("滑条数据丢失。", line);
 
                 var sliderData = values[5].Split('|');
 
@@ -269,18 +269,18 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
 
                     if (TryParseDouble(spl[0], out var ax) && TryParseDouble(spl[1], out var ay))
                         points.Add(new Vector2(ax, ay));
-                    else throw new BeatmapParsingException("Failed to parse coordinate of slider anchor.", line);
+                    else throw new BeatmapParsingException("转换滑条锚点的坐标失败。", line);
                 }
 
                 CurvePoints = points;
 
                 if (TryParseInt(values[6], out var repeat))
                     Repeat = repeat;
-                else throw new BeatmapParsingException("Failed to parse repeat number of slider.", line);
+                else throw new BeatmapParsingException("转换滑条的重复次数失败。", line);
 
                 if (TryParseDouble(values[7], out var pixelLength))
                     PixelLength = pixelLength;
-                else throw new BeatmapParsingException("Failed to parse pixel length of slider.", line);
+                else throw new BeatmapParsingException("转换滑条的像素长度失败。", line);
 
                 // Edge hitsounds on 8
                 EdgeHitsounds = new List<int>(Repeat + 1);
@@ -317,11 +317,11 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
                     SetExtras();
             } else if (IsSpinner) {
                 if (values.Length <= 5)
-                    throw new BeatmapParsingException("Spinner object is missing values.", line);
+                    throw new BeatmapParsingException("转盘数据丢失。", line);
 
                 if (TryParseDouble(values[5], out var et))
                     EndTime = et;
-                else throw new BeatmapParsingException("Failed to parse end time of spinner.", line);
+                else throw new BeatmapParsingException("转换转盘的结束时间失败。", line);
 
                 TemporalLength = EndTime - Time;
                 Repeat = 1;
@@ -471,7 +471,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
 
             if (IsHoldNote) return HitObjectType.HoldNote;
 
-            throw new InvalidOperationException("This hit object has no type.");
+            throw new InvalidOperationException("该打击物件没有类型。");
         }
 
         private string GetSliderFilename(SampleSet sampleSet, string sampleName, int index) {
@@ -773,7 +773,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
             if (IsHoldNote) {
                 if (TryParseDouble(split[i], out var et))
                     EndTime = et;
-                else throw new BeatmapParsingException("Failed to parse end time of hold note.", extras);
+                else throw new BeatmapParsingException("转换长键的结束时间失败。", extras);
                 TemporalLength = EndTime - Time;
                 Repeat = 1;
                 i += 1;
@@ -781,19 +781,19 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
 
             if (TryParseInt(split[i], out var ss))
                 SampleSet = (SampleSet) ss;
-            else throw new BeatmapParsingException("Failed to parse sample set of hit object.", extras);
+            else throw new BeatmapParsingException("转换打击物件的音效组失败。", extras);
 
             if (TryParseInt(split[i + 1], out var ass))
                 AdditionSet = (SampleSet) ass;
-            else throw new BeatmapParsingException("Failed to parse additional sample set of hit object.", extras);
+            else throw new BeatmapParsingException("转换打击物件的额外音效组失败。", extras);
 
             if (TryParseInt(split[i + 2], out var ci))
                 CustomIndex = ci;
-            else throw new BeatmapParsingException("Failed to parse custom index of hit object.", extras);
+            else throw new BeatmapParsingException("转换打击音效的自定义索引失败。", extras);
 
             if (TryParseDouble(split[i + 3], out var vol))
                 SampleVolume = vol;
-            else throw new BeatmapParsingException("Failed to parse volume of hit object.", extras);
+            else throw new BeatmapParsingException("转换打击物件的音量失败。", extras);
 
             Filename = split[i + 4];
         }

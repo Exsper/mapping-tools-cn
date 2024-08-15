@@ -2,7 +2,7 @@
 
 namespace Mapping_Tools.Classes.Exceptions {
     public class BeatmapIncompatibleException : Exception {
-        public static readonly string BeatmapIncompatibleText = "This beatmap is incompatible with this operation.";
+        public static readonly string BeatmapIncompatibleText = "该谱面不适用该操作。";
         
         public BeatmapIncompatibleException() : base(BeatmapIncompatibleText) { }
 

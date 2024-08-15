@@ -99,7 +99,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                         time += TimeSpan.FromDays(intValue);
                         break;
                     default:
-                        throw new ArgumentException(@"Provided timestamp has too many values.");
+                        throw new ArgumentException(@"给定的时间戳存在太多数值。");
                 }
             }
             

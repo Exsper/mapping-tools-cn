@@ -61,23 +61,23 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
             string[] values = line.Split(',');
 
             if (values[0] != "Sample" && values[0] != "5") {
-                throw new BeatmapParsingException("This line is not a storyboarded sample.", line);
+                throw new BeatmapParsingException("该行不是一个故事板音效。", line);
             }
 
             if (TryParseDouble(values[1], out double t))
                 StartTime = t;
-            else throw new BeatmapParsingException("Failed to parse time of storyboarded sample.", line);
+            else throw new BeatmapParsingException("转换故事板音效时间失败。", line);
 
             if (Enum.TryParse(values[2], out StoryboardLayer layer))
                 Layer = layer;
-            else throw new BeatmapParsingException("Failed to parse layer of storyboarded sample.", line);
+            else throw new BeatmapParsingException("转换故事板音效层失败。", line);
 
             FilePath = values[3].Trim('"');
 
             if (values.Length > 4) {
                 if (TryParseDouble(values[4], out double vol))
                     Volume = vol;
-                else throw new BeatmapParsingException("Failed to parse volume of storyboarded sample.", line);
+                else throw new BeatmapParsingException("转换故事板音效音量失败。", line);
             }
             else
                 Volume = 100;

@@ -21,18 +21,18 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
 
             // Either 'Break' or '2' indicates a break. We save the value so we dont accidentally change it.
             if (values[0] != "2" && values[0] != "Break") {
-                throw new BeatmapParsingException("This line is not a break.", line);
+                throw new BeatmapParsingException("该行不是一个休息段。", line);
             }
 
             EventType = values[0];
 
             if (TryParseDouble(values[1], out double startTime))
                 StartTime = startTime;
-            else throw new BeatmapParsingException("Failed to parse start time of break.", line);
+            else throw new BeatmapParsingException("转换休息段开始时间失败。", line);
 
             if (TryParseDouble(values[2], out double endTime))
                 EndTime = endTime;
-            else throw new BeatmapParsingException("Failed to parse end time of break.", line);
+            else throw new BeatmapParsingException("转换休息段结束时间失败。", line);
         }
     }
 }

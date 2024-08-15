@@ -184,27 +184,27 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
 
             if (TryParseDouble(values[0], out double offset))
                 Offset = offset;
-            else throw new BeatmapParsingException("Failed to parse offset of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的偏移失败", line);
 
             if (TryParseDouble(values[1], out double mpb))
                 MpB = mpb;
-            else throw new BeatmapParsingException("Failed to parse milliseconds per beat of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的拍长失败", line);
 
             if (TryParseInt(values[2], out int meter))
                 Meter = new TempoSignature(meter);
-            else throw new BeatmapParsingException("Failed to parse meter of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的节拍失败", line);
 
             if (Enum.TryParse(values[3], out SampleSet ss))
                 SampleSet = ss;
-            else throw new BeatmapParsingException("Failed to parse sampleset of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的音效组失败", line);
 
             if (TryParseInt(values[4], out int ind))
                 SampleIndex = ind;
-            else throw new BeatmapParsingException("Failed to parse sample index of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的音效索引失败", line);
 
             if (TryParseDouble(values[5], out double vol))
                 Volume = vol;
-            else throw new BeatmapParsingException("Failed to parse volume of timing point", line);
+            else throw new BeatmapParsingException("转换时间轴的音量失败", line);
 
             Uninherited = values[6] == "1";
 
@@ -213,7 +213,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper {
                 BitArray b = new BitArray(new int[] { style });
                 Kiai = b[0];
                 OmitFirstBarLine = b[3];
-            } else throw new BeatmapParsingException("Failed to style of timing point", line);
+            } else throw new BeatmapParsingException("转换时间轴的效果失败", line);
         }
 
         /// <summary>

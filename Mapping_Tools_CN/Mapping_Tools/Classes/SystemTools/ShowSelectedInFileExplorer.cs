@@ -186,7 +186,7 @@
                 else
                 {
                     throw new FileNotFoundException
-                        ($"The specified file or folder doesn't exists : {fixedPath}",
+                        ($"指定的文件或文件夹不存在： {fixedPath}",
                         fixedPath);
                 }
             }

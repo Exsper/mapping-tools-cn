@@ -117,7 +117,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                         Settings.OsuPath = FindByDisplayName(regKey, "osu!");
                     } catch (KeyNotFoundException) {
                         Settings.OsuPath = Path.Combine(MainWindow.AppCommon, "osu!");
-                        MessageBox.Show("Could not automatically find osu! install directory. Please set the correct paths in the Preferences.");
+                        MessageBox.Show("无法自动获取osu!安装路径。请在首选项中指定正确的路径。");
                     }
                 }
             }
@@ -165,7 +165,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 } catch (NullReferenceException) { }
             }
 
-            throw new KeyNotFoundException($"Could not find registry key with display name \"{name}\".");
+            throw new KeyNotFoundException($"无法获取名称为 \"{name}\" 的注册快捷键。");
         }
 
         public static List<string[]> GetRecentMaps() {

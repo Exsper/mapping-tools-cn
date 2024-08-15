@@ -30,24 +30,24 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
             string[] values = line.Split(',');
 
             if (values[0] != "Sprite") {
-                throw new BeatmapParsingException("This line is not a sprite.", line);
+                throw new BeatmapParsingException("该行不是一个精灵图。", line);
             }
 
             if (Enum.TryParse(values[1], out StoryboardLayer layer))
                 Layer = layer;
-            else throw new BeatmapParsingException("Failed to parse layer of sprite.", line);
+            else throw new BeatmapParsingException("转换精灵图的图层失败。", line);
 
             if (Enum.TryParse(values[2], out Origin origin))
                 Origin = origin;
-            else throw new BeatmapParsingException("Failed to parse origin of sprite.", line);
+            else throw new BeatmapParsingException("转换精灵图的原点失败。", line);
 
             FilePath = values[3].Trim('"');
 
             if (!TryParseDouble(values[4], out double x))
-                throw new BeatmapParsingException("Failed to parse X position of sprite.", line);
+                throw new BeatmapParsingException("转换精灵图的X轴坐标失败。", line);
 
             if (!TryParseDouble(values[5], out double y))
-                throw new BeatmapParsingException("Failed to parse Y position of sprite.", line);
+                throw new BeatmapParsingException("转换精灵图的Y轴坐标失败。", line);
 
             Pos = new Vector2(x, y);
         }

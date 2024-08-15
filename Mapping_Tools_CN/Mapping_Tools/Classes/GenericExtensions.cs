@@ -20,11 +20,11 @@ namespace Mapping_Tools.Classes {
         }
 
         public static MessageBoxResult Show(this Exception exception) {
-            var result = MessageBox.Show(exception.MessageStackTrace(), "Error", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show(exception.MessageStackTrace(), "错误", MessageBoxButton.OKCancel);
             if (result == MessageBoxResult.Cancel) return result;
             var ex = exception.InnerException;
             while (ex != null) {
-                result = MessageBox.Show(ex.MessageStackTrace(), "Inner exception", MessageBoxButton.OKCancel);
+                result = MessageBox.Show(ex.MessageStackTrace(), "内部错误", MessageBoxButton.OKCancel);
                 ex = result == MessageBoxResult.OK ? ex.InnerException : null;
             }
 

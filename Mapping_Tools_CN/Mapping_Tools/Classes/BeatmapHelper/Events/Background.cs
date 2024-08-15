@@ -18,7 +18,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
             string[] values = line.Split(',');
 
             if (values[0] != "0") {
-                throw new BeatmapParsingException("This line is not a background.", line);
+                throw new BeatmapParsingException("该行不是一个背景。", line);
             }
 
             EventType = values[0];
@@ -26,17 +26,17 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
             // This start time is usually 0 for backgrounds but lets parse it anyways
             if (TryParseDouble(values[1], out double startTime))
                 StartTime = startTime;
-            else throw new BeatmapParsingException("Failed to parse start time of background.", line);
+            else throw new BeatmapParsingException("转换背景起始时间失败。", line);
 
             Filename = values[2].Trim('"');
 
             // Writing offset is optional
             if (values.Length > 3) {
                 if (!TryParseDouble(values[3], out double xOffset))
-                   throw new BeatmapParsingException("Failed to parse X offset of background.", line);
+                   throw new BeatmapParsingException("转换背景X轴偏移失败。", line);
 
                 if (!TryParseDouble(values[4], out double yOffset))
-                   throw new BeatmapParsingException("Failed to parse Y offset of background.", line);
+                   throw new BeatmapParsingException("转换背景Y轴偏移失败。", line);
 
                 Pos = new Vector2(xOffset, yOffset);
             } else {

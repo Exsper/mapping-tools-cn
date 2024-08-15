@@ -55,11 +55,11 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
 
             if (Enum.TryParse(values[1], out EasingType easingType))
                 Easing = easingType;
-            else throw new BeatmapParsingException("Failed to parse easing of command.", line);
+            else throw new BeatmapParsingException("转换简化指令失败。", line);
 
             if (TryParseDouble(values[2], out double startTime))
                 StartTime = startTime;
-            else throw new BeatmapParsingException("Failed to parse start time of command.", line);
+            else throw new BeatmapParsingException("转换指令的开始时间失败。", line);
 
             // Set end time to start time if empty. This accounts for the shorthand
             if (string.IsNullOrEmpty(values[3])) {
@@ -68,7 +68,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
             else {
                 if (TryParseDouble(values[3], out double endTime))
                     EndTime = endTime;
-                else throw new BeatmapParsingException("Failed to parse end time of command.", line);
+                else throw new BeatmapParsingException("转换指令的结束时间失败。", line);
             }
 
             Params = new double[values.Length - 4];
@@ -78,7 +78,7 @@ namespace Mapping_Tools.Classes.BeatmapHelper.Events {
 
                 if (TryParseDouble(stringValue, out double value))
                     Params[index] = value;
-                else throw new BeatmapParsingException($"Failed to parse value at position {i} of command.", line);
+                else throw new BeatmapParsingException($"转换指令中位于 {i} 的数值失败。", line);
             }
         }
     }
