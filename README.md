@@ -1,8 +1,8 @@
 # Mapping Tools 汉化工程
 
-翻译进度：基本词条逐项翻译 ![进度](https://geps.dev/progress/66)
+翻译进度：基本词条逐项翻译 ![进度](https://geps.dev/progress/70)
 
-🚧**本汉化项目尚未完成，目前翻译进度：1367 个条目，占比 66.98% ，还有 674 个条目未翻译**🚧
+🚧**本汉化项目尚未完成，目前翻译进度：1433 个条目，占比 70.31% ，还有 605 个条目未翻译**🚧
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目，非汉化问题请转到原英文项目。
 
@@ -12,7 +12,7 @@
 
 ## 目前进度
 
-▶ 基本词条逐项翻译 ![进度](https://geps.dev/progress/66)
+▶ 基本词条逐项翻译 ![进度](https://geps.dev/progress/70)
 
 ⏱ 细节词条补充翻译（主要处理下拉菜单内容，尽量翻译且不影响原功能）
 

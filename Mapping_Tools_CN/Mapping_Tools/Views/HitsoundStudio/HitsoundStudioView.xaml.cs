@@ -297,15 +297,15 @@ namespace Mapping_Tools.Views.HitsoundStudio
             }
 
             if (settings.UsePreviousSampleSchema && settings.PreviousSampleSchema == null) {
-                MessageBox.Show("Can not use previous sample schema, because it has not been set by a previous run. Please run the tool first without 'Use previous sample schema' enabled.");
+                MessageBox.Show("无法使用上一次的采样规划，因为它并不是由上一次运行生成的。请取消勾选“使用上次采样规划”并重新运行。");
                 return;
             }
 
             if (!Directory.Exists(settings.ExportFolder))
             {
                 var folderResult = MessageBox.Show(
-                    $"Folder at path \"{settings.ExportFolder}\" does not exist.\nCreate a new folder?",
-                    "Export path not found.", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                    $"文件夹路径 \"{settings.ExportFolder}\" 不存在。\n创建新文件夹？",
+                    "未找到输出路径。", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
                 if (folderResult == MessageBoxResult.Yes) {
                     try {
@@ -533,7 +533,7 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
                 if (mainOutputStream == null)
                 {
-                    MessageBox.Show("Could not load the specified sample.");
+                    MessageBox.Show("无法加载指定采样。");
                     return;
                 }
                 
@@ -544,8 +544,8 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
                 outputDevice.Play();
             }
-            catch (FileNotFoundException) { MessageBox.Show("Could not find the specified sample."); }
-            catch (DirectoryNotFoundException) { MessageBox.Show("Could not find the specified sample's directory."); }
+            catch (FileNotFoundException) { MessageBox.Show("找不到指定采样。"); }
+            catch (DirectoryNotFoundException) { MessageBox.Show("找不到指定采样的文件夹。"); }
             catch (Exception ex) { ex.Show(); }
         }
 
@@ -601,7 +601,7 @@ namespace Mapping_Tools.Views.HitsoundStudio
             try
             {
                 // Ask for confirmation
-                MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure?", "Confirm deletion", MessageBoxButton.YesNo);
+                MessageBoxResult messageBoxResult = MessageBox.Show("确定吗？", "确认删除", MessageBoxButton.YesNo);
                 if (messageBoxResult != MessageBoxResult.Yes) { return; }
 
                 if (selectedLayers.Count == 0 || selectedLayers == null) { return; }
@@ -772,26 +772,26 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
 
             if (couldNotFind.Count == 0 && invalidExtension.Count == 0 && couldNotLoad.Count == 0) {
-                MessageBox.Show("All samples are valid!");
+                MessageBox.Show("所有采样均有效！");
                 return;
             }
 
             var message = new StringBuilder();
 
             if (couldNotFind.Count > 0) {
-                message.AppendLine("Could not find the following samples:");
+                message.AppendLine("找不到以下采样：");
                 message.AppendLine(string.Join(Environment.NewLine, couldNotFind.Select(o => o.Name)));
                 message.AppendLine();
             }
 
             if (invalidExtension.Count > 0) {
-                message.AppendLine("The following samples have an invalid extension:");
+                message.AppendLine("以下采样的文件类型无效：");
                 message.AppendLine(string.Join(Environment.NewLine, invalidExtension.Select(o => o.Name)));
                 message.AppendLine();
             }
 
             if (couldNotLoad.Count > 0) {
-                message.AppendLine("Could not load the following samples because of an exception:");
+                message.AppendLine("加载以下采样时出现问题：");
                 message.AppendLine(string.Join(Environment.NewLine, couldNotLoad.Select(o => $"{o.Item1.Name}: {o.Item2.Message}")));
                 message.AppendLine();
             }
@@ -1183,17 +1183,17 @@ namespace Mapping_Tools.Views.HitsoundStudio
 
         public MenuItem[] GetMenuItems() {
             var loadSampleSchemaMenu = new MenuItem {
-                Header = "_Load sample schema", Icon = new PackIcon {Kind = PackIconKind.FileMusic},
-                ToolTip = "Load sample schema from a project file."
+                Header = "加载采样规划（_L）", Icon = new PackIcon {Kind = PackIconKind.FileMusic},
+                ToolTip = "从项目文件中加载采样规划。"
             };
             loadSampleSchemaMenu.Click += LoadSampleSchemaFromFile;
 
             var bulkAssignSamplesMenu = new MenuItem {
-                Header = "_Bulk assign samples", Icon = new PackIcon {Kind = PackIconKind.MusicBoxMultiple},
-                ToolTip = "Bulk assign samples to selected hitsound layers. " +
-                          "The file name is expected to be in the following shape: [bank]_[patch]_[key]_[length]_[velocity].[extension]. " +
-                          "Leave a value empty to imply any value. " +
-                          "Example: 0_39__127.wav"
+                Header = "批量分配采样（_B）", Icon = new PackIcon {Kind = PackIconKind.MusicBoxMultiple},
+                ToolTip = "批量分配采样给选中的音效层。" +
+                          "文件名应为以下格式：[音色库bank]_[音色patch]_[音调key]_[长度]_[速度].[扩展名]. " +
+                          "留空以表示任何值。" +
+                          "例如：0_39__127.wav"
             };
             bulkAssignSamplesMenu.Click += BulkAssignSamples;
 
@@ -1208,7 +1208,7 @@ namespace Mapping_Tools.Views.HitsoundStudio
                 var project = ProjectManager.GetProject(this, true);
                 settings.PreviousSampleSchema = project.PreviousSampleSchema;
 
-                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Successfully loaded sample schema!"));
+                Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功加载采样规划！"));
             } catch (ArgumentException) { }
             catch (Exception ex) {
                 ex.Show();

@@ -75,6 +75,7 @@ async function create() {
         { filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs", skipText: "\"config.json\"" },
         { skipText: "\"RootDialog\"" },
         { skipText: "\"ToggleButton\"" },
+        { skipText: "\"explorer.exe\"" },
 
 
 

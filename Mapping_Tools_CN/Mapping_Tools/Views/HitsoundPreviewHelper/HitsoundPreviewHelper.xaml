@@ -30,16 +30,16 @@
 
               <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                  <Run Text="Hitsound Preview Helper"/>
+                  <Run Text="音效预览助手（Hitsound Preview Helper）"/>
                 </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                   <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                   </materialDesign:PopupBox.ToggleContent>
                   <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                    Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio.
+                    本工具可以给当前谱面中的物件按物件的位置下音效。这样您在下音效时就不用手动分配物件然后导入到音效工作室了。
                     <LineBreak/>
-                    This tool is meant to help a very specific hitsounding workflow. If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds. For example using a mania map and have each column represent a different sound.
+                    本工具专为特定的下音效方式服务，把物件按音效划分在不同的屏幕位置以对应不同的音效层。比如使用mania谱面并把每个轨道作为一个单独的音效。
                   </TextBlock>
                     </materialDesign:PopupBox>
                   <materialDesign:PopupBox Margin="0,10,10,10" VerticalAlignment="Bottom" ToolTip="点我！">
@@ -88,23 +88,23 @@
                         </DataGridCheckBoxColumn>
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
-                            Header="Name"
+                            Header="名称"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding Filename, UpdateSourceTrigger=PropertyChanged}"
-                            Header="Filename"
+                            Header="文件名"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding XPos, Converter={StaticResource D2SConverter}, ConverterParameter=-1, UpdateSourceTrigger=PropertyChanged}"
-                            Header="X position"
+                            Header="X轴位置"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"/>
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding YPos, Converter={StaticResource D2SConverter}, ConverterParameter=-1, UpdateSourceTrigger=PropertyChanged}"
-                            Header="Y position"
+                            Header="Y轴位置"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"/>
                         <!-- use custom combo box column to get better combos. Use ItemsSourceBinding as your binding template to be applied to each combo -->
                         <materialDesign:DataGridComboBoxColumn
-                            Header="Hitsound"
+                            Header="音效"
                             SelectedValueBinding="{Binding Hitsound, Converter={StaticResource Hs2SConverter}, UpdateSourceTrigger=PropertyChanged}"
                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Hitsounds}" />
                         <materialDesign:DataGridComboBoxColumn
@@ -117,7 +117,7 @@
                             ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.SampleSets}" />
                         <materialDesign:DataGridTextColumn
                             Binding="{Binding CustomIndex, Converter={StaticResource I2SConverter}, ConverterParameter=0, UpdateSourceTrigger=PropertyChanged}"
-                            Header="Custom index"
+                            Header="音效组索引"
                             EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}"/>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -128,16 +128,16 @@
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Orientation="Horizontal">
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Generate rhythm guide." Command="{Binding RhythmGuideCommand}" Margin="5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="启动节奏向导。" Command="{Binding RhythmGuideCommand}" Margin="5">
                         <materialDesign:PackIcon Kind="AlternatingCurrent" Height="24" Width="24" />
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a hitsound zone. Hold shift to add current selected coordinates." Command="{Binding AddCommand}" Margin="5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="添加一个音效区域。按住shift键按当前编辑器选中物件的坐标添加。" Command="{Binding AddCommand}" Margin="5">
                         <materialDesign:PackIcon Kind="Plus" Height="24" Width="24" />
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Copy selected hitsound zones." Command="{Binding CopyCommand}" Margin="5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="复制选中音效区域。" Command="{Binding CopyCommand}" Margin="5">
                         <materialDesign:PackIcon Kind="ContentCopy" Height="24" Width="24" />
                     </Button>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Remove selected hitsound zones." Command="{Binding RemoveCommand}" Margin="5">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="删除选中音效区域。" Command="{Binding RemoveCommand}" Margin="5">
                         <materialDesign:PackIcon Kind="Trashcan" Height="24" Width="24" />
                     </Button>
                 </StackPanel>

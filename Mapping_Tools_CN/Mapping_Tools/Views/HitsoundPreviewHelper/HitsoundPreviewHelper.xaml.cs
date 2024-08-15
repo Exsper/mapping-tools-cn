@@ -28,13 +28,13 @@ namespace Mapping_Tools.Views.HitsoundPreviewHelper
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Hitsound Preview Projects");
 
-        public static readonly string ToolName = "Hitsound Preview Helper";
+        public static readonly string ToolName = "音效预览助手";
         public static readonly string ToolDescription =
-            $@"Hitsound Preview Helper helps by placing hitsounds on all the objects of the current map based on the positions of the objects. " +
-            $@"That way you can hear the hitsounds play while you hitsound without having to assign them manually and later import them to Hitsound Studio." +
-            $@"{Environment.NewLine}This tool is meant to help a very specific hitsounding workflow." +
-            $@" If you hitsound by placing circles on different parts on the screen and treat each position as a different layer of hitsounds." +
-            $@" For example using a mania map and have each column represent a different sound.";
+            $@"本工具可以给当前谱面中的物件按物件的位置下音效。" +
+            $@"这样您在下音效时就不用手动分配物件然后导入到音效工作室了。" +
+            $@"{Environment.NewLine}本工具专为特定的下音效方式服务，" +
+            $@"把物件按音效划分在不同的屏幕位置以对应不同的音效层。" +
+            $@"比如使用mania谱面并把每个轨道作为一个单独的音效。";
 
         /// <summary>
         /// 
@@ -71,7 +71,7 @@ namespace Mapping_Tools.Views.HitsoundPreviewHelper
         private string PlaceHitsounds(Arguments args, BackgroundWorker worker, DoWorkEventArgs _)
         {
             if (args.Zones.Count == 0)
-                return "There are no zones!";
+                return "当前没有任何区域！";
 
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot();
 
