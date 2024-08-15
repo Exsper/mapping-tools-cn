@@ -31,7 +31,7 @@ namespace Mapping_Tools.Views.Standard {
         private async void SetChangelogList() {
             try {
                 string responseString;
-                using (HttpResponseMessage response = await MainWindow.HttpClient.GetAsync("https://api.github.com/repos/OliBomby/Mapping_Tools/releases")) {
+                using (HttpResponseMessage response = await MainWindow.HttpClient.GetAsync("https://api.github.com/repos/Exsper/mapping-tools-cn/releases")) {
                     responseString = await response.Content.ReadAsStringAsync();
                 }
                 dynamic json = JsonConvert.DeserializeObject(responseString);

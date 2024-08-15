@@ -121,13 +121,13 @@
                                     <MenuItem Header="检查更新（_C）" Click="MenuItem_OnClick" Icon="{materialDesign:PackIcon Update}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="检查当前是否有更新。" />
-                                    <MenuItem Header="网站（_W）" Click="OpenWebsite" Icon="{materialDesign:PackIcon OpenInBrowser}"
+                                    <MenuItem Header="官网（_W）" Click="OpenWebsite" Icon="{materialDesign:PackIcon OpenInBrowser}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="用浏览器打开Mapping Tools官网（英文）。" />
                                     <MenuItem Header="Github（_G）" Click="OpenGitHub" Icon="{materialDesign:PackIcon Github}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                         ToolTip="打开Github上的Mapping Tools汉化项目。" />
-                                    <MenuItem Header="捐赠（_D）" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
+                                    <MenuItem Header="捐赠原作者（_D）" Click="OpenDonate" Icon="{materialDesign:PackIcon Heart}"
                                               Foreground="{DynamicResource MaterialDesignBody}"
                                               ToolTip="支持Mapping Tools的原开发者。" />
                                     <MenuItem Header="关于（_A）" Click="OpenInfo" Icon="{materialDesign:PackIcon InfoCircle}"

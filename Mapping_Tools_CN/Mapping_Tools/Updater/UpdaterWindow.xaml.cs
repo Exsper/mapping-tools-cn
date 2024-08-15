@@ -30,7 +30,7 @@ namespace Mapping_Tools.Updater {
 
         private async Task LoadReleaseNotes() {
             string responseString;
-            using (HttpResponseMessage response = await MainWindow.HttpClient.GetAsync("https://api.github.com/repos/Exsper/Mapping_Tools_CN/releases/latest")) {
+            using (HttpResponseMessage response = await MainWindow.HttpClient.GetAsync("https://api.github.com/repos/Exsper/mapping-tools-cn/releases/latest")) {
                 responseString = await response.Content.ReadAsStringAsync();
             }
             dynamic json = JsonConvert.DeserializeObject(responseString);

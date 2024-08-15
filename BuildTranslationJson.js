@@ -5,6 +5,11 @@ async function create() {
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml",
             extraText: ["This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. "]
+        },
+        // 替换版本号
+        {
+            filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",
+            extraText: ["1.12.18"]
         }
     ]
 

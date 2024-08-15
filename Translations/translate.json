@@ -855,9 +855,9 @@
         "Header=\"_Open Mapping Tools folder\"": "Header=\"打开程序文件夹（_O）\"",
         "Header=\"_Open backups folder\"": "Header=\"打开备份文件夹（_O）\"",
         "Header=\"_Check for updates\"": "Header=\"检查更新（_C）\"",
-        "Header=\"_Website\"": "Header=\"网站（_W）\"",
+        "Header=\"_Website\"": "Header=\"官网（_W）\"",
         "Header=\"_Github\"": "Header=\"Github（_G）\"",
-        "Header=\"_Donate\"": "Header=\"捐赠（_D）\"",
+        "Header=\"_Donate\"": "Header=\"捐赠原作者（_D）\"",
         "Header=\"_Project\"": "Header=\"项目（_P）\"",
         "Header=\"_Exit without saving\"": "Header=\"不保存并退出（_E）\"",
         "Text=\"{Binding CurrentBeatmaps, Converter={StaticResource MapPathStringJustFilenameConverter}, Mode=OneWay}\"": "Text=\"{Binding CurrentBeatmaps, Converter={StaticResource MapPathStringJustFilenameConverter}, Mode=OneWay}\"",
@@ -891,7 +891,7 @@
         "\"https://mappingtools.github.io\"": "\"https://mappingtools.github.io\"",
         "\"https://github.com/OliBomby/Mapping_Tools\"": "\"https://github.com/Exsper/mapping-tools-cn\"",
         "\"https://ko-fi.com/olibomby \"": "\"https://ko-fi.com/olibomby \"",
-        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （汉化版）\"",
+        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.18）\"",
         "\"Made by:\"": "\"制作者：\"",
         "\"Supporters:\"": "\"支持者：\"",
         "\"Mercury\"": "\"Mercury\"",
@@ -926,7 +926,7 @@
         "Content=\"Skip this version\"": "Content=\"Skip this version\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdaterWindow.xaml.cs": {
-        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/Mapping_Tools_CN/releases/latest\""
+        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/mapping-tools-cn/releases/latest\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\HitsoundPreviewHelperVm.cs": {
         "\"Please select a hit object to fetch the coordinates.\"": "\"Please select a hit object to fetch the coordinates.\""
@@ -2316,7 +2316,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\StandardView.xaml.cs": {
         "\"Get started\"": "\"开始\"",
-        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\"": "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\""
+        "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases\"": "\"https://api.github.com/repos/Exsper/mapping-tools-cn/releases\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingCopier\\TimingCopierView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -2482,5 +2482,8 @@
         "\"ToolName\"": "\"ToolName\"",
         "\"ToolDescription\"": "\"ToolDescription\"",
         "$\"There exists no view with name '{name}'\"": "$\"There exists no view with name '{name}'\""
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
+        "1.12.18": "0.0.1"
     }
 }
