@@ -104,7 +104,7 @@ namespace Mapping_Tools {
         private async Task Update(bool allowSkip = true, bool notifyUser = false) {
             try {
                 var assetNamePattern = Environment.Is64BitProcess ? "release_x64.zip" : "release.zip";
-                updateManager = new UpdateManager("Exsper", "Mapping_Tools_CN", assetNamePattern);
+                updateManager = new UpdateManager("Exsper", "mapping-tools-cn", assetNamePattern);
                 var hasUpdate = await updateManager.FetchUpdateAsync();
 
                 if (!hasUpdate) {

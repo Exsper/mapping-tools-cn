@@ -876,7 +876,7 @@
         "\"release_x64.zip\"": "\"release_x64.zip\"",
         "\"release.zip\"": "\"release.zip\"",
         "\"OliBomby\"": "\"Exsper\"",
-        "\"Mapping_Tools\"": "\"Mapping_Tools_CN\"",
+        "\"Mapping_Tools\"": "\"mapping-tools-cn\"",
         "\"No new versions available.\"": "\"暂无新版本。\"",
         "$\"Version {updateManager.UpdatesResult.LastVersion} skipped because of user config.\"": "$\"版本 {updateManager.UpdatesResult.LastVersion} 因用户设置被跳过。\"",
         "\"UPDATER_EXCEPTION: \"": "\"更新程序异常：\"",
