@@ -71,6 +71,8 @@ function getContentInXaml(str) {
     // TextBlock
     results = str.split("\n").map((line) => line.trim()).filter((line) => /^[^<](.*)[^>]$/.test(line)).filter((line) => !/[a-zA-Z]+="(.+)"/.test(line));
     if (results.length > 0) match.push(...results);
+    results = str.split("\n").map((line) => line.trim()).filter((line) => /<TextBlock>([^<>]*)<\/TextBlock>/.test(line));
+    if (results) match.push(...results);
 
     // 当文字长度过短而且没有引号和空格时，为了防止误替换，附带前面几个空格
     match = match.map((text) => {
