@@ -992,7 +992,7 @@
         "\"Warning\"": "\"警告\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\TimingCopierVm.cs": {
-        "\"Number of beats between objects stays the same\"": "\"需要保持相同的物件之间的节拍数\""
+        "\"Number of beats between objects stays the same\"": "\"物件间的节拍数保持不变\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\TumourGeneratorVm.cs": {
         "\"0,0,0,2,0,L|256:0,1,256\"": "\"0,0,0,2,0,L|256:0,1,256\"",
