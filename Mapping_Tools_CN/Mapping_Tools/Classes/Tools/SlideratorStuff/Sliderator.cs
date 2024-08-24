@@ -44,7 +44,7 @@ namespace Mapping_Tools.Classes.Tools.SlideratorStuff {
                 pathL.Add(sum);
             }
 
-            if (Math.Abs(sum) < Precision.DoubleEpsilon) throw new InvalidOperationException("Zero length path.");
+            if (Math.Abs(sum) < Precision.DoubleEpsilon) throw new InvalidOperationException("路径长度为0。");
 
             // Add last member again so these lists have the same number of elements as path
             diff.Add(diff.Last());

@@ -53,7 +53,7 @@ namespace Mapping_Tools.Components.Domain {
                     var valid = TypeConverters.TryParseDouble(val, out double doubleValue);
                     if (valid) {
                         if (doubleValue <= 0)
-                            return new ValidationResult(false, "Beat divisor must be greater than zero.");
+                            return new ValidationResult(false, "节拍细分必须大于0。");
 
                         beatDivisors[i] = new IrrationalBeatDivisor(doubleValue);
                     } else {

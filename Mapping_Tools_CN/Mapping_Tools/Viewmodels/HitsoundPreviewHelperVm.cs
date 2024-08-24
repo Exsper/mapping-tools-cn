@@ -44,7 +44,7 @@ namespace Mapping_Tools.Viewmodels {
                             var editor = EditorReaderStuff.GetBeatmapEditor(EditorReaderStuff.GetFullEditorReader(), out var selected);
 
                             if (selected.Count == 0) {
-                                MessageBox.Show("Please select a hit object to fetch the coordinates.");
+                                MessageBox.Show("请选择打击物件以便获取坐标。");
                                 return;
                             }
 

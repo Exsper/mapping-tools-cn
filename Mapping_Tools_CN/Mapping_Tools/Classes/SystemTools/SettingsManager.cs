@@ -42,7 +42,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.StackTrace);
                 Console.WriteLine(ex.Message);
 
-                MessageBox.Show("User-specific configuration could not be loaded!");
+                MessageBox.Show("无法加载用户配置！");
                 ex.Show();
                 return false;
             }
@@ -61,7 +61,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.StackTrace);
                 Console.WriteLine(ex.Message);
 
-                MessageBox.Show("User-specific configuration could not be loaded!");
+                MessageBox.Show("无法加载用户配置！");
                 ex.Show();
                 return false;
             }
@@ -80,7 +80,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 Console.WriteLine(ex.StackTrace);
                 Console.WriteLine(ex.Message);
 
-                MessageBox.Show("User-specific configuration could not be saved!");
+                MessageBox.Show("无法保存用户配置！");
                 ex.Show();
                 return false;
             }

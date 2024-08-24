@@ -38,7 +38,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
 
                     // Convert hint path type
                     if (pathType != PathType.Bezier && hintPathType != pathType) {
-                        throw new Exception("Can not convert hint path to non-bezier path type.");
+                        throw new Exception("无法转换提示路径为非贝塞尔路径。");
                     }
 
                     var convertedAnchors = pathType == PathType.Bezier ? BezierConverter.ConvertToBezierAnchors(cutAnchors, hintPathType) : cutAnchors;

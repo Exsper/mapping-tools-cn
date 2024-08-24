@@ -142,10 +142,10 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
 
         public static void Interpolate(LinkedListNode<PathPoint> p1, IEnumerable<double> ts) {
             if (p1.List is null) {
-                throw new ArgumentException(@"Point 1 must be part of a linked list.", nameof(p1));
+                throw new ArgumentException(@"点 1 必须是链表的一部分。", nameof(p1));
             }
             if (p1.Next is null) {
-                throw new ArgumentException(@"Point 1 must have a successor.", nameof(p1));
+                throw new ArgumentException(@"点 1 必须有后继点。", nameof(p1));
             }
 
             var p2 = p1.Next;
@@ -184,7 +184,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
         /// <returns>The number of points added between start and end.</returns>
         public static int Subdivide(this LinkedList<PathPoint> path, LinkedListNode<PathPoint> start, LinkedListNode<PathPoint> end, int wantedCount) {
             if (ReferenceEquals(start, end)) {
-                throw new ArgumentException(@"Start and end points can not be the same.");
+                throw new ArgumentException(@"开始点和结束点应不相同。");
             }
 
             if (wantedCount <= 0) {
@@ -291,7 +291,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
         /// <returns>The number of points added between start and end.</returns>
         public static int EnsureLocalCurvature(this LinkedList<PathPoint> path, LinkedListNode<PathPoint> start, LinkedListNode<PathPoint> end, IEnumerable<LinkedListNode<PathPoint>> ensuredPoints) {
             if (ReferenceEquals(start, end)) {
-                throw new ArgumentException(@"Start and end points can not be the same.");
+                throw new ArgumentException(@"开始点和结束点应不相同。");
             }
 
             int addedPoints = 0;
@@ -339,7 +339,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
 
             return p.Next is null
                 ? throw new ArgumentException(
-                    @"The end point has to be a node that comes after the starting node in the linked list.",
+                    @"结束点应为链表中开始节点之后的节点。",
                     nameof(end))
                 : count;
         }
@@ -352,7 +352,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
         /// <returns>The list containing points between start and end inclusive</returns>
         public static IEnumerable<PathPoint> EnumerateBetween(LinkedListNode<PathPoint> start, LinkedListNode<PathPoint> end) {
             if (start.Value > end.Value) {
-                throw new ArgumentException(@"The end point has to be a points that comes after the starting point in the path.");
+                throw new ArgumentException(@"结束点应为路径中开始点之后的点。");
             }
 
             var p = start;

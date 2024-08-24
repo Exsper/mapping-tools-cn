@@ -84,7 +84,7 @@ namespace Mapping_Tools.Views {
         public object GetView(string name) {
             var type = GetType(name);
             if (type == null) {
-                throw new ArgumentException($"There exists no view with name '{name}'");
+                throw new ArgumentException($"不存在名为 '{name}' 的界面");
             }
 
             return GetView(type);

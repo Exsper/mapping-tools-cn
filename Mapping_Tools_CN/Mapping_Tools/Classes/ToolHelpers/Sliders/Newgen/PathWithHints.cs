@@ -23,7 +23,7 @@ namespace Mapping_Tools.Classes.ToolHelpers.Sliders.Newgen {
 
         public void AddReconstructionHint(ReconstructionHint hint) {
             if (hint.Start.Value >= hint.End.Value) {
-                throw new ArgumentException("Hint start must be before end.");
+                throw new ArgumentException("提示开始必须在结束之前。");
             }
 
             // Find sorted place in the list

@@ -164,7 +164,7 @@ namespace Mapping_Tools.Components {
 
                         if (null == bitmap)
 
-                            throw new FileNotFoundException("GIF Source was not found.", GifSource);
+                            throw new FileNotFoundException("找不到GIF资源。", GifSource);
                     }
                 }
             }

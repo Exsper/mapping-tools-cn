@@ -9,7 +9,7 @@ async function create() {
         // 替换版本号
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",
-            extraText: ["1.12.18"]
+            extraText: ["1.12.19"]
         }
     ]
 

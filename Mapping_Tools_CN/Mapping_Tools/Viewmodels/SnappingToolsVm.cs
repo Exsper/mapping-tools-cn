@@ -229,7 +229,7 @@ namespace Mapping_Tools.Viewmodels {
                         fetchEditorFails++;
                         if (fetchEditorFails <= 3) return;
 
-                        MessageBox.Show("Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.");
+                        MessageBox.Show("编辑器读取功能好像无法正常工作。尝试重新打开osu!和几何仪表盘，或者到官网查看FAQ。");
                         ex.Show();
 
                         updateTimer.IsEnabled = false;
@@ -821,7 +821,7 @@ namespace Mapping_Tools.Viewmodels {
                 configWatcher.Path = Path.GetDirectoryName(path);
                 configWatcher.Filter = Path.GetFileName(path);
             }
-            catch (Exception ex) { Console.WriteLine(@"Can't set ConfigWatcher Path/Filter: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(@"无法设置配置监视器路径/筛选器: " + ex.Message); }
         }
 
         private void OnChangedConfigWatcher(object sender, FileSystemEventArgs e) {
@@ -989,7 +989,7 @@ namespace Mapping_Tools.Viewmodels {
             try {
                 configWatcher.EnableRaisingEvents = true;
             } catch (Exception ex) {
-                MessageBox.Show("Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.", "Warning");
+                MessageBox.Show("无法启动文件系统监视器。osu!配置文件的路径设置可能不正确。请在首选项中设置正确路径，防止图层位置显示错误。", "警告");
                 ex.Show();
             }
 
@@ -1006,7 +1006,7 @@ namespace Mapping_Tools.Viewmodels {
             try {
                 configWatcher.EnableRaisingEvents = false;
             } catch (Exception ex) {
-                MessageBox.Show("Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.", "Warning");
+                MessageBox.Show("无法启动文件系统监视器。osu!配置文件的路径设置可能不正确。请在首选项中设置正确路径，防止图层位置显示错误。", "警告");
                 ex.Show();
             }
 

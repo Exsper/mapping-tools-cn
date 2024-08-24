@@ -891,7 +891,7 @@
         "\"https://mappingtools.github.io\"": "\"https://mappingtools.github.io\"",
         "\"https://github.com/OliBomby/Mapping_Tools\"": "\"https://github.com/Exsper/mapping-tools-cn\"",
         "\"https://ko-fi.com/olibomby \"": "\"https://ko-fi.com/olibomby \"",
-        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.18）\"",
+        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.19）\"",
         "\"Made by:\"": "\"制作者：\"",
         "\"Supporters:\"": "\"支持者：\"",
         "\"Mercury\"": "\"Mercury\"",
@@ -2484,6 +2484,6 @@
         "$\"There exists no view with name '{name}'\"": "$\"不存在名为 '{name}' 的界面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
-        "1.12.18": "0.0.1"
+        "1.12.19": "0.0.2"
     }
 }

@@ -5,7 +5,7 @@ using Mapping_Tools.Classes.MathUtil;
 
 namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject.RelevantObjects {
     public class RelevantPoint : RelevantDrawable {
-        public static string PreferencesNameStatic => "Virtual point preferences";
+        public static string PreferencesNameStatic => "辅助点选项";
         public override string PreferencesName => PreferencesNameStatic;
 
         public Vector2 Child { get; set; }

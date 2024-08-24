@@ -187,9 +187,9 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
         /// <returns>All the combinations</returns>
         public static IEnumerable<T[]> CombinationsRecursion<T>(T[] array, int m) {
             if (array.Length < m)
-                throw new ArgumentException("Array length can't be less than number of selected elements");
+                throw new ArgumentException("数组长度不能小于选中物件数量");
             if (m < 1)
-                throw new ArgumentException("Number of selected elements can't be less than 1");
+                throw new ArgumentException("选中物件数量不能小于1");
             T[] result = new T[m];
             foreach (int[] j in CombinationsRecursion(m, array.Length)) {
                 for (int i = 0; i < m; i++) {

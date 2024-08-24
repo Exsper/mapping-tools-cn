@@ -150,7 +150,7 @@ namespace Mapping_Tools.Classes.Tools {
                     var editor = new Editor {TextFile = beatmap, Path = args.ExportPath};
                     editor.SaveFile();
                     System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(args.ExportPath) ??
-                                                                     throw new ArgumentException("Export path must be a file."));
+                                                                     throw new ArgumentException("导出路径必须是一个文件。"));
                     break;
                 case ExportMode.AddToMap:
                     var editor2 = EditorReaderStuff.GetNewestVersionOrNot(args.ExportPath, reader);
@@ -168,7 +168,7 @@ namespace Mapping_Tools.Classes.Tools {
 
         private static Beatmap MergeBeatmaps(Beatmap[] beatmaps, RhythmGuideGeneratorArgs args) {
             if (beatmaps.Length == 0) {
-                throw new ArgumentException("There must be at least one beatmap.");
+                throw new ArgumentException("必须至少存在一个谱面。");
             }
 
             // Scuffed beatmap copy

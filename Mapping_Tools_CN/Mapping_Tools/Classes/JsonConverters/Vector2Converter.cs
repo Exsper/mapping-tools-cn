@@ -46,7 +46,7 @@ namespace Mapping_Tools.Classes.JsonConverters {
             }
 
             if (!(gotX && gotY)) {
-                throw new InvalidDataException("A Vector2 must contain X and Y properties.");
+                throw new InvalidDataException("Vector2对象必须包含X和Y属性。");
             }
 
             return new Vector2(x, y);

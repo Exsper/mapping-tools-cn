@@ -29,7 +29,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
             Channels = channels;
 
             if (!startBuffers.ContainsKey(sampleRate))
-                throw new InvalidOperationException($"Vorbis writer does not support {sampleRate} sample rate.");
+                throw new InvalidOperationException($"Vorbis writer不支持 {sampleRate} 采样率。");
 
             // Stores all the static vorbis bitstream settings
             Console.WriteLine($"Initiating variable bit rate: {channels} channels, {sampleRate} sample rate, {quality} quality");
@@ -231,7 +231,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
 
                     break;
                 default:
-                    throw new InvalidOperationException($"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}");
+                    throw new InvalidOperationException($"VorbisFileWriter 不支持该 Wave 编码：{format.Encoding}");
             }
 
             WriteFloatSamples(outSamples, numOutputSamples);

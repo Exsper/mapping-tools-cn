@@ -198,7 +198,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                                 HitsoundExporter.AddNewSampleName(names, s.SampleArgs, loadedSamples);
                                 filename = names[s.SampleArgs];
                             } else {
-                                throw new Exception($"Given sample schema doesn't support sample ({s.SampleArgs}) and growth is disabled.");
+                                throw new Exception($"给定的采样规划不支持采样 ({s.SampleArgs}) ，扩展已禁用。");
                             }
                         } else {
                             filename = string.Empty;
@@ -252,8 +252,8 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
 
 
                 if (bestFits == 0) {
-                    throw new Exception("Custom indices can't fit the sample packages.\n" +
-                                        "Maybe you are using an incompatible previous sample schema and growth is disabled.");
+                    throw new Exception("自定义音效组无法匹配该采样包。\n" +
+                                        "该文件可能是无法兼容的旧版采样规划，扩展已禁用。");
                 }
 
                 // Add all the fitted packages as hitsounds

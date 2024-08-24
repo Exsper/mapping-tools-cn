@@ -30,7 +30,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure {
 
         public void SetInceptionLevel(int inceptionLevel) {
             if (inceptionLevel < 0) {
-                throw new ArgumentException("Inception level can't be less than 0.");
+                throw new ArgumentException("启用层级不能小于0。");
             }
 
             if (ObjectLayers.Count < inceptionLevel) {

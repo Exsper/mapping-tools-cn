@@ -58,11 +58,11 @@ namespace Mapping_Tools.Updater {
         /// <exception cref="InvalidOperationException"></exception>
         public async Task DownloadUpdateAsync() {
             if (UpdatesResult?.LastVersion == null) {
-                throw new InvalidOperationException("Do not call this method before fetching updates!");
+                throw new InvalidOperationException("请勿在获取更新之前调用此方法！");
             }
 
             if (!UpdatesResult.CanUpdate) {
-                throw new InvalidOperationException("Do not call this method if there are no updates!");
+                throw new InvalidOperationException("请勿在没有可用更新时调用此方法！");
             }
 
             await updateManager.PrepareUpdateAsync(UpdatesResult.LastVersion, Progress);
@@ -75,11 +75,11 @@ namespace Mapping_Tools.Updater {
         /// <exception cref="InvalidOperationException"></exception>
         public void StartUpdateProcess() {
             if (UpdatesResult?.LastVersion == null) {
-                throw new InvalidOperationException("Do not call this method before fetching updates!");
+                throw new InvalidOperationException("请勿在获取更新之前调用此方法！");
             }
 
             if (!hasDownloaded) {
-                throw new InvalidOperationException("Do not call this method before download has finished!");
+                throw new InvalidOperationException("请勿在下载完成前调用此方法！");
             }
 
             updateManager.LaunchUpdater(UpdatesResult.LastVersion, RestartAfterUpdate);

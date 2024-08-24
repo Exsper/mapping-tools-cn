@@ -12,13 +12,13 @@ namespace Mapping_Tools.Classes.SystemTools {
     public static class BackupManager {
         public static bool SaveMapBackup(string fileToCopy, bool forced = false, string filename = null, string backupCode = "") {
             if (!File.Exists(fileToCopy)) {
-                MessageBox.Show("Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.", "Error");
+                MessageBox.Show("所选谱面文件不存在！请检查当前谱面输入框内的文件是否正确，或尝试重新选择谱面文件。", "错误");
                 return false;
             }
 
             string destinationDirectory = SettingsManager.GetBackupsPath();
             if (!Directory.Exists(destinationDirectory)) {
-                MessageBox.Show("Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.", "Error");
+                MessageBox.Show("备份文件夹不存在！请检查首选项中的备份文件夹路径是否存在。", "错误");
                 return false;
             }
 
@@ -76,7 +76,7 @@ namespace Mapping_Tools.Classes.SystemTools {
             var destinationFilename = destinationEditor.Beatmap.GetFileName();
 
             if (!allowDifferentFilename && !string.Equals(backupFilename, destinationFilename)) {
-                throw new BeatmapIncompatibleException($"The backup and the destination beatmap have mismatching metadata.\n{backupFilename}\n{destinationFilename}");
+                throw new BeatmapIncompatibleException($"备份文件和目标谱面的元数据（metadata）不一致。\n{backupFilename}\n{destinationFilename}");
             }
 
             File.Copy(backupPath, destination, true);
@@ -91,7 +91,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                         LoadMapBackup(backupFile.FullName, path, false);
                     } catch (BeatmapIncompatibleException ex) {
                         ex.Show();
-                        var result = MessageBox.Show("Do you want to load the backup anyways?", "Load backup",
+                        var result = MessageBox.Show("是否仍要加载备份？", "加载备份",
                             MessageBoxButton.YesNo);
                         if (result == MessageBoxResult.Yes) {
                             LoadMapBackup(backupFile.FullName, path, true);
@@ -99,7 +99,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                             return;
                         }
                     }
-                    Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("Backup successfully loaded!"));
+                    Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("成功载入备份！"));
 
                     if (SettingsManager.Settings.AutoReload) {
                         ListenerManager.ForceReloadEditor();

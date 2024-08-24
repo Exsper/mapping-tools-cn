@@ -12,8 +12,8 @@
              MouseRightButtonUp="ThisMouseUp"
              MouseMove="ThisMouseMove">
     <local:GraphPointControl.Resources>
-        <MenuItem x:Key="DeleteMenuItem" Header="Delete" Click="DeleteMenuItem_OnClick"/>
-        <MenuItem x:Key="TypeInMenuItem" Header="Type in value..." Click="TypeInMenuItem_OnClick"/>
+        <MenuItem x:Key="DeleteMenuItem" Header="删除" Click="DeleteMenuItem_OnClick"/>
+        <MenuItem x:Key="TypeInMenuItem" Header="输入数据..." Click="TypeInMenuItem_OnClick"/>
         <ContextMenu x:Key="ContextMenu"></ContextMenu>
     </local:GraphPointControl.Resources>
 

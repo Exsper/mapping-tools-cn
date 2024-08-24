@@ -124,7 +124,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools {
                     return split[1].Trim();
                 }
             }
-            throw new Exception($"Can't find the key {key} in osu! user config.");
+            throw new Exception($"在osu!用户配置中找不到键 {key} 。");
         }
 
         /// <summary>

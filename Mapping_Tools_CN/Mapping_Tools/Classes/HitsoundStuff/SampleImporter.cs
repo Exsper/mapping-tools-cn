@@ -138,14 +138,14 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
 
                 if (!File.Exists(path)) {
                     foreach (var args in value) {
-                        sampleExceptions.Add(args, new FileNotFoundException("File not found", path));
+                        sampleExceptions.Add(args, new FileNotFoundException("文件未找到", path));
                     }
                     continue;
                 }
 
                 if (!ValidateSamplePath(path)) {
                     foreach (var args in value) {
-                        sampleExceptions.Add(args, new InvalidDataException("Invalid file extension"));
+                        sampleExceptions.Add(args, new InvalidDataException("文件扩展名无效"));
                     }
                     continue;
                 }

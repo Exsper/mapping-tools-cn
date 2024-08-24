@@ -171,7 +171,7 @@ namespace Mapping_Tools.Components.ObjectVisualiser {
         }
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) {
-            throw new NotSupportedException("OsuPatternToThumbnailConverter is a OneWay converter.");
+            throw new NotSupportedException("OsuPatternToThumbnailConverter是单向转换器。");
         }
     }
 }

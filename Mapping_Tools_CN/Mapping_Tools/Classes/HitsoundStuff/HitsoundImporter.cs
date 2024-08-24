@@ -86,8 +86,8 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                             } catch (Exception ex) {
                                 // Something went wrong reading the samples. I'll just assume they weren't the same
                                 if (!error) {
-                                    MessageBox.Show($"Exception '{ex.Message}' while trying to analyze samples.",
-                                        "Warning");
+                                    MessageBox.Show($"分析采样时出现错误：'{ex.Message}'。",
+                                        "警告");
                                     ex.Show();
                                     error = true;
                                 }

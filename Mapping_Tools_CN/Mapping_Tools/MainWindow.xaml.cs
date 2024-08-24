@@ -388,7 +388,7 @@ namespace Mapping_Tools {
         private void OpenInfo(object sender, RoutedEventArgs e) {
             var version = Assembly.GetEntryAssembly()?.GetName().Version;
             var builder = new StringBuilder();
-            builder.AppendLine($"Mapping Tools {version} （对应原版1.12.18）");
+            builder.AppendLine($"Mapping Tools {version} （对应原版1.12.19）");
             builder.AppendLine();
             builder.AppendLine("制作者：");
             builder.AppendLine("OliBomby");

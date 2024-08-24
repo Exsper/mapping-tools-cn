@@ -43,11 +43,11 @@
                         <Button Style="{DynamicResource MaterialDesignFlatButton}"
                                 Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
                                 CommandParameter="0"
-                                Content="CANCEL" />
+                                Content="取消" />
                         <Button Style="{DynamicResource MaterialDesignFlatButton}"
                                 Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
                                 CommandParameter="1"
-                                Content="OK" />
+                                Content="确定" />
                     </StackPanel>
                 </Grid>
             </Button.CommandParameter>

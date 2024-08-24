@@ -8,7 +8,7 @@ namespace Mapping_Tools.Components.Domain {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo) {
             int limit = LimitWrapper.Value;
             string str = (value ?? "").ToString();
-            return str.Length <= limit ? ValidationResult.ValidResult : new ValidationResult(false, $"Field can not be over {limit} characters long.");
+            return str.Length <= limit ? ValidationResult.ValidResult : new ValidationResult(false, $"输入框字符长度不能大于 {limit} 。");
         }
 
         public IntWrapper LimitWrapper { get; set; }

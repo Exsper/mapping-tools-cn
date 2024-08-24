@@ -456,7 +456,7 @@ namespace Mapping_Tools.Viewmodels
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.DefaultExt = ".png"; // Required file extension
-            fileDialog.Filter = @"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO";// Optional file extensions
+            fileDialog.Filter = @"所有图片文件|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO";// Optional file extensions
 
             if (fileDialog.ShowDialog() == DialogResult.OK) {
                 PictureFile = fileDialog.FileName;
@@ -469,14 +469,14 @@ namespace Mapping_Tools.Viewmodels
                 EditorReader reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
                 if (editorReaderException1 != null) {
-                    throw new Exception("Could not fetch selected hit object.", editorReaderException1);
+                    throw new Exception("无法获取到选中的打击物件。", editorReaderException1);
                 }
 
                 BeatmapEditor editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
                 List<HitObject> markedObjects = selected;
 
                 if (editorReaderException2 != null) {
-                    throw new Exception("Could not fetch selected hit object.", editorReaderException2);
+                    throw new Exception("无法获取到选中的打击物件。", editorReaderException2);
                 }
 
                 if (markedObjects == null || markedObjects.Count(o => o.IsSlider) == 0) return;

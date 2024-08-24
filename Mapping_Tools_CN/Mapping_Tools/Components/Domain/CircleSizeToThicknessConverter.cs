@@ -10,7 +10,7 @@ namespace Mapping_Tools.Components.Domain {
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
-            throw new NotSupportedException("CircleSizeToThicknessConverter is a OneWay converter.");
+            throw new NotSupportedException("CircleSizeToThicknessConverter是单向转换器。");
         }
     }
 }
