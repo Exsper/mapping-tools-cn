@@ -122,7 +122,7 @@
         "\"This beatmap is incompatible with this operation.\"": "\"该谱面不适用该操作。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Exceptions\\EditorReaderDisabledException.cs": {
-        "\"You need to enable Editor Reader to use this feature.\"": "\"该功能需要开启编辑器读取器。\""
+        "\"You need to enable Editor Reader to use this feature.\"": "\"该功能需要开启编辑器读取功能。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Exceptions\\InvalidEditorReaderStateException.cs": {
         "\"Failed to validate Editor Reader state.\"": "\"无法验证编辑器读取器的状态。\""
@@ -138,36 +138,36 @@
         "\"Output Brickwall(dB)\"": "\"Output Brickwall(dB)\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundConverter.cs": {
-        "$\"Given sample schema doesn't support sample ({s.SampleArgs}) and growth is disabled.\"": "$\"Given sample schema doesn't support sample ({s.SampleArgs}) and growth is disabled.\"",
-        "\"Custom indices can't fit the sample packages.\\n\"": "\"Custom indices can't fit the sample packages.\\n\"",
-        "\"Maybe you are using an incompatible previous sample schema and growth is disabled.\"": "\"Maybe you are using an incompatible previous sample schema and growth is disabled.\""
+        "$\"Given sample schema doesn't support sample ({s.SampleArgs}) and growth is disabled.\"": "$\"给定的采样规划不支持采样 ({s.SampleArgs}) ，扩展已禁用。\"",
+        "\"Custom indices can't fit the sample packages.\\n\"": "\"自定义音效组无法匹配该采样包。\\n\"",
+        "\"Maybe you are using an incompatible previous sample schema and growth is disabled.\"": "\"该文件可能是无法兼容的旧版采样规划，扩展已禁用。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs": {
-        "$\"Exception '{ex.Message}' while trying to analyze samples.\"": "$\"Exception '{ex.Message}' while trying to analyze samples.\"",
-        "\"Warning\"": "\"Warning\"",
+        "$\"Exception '{ex.Message}' while trying to analyze samples.\"": "$\"分析采样时出现错误：'{ex.Message}'。\"",
+        "\"Warning\"": "\"警告\"",
         "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\"": "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleImporter.cs": {
         "\".sf2\"": "\".sf2\"",
         "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"": "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"",
-        "\"File not found\"": "\"File not found\"",
-        "\"Invalid file extension\"": "\"Invalid file extension\""
+        "\"File not found\"": "\"文件未找到\"",
+        "\"Invalid file extension\"": "\"文件扩展名无效\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\VorbisFileWriter.cs": {
-        "$\"Vorbis writer does not support {sampleRate} sample rate.\"": "$\"Vorbis writer does not support {sampleRate} sample rate.\"",
-        "$\"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}\"": "$\"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}\""
+        "$\"Vorbis writer does not support {sampleRate} sample rate.\"": "$\"Vorbis writer不支持 {sampleRate} 采样率。\"",
+        "$\"This Wave encoding is not supported by VorbisFileWriter: {format.Encoding}\"": "$\"VorbisFileWriter 不支持该 Wave 编码：{format.Encoding}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\JsonConverters\\Vector2Converter.cs": {
-        "\"A Vector2 must contain X and Y properties.\"": "\"A Vector2 must contain X and Y properties.\""
+        "\"A Vector2 must contain X and Y properties.\"": "\"Vector2对象必须包含X和Y属性。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\BackupManager.cs": {
-        "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"": "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"",
-        "\"Error\"": "\"Error\"",
-        "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"": "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"",
-        "$\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"": "$\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"",
-        "\"Do you want to load the backup anyways?\"": "\"Do you want to load the backup anyways?\"",
-        "\"Load backup\"": "\"Load backup\"",
-        "\"Backup successfully loaded!\"": "\"Backup successfully loaded!\""
+        "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"": "\"所选谱面文件不存在！请检查当前谱面输入框内的文件是否正确，或尝试重新选择谱面文件。\"",
+        "\"Error\"": "\"错误\"",
+        "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"": "\"备份文件夹不存在！请检查首选项中的备份文件夹路径是否存在。\"",
+        "$\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"": "$\"备份文件和目标谱面的元数据（metadata）不一致。\\n{backupFilename}\\n{destinationFilename}\"",
+        "\"Do you want to load the backup anyways?\"": "\"是否仍要加载备份？\"",
+        "\"Load backup\"": "\"加载备份\"",
+        "\"Backup successfully loaded!\"": "\"成功载入备份！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\IOHelper.cs": {
         "\"JSON File|*.json\"": "\"JSON文件|*.json\"",
@@ -198,8 +198,8 @@
         "\"New project could not be initialized!\"": "\"无法初始化新项目！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs": {
-        "\"User-specific configuration could not be loaded!\"": "\"User-specific configuration could not be loaded!\"",
-        "\"User-specific configuration could not be saved!\"": "\"User-specific configuration could not be saved!\"",
+        "\"User-specific configuration could not be loaded!\"": "\"无法加载用户配置！\"",
+        "\"User-specific configuration could not be saved!\"": "\"无法保存用户配置！\"",
         "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
         "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"": "\"SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\"",
         "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"": "\"无法自动获取osu!安装路径。请在首选项中指定正确的路径。\"",
@@ -249,20 +249,20 @@
         "\"Successfully saved current beatmap!\"": "\"成功保存当前谱面！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\PathHelper.cs": {
-        "\"Point 1 must be part of a linked list.\"": "\"Point 1 must be part of a linked list.\"",
-        "\"Point 1 must have a successor.\"": "\"Point 1 must have a successor.\"",
-        "\"Start and end points can not be the same.\"": "\"Start and end points can not be the same.\"",
-        "\"The end point has to be a node that comes after the starting node in the linked list.\"": "\"The end point has to be a node that comes after the starting node in the linked list.\"",
-        "\"The end point has to be a points that comes after the starting point in the path.\"": "\"The end point has to be a points that comes after the starting point in the path.\""
+        "\"Point 1 must be part of a linked list.\"": "\"点 1 必须是链表的一部分。\"",
+        "\"Point 1 must have a successor.\"": "\"点 1 必须有后继点。\"",
+        "\"Start and end points can not be the same.\"": "\"开始点和结束点应不相同。\"",
+        "\"The end point has to be a node that comes after the starting node in the linked list.\"": "\"结束点应为链表中开始节点之后的节点。\"",
+        "\"The end point has to be a points that comes after the starting point in the path.\"": "\"结束点应为路径中开始点之后的点。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\PathPoint.cs": {
         "$\"{Pos} {OgPos} ({PreAngle}, {PostAngle}) {CumulativeLength} {T} {Red}\"": "$\"{Pos} {OgPos} ({PreAngle}, {PostAngle}) {CumulativeLength} {T} {Red}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\PathWithHints.cs": {
-        "\"Hint start must be before end.\"": "\"Hint start must be before end.\""
+        "\"Hint start must be before end.\"": "\"提示开始必须在结束之前。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\Sliders\\Newgen\\Reconstructor.cs": {
-        "\"Can not convert hint path to non-bezier path type.\"": "\"Can not convert hint path to non-bezier path type.\""
+        "\"Can not convert hint path to non-bezier path type.\"": "\"无法转换提示路径为非贝塞尔路径。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\AutoFailDetector.cs": {
         "\"\\nDo you want to use this solution?\"": "\"\\n您想使用这个解决方案吗？\"",
@@ -362,12 +362,12 @@
         "\"Hitsounds\"": "\"Hitsounds\"",
         "\"rhythm_guide.osu\"": "\"rhythm_guide.osu\"",
         "\"{Paths}, {ExportPath}, {ExportMode}, {OutputGameMode}, {OutputName}, {NcEverything}\"": "\"{Paths}, {ExportPath}, {ExportMode}, {OutputGameMode}, {OutputName}, {NcEverything}\"",
-        "\"Export path must be a file.\"": "\"Export path must be a file.\"",
-        "\"There must be at least one beatmap.\"": "\"There must be at least one beatmap.\"",
+        "\"Export path must be a file.\"": "\"导出路径必须是一个文件。\"",
+        "\"There must be at least one beatmap.\"": "\"必须至少存在一个谱面。\"",
         "\"0.0\"": "\"0.0\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SlideratorStuff\\Sliderator.cs": {
-        "\"Zero length path.\"": "\"Zero length path.\""
+        "\"Zero length path.\"": "\"路径长度为0。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\CoordinateConverter.cs": {
         "\"Fullscreen\"": "\"Fullscreen\"",
@@ -378,20 +378,20 @@
         "\"Letterboxing\"": "\"Letterboxing\"",
         "\"LetterboxPositionX\"": "\"LetterboxPositionX\"",
         "\"LetterboxPositionY\"": "\"LetterboxPositionY\"",
-        "$\"Can't find the key {key} in osu! user config.\"": "$\"Can't find the key {key} in osu! user config.\"",
+        "$\"Can't find the key {key} in osu! user config.\"": "$\"在osu!用户配置中找不到键 {key} 。\"",
         "$\"{GetScreenBox()}, {OsuWindowPosition}, {OsuResolution}, {Fullscreen}, {Letterboxing}, {LetterboxingPosition}\"": "$\"{GetScreenBox()}, {OsuWindowPosition}, {OsuResolution}, {Fullscreen}, {Letterboxing}, {LetterboxingPosition}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\LayerCollection.cs": {
-        "\"Inception level can't be less than 0.\"": "\"Inception level can't be less than 0.\""
+        "\"Inception level can't be less than 0.\"": "\"启用层级不能小于0。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObject\\RelevantObjects\\RelevantCircle.cs": {
-        "\"Virtual circle preferences\"": "\"Virtual circle preferences\""
+        "\"Virtual circle preferences\"": "\"辅助圆选项\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObject\\RelevantObjects\\RelevantLine.cs": {
-        "\"Virtual line preferences\"": "\"Virtual line preferences\""
+        "\"Virtual line preferences\"": "\"辅助线选项\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObject\\RelevantObjects\\RelevantPoint.cs": {
-        "\"Virtual point preferences\"": "\"Virtual point preferences\""
+        "\"Virtual point preferences\"": "\"辅助点选项\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Allocation\\RelevantObjectPairGenerator.cs": {
         "\"Dependencies:\"": "\"Dependencies:\"",
@@ -399,8 +399,8 @@
         "\"combinations of every type:\"": "\"combinations of every type:\"",
         "\"Cartesian product:\"": "\"Cartesian product:\"",
         "\"Flattened:\"": "\"Flattened:\"",
-        "\"Array length can't be less than number of selected elements\"": "\"Array length can't be less than number of selected elements\"",
-        "\"Number of selected elements can't be less than 1\"": "\"Number of selected elements can't be less than 1\""
+        "\"Array length can't be less than number of selected elements\"": "\"数组长度不能小于选中物件数量\"",
+        "\"Number of selected elements can't be less than 1\"": "\"选中物件数量不能小于1\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\GeneratorInputSelection\\SelectionPredicate.cs": {
         "\"NeedSelected: {NeedSelected}, NeedLocked: {NeedLocked}, NeedGeneratedByThis: {NeedGeneratedByThis}, NeedGeneratedNotByThis: {NeedGeneratedNotByThis}, MinRelevancy: {MinRelevancy}\"": "\"NeedSelected: {NeedSelected}, NeedLocked: {NeedLocked}, NeedGeneratedByThis: {NeedGeneratedByThis}, NeedGeneratedNotByThis: {NeedGeneratedNotByThis}, MinRelevancy: {MinRelevancy}\""
@@ -603,16 +603,16 @@
         "\"Select beatmaps with File Explorer.\"": "\"在文件浏览器中选择谱面。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\MessageDialog.xaml": {
-        "    OK": "    OK",
-        "I WANNA SPEAK TO YOUR MANAGER": "I WANNA SPEAK TO YOUR MANAGER"
+        "    OK": "    好的",
+        "I WANNA SPEAK TO YOUR MANAGER": "我想和你们经理谈谈"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\SampleDialog\\SampleDialog.xaml": {
         "    ACCEPT": "    确定",
         "    CANCEL": "    取消",
-        "<TextBlock>New contact:</TextBlock>": "<TextBlock>New contact:</TextBlock>"
+        "<TextBlock>New contact:</TextBlock>": "<TextBlock>新联系人：</TextBlock>"
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Dialogs\\TypeValueDialog.xaml": {
-        "materialDesign:HintAssist.Hint=\"Value\"": "materialDesign:HintAssist.Hint=\"Value\"",
+        "materialDesign:HintAssist.Hint=\"Value\"": "materialDesign:HintAssist.Hint=\"数值\"",
         "    ACCEPT": "    确定",
         "    CANCEL": "    取消"
     },
@@ -620,25 +620,25 @@
         "\", \"": "\", \"",
         "$\"{rbd.Numerator.ToInvariant()}/{rbd.Denominator.ToInvariant()}\"": "$\"{rbd.Numerator.ToInvariant()}/{rbd.Denominator.ToInvariant()}\"",
         "\"^[\\\\s]*[1-9][0-9]*[\\\\s]*/[\\\\s]*[1-9][0-9]*[\\\\s]*$\"": "\"^[\\\\s]*[1-9][0-9]*[\\\\s]*/[\\\\s]*[1-9][0-9]*[\\\\s]*$\"",
-        "\"Beat divisor must be greater than zero.\"": "\"Beat divisor must be greater than zero.\"",
+        "\"Beat divisor must be greater than zero.\"": "\"节拍细分必须大于0。\"",
         "\"Double format error.\"": "\"Double格式错误。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\BooleanAndConverter.cs": {
-        "\"BooleanAndConverter is a OneWay converter.\"": "\"BooleanAndConverter is a OneWay converter.\""
+        "\"BooleanAndConverter is a OneWay converter.\"": "\"BooleanAndConverter是单向转换器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\BooleanOrConverter.cs": {
-        "\"BooleanOrConverter is a OneWay converter.\"": "\"BooleanOrConverter is a OneWay converter.\""
+        "\"BooleanOrConverter is a OneWay converter.\"": "\"BooleanOrConverter是单向转换器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\BooleanOrToVisibilityConverter.cs": {
-        "\"BooleanOrConverter is a OneWay converter.\"": "\"BooleanOrConverter is a OneWay converter.\""
+        "\"BooleanOrConverter is a OneWay converter.\"": "\"BooleanOrConverter是单向转换器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\CharacterLimitValidationRule.cs": {
-        "$\"Field can not be over {limit} characters long.\"": "$\"Field can not be over {limit} characters long.\"",
+        "$\"Field can not be over {limit} characters long.\"": "$\"输入框字符长度不能大于 {limit} 。\"",
         "\"Value\"": "\"Value\"",
         "\"Data\"": "\"Data\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\CircleSizeToThicknessConverter.cs": {
-        "\"CircleSizeToThicknessConverter is a OneWay converter.\"": "\"CircleSizeToThicknessConverter is a OneWay converter.\""
+        "\"CircleSizeToThicknessConverter is a OneWay converter.\"": "\"CircleSizeToThicknessConverter是单向转换器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Domain\\ColorToStringConverter.cs": {
         "\"Cannot convert back null.\"": "\"不能逆转换null。\"",
@@ -717,13 +717,13 @@
         "\"AllowClickToPause\"": "\"AllowClickToPause\"",
         "\"GifSource\"": "\"GifSource\"",
         "\"PlayAnimation\"": "\"PlayAnimation\"",
-        "\"GIF Source was not found.\"": "\"GIF Source was not found.\"",
+        "\"GIF Source was not found.\"": "\"找不到GIF资源。\"",
         "$\"Mapping_Tools.{GifSource}\"": "$\"Mapping_Tools.{GifSource}\"",
         "\"DeleteObject\"": "\"DeleteObject\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Anchor.xaml": {
-        "Header=\"Delete\"": "Header=\"Delete\"",
-        "Header=\"Type in value...\"": "Header=\"Type in value...\""
+        "Header=\"Delete\"": "Header=\"删除\"",
+        "Header=\"Type in value...\"": "Header=\"输入数据...\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Anchor.xaml.cs": {
         "\"ContextMenu\"": "\"ContextMenu\"",
@@ -811,7 +811,7 @@
         "\"SliderBallStroke\"": "\"SliderBallStroke\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ObjectVisualiser\\OsuPatternToThumbnailConverter.cs": {
-        "\"OsuPatternToThumbnailConverter is a OneWay converter.\"": "\"OsuPatternToThumbnailConverter is a OneWay converter.\""
+        "\"OsuPatternToThumbnailConverter is a OneWay converter.\"": "\"OsuPatternToThumbnailConverter是单向转换器。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\TimeLine\\TimeLineElement.xaml.cs": {
         "\"{0}:{1}:{2}\"": "\"{0}:{1}:{2}\"",
@@ -823,11 +823,11 @@
     "./Mapping_Tools\\Mapping_Tools\\Components\\ValueOrGraphControl.xaml": {
         "Text=\"{Binding GraphState, ElementName=UserControl, Converter={StaticResource GraphStateToStringConverter}, UpdateSourceTrigger=LostFocus, Mode=TwoWay}\"": "Text=\"{Binding GraphState, ElementName=UserControl, Converter={StaticResource GraphStateToStringConverter}, UpdateSourceTrigger=LostFocus, Mode=TwoWay}\"",
         "Content=\"...\"": "Content=\"...\"",
-        "Content=\"CANCEL\"": "Content=\"CANCEL\"",
-        "Content=\"OK\"": "Content=\"OK\""
+        "Content=\"CANCEL\"": "Content=\"取消\"",
+        "Content=\"OK\"": "Content=\"确定\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ViewHeaderComponent.xaml": {
-        "Text=\"Test\"": "Text=\"Test\"",
+        "Text=\"Test\"": "Text=\"测试\"",
         "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml": {
@@ -913,23 +913,23 @@
         "\"Info\"": "\"信息\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdateManager.cs": {
-        "\"Do not call this method before fetching updates!\"": "\"Do not call this method before fetching updates!\"",
-        "\"Do not call this method if there are no updates!\"": "\"Do not call this method if there are no updates!\"",
-        "\"Do not call this method before download has finished!\"": "\"Do not call this method before download has finished!\""
+        "\"Do not call this method before fetching updates!\"": "\"请勿在获取更新之前调用此方法！\"",
+        "\"Do not call this method if there are no updates!\"": "\"请勿在没有可用更新时调用此方法！\"",
+        "\"Do not call this method before download has finished!\"": "\"请勿在下载完成前调用此方法！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdaterWindow.xaml": {
-        "Text=\"A new version of Mapping Tools is ready to be installed!\"": "Text=\"A new version of Mapping Tools is ready to be installed!\"",
-        "Text=\"Loading release notes...\"": "Text=\"Loading release notes...\"",
-        "Text=\"Downloading new update ...\"": "Text=\"Downloading new update ...\"",
-        "Content=\"Install now\"": "Content=\"Install now\"",
-        "Content=\"Install after closing\"": "Content=\"Install after closing\"",
-        "Content=\"Skip this version\"": "Content=\"Skip this version\""
+        "Text=\"A new version of Mapping Tools is ready to be installed!\"": "Text=\"Mapping Tools的新版本已经准备好了！\"",
+        "Text=\"Loading release notes...\"": "Text=\"加载版本说明...\"",
+        "Text=\"Downloading new update ...\"": "Text=\"下载新版本...\"",
+        "Content=\"Install now\"": "Content=\"立即安装\"",
+        "Content=\"Install after closing\"": "Content=\"关闭时安装\"",
+        "Content=\"Skip this version\"": "Content=\"跳过该版本\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdaterWindow.xaml.cs": {
         "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/mapping-tools-cn/releases/latest\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\HitsoundPreviewHelperVm.cs": {
-        "\"Please select a hit object to fetch the coordinates.\"": "\"Please select a hit object to fetch the coordinates.\""
+        "\"Please select a hit object to fetch the coordinates.\"": "\"请选择打击物件以便获取坐标。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\HitsoundStudioVm.cs": {
         "\"Default\"": "\"Default\"",
@@ -980,19 +980,19 @@
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SliderPicturatorVm.cs": {
         "\"SliderTrackOverride\"": "\"SliderTrackOverride\"",
         "\".png\"": "\".png\"",
-        "\"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"": "\"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"",
-        "\"Could not fetch selected hit object.\"": "\"Could not fetch selected hit object.\""
+        "\"All Image Files|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"": "\"所有图片文件|*.BMP;*.bmp;*.JPG;*.JPEG*.jpg;*.jpeg;*.PNG;*.png;*.GIF;*.gif;*.tif;*.tiff;*.ico;*.ICO|PNG|*.PNG;*.png|JPEG|*.JPG;*.JPEG*.jpg;*.jpeg|Bitmap(.BMP,.bmp)|*.BMP;*.bmp|GIF|*.GIF;*.gif|TIF|*.tif;*.tiff|ICO|*.ico;*.ICO\"",
+        "\"Could not fetch selected hit object.\"": "\"无法获取到选中的打击物件。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SnappingToolsVm.cs": {
         "\"GeneratorType\"": "\"GeneratorType\"",
         "\".osu\"": "\".osu\"",
-        "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"": "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"",
-        "\"Can't set ConfigWatcher Path/Filter: \"": "\"Can't set ConfigWatcher Path/Filter: \"",
-        "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"": "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"",
-        "\"Warning\"": "\"Warning\""
+        "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"": "\"编辑器读取功能好像无法正常工作。尝试重新打开osu!和几何仪表盘，或者到官网查看FAQ。\"",
+        "\"Can't set ConfigWatcher Path/Filter: \"": "\"无法设置配置监视器路径/筛选器: \"",
+        "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"": "\"无法启动文件系统监视器。osu!配置文件的路径设置可能不正确。请在首选项中设置正确路径，防止图层位置显示错误。\"",
+        "\"Warning\"": "\"警告\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\TimingCopierVm.cs": {
-        "\"Number of beats between objects stays the same\"": "\"Number of beats between objects stays the same\""
+        "\"Number of beats between objects stays the same\"": "\"需要保持相同的物件之间的节拍数\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\TumourGeneratorVm.cs": {
         "\"0,0,0,2,0,L|256:0,1,256\"": "\"0,0,0,2,0,L|256:0,1,256\"",
@@ -2481,7 +2481,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\ViewCollection.cs": {
         "\"ToolName\"": "\"ToolName\"",
         "\"ToolDescription\"": "\"ToolDescription\"",
-        "$\"There exists no view with name '{name}'\"": "$\"There exists no view with name '{name}'\""
+        "$\"There exists no view with name '{name}'\"": "$\"不存在名为 '{name}' 的界面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
         "1.12.18": "0.0.1"
