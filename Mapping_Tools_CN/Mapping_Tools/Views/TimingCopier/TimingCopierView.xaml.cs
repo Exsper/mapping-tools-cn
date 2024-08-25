@@ -68,7 +68,7 @@ namespace Mapping_Tools.Views.TimingCopier {
 
                 // Get markers for hitobjects if mode 1 is used
                 List<Marker> markers = new List<Marker>();
-                if (arg.ResnapMode == "Number of beats between objects stays the same") {
+                if (arg.ResnapMode == "物件间的节拍数保持不变") {
                     markers = GetMarkers(beatmapTo, timingTo);
                 }
 
@@ -105,7 +105,7 @@ namespace Mapping_Tools.Views.TimingCopier {
                 // Apply timing changes
                 TimingPointsChange.ApplyChanges(timingTo, timingPointsChanges);
 
-                if (arg.ResnapMode == "Number of beats between objects stays the same" && redlines.Count > 0) {
+                if (arg.ResnapMode == "物件间的节拍数保持不变" && redlines.Count > 0) {
                     redlines = timingTo.Redlines;
                     List<double> newBookmarks = new List<double>();
                     double lastTime = redlines.FirstOrDefault().Offset;
@@ -145,7 +145,7 @@ namespace Mapping_Tools.Views.TimingCopier {
                         }
                     }
                     beatmapTo.SetBookmarks(newBookmarks);
-                } else if (arg.ResnapMode == "Just resnap" && redlines.Count > 0) {
+                } else if (arg.ResnapMode == "仅重新对齐" && redlines.Count > 0) {
                     // Resnap hitobjects
                     foreach (HitObject ho in beatmapTo.HitObjects)
                     {

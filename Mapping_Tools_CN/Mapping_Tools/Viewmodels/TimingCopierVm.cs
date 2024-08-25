@@ -20,7 +20,7 @@ namespace Mapping_Tools.Viewmodels {
         public TimingCopierVm() {
             importPath = "";
             exportPath = "";
-            resnapMode = "需要保持相同的物件之间的节拍数";
+            resnapMode = "物件间的节拍数保持不变";
             beatDivisors = RationalBeatDivisor.GetDefaultBeatDivisors();
 
             ImportLoadCommand = new CommandImplementation(
