@@ -36,7 +36,7 @@ function getContentBetweenQuotes(str) {
         // 排除 case "xxx" 的情况
         m = m.filter((text) => !(line.includes("case " + text)));
         // 排除 if语句 的情况
-        m = m.filter((text) => !(line.includes("== " + text) || line.includes("!= " + text)));
+        // m = m.filter((text) => !(line.includes("== " + text) || line.includes("!= " + text)));
         // 排除 索引 的情况
         m = m.filter((text) => !(line.includes("[" + text + "]")));
 

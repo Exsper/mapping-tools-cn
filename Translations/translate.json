@@ -17,6 +17,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Animation.cs": {
         "$\"Animation,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"": "$\"Animation,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()},{FrameCount.ToInvariant()},{FrameDelay.ToInvariant()},{LoopType}\"",
+        "\"Animation\"": "\"Animation\"",
         "\"This line is not an animation.\"": "\"该行不是一个动画。\"",
         "\"Failed to parse layer of animation.\"": "\"转换动画行失败。\"",
         "\"Failed to parse origin of animation.\"": "\"转换动画原点失败。\"",
@@ -35,6 +36,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Break.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{(SaveWithFloatPrecision ? EndTime.ToInvariant() : EndTime.ToRoundInvariant())}\"",
+        "\"Break\"": "\"Break\"",
         "\"This line is not a break.\"": "\"该行不是一个休息段。\"",
         "\"Failed to parse start time of break.\"": "\"转换休息段开始时间失败。\"",
         "\"Failed to parse end time of break.\"": "\"转换休息段结束时间失败。\""
@@ -52,6 +54,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Sprite.cs": {
         "$\"Sprite,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"Sprite,{Layer},{Origin},\\\"{FilePath}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
+        "\"Sprite\"": "\"Sprite\"",
         "\"This line is not a sprite.\"": "\"该行不是一个精灵图。\"",
         "\"Failed to parse layer of sprite.\"": "\"转换精灵图的图层失败。\"",
         "\"Failed to parse origin of sprite.\"": "\"转换精灵图的原点失败。\"",
@@ -65,6 +68,7 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\StoryboardSoundSample.cs": {
         "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"": "$\"Sample,{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},{Layer.ToIntInvariant()},\\\"{FilePath}\\\",{Volume.ToRoundInvariant()}\"",
+        "\"Sample\"": "\"Sample\"",
         "\"This line is not a storyboarded sample.\"": "\"该行不是一个故事板音效。\"",
         "\"Failed to parse time of storyboarded sample.\"": "\"转换故事板音效时间失败。\"",
         "\"Failed to parse layer of storyboarded sample.\"": "\"转换故事板音效层失败。\"",
@@ -78,6 +82,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Classes\\BeatmapHelper\\Events\\Video.cs": {
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\"\"",
         "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"": "$\"{EventType},{(SaveWithFloatPrecision ? StartTime.ToInvariant() : StartTime.ToRoundInvariant())},\\\"{Filename}\\\",{Pos.X.ToInvariant()},{Pos.Y.ToInvariant()}\"",
+        "\"Video\"": "\"Video\"",
         "\"This line is not a video.\"": "\"该行不是一个视频。\"",
         "\"Failed to parse start time of video.\"": "\"转换视频起始时间失败。\"",
         "\"Failed to parse X offset of video.\"": "\"转换视频X轴偏移失败。\"",
@@ -147,6 +152,9 @@
         "\"Warning\"": "\"警告\"",
         "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\"": "$\"{sampleSet.ToString().ToLower()}-hit{hitsound.ToString().ToLower()}-1.wav\""
     },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleGeneratingArgsComparer.cs": {
+        "\".sf2\"": "\".sf2\""
+    },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\SampleImporter.cs": {
         "\".sf2\"": "\".sf2\"",
         "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"": "\"^(none|normal|soft|drum)-hit(normal|whistle|finish|clap)-1\\.wav$\"",
@@ -164,6 +172,7 @@
         "\"Selected beatmap file does not exist! Check if you have the correct file selected in the current beatmap field, or try re-selecting the beatmap file.\"": "\"所选谱面文件不存在！请检查当前谱面输入框内的文件是否正确，或尝试重新选择谱面文件。\"",
         "\"Error\"": "\"错误\"",
         "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"": "\"备份文件夹不存在！请检查首选项中的备份文件夹路径是否存在。\"",
+        "\".osu\"": "\".osu\"",
         "$\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"": "$\"备份文件和目标谱面的元数据（metadata）不一致。\\n{backupFilename}\\n{destinationFilename}\"",
         "\"Do you want to load the backup anyways?\"": "\"是否仍要加载备份？\"",
         "\"Load backup\"": "\"加载备份\"",
@@ -205,6 +214,7 @@
         "\"Could not automatically find osu! install directory. Please set the correct paths in the Preferences.\"": "\"无法自动获取osu!安装路径。请在首选项中指定正确的路径。\"",
         "$\"osu!.{Environment.UserName}.cfg\"": "$\"osu!.{Environment.UserName}.cfg\"",
         "\"Backups\"": "\"Backups\"",
+        "\"BeatmapDirectory\"": "\"BeatmapDirectory\"",
         "\"Songs\"": "\"Songs\"",
         "\"DisplayName\"": "\"DisplayName\"",
         "\"UninstallString\"": "\"UninstallString\"",
@@ -223,6 +233,7 @@
         "\"Provided timestamp has too many values.\"": "\"给定的时间戳存在太多数值。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\ToolHelpers\\EditorReaderStuff.cs": {
+        "\"osu!.exe\"": "\"osu!.exe\"",
         "\".osu\"": "\".osu\"",
         "\"No active editor detected.\"": "\"未检测到正在运行的编辑器。\"",
         "\"editor_reader_error.txt\"": "\"editor_reader_error.txt\"",
@@ -574,6 +585,7 @@
         "$\"Successfully loaded settings from {saveSlot.Name}!\"": "$\"成功载入设置从 {saveSlot.Name}!\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\Serialization\\SnappingToolsSaveSlot.cs": {
+        "\"ProjectHotkey\"": "\"ProjectHotkey\"",
         "$\"SaveSlot - {number}\"": "$\"存档 - {number}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Options\\TumourLayer.cs": {
@@ -987,6 +999,8 @@
         "\"GeneratorType\"": "\"GeneratorType\"",
         "\".osu\"": "\".osu\"",
         "\"Editor Reader seems to be failing a lot. Try restarting osu! and opening Geometry Dashboard again or refer to the FAQ.\"": "\"编辑器读取功能好像无法正常工作。尝试重新打开osu!和几何仪表盘，或者到官网查看FAQ。\"",
+        "\"CurrentPreferences\"": "\"CurrentPreferences\"",
+        "\"OsuConfigPath\"": "\"OsuConfigPath\"",
         "\"Can't set ConfigWatcher Path/Filter: \"": "\"无法设置配置监视器路径/筛选器: \"",
         "\"Can not enable filesystem watcher. osu! config path is probably incorrect. Please set the correct path in the Preferences or your overlay might have the wrong position.\"": "\"无法启动文件系统监视器。osu!配置文件的路径设置可能不正确。请在首选项中设置正确路径，防止图层位置显示错误。\"",
         "\"Warning\"": "\"警告\""
@@ -1814,6 +1828,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\PropertyTransformer\\PropertyTransformerView.xaml.cs": {
         "\"Property Transformer\"": "\"属性修改器\"",
         "\"Multiple and add to properties of all the timingpoints, hitobjects, bookmarks and storyboarded samples of the current map.{Environment.NewLine}The new value is the old value times the multiplier plus the offset. The multiplier is the left textbox and the offset is the right textbox. The multiplier gets done first.{Environment.NewLine}Resulting values get rounded if they have to be integer.\"": "\"修改当前谱面的时间线、打击物件、书签和故事板音效的属性，将各属性值乘以或加上自定义数值。{Environment.NewLine}新数值是在旧数值基础上乘以乘数并加上偏移。左边的文本框是乘数，右边的文本框是偏移。先做乘法再做加法。{Environment.NewLine}如果数值需要为整数，结果会自动四舍五入。\"",
+        "\".osb\"": "\".osb\"",
         "\"Done!\"": "\"完成！\"",
         "\"propertytransformerproject.json\"": "\"propertytransformerproject.json\"",
         "\"Property Transformer Projects\"": "\"Property Transformer Projects\""
@@ -2355,6 +2370,8 @@
         "\"Timing Copier Projects\"": "\"Timing Copier Projects\"",
         "\"Timing Copier\"": "\"Timing复制器\"",
         "\"Copies timing from A to B.{Environment.NewLine}There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:{Environment.NewLine}'Number of beats between objects stays the same' will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.{Environment.NewLine}'Just resnap' will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.{Environment.NewLine}'Don't move objects' will not move the objects at all.\"": "\"将A谱面的timing复制到B谱面。{Environment.NewLine}程序有 3 种工作模式处理移动物件（打击物件/时间轴/书签）以适配新timing：{Environment.NewLine}“物件间的节拍数保持不变”模式在移动并保证物件间节拍数不变后，也会按照指定的节拍细分自动对齐。注意使用前确保所有物件都已对齐，并且当新timing更改了物件间的节拍数时请勿使用该模式。{Environment.NewLine}“仅重新对齐”模式将物件对齐到新timing指定的节拍细分上。该模式不对齐书签。{Environment.NewLine}“不移动物件”模式不会移动任何物件。\"",
+        "\"Number of beats between objects stays the same\"": "\"物件间的节拍数保持不变\"",
+        "\"Just resnap\"": "\"仅重新对齐\"",
         "$\"Successfully copied timing to {mapsDone} {(mapsDone == 1 ? \"beatmap\" : \"beatmaps\")}!\"": "$\"成功复制timing到 {mapsDone} 张{(mapsDone == 1 ? \"谱面\" : \"谱面\")}！\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingHelper\\TimingHelperView.xaml": {
