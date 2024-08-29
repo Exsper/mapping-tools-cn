@@ -81,14 +81,14 @@ namespace Mapping_Tools.Views.SliderMerger {
             foreach (var path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
-                if (arg.ImportModeSetting == SliderMergerVm.ImportMode.Selected && editorReaderException2 != null) {
+                if (arg.ImportModeSetting == SliderMergerVm.ImportMode.选中的 && editorReaderException2 != null) {
                     throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
                 var beatmap = editor.Beatmap;
                 var markedObjects = arg.ImportModeSetting == 0 ? selected :
-                    arg.ImportModeSetting == SliderMergerVm.ImportMode.Bookmarked ? beatmap.GetBookmarkedObjects() :
-                    arg.ImportModeSetting == SliderMergerVm.ImportMode.Time ? beatmap.QueryTimeCode(arg.TimeCode).ToList() :
+                    arg.ImportModeSetting == SliderMergerVm.ImportMode.书签处 ? beatmap.GetBookmarkedObjects() :
+                    arg.ImportModeSetting == SliderMergerVm.ImportMode.指定时间处 ? beatmap.QueryTimeCode(arg.TimeCode).ToList() :
                     beatmap.HitObjects;
 
                 var mergeLast = false;
@@ -123,10 +123,10 @@ namespace Mapping_Tools.Views.SliderMerger {
 
                         double extraLength = 0;
                         switch (arg.ConnectionModeSetting) {
-                            case SliderMergerVm.ConnectionMode.Move:
+                            case SliderMergerVm.ConnectionMode.移动:
                                 Move(sp2, sp1.Last() - sp2.First());
                                 break;
-                            case SliderMergerVm.ConnectionMode.Linear:
+                            case SliderMergerVm.ConnectionMode.线性连接:
                                 sp1.Add(sp1.Last());
                                 sp1.Add(sp2.First());
                                 extraLength = (ho1.CurvePoints.Last() - ho2.Pos).Length;

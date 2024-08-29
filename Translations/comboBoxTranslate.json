@@ -1,0 +1,22 @@
+{
+    "//": "SliderMerger部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SliderMergerVm.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "ConnectionMode.Move": "ConnectionMode.移动",
+        "    Selected": "    选中的",
+        "    Bookmarked": "    书签处",
+        "    Time": "    指定时间处",
+        "    Everything": "    所有物件",
+        "    Move": "    移动",
+        "    Linear\r\n": "    线性连接\r\n"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\SliderMerger\\SliderMergerView.xaml.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Bookmarked": "ImportMode.书签处",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "ConnectionMode.Move": "ConnectionMode.移动",
+        "ConnectionMode.Linear": "ConnectionMode.线性连接"
+    },
+    "//": "SliderMerger部分结束"
+}

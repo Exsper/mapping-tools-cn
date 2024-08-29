@@ -305,6 +305,13 @@ async function translateRepo(orgfolder, transJsonPath, distfolder, skipPaths = [
         console.error("无法读取翻译文件：" + transJsonPath + "\n", err);
         console.warn("将直接复制原项目到目标文件夹");
     }
+    let comboBoxTranslation = null;
+    try {
+        comboBoxTranslation = JSON.parse(await fs.readFile("./Translations/comboBoxTranslate.json", 'utf8'));
+    }
+    catch (ex) {
+        console.error("无法读取combobox翻译文件：" + "./Translations/comboBoxTranslate.json" + "\n", err);
+    }
     // 数量统计
     let textcount = 0;
     let translatedcount = 0;
@@ -327,7 +334,7 @@ async function translateRepo(orgfolder, transJsonPath, distfolder, skipPaths = [
             catch (e) {
                 await fs.mkdir(path.dirname(destPath), { recursive: true });
             }
-            if (existTranslation === null || existTranslation[filePaths[i]] === undefined) {
+            if (existTranslation === null || (existTranslation[filePaths[i]] === undefined && comboBoxTranslation[filePaths[i]] === undefined)) {
                 // 直接复制文件
                 await fs.copyFile(filePaths[i], destPath);
                 continue;
@@ -335,15 +342,24 @@ async function translateRepo(orgfolder, transJsonPath, distfolder, skipPaths = [
             // 读取文件
             let data = await readFile(filePaths[i]);
             // 翻译文本
-            Object.keys(existTranslation[filePaths[i]]).forEach(subkey => {
-                let transText = existTranslation[filePaths[i]][subkey];
-                // 因为 MainWindow.xaml.cs 内 UpdateManager 和 制作者名单 都出现了"OliBomby"
-                // 而更新器的地址需要更改为本项目，需要将UpdateManager的参数改为本人Github用户名
-                // 故需要防止在翻译 MainWindow.xaml.cs 时将制作者名单中的"OliBomby"也替换掉
-                if (filePaths[i] === "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs" && subkey === "\"OliBomby\"")
-                    data = data.replace(subkey, transText);
-                else data = data.replaceAll(subkey, transText);
-            });
+            if (existTranslation[filePaths[i]]) {
+                Object.keys(existTranslation[filePaths[i]]).forEach(subkey => {
+                    let transText = existTranslation[filePaths[i]][subkey];
+                    // 因为 MainWindow.xaml.cs 内 UpdateManager 和 制作者名单 都出现了"OliBomby"
+                    // 而更新器的地址需要更改为本项目，需要将UpdateManager的参数改为本人Github用户名
+                    // 故需要防止在翻译 MainWindow.xaml.cs 时将制作者名单中的"OliBomby"也替换掉
+                    if (filePaths[i] === "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs" && subkey === "\"OliBomby\"")
+                        data = data.replace(subkey, transText);
+                    else data = data.replaceAll(subkey, transText);
+                });
+            }
+            // combobox翻译
+            if (comboBoxTranslation[filePaths[i]]) {
+                Object.keys(comboBoxTranslation[filePaths[i]]).forEach(subkey => {
+                    let transText = comboBoxTranslation[filePaths[i]][subkey];
+                    data = data.replaceAll(subkey, transText);
+                });
+            }
             // 写入文件
             await fs.writeFile(destPath, data, "utf8");
         }

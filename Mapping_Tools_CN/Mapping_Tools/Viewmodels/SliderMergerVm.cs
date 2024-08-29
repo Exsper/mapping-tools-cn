@@ -30,7 +30,7 @@ namespace Mapping_Tools.Viewmodels {
         public IEnumerable<ImportMode> ImportModes => Enum.GetValues(typeof(ImportMode)).Cast<ImportMode>();
 
         [JsonIgnore]
-        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.Time ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.指定时间处 ? Visibility.Visible : Visibility.Collapsed;
 
         private string timeCode;
         public string TimeCode {
@@ -68,8 +68,8 @@ namespace Mapping_Tools.Viewmodels {
         #endregion
 
         public SliderMergerVm() {
-            ImportModeSetting = ImportMode.Selected;
-            ConnectionModeSetting = ConnectionMode.Move;
+            ImportModeSetting = ImportMode.选中的;
+            ConnectionModeSetting = ConnectionMode.移动;
             Leniency = 256;
             LinearOnLinear = false;
             MergeOnSliderEnd = true;
@@ -77,16 +77,16 @@ namespace Mapping_Tools.Viewmodels {
 
         public enum ImportMode
         {
-            Selected,
-            Bookmarked,
-            Time,
-            Everything
+            选中的,
+            书签处,
+            指定时间处,
+            所有物件
         }
 
         public enum ConnectionMode
         {
-            Move,
-            Linear
+            移动,
+            线性连接
         }
     }
 }
