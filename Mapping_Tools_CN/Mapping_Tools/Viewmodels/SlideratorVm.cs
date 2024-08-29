@@ -298,7 +298,7 @@ namespace Mapping_Tools.Viewmodels {
             GlobalSv = 1.4;
             GraphBeats = 3;
             BeatSnapDivisor = 4;
-            ImportModeSetting = ImportMode.Selected;
+            ImportModeSetting = ImportMode.选中的;
             TimeCodeBoxVisibility = Visibility.Collapsed;
             VelocityLimit = 10;
             GraphModeSetting = GraphMode.Position;
@@ -315,7 +315,7 @@ namespace Mapping_Tools.Viewmodels {
             Quick = false;
             ExportAsNormal = true;
 
-            ImportCommand = new CommandImplementation(_ => Import(ImportModeSetting == ImportMode.Selected ? 
+            ImportCommand = new CommandImplementation(_ => Import(ImportModeSetting == ImportMode.选中的 ? 
                 IOHelper.GetCurrentBeatmapOrCurrentBeatmap(false) :
                 MainWindow.AppWindow.GetCurrentMaps()[0])
             );
@@ -374,7 +374,7 @@ namespace Mapping_Tools.Viewmodels {
             try {
                 EditorReader reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
                 
-                if (ImportModeSetting == ImportMode.Selected && editorReaderException1 != null) {
+                if (ImportModeSetting == ImportMode.选中的 && editorReaderException1 != null) {
                     throw new Exception("无法获取选中物件。", editorReaderException1);
                 }
 
@@ -382,7 +382,7 @@ namespace Mapping_Tools.Viewmodels {
                 List<HitObject> markedObjects = null;
 
                 switch (ImportModeSetting) {
-                    case ImportMode.Selected:
+                    case ImportMode.选中的:
                         editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                         if (editorReaderException2 != null) {
@@ -391,11 +391,11 @@ namespace Mapping_Tools.Viewmodels {
 
                         markedObjects = selected;
                         break;
-                    case ImportMode.Bookmarked:
+                    case ImportMode.书签处:
                         editor = new BeatmapEditor(path);
                         markedObjects = editor.Beatmap.GetBookmarkedObjects();
                         break;
-                    case ImportMode.Time:
+                    case ImportMode.指定时间处:
                         editor = new BeatmapEditor(path);
                         markedObjects = editor.Beatmap.QueryTimeCode(TimeCode).ToList();
                         break;
@@ -478,20 +478,20 @@ namespace Mapping_Tools.Viewmodels {
 
         private void SetImportMode(ImportMode value) {
             if (!Set(ref importModeSetting, value, nameof(ImportMode))) return;
-            TimeCodeBoxVisibility = ImportModeSetting == ImportMode.Time ? Visibility.Visible : Visibility.Collapsed;
+            TimeCodeBoxVisibility = ImportModeSetting == ImportMode.指定时间处 ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public enum ImportMode
         {
-            Selected,
-            Bookmarked,
-            Time
+            选中的,
+            书签处,
+            指定时间处
         }
 
         public enum ExportMode
         {
-            Add,
-            Override
+            添加,
+            覆盖
         }
 
         public enum GraphMode

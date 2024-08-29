@@ -18,5 +18,19 @@
         "ConnectionMode.Move": "ConnectionMode.移动",
         "ConnectionMode.Linear": "ConnectionMode.线性连接"
     },
-    "//": "SliderMerger部分结束"
+    "//": "Sliderator部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SlideratorVm.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Bookmarked": "ImportMode.书签处",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "    Selected": "    选中的",
+        "    Bookmarked": "    书签处",
+        "    Time\r\n": "    指定时间处\r\n",
+        "    Add": "    添加",
+        "    Override": "    覆盖"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml.cs": {
+        "ExportMode.Add": "ExportMode.添加",
+        "ExportMode.Override": "ExportMode.覆盖"
+    }
 }

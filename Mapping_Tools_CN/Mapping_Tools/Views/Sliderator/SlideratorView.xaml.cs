@@ -727,7 +727,7 @@ namespace Mapping_Tools.Views.Sliderator {
                 clone.SliderVelocity = -100 / newVelocitySV;
                 
                 // Add hit object
-                if (arg.ExportModeSetting == SlideratorVm.ExportMode.Add) {
+                if (arg.ExportModeSetting == SlideratorVm.ExportMode.添加) {
                     beatmap.HitObjects.Add(clone);
                 } else {
                     beatmap.HitObjects.Remove(hitObjectHere);
@@ -771,7 +771,7 @@ namespace Mapping_Tools.Views.Sliderator {
                 TimingPointsChange.ApplyChanges(timing, timingPointsChanges);
             } else {
                 // Add hit objects
-                if (arg.ExportModeSetting == SlideratorVm.ExportMode.Override) {
+                if (arg.ExportModeSetting == SlideratorVm.ExportMode.覆盖) {
                     beatmap.HitObjects.Remove(hitObjectHere);
                 }
 
