@@ -29,7 +29,7 @@ namespace Mapping_Tools.Viewmodels {
         public IEnumerable<ImportMode> ImportModes => Enum.GetValues(typeof(ImportMode)).Cast<ImportMode>();
 
         [JsonIgnore]
-        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.Time ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.指定时间处 ? Visibility.Visible : Visibility.Collapsed;
 
         private FreeVariable freeVariableSetting;
         public FreeVariable FreeVariableSetting {
@@ -48,16 +48,16 @@ namespace Mapping_Tools.Viewmodels {
         public IEnumerable<FreeVariable> FreeVariables => Enum.GetValues(typeof(FreeVariable)).Cast<FreeVariable>();
 
         [JsonIgnore]
-        public Visibility DurationBoxVisibility => FreeVariableSetting != FreeVariable.Duration && !UseEndTime ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility DurationBoxVisibility => FreeVariableSetting != FreeVariable.时长 && !UseEndTime ? Visibility.Visible : Visibility.Collapsed;
 
         [JsonIgnore]
-        public Visibility EndTimeBoxVisibility => FreeVariableSetting != FreeVariable.Duration && UseEndTime && !UseCurrentEditorTime ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility EndTimeBoxVisibility => FreeVariableSetting != FreeVariable.时长 && UseEndTime && !UseCurrentEditorTime ? Visibility.Visible : Visibility.Collapsed;
 
         [JsonIgnore]
-        public Visibility LengthBoxVisibility => FreeVariableSetting != FreeVariable.Length ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility LengthBoxVisibility => FreeVariableSetting != FreeVariable.长度 ? Visibility.Visible : Visibility.Collapsed;
 
         [JsonIgnore]
-        public Visibility VelocityBoxVisibility => FreeVariableSetting != FreeVariable.Velocity ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility VelocityBoxVisibility => FreeVariableSetting != FreeVariable.速度 ? Visibility.Visible : Visibility.Collapsed;
 
         private string timeCode;
         public string TimeCode {
@@ -132,7 +132,7 @@ namespace Mapping_Tools.Viewmodels {
         #endregion
 
         public SliderCompletionatorVm() {
-            ImportModeSetting = ImportMode.Selected;
+            ImportModeSetting = ImportMode.选中的;
             Duration = -1;
             EndTime = -1;
             Length = 1;
@@ -146,16 +146,16 @@ namespace Mapping_Tools.Viewmodels {
         }
 
         public enum FreeVariable {
-            Velocity,
-            Length,
-            Duration
+            速度,
+            长度,
+            时长
         }
 
         public enum ImportMode {
-            Selected,
-            Bookmarked,
-            Time,
-            Everything
+            选中的,
+            书签处,
+            指定时间处,
+            所有物件
         }
     }
 }

@@ -84,7 +84,7 @@ namespace Mapping_Tools.Views.SliderCompletionator {
 
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
-            if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.Selected && editorReaderException1 != null) {
+            if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.选中的 && editorReaderException1 != null) {
                 throw new Exception("无法获取选中物件。", editorReaderException1);
             }
 
@@ -98,7 +98,7 @@ namespace Mapping_Tools.Views.SliderCompletionator {
             foreach (string path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
-                if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.Selected && editorReaderException2 != null) {
+                if (arg.ImportModeSetting == SliderCompletionatorVm.ImportMode.选中的 && editorReaderException2 != null) {
                     throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
@@ -106,10 +106,10 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                 Timing timing = beatmap.BeatmapTiming;
 
                 List<HitObject> markedObjects = arg.ImportModeSetting switch {
-                    SliderCompletionatorVm.ImportMode.Selected => selected,
-                    SliderCompletionatorVm.ImportMode.Bookmarked => beatmap.GetBookmarkedObjects(),
-                    SliderCompletionatorVm.ImportMode.Time => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
-                    SliderCompletionatorVm.ImportMode.Everything => beatmap.HitObjects,
+                    SliderCompletionatorVm.ImportMode.选中的 => selected,
+                    SliderCompletionatorVm.ImportMode.书签处 => beatmap.GetBookmarkedObjects(),
+                    SliderCompletionatorVm.ImportMode.指定时间处 => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
+                    SliderCompletionatorVm.ImportMode.所有物件 => beatmap.HitObjects,
                     _ => throw new ArgumentException("意料外的导入模式。")
                 };
 
@@ -128,14 +128,14 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                         double newSv = arg.SliderVelocity == -1 ? oldSv : -100 / arg.SliderVelocity;
 
                         switch (arg.FreeVariableSetting) {
-                            case SliderCompletionatorVm.FreeVariable.Velocity:
+                            case SliderCompletionatorVm.FreeVariable.速度:
                                 newSv = -10000 * timing.SliderMultiplier * newDuration / (newLength * mpb);
                                 break;
-                            case SliderCompletionatorVm.FreeVariable.Duration:
+                            case SliderCompletionatorVm.FreeVariable.时长:
                                 // This actually doesn't get used anymore because the .osu doesn't store the duration
                                 newDuration = newLength * newSv * mpb / (-10000 * timing.SliderMultiplier);
                                 break;
-                            case SliderCompletionatorVm.FreeVariable.Length:
+                            case SliderCompletionatorVm.FreeVariable.长度:
                                 newLength = -10000 * timing.SliderMultiplier * newDuration / (newSv * mpb);
                                 break;
                             default:

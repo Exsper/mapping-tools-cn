@@ -32,5 +32,29 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml.cs": {
         "ExportMode.Add": "ExportMode.添加",
         "ExportMode.Override": "ExportMode.覆盖"
+    },
+    "//": "SliderCompletionator部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\SliderCompletionatorVm.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "FreeVariable.Duration": "FreeVariable.时长",
+        "FreeVariable.Length": "FreeVariable.长度",
+        "FreeVariable.Velocity": "FreeVariable.速度",
+        "    Selected": "    选中的",
+        "    Bookmarked": "    书签处",
+        "    Time,": "    指定时间处,",
+        "    Everything": "    所有物件",
+        "    Velocity": "    速度",
+        "    Length,": "    长度,",
+        "    Duration\r\n": "    时长\r\n"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\SliderCompletionator\\SliderCompletionatorView.xaml.cs": {
+        "FreeVariable.Duration": "FreeVariable.时长",
+        "FreeVariable.Length": "FreeVariable.长度",
+        "FreeVariable.Velocity": "FreeVariable.速度",
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Bookmarked": "ImportMode.书签处",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "ImportMode.Everything": "ImportMode.所有物件"
     }
 }
