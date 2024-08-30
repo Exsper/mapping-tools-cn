@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Mapping_Tools.Classes.MathUtil;
 
 namespace Mapping_Tools.Components.Graph.Interpolation.Interpolators {
-    [DisplayName("Double curve 3")]
+    [DisplayName("双弯曲线 3")]
     [VerticalMirrorInterpolator]
     [CustomDerivativeExtrema(new []{0, 0.5, 1})]
     public class DoubleCurveInterpolator3 : CustomInterpolator, IDerivableInterpolator, IIntegrableInterpolator {

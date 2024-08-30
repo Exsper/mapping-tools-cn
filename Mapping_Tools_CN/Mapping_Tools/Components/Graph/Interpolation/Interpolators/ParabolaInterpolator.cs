@@ -3,10 +3,10 @@ using System;
 using System.ComponentModel;
 
 namespace Mapping_Tools.Components.Graph.Interpolation.Interpolators {
-    [DisplayName("Parabola")]
+    [DisplayName("抛物线")]
     [VerticalMirrorInterpolator]
     public class ParabolaInterpolator : CustomInterpolator, IDerivableInterpolator, IIntegrableInterpolator {
-        public string Name => "Parabola";
+        public string Name => "抛物线";
 
         public ParabolaInterpolator() {
             InterpolationFunction = Function;

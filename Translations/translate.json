@@ -764,46 +764,46 @@
         "\"Custom\"": "\"Custom\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\InterpolatorComparer.cs": {
-        "\"Single curve\"": "\"Single curve\"",
-        "\"Single curve 2\"": "\"Single curve 2\"",
-        "\"Single curve 3\"": "\"Single curve 3\"",
-        "\"Double curve\"": "\"Double curve\"",
-        "\"Double curve 2\"": "\"Double curve 2\"",
-        "\"Double curve 3\"": "\"Double curve 3\"",
-        "\"Half sine\"": "\"Half sine\"",
-        "\"Wave\"": "\"Wave\"",
-        "\"Parabola\"": "\"Parabola\"",
-        "\"Linear\"": "\"Linear\""
+        "\"Single curve\"": "\"单弯曲线\"",
+        "\"Single curve 2\"": "\"单弯曲线 2\"",
+        "\"Single curve 3\"": "\"单弯曲线 3\"",
+        "\"Double curve\"": "\"双弯曲线\"",
+        "\"Double curve 2\"": "\"双弯曲线 2\"",
+        "\"Double curve 3\"": "\"双弯曲线 3\"",
+        "\"Half sine\"": "\"半正弦曲线\"",
+        "\"Wave\"": "\"波浪线\"",
+        "\"Parabola\"": "\"抛物线\"",
+        "\"Linear\"": "\"直线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\DoubleCurveInterpolator.cs": {
-        "\"Double curve\"": "\"Double curve\""
+        "\"Double curve\"": "\"双弯曲线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\DoubleCurveInterpolator2.cs": {
-        "\"Double curve 2\"": "\"Double curve 2\""
+        "\"Double curve 2\"": "\"双弯曲线 2\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\DoubleCurveInterpolator3.cs": {
-        "\"Double curve 3\"": "\"Double curve 3\""
+        "\"Double curve 3\"": "\"双弯曲线 3\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\HalfSineInterpolator.cs": {
-        "\"Half sine\"": "\"Half sine\""
+        "\"Half sine\"": "\"半正弦曲线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\LinearInterpolator.cs": {
-        "\"Linear\"": "\"Linear\""
+        "\"Linear\"": "\"直线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\ParabolaInterpolator.cs": {
-        "\"Parabola\"": "\"Parabola\""
+        "\"Parabola\"": "\"抛物线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\SingleCurveInterpolator.cs": {
-        "\"Single curve\"": "\"Single curve\""
+        "\"Single curve\"": "\"单弯曲线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\SingleCurveInterpolator2.cs": {
-        "\"Single curve 2\"": "\"Single curve 2\""
+        "\"Single curve 2\"": "\"单弯曲线 2\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\SingleCurveInterpolator3.cs": {
-        "\"Single curve 3\"": "\"Single curve 3\""
+        "\"Single curve 3\"": "\"单弯曲线 3\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Interpolation\\Interpolators\\WaveInterpolator.cs": {
-        "\"Wave\"": "\"Wave\""
+        "\"Wave\"": "\"波浪线\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\Graph\\Markers\\DoubleMarkerGenerator.cs": {
         "$\"{v:g2}{Unit}\"": "$\"{v:g2}{Unit}\""

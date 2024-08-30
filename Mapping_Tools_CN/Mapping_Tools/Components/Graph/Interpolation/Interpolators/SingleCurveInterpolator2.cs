@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Mapping_Tools.Classes.MathUtil;
 
 namespace Mapping_Tools.Components.Graph.Interpolation.Interpolators {
-    [DisplayName("Single curve 2")]
+    [DisplayName("单弯曲线 2")]
     [VerticalMirrorInterpolator]
     public class SingleCurveInterpolator2 : CustomInterpolator, IDerivableInterpolator, IIntegrableInterpolator {
         private readonly LinearInterpolator linearDegenerate;

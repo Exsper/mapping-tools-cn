@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Mapping_Tools.Classes.MathUtil;
 
 namespace Mapping_Tools.Components.Graph.Interpolation.Interpolators {
-    [DisplayName("Half sine")]
+    [DisplayName("半正弦曲线")]
     [VerticalMirrorInterpolator]
     public class HalfSineInterpolator : CustomInterpolator, IDerivableInterpolator, IIntegrableInterpolator {
         private readonly LinearInterpolator linearDegenerate;

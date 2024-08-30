@@ -4,10 +4,10 @@ using System.ComponentModel;
 using Mapping_Tools.Classes.MathUtil;
 
 namespace Mapping_Tools.Components.Graph.Interpolation.Interpolators {
-    [DisplayName("Wave")]
+    [DisplayName("波浪线")]
     [CustomDerivativeExtrema(new []{0, 0.5, 1})]
     public class WaveInterpolator : CustomInterpolator, IDerivableInterpolator, IIntegrableInterpolator, IInvertibleInterpolator {
-        public string Name => "Wave";
+        public string Name => "波浪线";
 
         public WaveInterpolator() {
             InterpolationFunction = Function;
