@@ -38,6 +38,10 @@
 
 - 文件 Translations/translate.json 生成的JSON翻译表
 
+- 文件 Translations/comboBoxTranslate.json 自行添加的ComboBox相关内容翻译表
+  
+  与 translate.json 不同，comboBoxTranslate.json翻译的不是字符串，而是原代码，修改内容必须谨慎防止破坏原有功能
+
 - 文件 Translate.js 用于生成汉化后的项目
 
 ## 汉化步骤
@@ -55,6 +59,8 @@
 3. 汉化文本
 
    修改 Translations 文件夹下的 translate.json
+
+   不推荐新手修改 comboBoxTranslate.json
 
 4. 生成项目
 
