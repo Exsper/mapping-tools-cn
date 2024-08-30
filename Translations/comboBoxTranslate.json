@@ -56,5 +56,101 @@
         "ImportMode.Bookmarked": "ImportMode.书签处",
         "ImportMode.Time": "ImportMode.指定时间处",
         "ImportMode.Everything": "ImportMode.所有物件"
+    },
+    "//": "SnappingTools部分，未测试",
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\GeneratorTypes\\GeneratorType.cs": {
+        "Basic": "基本",
+        "Intermediate": "中级",
+        "Advanced": "高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AnchorPointGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AngleBisectorGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AveragePointGenerator2.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\AveragePointGenerator3.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\CircleTangentGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\EqualSpacingGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\IntersectionGenerator.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LastAnchorGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LinearLineGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\LineGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\ParallelismGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerfectCircleBlanketGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerfectCircleGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PerpendicularGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\PointBisectorGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator2.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator3.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator3Reversed.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SameTransformGenerator4.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\ScaleRotateGenerator.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SinglePointCircleGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SliderEndGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SliderPathGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SquareGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SquareGenerator2.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\StartPointGenerator.cs": {
+        "GeneratorType.Basic": "GeneratorType.基本"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\SymmetryGenerator.cs": {
+        "GeneratorType.Advanced": "GeneratorType.高级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TangentCircleGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TriangleGenerator.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TriangleGenerator2.cs": {
+        "GeneratorType.Intermediate": "GeneratorType.中级"
     }
 }

@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class TriangleGenerator : RelevantObjectsGenerator {
         public override string Name => "两点作等边三角形（边）";
         public override string Tooltip => "选取两个辅助点作为等边三角形的一条边，生成其余点补全等边三角形。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public TriangleGenerator() {
             Settings.IsActive = true;

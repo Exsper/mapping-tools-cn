@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SameTransformGenerator2 : RelevantObjectsGenerator {
         public override string Name => "两点后继点";
         public override string Tooltip => "选取两个辅助点，按前一个点到后一个点的速度作后续辅助点。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.After;
 
         public SameTransformGenerator2() {

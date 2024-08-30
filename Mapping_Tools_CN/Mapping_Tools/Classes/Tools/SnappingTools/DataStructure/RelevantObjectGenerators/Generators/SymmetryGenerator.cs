@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SymmetryGenerator : RelevantObjectsGenerator {
         public override string Name => "镜像";
         public override string Tooltip => "将辅助线作为对称轴，作选中辅助对象的镜像。在设置中修改选择对称轴的额外规则。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
 
         private SymmetryGeneratorSettings MySettings => (SymmetryGeneratorSettings) Settings;
 

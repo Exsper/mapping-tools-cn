@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class TangentCircleGenerator : RelevantObjectsGenerator {
         public override string Name => "过两点作相切圆";
         public override string Tooltip => "选取一个辅助圆和两个辅助点，过两个辅助点作圆的内切和外切圆。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public TangentCircleGenerator() {
             Settings.IsActive = true;

@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SameTransformGenerator3Reversed : RelevantObjectsGenerator {
         public override string Name => "三点反向后继点";
         public override string Tooltip => "选取三个辅助点，按前一个点到后一个点的相反角度和速度变化作后续辅助点。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.After;
 
         public SameTransformGenerator3Reversed() {

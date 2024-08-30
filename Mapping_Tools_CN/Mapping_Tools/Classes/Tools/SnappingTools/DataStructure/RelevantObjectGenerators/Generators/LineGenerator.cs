@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class LineGenerator : RelevantObjectsGenerator {
         public override string Name => "两点直线";
         public override string Tooltip => "选取两个辅助点作直线。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public LineGenerator() {
             Settings.IsActive = true;

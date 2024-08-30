@@ -1,7 +1,7 @@
 ﻿namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObjectGenerators.GeneratorTypes {
     public enum GeneratorType {
-        Basic,
-        Intermediate,
-        Advanced
+        基本,
+        中级,
+        高级
     }
 }

@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class AngleBisectorGenerator : RelevantObjectsGenerator {
         public override string Name => "角平分线";
         public override string Tooltip => "选取一对辅助线，在交点处生成角平分线。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public AngleBisectorGenerator() {
             Settings.IsActive = true;

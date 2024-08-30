@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class PerfectCircleBlanketGenerator : RelevantObjectsGenerator {
         public override string Name => "包裹（Blanket）中心点";
         public override string Tooltip => "选取一个弧形滑条，生成包裹（Blanket）中心点。";
-        public override GeneratorType GeneratorType => GeneratorType.Basic;
+        public override GeneratorType GeneratorType => GeneratorType.基本;
 
         public PerfectCircleBlanketGenerator() {
             Settings.RelevancyRatio = 0.8;

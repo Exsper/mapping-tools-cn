@@ -6,7 +6,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class StartPointGenerator : RelevantObjectsGenerator {
         public override string Name => "圆圈和滑条头作点";
         public override string Tooltip => "在圆圈和滑条头位置作辅助点。";
-        public override GeneratorType GeneratorType => GeneratorType.Basic;
+        public override GeneratorType GeneratorType => GeneratorType.基本;
 
         public StartPointGenerator() {
             Settings.RelevancyRatio = 1;

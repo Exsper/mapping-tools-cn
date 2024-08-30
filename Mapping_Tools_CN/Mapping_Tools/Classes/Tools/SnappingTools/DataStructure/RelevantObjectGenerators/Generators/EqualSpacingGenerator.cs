@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class EqualSpacingGenerator : RelevantObjectsGenerator {
         public override string Name => "两点作相交圆";
         public override string Tooltip => "选取两个辅助点，分别作以自己为中心，到对方的距离为半径的圆。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public EqualSpacingGenerator() {
             Settings.IsActive = true;

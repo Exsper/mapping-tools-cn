@@ -7,7 +7,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class AveragePointGenerator3 : RelevantObjectsGenerator {
         public override string Name => "三点中心点";
         public override string Tooltip => "选取三个辅助点，生成中心点。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public AveragePointGenerator3() {
             Settings.IsActive = true;

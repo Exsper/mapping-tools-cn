@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SinglePointCircleGenerator : RelevantObjectsGenerator {
         public override string Name => "以点作圆";
         public override string Tooltip => "以每个选取的辅助点为圆心，按设置的半径分别作圆。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         private SinglePointCircleGeneratorSettings MySettings => (SinglePointCircleGeneratorSettings) Settings;
 

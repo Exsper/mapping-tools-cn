@@ -7,7 +7,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class LastAnchorGenerator : RelevantObjectsGenerator {
         public override string Name => "滑条末尾锚点";
         public override string Tooltip => "在滑条最后一个锚点上生成辅助点。";
-        public override GeneratorType GeneratorType => GeneratorType.Basic;
+        public override GeneratorType GeneratorType => GeneratorType.基本;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.Custom;
 
         public LastAnchorGenerator() {

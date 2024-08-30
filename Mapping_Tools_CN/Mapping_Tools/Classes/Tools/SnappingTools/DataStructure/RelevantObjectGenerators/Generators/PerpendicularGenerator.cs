@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class PerpendicularGenerator : RelevantObjectsGenerator {
         public override string Name => "垂线";
         public override string Tooltip => "选取一条辅助线和一个辅助点，过辅助点作辅助线的垂线。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public PerpendicularGenerator() {
             Settings.IsActive = true;

@@ -8,7 +8,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class PointBisectorGenerator : RelevantObjectsGenerator {
         public override string Name => "两点垂直平分线";
         public override string Tooltip => "选取一对辅助点，生成垂直平分线。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public PointBisectorGenerator() {
             Settings.IsActive = true;

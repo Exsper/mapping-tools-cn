@@ -10,7 +10,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class IntersectionGenerator : RelevantObjectsGenerator {
         public override string Name => "直线交点";
         public override string Tooltip => "选取两条辅助线，生成交点。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
 
         public IntersectionGenerator() {
             Settings.IsActive = true;

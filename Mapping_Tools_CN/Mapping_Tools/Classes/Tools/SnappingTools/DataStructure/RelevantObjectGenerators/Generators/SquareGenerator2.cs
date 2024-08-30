@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SquareGenerator2 : RelevantObjectsGenerator {
         public override string Name => "两点作正方形（边）";
         public override string Tooltip => "选取两个辅助点作为正方形的一条边，生成其余点补全两个正方形。";
-        public override GeneratorType GeneratorType => GeneratorType.Intermediate;
+        public override GeneratorType GeneratorType => GeneratorType.中级;
 
         public SquareGenerator2() {
             Settings.IsActive = true;

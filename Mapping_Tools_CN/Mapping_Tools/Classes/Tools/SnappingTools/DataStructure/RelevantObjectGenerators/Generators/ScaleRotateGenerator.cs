@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class ScaleRotateGenerator : RelevantObjectsGenerator {
         public override string Name => "围绕固定点缩放&旋转";
         public override string Tooltip => "围绕固定点旋转和缩放选中辅助对象。在设置中修改角度、缩放量以及选择固定点的额外规则。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
 
         private ScaleRotateGeneratorSettings MySettings => (ScaleRotateGeneratorSettings) Settings;
 

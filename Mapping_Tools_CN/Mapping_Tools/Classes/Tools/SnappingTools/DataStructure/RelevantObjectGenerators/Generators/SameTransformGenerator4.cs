@@ -9,7 +9,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SameTransformGenerator4 : RelevantObjectsGenerator {
         public override string Name => "四点后继点";
         public override string Tooltip => "选取四个辅助点，按前一个点到后一个点的相同角度、角度变化、速度变化和加速度变化作后续辅助点。";
-        public override GeneratorType GeneratorType => GeneratorType.Advanced;
+        public override GeneratorType GeneratorType => GeneratorType.高级;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.After;
 
         public SameTransformGenerator4() {

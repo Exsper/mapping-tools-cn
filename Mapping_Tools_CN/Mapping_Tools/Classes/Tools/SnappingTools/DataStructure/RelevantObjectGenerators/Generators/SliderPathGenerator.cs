@@ -7,7 +7,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     public class SliderPathGenerator : RelevantObjectsGenerator {
         public override string Name => "滑条路径点";
         public override string Tooltip => "在滑条路径上生成大量辅助点。可以自定义生成的辅助点密度。";
-        public override GeneratorType GeneratorType => GeneratorType.Basic;
+        public override GeneratorType GeneratorType => GeneratorType.基本;
         public override GeneratorTemporalPositioning TemporalPositioning => GeneratorTemporalPositioning.Custom;
 
         /// <summary>
