@@ -18,6 +18,11 @@ async function create() {
                 "On the right there are export options which allow for additional processing on the pattern during export."
             ]
         },
+        // 更换字体
+        {
+            filePath: "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml",
+            extraText: ["FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\""]
+        },
         // 替换版本号
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",

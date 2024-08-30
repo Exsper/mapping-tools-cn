@@ -31,7 +31,7 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Combo色彩工作室（Combo Colour Studio）"/>
+                    <Run Text="Combo 色彩工作室（Combo Colour Studio）"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>

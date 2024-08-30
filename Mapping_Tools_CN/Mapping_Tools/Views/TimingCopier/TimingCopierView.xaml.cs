@@ -22,7 +22,7 @@ namespace Mapping_Tools.Views.TimingCopier {
 
         public string DefaultSaveFolder => Path.Combine(MainWindow.AppDataPath, "Timing Copier Projects");
 
-        public static readonly string ToolName = "Timing复制器";
+        public static readonly string ToolName = "Timing 复制器";
 
         public static readonly string ToolDescription = $@"将A谱面的timing复制到B谱面。{Environment.NewLine}程序有 3 种工作模式处理移动物件（打击物件/时间轴/书签）以适配新timing：{Environment.NewLine}“物件间的节拍数保持不变”模式在移动并保证物件间节拍数不变后，也会按照指定的节拍细分自动对齐。注意使用前确保所有物件都已对齐，并且当新timing更改了物件间的节拍数时请勿使用该模式。{Environment.NewLine}“仅重新对齐”模式将物件对齐到新timing指定的节拍细分上。该模式不对齐书签。{Environment.NewLine}“不移动物件”模式不会移动任何物件。";
 

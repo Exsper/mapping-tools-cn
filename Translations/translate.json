@@ -883,7 +883,8 @@
         "Content=\"{materialDesign:PackIcon WindowMaximize}\"": "Content=\"{materialDesign:PackIcon WindowMaximize}\"",
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "Content=\"{Binding View}\"": "Content=\"{Binding View}\"",
-        "materialDesign:HintAssist.Hint=\"Search\"": "materialDesign:HintAssist.Hint=\"搜索\""
+        "materialDesign:HintAssist.Hint=\"Search\"": "materialDesign:HintAssist.Hint=\"搜索\"",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\""
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs": {
         "\"Mapping Tools\"": "\"Mapping Tools\"",
@@ -1073,7 +1074,7 @@
         "Header=\"Offset\"": "Header=\"Offset\"",
         "Header=\"Mode\"": "Header=\"模式\"",
         "Header=\"Colour Sequence\"": "Header=\"颜色次序\"",
-        "Text=\"Combo Colour Studio\"": "Text=\"Combo色彩工作室（Combo Colour Studio）\"",
+        "Text=\"Combo Colour Studio\"": "Text=\"Combo 色彩工作室（Combo Colour Studio）\"",
         "Text=\"{Binding Project.MaxBurstLength}\"": "Text=\"{Binding Project.MaxBurstLength}\"",
         "Text=\"{Binding Color, ElementName=ColorPicker, Converter={StaticResource ColorToStringConverter}}\"": "Text=\"{Binding Color, ElementName=ColorPicker, Converter={StaticResource ColorToStringConverter}}\"",
         "Text=\"Made by OliBomby\"": "Text=\"由 OliBomby 制作\"",
@@ -1091,7 +1092,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\ComboColourStudio\\ComboColourStudioView.xaml.cs": {
         "\"combocolourproject.json\"": "\"combocolourproject.json\"",
         "\"Combo Colour Studio Projects\"": "\"Combo Colour Studio Projects\"",
-        "\"Combo Colour Studio\"": "\"Combo色彩工作室\"",
+        "\"Combo Colour Studio\"": "\"Combo 色彩工作室\"",
         "\"With Combo Colour Studio you can easily customize the combo colours of your beatmap. AKA colour haxing.{Environment.NewLine}You define colored sections much like how you use timing points in the osu! editor. Just add a new colour point and define the sequence of combo colours.{Environment.NewLine}You can also define colour points which only work for one combo, so you can emphasize specific patterns using colour.{Environment.NewLine}You can get started by adding a combo colour using the plus on the bottom left or by importing combo colours from an existing map. The combo colours can be edited by clicking on the coloured circles.{Environment.NewLine}Add a colour point by clicking on the plus on the bottom right. You can edit the colour sequence by double clicking the colour sequence cell.\"": "\"本工具可以轻松定制谱面combo颜色，也叫做colour haxing。{Environment.NewLine}定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。{Environment.NewLine}您也可以定义爆发（Burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。{Environment.NewLine}要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。combo颜色可以通过点击修改。{Environment.NewLine}点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。\"",
         "$\"Can not use colour {colourSequence[colourPointColourIndex].Name} of colour point at offset {colourPoint.Time} because it does not exist in the combo colours.\"": "$\"无法使用颜色轴内的颜色 {colourSequence[colourPointColourIndex].Name} 在offset时间 {colourPoint.Time} 因为该颜色不在combo颜色之中。\"",
         "$\"Successfully exported colours to {mapsDone} {(mapsDone == 1 ? \"beatmap\" : \"beatmaps\")}!\"": "$\"成功导出颜色到 {mapsDone} 个{(mapsDone == 1 ? \"谱面\" : \"谱面\")}!\""
@@ -2378,7 +2379,7 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\TimingCopier\\TimingCopierView.xaml.cs": {
         "\"timingcopierproject.json\"": "\"timingcopierproject.json\"",
         "\"Timing Copier Projects\"": "\"Timing Copier Projects\"",
-        "\"Timing Copier\"": "\"Timing复制器\"",
+        "\"Timing Copier\"": "\"Timing 复制器\"",
         "\"Copies timing from A to B.{Environment.NewLine}There are 3 modes that describe how this program will handle moving objects (hitobjects/timingpoints/bookmarks) to the new timing:{Environment.NewLine}'Number of beats between objects stays the same' will move the objects so that the number of beats between objects stays the same. After that it will also resnap to the specified snap divisors. Make sure everything is snapped and don't use this if your new timing is supposed to change the number of beats between objects.{Environment.NewLine}'Just resnap' will snap the objects to the new timing on the specified snap divisors. This doesn't resnap bookmarks.{Environment.NewLine}'Don't move objects' will not move the objects at all.\"": "\"将A谱面的timing复制到B谱面。{Environment.NewLine}程序有 3 种工作模式处理移动物件（打击物件/时间轴/书签）以适配新timing：{Environment.NewLine}“物件间的节拍数保持不变”模式在移动并保证物件间节拍数不变后，也会按照指定的节拍细分自动对齐。注意使用前确保所有物件都已对齐，并且当新timing更改了物件间的节拍数时请勿使用该模式。{Environment.NewLine}“仅重新对齐”模式将物件对齐到新timing指定的节拍细分上。该模式不对齐书签。{Environment.NewLine}“不移动物件”模式不会移动任何物件。\"",
         "\"Number of beats between objects stays the same\"": "\"物件间的节拍数保持不变\"",
         "\"Just resnap\"": "\"仅重新对齐\"",
