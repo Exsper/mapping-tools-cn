@@ -196,6 +196,7 @@
         "\"QuickRunHotkey\"": "\"QuickRunHotkey\"",
         "\"QuickUndoHotkey\"": "\"QuickUndoHotkey\"",
         "\"BetterSaveHotkey\"": "\"BetterSaveHotkey\"",
+        "\"<Current Tool>\"": "\"<当前工具>\"",
         "\"Failed to overwrite osu! save with BetterSave.\"": "\"使用优化存储（BetterSave）代替osu!保存谱面失败。\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ProjectManager.cs": {
@@ -205,6 +206,9 @@
         "\"Are you sure you want to start a new project? All unsaved progress will be lost.\"": "\"您确定要创建一个新项目吗？所有未保存的进度都将丢失。\"",
         "\"Confirm new project\"": "\"新建项目确认\"",
         "\"New project could not be initialized!\"": "\"无法初始化新项目！\""
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\Settings.cs": {
+        "\"<Current Tool>\"": "\"<当前工具>\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs": {
         "\"User-specific configuration could not be loaded!\"": "\"无法加载用户配置！\"",
@@ -1751,7 +1755,8 @@
         "materialDesign:HintAssist.Hint=\"Backup interval\"": "materialDesign:HintAssist.Hint=\"备份间隔\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Preferences\\PreferencesView.xaml.cs": {
-        "\"Preferences\"": "\"首选项\""
+        "\"Preferences\"": "\"首选项\"",
+        "\"<Current Tool>\"": "\"<当前工具>\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PropertyTransformer\\PropertyTransformerView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",

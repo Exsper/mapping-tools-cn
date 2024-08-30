@@ -89,7 +89,6 @@ async function create() {
         { filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ListenerManager.cs", skipText: "\"^{L 10}\"" },
         { filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\ListenerManager.cs", skipText: "\"{ENTER}\"" },
         { skipText: "\"*.osu\"" },
-        { skipText: "\"<Current Tool>\"" },
         { filePath: "./Mapping_Tools\\Mapping_Tools\\Classes\\SystemTools\\SettingsManager.cs", skipText: "\"config.json\"" },
         { skipText: "\"RootDialog\"" },
         { skipText: "\"ToggleButton\"" },

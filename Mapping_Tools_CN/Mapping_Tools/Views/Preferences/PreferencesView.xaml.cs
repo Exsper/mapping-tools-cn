@@ -23,11 +23,11 @@ namespace Mapping_Tools.Views.Preferences
             DataContext = SettingsManager.Settings;
 
             var views = MainWindow.AppWindow.Views;
-            NoneQuickRunBox.ItemsSource = new[] { "<Current Tool>" }.Concat(
+            NoneQuickRunBox.ItemsSource = new[] { "<当前工具>" }.Concat(
                 ViewCollection.GetNames(ViewCollection.GetAllQuickRunTypesWithTargets(SmartQuickRunTargets.NoSelection)));
-            SingleQuickRunBox.ItemsSource = new[] {"<Current Tool>"}.Concat(
+            SingleQuickRunBox.ItemsSource = new[] {"<当前工具>"}.Concat(
                 ViewCollection.GetNames(ViewCollection.GetAllQuickRunTypesWithTargets(SmartQuickRunTargets.SingleSelection)));
-            MultipleQuickRunBox.ItemsSource = new[] {"<Current Tool>"}.Concat(
+            MultipleQuickRunBox.ItemsSource = new[] {"<当前工具>"}.Concat(
                 ViewCollection.GetNames(ViewCollection.GetAllQuickRunTypesWithTargets(SmartQuickRunTargets.MultipleSelection)));
         }
 

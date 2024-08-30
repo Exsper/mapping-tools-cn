@@ -147,9 +147,9 @@ namespace Mapping_Tools.Classes.SystemTools {
             OverrideOsuSave = false;
             AutoReload = true;
             SmartQuickRunEnabled = true;
-            NoneQuickRunTool = "<Current Tool>";
-            SingleQuickRunTool = "<Current Tool>";
-            MultipleQuickRunTool = "<Current Tool>";
+            NoneQuickRunTool = "<当前工具>";
+            SingleQuickRunTool = "<当前工具>";
+            MultipleQuickRunTool = "<当前工具>";
             MaxBackupFiles = 1000;
             MakePeriodicBackups = true;
             PeriodicBackupInterval = TimeSpan.FromMinutes(10);

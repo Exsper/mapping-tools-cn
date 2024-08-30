@@ -245,21 +245,21 @@ namespace Mapping_Tools.Classes.SystemTools {
                 System.Windows.Application.Current.Dispatcher.Invoke(() => {
                     if (so == 0)
                     {
-                        if (SettingsManager.Settings.NoneQuickRunTool == "<Current Tool>") { QuickRunCurrentTool(); return; }
+                        if (SettingsManager.Settings.NoneQuickRunTool == "<当前工具>") { QuickRunCurrentTool(); return; }
                         if (!(MainWindow.AppWindow.Views.GetView(SettingsManager.Settings.NoneQuickRunTool) is IQuickRun noneTool)) return;
 
                         tool = noneTool;
                     }
                     else if (so == 1)
                     {
-                        if (SettingsManager.Settings.SingleQuickRunTool == "<Current Tool>") { QuickRunCurrentTool(); return; }
+                        if (SettingsManager.Settings.SingleQuickRunTool == "<当前工具>") { QuickRunCurrentTool(); return; }
                         if (!(MainWindow.AppWindow.Views.GetView(SettingsManager.Settings.SingleQuickRunTool) is IQuickRun singleTool)) return;
 
                         tool = singleTool;
                     }
                     else if (so > 1)
                     {
-                        if (SettingsManager.Settings.MultipleQuickRunTool == "<Current Tool>") { QuickRunCurrentTool(); return; }
+                        if (SettingsManager.Settings.MultipleQuickRunTool == "<当前工具>") { QuickRunCurrentTool(); return; }
                         if (!(MainWindow.AppWindow.Views.GetView(SettingsManager.Settings.MultipleQuickRunTool) is IQuickRun multiTool)) return;
 
                         tool = multiTool;
