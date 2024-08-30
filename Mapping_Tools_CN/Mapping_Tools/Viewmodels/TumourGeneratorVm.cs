@@ -69,7 +69,7 @@ namespace Mapping_Tools.Viewmodels {
         }
 
         [JsonIgnore]
-        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.Time ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility TimeCodeBoxVisibility => ImportModeSetting == ImportMode.指定时间处 ? Visibility.Visible : Visibility.Collapsed;
 
         private ObservableCollection<TumourLayer> tumourLayers;
         public ObservableCollection<TumourLayer> TumourLayers {
@@ -231,14 +231,14 @@ namespace Mapping_Tools.Viewmodels {
 
         public TumourGeneratorVm() {
             PreviewHitObject = new HitObject("0,0,0,2,0,L|256:0,1,256");
-            ImportModeSetting = ImportMode.Selected;
+            ImportModeSetting = ImportMode.选中的;
             JustMiddleAnchors = false;
             Scale = 1;
             CircleSize = 4;
             FixSv = true;
             TumourLayers = new ObservableCollection<TumourLayer>();
 
-            ImportCommand = new CommandImplementation(_ => Import(ImportModeSetting == ImportMode.Selected ?
+            ImportCommand = new CommandImplementation(_ => Import(ImportModeSetting == ImportMode.选中的 ?
                 IOHelper.GetCurrentBeatmapOrCurrentBeatmap(false) :
                 MainWindow.AppWindow.GetCurrentMaps()[0])
             );
@@ -298,7 +298,7 @@ namespace Mapping_Tools.Viewmodels {
             try {
                 Editor_Reader.EditorReader reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
-                if (ImportModeSetting == ImportMode.Selected && editorReaderException1 != null) {
+                if (ImportModeSetting == ImportMode.选中的 && editorReaderException1 != null) {
                     throw new Exception("无法获取选中物件。", editorReaderException1);
                 }
 
@@ -306,7 +306,7 @@ namespace Mapping_Tools.Viewmodels {
                 List<HitObject> markedObjects;
 
                 switch (ImportModeSetting) {
-                    case ImportMode.Selected:
+                    case ImportMode.选中的:
                         editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
                         if (editorReaderException2 != null) {
@@ -315,11 +315,11 @@ namespace Mapping_Tools.Viewmodels {
 
                         markedObjects = selected;
                         break;
-                    case ImportMode.Bookmarked:
+                    case ImportMode.书签处:
                         editor = new BeatmapEditor(path);
                         markedObjects = editor.Beatmap.GetBookmarkedObjects();
                         break;
-                    case ImportMode.Time:
+                    case ImportMode.指定时间处:
                         editor = new BeatmapEditor(path);
                         markedObjects = editor.Beatmap.QueryTimeCode(TimeCode).ToList();
                         break;
@@ -411,10 +411,10 @@ namespace Mapping_Tools.Viewmodels {
         }
 
         public enum ImportMode {
-            Selected,
-            Bookmarked,
-            Time,
-            Everything
+            选中的,
+            书签处,
+            指定时间处,
+            所有物件
         }
     }
 }

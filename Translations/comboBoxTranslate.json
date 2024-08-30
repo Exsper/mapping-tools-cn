@@ -183,5 +183,21 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideView.xaml.cs": {
         "NewMap": "完全覆盖导出谱面"
+    },
+    "//": "TumourGenerator部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Views\\TumourGenerator\\TumourGeneratorView.xaml.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Bookmarked": "ImportMode.书签处",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "ImportMode.Everything": "ImportMode.所有物件"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\TumourGeneratorVm.cs": {
+        "ImportMode.Selected": "ImportMode.选中的",
+        "ImportMode.Bookmarked": "ImportMode.书签处",
+        "ImportMode.Time": "ImportMode.指定时间处",
+        "    Selected,": "    选中的,",
+        "    Bookmarked,": "    书签处,",
+        "    Time,": "    指定时间处,",
+        "    Everything": "    所有物件"
     }
 }

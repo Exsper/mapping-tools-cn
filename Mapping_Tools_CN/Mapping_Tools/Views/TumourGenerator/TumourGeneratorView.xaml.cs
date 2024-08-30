@@ -104,14 +104,14 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
             // Load sliders from the selector
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot(out var editorReaderException1);
 
-            if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.Selected && editorReaderException1 != null) {
+            if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.选中的 && editorReaderException1 != null) {
                 throw new Exception("无法获取选中物件。", editorReaderException1);
             }
 
             foreach (string path in arg.Paths) {
                 var editor = EditorReaderStuff.GetNewestVersionOrNot(path, reader, out var selected, out var editorReaderException2);
 
-                if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.Selected && editorReaderException2 != null) {
+                if (arg.ImportModeSetting == TumourGeneratorVm.ImportMode.选中的 && editorReaderException2 != null) {
                     throw new Exception("无法获取选中物件。", editorReaderException2);
                 }
 
@@ -119,10 +119,10 @@ To get started, select a slider in your beatmap and click 'Preview slider' to pr
                 Timing timing = beatmap.BeatmapTiming;
 
                 List<HitObject> markedObjects = arg.ImportModeSetting switch {
-                    TumourGeneratorVm.ImportMode.Selected => selected,
-                    TumourGeneratorVm.ImportMode.Bookmarked => beatmap.GetBookmarkedObjects(),
-                    TumourGeneratorVm.ImportMode.Time => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
-                    TumourGeneratorVm.ImportMode.Everything => beatmap.HitObjects,
+                    TumourGeneratorVm.ImportMode.选中的 => selected,
+                    TumourGeneratorVm.ImportMode.书签处 => beatmap.GetBookmarkedObjects(),
+                    TumourGeneratorVm.ImportMode.指定时间处 => beatmap.QueryTimeCode(arg.TimeCode).ToList(),
+                    TumourGeneratorVm.ImportMode.所有物件 => beatmap.HitObjects,
                     _ => throw new ArgumentException("意料外的导入模式。")
                 };
 
