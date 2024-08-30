@@ -808,7 +808,7 @@
         "\"Segoe UI\"": "\"Segoe UI\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\HotkeyEditorControl.xaml": {
-        "Text=\"{Binding Hotkey, ElementName=UserControl, Mode=OneWay, TargetNullValue=&lt; not set &gt;}\"": "Text=\"{Binding Hotkey, ElementName=UserControl, Mode=OneWay, TargetNullValue=&lt; not set &gt;}\""
+        "Text=\"{Binding Hotkey, ElementName=UserControl, Mode=OneWay, TargetNullValue=&lt; not set &gt;}\"": "Text=\"{Binding Hotkey, ElementName=UserControl, Mode=OneWay, TargetNullValue=&lt; 未设置 &gt;}\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Components\\ObjectVisualiser\\HitObjectElement.cs": {
         "\"HitObject\"": "\"HitObject\"",
