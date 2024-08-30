@@ -4,7 +4,10 @@ async function create() {
     const extraTemplate = [
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml",
-            extraText: ["This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. "]
+            extraText: [
+                "This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. ",
+                "⚠ You must specify your user config file in the Mapping Tools Preferences (Options -> Preferences) for this tool to function."
+            ]
         },
         // 替换版本号
         {
@@ -13,10 +16,11 @@ async function create() {
         }
     ]
 
-    const skipPaths = [".git", ".github", "lib",
+    const skipPaths = [".git", ".github", ".vs", "lib",
         ".editorconfig", ".gitattributes", ".gitignore", "LICENCE", "README.md",
         ".sln", ".DotSettings", ".iss", ".resx", ".csproj", ".config",
         "Mapping_Tools_Tests", "Mapping_Tools\\Data", "Mapping_Tools\\Classes\\MathUtil",
+        "Mapping_Tools\\bin", "Mapping_Tools\\obj",
 
         "Mapping_Tools\\Mapping_Tools\\Properties\\Annotations.cs",
         "Mapping_Tools\\Mapping_Tools\\Properties\\Resources.Designer.cs",

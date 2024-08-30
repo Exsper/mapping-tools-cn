@@ -52,15 +52,15 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
 
         public DashStyle GetDashStyle() {
             switch (Dashstyle) {
-                case DashStylesEnum.Dash:
+                case DashStylesEnum.虚线:
                     return DashStyles.Dash;
-                case DashStylesEnum.Dot:
+                case DashStylesEnum.点线:
                     return DashStyles.Dot;
-                case DashStylesEnum.DashSingleDot:
+                case DashStylesEnum.点划线:
                     return DashStyles.DashDot;
-                case DashStylesEnum.DashDoubleDot:
+                case DashStylesEnum.双点划线:
                     return DashStyles.DashDotDot;
-                case DashStylesEnum.Solid:
+                case DashStylesEnum.实线:
                     return DashStyles.Solid;
                 default:
                     throw new ArgumentOutOfRangeException();

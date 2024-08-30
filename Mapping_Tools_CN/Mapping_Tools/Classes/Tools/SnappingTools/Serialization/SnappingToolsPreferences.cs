@@ -191,7 +191,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.Serialization {
                     RelevantPoint.PreferencesNameStatic, new RelevantObjectPreferences {
                         Name = RelevantPoint.PreferencesNameStatic,
                         Color = Colors.Cyan,
-                        Dashstyle = DashStylesEnum.Solid,
+                        Dashstyle = DashStylesEnum.实线,
                         Opacity = 0.8,
                         Size = 5,
                         Thickness = 3,
@@ -201,7 +201,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.Serialization {
                     RelevantLine.PreferencesNameStatic, new RelevantObjectPreferences {
                         Name = RelevantLine.PreferencesNameStatic,
                         Color = Colors.LawnGreen,
-                        Dashstyle = DashStylesEnum.Dash,
+                        Dashstyle = DashStylesEnum.虚线,
                         Opacity = 0.8,
                         Thickness = 3,
                         HasSizeOption = false,
@@ -210,7 +210,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.Serialization {
                     RelevantCircle.PreferencesNameStatic, new RelevantObjectPreferences {
                         Name = RelevantCircle.PreferencesNameStatic,
                         Color = Colors.Red,
-                        Dashstyle = DashStylesEnum.Dash,
+                        Dashstyle = DashStylesEnum.虚线,
                         Opacity = 0.8,
                         Thickness = 3,
                         HasSizeOption = false,

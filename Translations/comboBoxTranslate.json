@@ -57,7 +57,7 @@
         "ImportMode.Time": "ImportMode.指定时间处",
         "ImportMode.Everything": "ImportMode.所有物件"
     },
-    "//": "SnappingTools部分，未测试",
+    "//": "SnappingTools部分，已测试",
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\GeneratorTypes\\GeneratorType.cs": {
         "Basic": "基本",
         "Intermediate": "中级",
@@ -152,5 +152,23 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObjectGenerators\\Generators\\TriangleGenerator2.cs": {
         "GeneratorType.Intermediate": "GeneratorType.中级"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DashStylesEnum.cs": {
+        "Dash = 0": "虚线 = 0",
+        "Dot = 1": "点线 = 1",
+        "DashSingleDot = 2": "点划线 = 2",
+        "DashDoubleDot = 3": "双点划线 = 3",
+        "Solid = 4": "实线 = 4"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\DataStructure\\RelevantObject\\RelevantObjectPreferences.cs": {
+        "DashStylesEnum.Dash:": "DashStylesEnum.虚线:",
+        "DashStylesEnum.Dot:": "DashStylesEnum.点线:",
+        "DashStylesEnum.DashSingleDot:": "DashStylesEnum.点划线:",
+        "DashStylesEnum.DashDoubleDot:": "DashStylesEnum.双点划线:",
+        "DashStylesEnum.Solid:": "DashStylesEnum.实线:"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\Serialization\\SnappingToolsPreferences.cs": {
+        "DashStylesEnum.Solid,": "DashStylesEnum.实线,",
+        "DashStylesEnum.Dash,": "DashStylesEnum.虚线,"
     }
 }

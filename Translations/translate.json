@@ -2288,7 +2288,8 @@
         "Lastly there are savestates which you can use to quickly change out preferences and generator settings using hotkeys. As an advanced user this can save lots of time continuously changing generators and stuff.": "最后还有保存状态功能，可以快速切换各生成器选项和快捷键。对于有经验的用户，可以快速更换生成器及其设置，以节省大量时间。",
         "The savestates window is opened by clicking the button next to the preferences button.": "打开全局选项左边的保存按钮打开保存状态对话框。",
         "    Configure": "    配置",
-        "This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. ": "该工具可以在编辑器之上显示（overlay）打击物件的辅助点、辅助线和辅助圆。"
+        "This tool derives virtual points, lines and circles from the hit objects in your editor and overlays them over the editor. ": "该工具可以在编辑器之上显示（overlay）打击物件的辅助点、辅助线和辅助圆。",
+        "⚠ You must specify your user config file in the Mapping Tools Preferences (Options -> Preferences) for this tool to function.": "⚠ 必须先在首选项中指定osu!用户配置文件地址，工具才能正常运行。"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsView.xaml.cs": {
         "\"Geometry Dashboard\"": "\"几何仪表盘\"",

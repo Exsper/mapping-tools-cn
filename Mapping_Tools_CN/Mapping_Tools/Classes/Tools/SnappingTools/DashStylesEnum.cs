@@ -4,18 +4,18 @@
     /// </summary>
     public enum DashStylesEnum {
     /// <summary />
-    Dash = 0,
+    虚线 = 0,
 
     /// <summary />
-    Dot = 1,
+    点线 = 1,
 
     /// <summary />
-    DashSingleDot = 2,
+    点划线 = 2,
 
     /// <summary />
-    DashDoubleDot = 3,
+    双点划线 = 3,
 
     /// <summary />
-    Solid = 4
+    实线 = 4
     }
 }

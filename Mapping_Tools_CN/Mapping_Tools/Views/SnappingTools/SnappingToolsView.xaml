@@ -54,7 +54,7 @@
 最后还有保存状态功能，可以快速切换各生成器选项和快捷键。对于有经验的用户，可以快速更换生成器及其设置，以节省大量时间。
 打开全局选项左边的保存按钮打开保存状态对话框。
 <LineBreak/>
-⚠ You must specify your user config file in the Mapping Tools Preferences (Options -> Preferences) for this tool to function.</TextBlock>
+⚠ 必须先在首选项中指定osu!用户配置文件地址，工具才能正常运行。</TextBlock>
                         </materialDesign:PopupBox>
                     </StackPanel>
 
