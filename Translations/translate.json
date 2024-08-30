@@ -1664,7 +1664,11 @@
         "materialDesign:HintAssist.Hint=\"Pattern overwrite mode\"": "materialDesign:HintAssist.Hint=\"Pattern覆盖模式\"",
         "materialDesign:HintAssist.Hint=\"Timing overwrite mode\"": "materialDesign:HintAssist.Hint=\"Timing覆盖模式\"",
         "With the 'Project' menu you can save/load/rename/import/export your pattern collections.": "在“项目”菜单中进行保存/读取/重命名/导入/导出Pattern收藏夹。",
-        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！"
+        "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
+        "Import and export patterns from osu! beatmaps and create pattern collections which you can share with your friends.": "导入导出谱面的Pattern，制作成Pattern收藏夹并与其他人分享。",
+        "You can add or remove patterns by using the buttons at the bottom.": "使用底部按钮添加或删除Pattern。",
+        "To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it.": "选择一个或多个Pattern并点击运行按钮，或者直接双击Pattern，来导出Pattern到当前谱面。",
+        "On the right there are export options which allow for additional processing on the pattern during export.": "界面右边的选项可以定制导出规则。"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\PatternGallery\\PatternGalleryView.xaml.cs": {
         "\"patterngalleryproject.json\"": "\"patterngalleryproject.json\"",

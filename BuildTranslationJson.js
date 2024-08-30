@@ -9,6 +9,15 @@ async function create() {
                 "⚠ You must specify your user config file in the Mapping Tools Preferences (Options -> Preferences) for this tool to function."
             ]
         },
+        {
+            filePath: "./Mapping_Tools\\Mapping_Tools\\Views\\PatternGallery\\PatternGalleryView.xaml",
+            extraText: [
+                "Import and export patterns from osu! beatmaps and create pattern collections which you can share with your friends.",
+                "You can add or remove patterns by using the buttons at the bottom.",
+                "To export a pattern to the current beatmap simply select one or more patterns and click the run button. You can also double-click a pattern to instantly export it.",
+                "On the right there are export options which allow for additional processing on the pattern during export."
+            ]
+        },
         // 替换版本号
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",
