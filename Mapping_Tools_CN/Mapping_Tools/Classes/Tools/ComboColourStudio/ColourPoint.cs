@@ -19,7 +19,7 @@ namespace Mapping_Tools.Classes.Tools.ComboColourStudio {
         private bool isSelected;
         private ComboColourProject parentProject;
 
-        public ColourPoint() : this(0, new ObservableCollection<SpecialColour>(), ColourPointMode.Normal, null) {}
+        public ColourPoint() : this(0, new ObservableCollection<SpecialColour>(), ColourPointMode.正常, null) {}
 
         public ColourPoint(double time, IEnumerable<SpecialColour> colourSequence, ColourPointMode mode, ComboColourProject parentProject) {
             Time = time;

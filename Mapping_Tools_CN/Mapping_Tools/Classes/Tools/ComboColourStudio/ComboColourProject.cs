@@ -106,7 +106,7 @@ namespace Mapping_Tools.Classes.Tools.ComboColourStudio {
             }
         }
 
-        private ColourPoint GenerateNewColourPoint(double time = 0, IEnumerable<SpecialColour> colours = null, ColourPointMode mode = ColourPointMode.Normal) {
+        private ColourPoint GenerateNewColourPoint(double time = 0, IEnumerable<SpecialColour> colours = null, ColourPointMode mode = ColourPointMode.正常) {
             return new ColourPoint(time, colours ?? new SpecialColour[0], mode, this);
         }
 
@@ -164,8 +164,8 @@ namespace Mapping_Tools.Classes.Tools.ComboColourStudio {
                     // Add a new colour point
                     var mode = bestContribution == 1 &&
                                GetComboLength(beatmap.HitObjects, firstComboHitObject) <= MaxBurstLength
-                        ? ColourPointMode.Burst
-                        : ColourPointMode.Normal;
+                        ? ColourPointMode.爆发
+                        : ColourPointMode.正常;
 
                     // To optimize on colour points, we dont add a new colour point if the previous point was a burst and
                     // the sequence before the burst is equivalent to this sequence
@@ -174,9 +174,9 @@ namespace Mapping_Tools.Classes.Tools.ComboColourStudio {
                         ColourPoints.Add(GenerateNewColourPoint(firstComboHitObject.Time, colourSequence, mode));
                     }
 
-                    lastBurst = mode == ColourPointMode.Burst;
+                    lastBurst = mode == ColourPointMode.爆发;
                     sequenceStartIndex += bestContribution;
-                    lastNormalSequence = mode == ColourPointMode.Burst ? lastNormalSequence : bestSequence;
+                    lastNormalSequence = mode == ColourPointMode.爆发 ? lastNormalSequence : bestSequence;
                 }
             }
             catch( Exception ex ) {

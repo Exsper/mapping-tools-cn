@@ -42,7 +42,7 @@
                         <LineBreak/>
                         定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。
                         <LineBreak/>
-                        您也可以定义爆发（burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。
+                        您也可以定义爆发（Burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。
                         <LineBreak/>
                         要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。
                         combo颜色可以通过点击修改。
@@ -150,8 +150,8 @@
                                         ToolTip="从谱面中导入换色（colorhax）并添加颜色轴。"/>
 
                                 <TextBox Width="120" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10 0 10 5"
-                                         materialDesign:HintAssist.Hint="爆发（burst）上限" 
-                                         ToolTip="定义爆发（burst）combo的连击数上限。连击数大于该值将不会使用爆发（burst）颜色轴的颜色。"
+                                         materialDesign:HintAssist.Hint="爆发（Burst）上限" 
+                                         ToolTip="定义爆发（Burst）combo的连击数上限。连击数大于该值将不会使用爆发（Burst）颜色轴的颜色。"
                                          Text="{Binding Project.MaxBurstLength}"/>
                             </StackPanel>
                         </materialDesign:Card>

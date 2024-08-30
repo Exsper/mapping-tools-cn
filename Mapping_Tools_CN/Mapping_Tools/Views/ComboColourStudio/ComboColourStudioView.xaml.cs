@@ -26,7 +26,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
 
         public static readonly string ToolName = "Combo色彩工作室";
 
-        public static readonly string ToolDescription = $@"本工具可以轻松定制谱面combo颜色，也叫做colour haxing。{Environment.NewLine}定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。{Environment.NewLine}您也可以定义爆发（burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。{Environment.NewLine}要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。combo颜色可以通过点击修改。{Environment.NewLine}点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。";
+        public static readonly string ToolDescription = $@"本工具可以轻松定制谱面combo颜色，也叫做colour haxing。{Environment.NewLine}定义Combo颜色区间很像在osu!编辑器里设置时间轴，只需要添加一个新的颜色轴然后设置combo颜色次序即可。{Environment.NewLine}您也可以定义爆发（Burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。{Environment.NewLine}要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。combo颜色可以通过点击修改。{Environment.NewLine}点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。";
 
         private ComboColourStudioVm ViewModel => (ComboColourStudioVm) DataContext;
 
@@ -110,7 +110,7 @@ namespace Mapping_Tools.Views.ComboColourStudio {
                         var colourSequence = colourPoint.ColourSequence.ToList();
 
                         // Add the colour point to the exceptions so it doesnt get used again
-                        if (colourPoint.Mode == ColourPointMode.Burst) {
+                        if (colourPoint.Mode == ColourPointMode.爆发) {
                             exceptions.Add(colourPoint);
                         }
 
@@ -195,8 +195,8 @@ namespace Mapping_Tools.Views.ComboColourStudio {
         }
 
         private static ColourPoint GetColourPoint(IReadOnlyList<ColourPoint> colourPoints, double time, IReadOnlyCollection<ColourPoint> exceptions, bool includeBurst) {
-            return colourPoints.Except(exceptions).LastOrDefault(o => o.Time <= time + 5 && (o.Mode != ColourPointMode.Burst || o.Time >= time - 5 && includeBurst)) ?? 
-                                                                      colourPoints.Except(exceptions).FirstOrDefault(o => o.Mode != ColourPointMode.Burst) ?? 
+            return colourPoints.Except(exceptions).LastOrDefault(o => o.Time <= time + 5 && (o.Mode != ColourPointMode.爆发 || o.Time >= time - 5 && includeBurst)) ?? 
+                                                                      colourPoints.Except(exceptions).FirstOrDefault(o => o.Mode != ColourPointMode.爆发) ?? 
                                                                       colourPoints[0];
         }
 

@@ -238,5 +238,20 @@
         "ImportType.Hitsounds": "ImportType.音效",
         "ImportType.MIDI": "ImportType.MIDI",
         "ImportType.Storyboard": "ImportType.故事板"
+    },
+    "//": "ComboColourStudio部分，未测试",
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ColourPointMode.cs": {
+        "Normal": "正常",
+        "Burst": "爆发"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ComboColourProject.cs": {
+        "ColourPointMode.Burst": "ColourPointMode.爆发",
+        "ColourPointMode.Normal": "ColourPointMode.正常"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\ComboColourStudio\\ComboColourStudioView.xaml.cs": {
+        "ColourPointMode.Burst": "ColourPointMode.爆发"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ColourPoint.cs": {
+        "ColourPointMode.Normal": "ColourPointMode.正常"
     }
 }
