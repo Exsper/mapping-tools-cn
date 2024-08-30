@@ -1,6 +1,6 @@
 # Mapping Tools 汉化工程
 
-🚧**本汉化项目尚未完成，目前翻译进度：细节词条补充翻译**🚧
+🚧**本汉化项目尚在测试阶段**🚧
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目，非汉化问题请转到原英文项目。
 
@@ -12,11 +12,11 @@
 
 ✅ 基本词条逐项翻译 ![进度](https://geps.dev/progress/100)
 
-♿ 细节词条补充翻译 ![进度](https://geps.dev/progress/26) （主要处理下拉菜单内容，尽量翻译且不影响原功能）
+✅ 细节词条补充翻译 ![进度](https://geps.dev/progress/100)
 
-⏱ 翻译项目功能检查
+♿ 翻译项目功能检查
 
-⏱ 汉化内容校对修正
+♿ 汉化内容校对修正
 
 ⏱ 发布正式汉化版本
 
