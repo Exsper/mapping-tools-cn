@@ -44,10 +44,10 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating.Options {
 
         [JsonIgnore]
         public ITumourTemplate TumourTemplate => tumourTemplateEnum switch {
-            Enums.TumourTemplate.Triangle => triangleTemplate,
-            Enums.TumourTemplate.Square => squareTemplate,
-            Enums.TumourTemplate.Circle => circleTemplate,
-            Enums.TumourTemplate.Parabola => parabolaTemplate,
+            Enums.TumourTemplate.三角形 => triangleTemplate,
+            Enums.TumourTemplate.方形 => squareTemplate,
+            Enums.TumourTemplate.圆形 => circleTemplate,
+            Enums.TumourTemplate.抛物线 => parabolaTemplate,
             _ => triangleTemplate
         };
 
@@ -137,8 +137,8 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating.Options {
 
         public static TumourLayer GetDefaultLayer() {
             var l = new TumourLayer {
-                TumourTemplateEnum = Enums.TumourTemplate.Triangle,
-                WrappingMode = WrappingMode.Simple,
+                TumourTemplateEnum = Enums.TumourTemplate.三角形,
+                WrappingMode = WrappingMode.简单,
                 IsActive = true,
                 Name = "层级",
                 TumourCount = 0,

@@ -18,6 +18,12 @@ async function create() {
                 "On the right there are export options which allow for additional processing on the pattern during export."
             ]
         },
+        {
+            filePath: "./Mapping_Tools\\Mapping_Tools\\Views\\TumourGenerator\\TumourGeneratorView.xaml",
+            extraText: [
+                "{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.Random}}"
+            ]
+        },
         // 更换字体
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml",

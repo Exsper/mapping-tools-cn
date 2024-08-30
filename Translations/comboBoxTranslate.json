@@ -287,5 +287,46 @@
         "InPatternRelativeTiming": "Pattern中相对Timing",
         "InPatternAbsoluteTiming": "Pattern中绝对Timing",
         "PatternTimingOnly": "仅PatternTiming"
+    },
+    "//": "TumourGenerator部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Enums\\TumourTemplate.cs": {
+        "Triangle,": "三角形,",
+        "Square,": "方形,",
+        "Circle,": "圆形,",
+        "Parabola": "抛物线"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Enums\\WrappingMode.cs": {
+        "Simple,": "简单,",
+        "Wrap,": "环绕,",
+        "Absolute": "绝对"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Enums\\TumourSidedness.cs": {
+        "    Left,": "    左边,",
+        "    Right,": "    右边,",
+        "    AlternatingLeft,": "    左起交替,",
+        "    AlternatingRight,": "    右起交替,",
+        "    Random": "    随机"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Options\\TumourLayer.cs": {
+        "TumourTemplate.Triangle": "TumourTemplate.三角形",
+        "TumourTemplate.Square": "TumourTemplate.方形",
+        "TumourTemplate.Circle": "TumourTemplate.圆形",
+        "TumourTemplate.Parabola": "TumourTemplate.抛物线",
+        "WrappingMode.Simple": "WrappingMode.简单"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\Domain\\TumourTemplateToIconConverter.cs": {
+        "TumourTemplate.Triangle": "TumourTemplate.三角形",
+        "TumourTemplate.Square": "TumourTemplate.方形",
+        "TumourTemplate.Circle": "TumourTemplate.圆形",
+        "TumourTemplate.Parabola": "TumourTemplate.抛物线"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\TumourGenerating\\TumourGenerator.cs": {
+        "WrappingMode.Simple": "WrappingMode.简单",
+        "WrappingMode.Wrap": "WrappingMode.环绕",
+        "TumourSidedness.AlternatingLeft": "TumourSidedness.左起交替",
+        "TumourSidedness.Left": "TumourSidedness.左边",
+        "TumourSidedness.Right": "TumourSidedness.右边",
+        "TumourSidedness.AlternatingRight": "TumourSidedness.右起交替",
+        "TumourSidedness.Random": "TumourSidedness.随机"
     }
 }

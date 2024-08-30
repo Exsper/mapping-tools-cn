@@ -105,7 +105,7 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating {
                 var random = tumourLayer.RandomSeed != 0 ? new Random(tumourLayer.RandomSeed) : Random;
                 var current = pathWithHints.Path.First;
                 var nextDist = tumourStart;
-                var side = tumourLayer.TumourSidedness == TumourSidedness.AlternatingLeft;
+                var side = tumourLayer.TumourSidedness == TumourSidedness.左起交替;
                 var i = 0;
 
                 while (nextDist <= Math.Min(totalLength, tumourEnd) + Precision.DoubleEpsilon && current is not null &&
@@ -119,11 +119,11 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating {
 
                     // Get which side the tumour should be on
                     side = tumourLayer.TumourSidedness switch {
-                        TumourSidedness.Left => false,
-                        TumourSidedness.Right => true,
-                        TumourSidedness.AlternatingLeft => !side,
-                        TumourSidedness.AlternatingRight => !side,
-                        TumourSidedness.Random => random.NextDouble() < 0.5,
+                        TumourSidedness.左边 => false,
+                        TumourSidedness.右边 => true,
+                        TumourSidedness.左起交替 => !side,
+                        TumourSidedness.右起交替 => !side,
+                        TumourSidedness.随机 => random.NextDouble() < 0.5,
                         _ => false
                     };
 
@@ -311,17 +311,17 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating {
                 // Get the offset, original pos, and direction
                 var interpolatedPoint = PathPoint.Lerp(startPoint, endPoint, t);
                 var pos = tumourLayer.WrappingMode switch {
-                    WrappingMode.Simple => interpolatedPoint.OgPos,
+                    WrappingMode.简单 => interpolatedPoint.OgPos,
                     _ => point.OgPos
                 };
                 (double preAngle, double postAngle) = tumourLayer.WrappingMode switch {
-                    WrappingMode.Simple => (betweenAngle, betweenAngle),
-                    WrappingMode.Wrap => (point.PreAngle, point.PostAngle),
+                    WrappingMode.简单 => (betweenAngle, betweenAngle),
+                    WrappingMode.环绕 => (point.PreAngle, point.PostAngle),
                     _ => (0, 0),
                 };
                 var isOffsetInThisLayer = Vector2.DistanceSquared(point.OgPos, pos) < Precision.DoubleEpsilon;
                 var red = tumourLayer.WrappingMode switch {
-                    WrappingMode.Simple => isCritical || (point.Red && isOffsetInThisLayer),
+                    WrappingMode.简单 => isCritical || (point.Red && isOffsetInThisLayer),
                     _ => isCritical || point.Red
                 };
 
@@ -367,7 +367,7 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating {
             }
 
             // Maybe add a hint
-            if (tumourLayer.WrappingMode == WrappingMode.Simple &&
+            if (tumourLayer.WrappingMode == WrappingMode.简单 &&
                 Precision.AlmostEquals(MathHelper.AngleDifference(rotation, 0), 0, 1E-6D)) {
                 var hintAnchors = tumourTemplate.GetReconstructionHint();
                 var hintType = tumourTemplate.GetReconstructionHintPathType();

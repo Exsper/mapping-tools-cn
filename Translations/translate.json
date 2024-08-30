@@ -2496,7 +2496,8 @@
         "You can also generate multiple layers of tumours. A layer will either merge the tumours with the tumours of the previous layer or place the tumours on top of the previous tumours.": "还可以设置多层级的凸点。层级间的凸点既可以互相融合，也可以迭代计算。",
         "Enable the Advanced toggle and click the ... button to edit how a parameter changes over time. Use the arrow keys on the sliders to do fine adjustments.": "启用高级模式后，点击...按钮可以使参数的值随时间变化。在数值条上按方向键可以进行微调。",
         "To get started, select a slider in your beatmap and click 'Preview slider' to preview changes or click the run button to instantly generate tumours on the selected sliders.": "要开始，请在编辑器选中一个滑条，然后点击“导入并预览”预览生成后的滑条，或直接点击运行按钮立刻给选中滑条添加凸点。",
-        "Preview slider": "导入并预览"
+        "Preview slider": "导入并预览",
+        "{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.Random}}": "{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.随机}}"
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\TumourGenerator\\TumourGeneratorView.xaml.cs": {
         "\"Tumour Generator 2\"": "\"凸点生成器v2\"",

@@ -252,7 +252,7 @@
                                   SelectedItem="{Binding CurrentLayer.TumourSidedness}"
                                   Margin="0 0 0 0"
                                   ToolTip="确定在滑条的哪一边放置凸点。"/>
-                        <Grid Visibility="{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.Random}}">
+                        <Grid Visibility="{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.随机}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="Auto"/>

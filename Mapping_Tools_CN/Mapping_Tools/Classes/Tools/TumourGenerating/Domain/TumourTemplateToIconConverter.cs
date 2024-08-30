@@ -9,10 +9,10 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating.Domain {
         /// <inheritdoc />
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             return value switch {
-                TumourTemplate.Triangle => PackIconKind.TriangleOutline,
-                TumourTemplate.Square => PackIconKind.SquareOutline,
-                TumourTemplate.Circle => PackIconKind.CircleOutline,
-                TumourTemplate.Parabola => PackIconKind.Multiply,
+                TumourTemplate.三角形 => PackIconKind.TriangleOutline,
+                TumourTemplate.方形 => PackIconKind.SquareOutline,
+                TumourTemplate.圆形 => PackIconKind.CircleOutline,
+                TumourTemplate.抛物线 => PackIconKind.Multiply,
                 _ => PackIconKind.TriangleOutline,
             };
         }
@@ -20,11 +20,11 @@ namespace Mapping_Tools.Classes.Tools.TumourGenerating.Domain {
         /// <inheritdoc />
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
             return value switch {
-                PackIconKind.TriangleOutline => TumourTemplate.Triangle,
-                PackIconKind.SquareOutline => TumourTemplate.Square,
-                PackIconKind.CircleOutline => TumourTemplate.Circle,
-                PackIconKind.Multiply => TumourTemplate.Parabola,
-                _ => TumourTemplate.Triangle,
+                PackIconKind.TriangleOutline => TumourTemplate.三角形,
+                PackIconKind.SquareOutline => TumourTemplate.方形,
+                PackIconKind.CircleOutline => TumourTemplate.圆形,
+                PackIconKind.Multiply => TumourTemplate.抛物线,
+                _ => TumourTemplate.三角形,
             };
         }
     }
