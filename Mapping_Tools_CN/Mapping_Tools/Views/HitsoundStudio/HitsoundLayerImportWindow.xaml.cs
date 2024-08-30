@@ -142,7 +142,7 @@ namespace Mapping_Tools.Views.HitsoundStudio {
                 }
                 else {
                     // Import none
-                    HitsoundLayer layer = new HitsoundLayer(NameBox0.Text, ImportType.None, (SampleSet) ( SampleSetBox0.SelectedIndex + 1 ), (Hitsound) HitsoundBox0.SelectedIndex, SamplePathBox0.Text);
+                    HitsoundLayer layer = new HitsoundLayer(NameBox0.Text, ImportType.无, (SampleSet) ( SampleSetBox0.SelectedIndex + 1 ), (Hitsound) HitsoundBox0.SelectedIndex, SamplePathBox0.Text);
                     HitsoundLayers.Add(layer);
                 }
 

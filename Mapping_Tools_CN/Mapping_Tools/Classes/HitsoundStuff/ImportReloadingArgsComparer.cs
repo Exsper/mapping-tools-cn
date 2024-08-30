@@ -11,18 +11,18 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                 return false;
 
             switch (x.ImportType) {
-                case ImportType.Stack:
+                case ImportType.堆叠:
                     return x.Path == y.Path &&
                     x.X == y.X &&
                     x.Y == y.Y;
-                case ImportType.Hitsounds:
+                case ImportType.音效:
                     return x.Path == y.Path;
                 case ImportType.MIDI:
                     return x.Path == y.Path &&
                     x.LengthRoughness == y.LengthRoughness &&
                     x.VelocityRoughness == y.VelocityRoughness &&
                     x.Offset == y.Offset;
-                case ImportType.None:
+                case ImportType.无:
                     return true;
                 default:
                     return x.Equals(y);
@@ -37,12 +37,12 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
             var hashCode = 1887348610;
             hashCode = hashCode * -1521134295 + x.ImportType.GetHashCode();
             switch (x.ImportType) {
-                case ImportType.Stack:
+                case ImportType.堆叠:
                     hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(x.Path);
                     hashCode = hashCode * -1521134295 + x.X.GetHashCode();
                     hashCode = hashCode * -1521134295 + x.Y.GetHashCode();
                     return hashCode;
-                case ImportType.Hitsounds:
+                case ImportType.音效:
                     hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(x.Path);
                     return hashCode;
                 case ImportType.MIDI:
@@ -51,7 +51,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                     hashCode = hashCode * -1521134295 + x.VelocityRoughness.GetHashCode();
                     hashCode = hashCode * -1521134295 + x.Offset.GetHashCode();
                     return hashCode;
-                case ImportType.None:
+                case ImportType.无:
                     return hashCode;
                 default:
                     return x.GetHashCode();

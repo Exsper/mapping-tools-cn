@@ -30,7 +30,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
         public static HitsoundLayer ImportStack(string path, double x, double y) {
             HitsoundLayer layer = new HitsoundLayer
             {
-                ImportArgs = {ImportType = ImportType.Stack, Path = path, X = x, Y = y},
+                ImportArgs = {ImportType = ImportType.堆叠, Path = path, X = x, Y = y},
                 Times = TimesFromStack(path, x, y)
             };
             return layer;
@@ -167,7 +167,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                     }
                     
                     string extLessFilename = Path.GetFileNameWithoutExtension(samplePath);
-                    var importArgs = new LayerImportArgs(ImportType.Hitsounds) { Path = path, SamplePath = samplePath,
+                    var importArgs = new LayerImportArgs(ImportType.音效) { Path = path, SamplePath = samplePath,
                         Volume = volume, DetectDuplicateSamples = detectDuplicateSamples, DiscriminateVolumes = volumes, RemoveDuplicates = removeDuplicates};
 
                     // Find the hitsoundlayer with this path
@@ -221,7 +221,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                 SampleSet sampleSet = GetSamplesetFromFilename(filename);
                 Hitsound hitsound = GetHitsoundFromFilename(filename);
 
-                var importArgs = new LayerImportArgs(ImportType.Storyboard)
+                var importArgs = new LayerImportArgs(ImportType.故事板)
                     {Path = path, SamplePath = samplePath, Volume = volume, DiscriminateVolumes = volumes, RemoveDuplicates = removeDuplicates};
 
                 // Find the hitsoundlayer with this path
@@ -466,12 +466,12 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
 
         public static List<HitsoundLayer> ImportReloading(ImportReloadingArgs reloadingArgs) {
             switch (reloadingArgs.ImportType) {
-                case ImportType.Stack:
+                case ImportType.堆叠:
                     return new List<HitsoundLayer>
                         {ImportStack(reloadingArgs.Path, reloadingArgs.X, reloadingArgs.Y)};
-                case ImportType.Hitsounds:
+                case ImportType.音效:
                     return ImportHitsounds(reloadingArgs.Path, reloadingArgs.DiscriminateVolumes, reloadingArgs.DetectDuplicateSamples, reloadingArgs.RemoveDuplicates, false);
-                case ImportType.Storyboard:
+                case ImportType.故事板:
                     return ImportStoryboard(reloadingArgs.Path, reloadingArgs.DiscriminateVolumes, reloadingArgs.RemoveDuplicates);
                 case ImportType.MIDI:
                     return ImportMidi(reloadingArgs.Path, reloadingArgs.Offset,

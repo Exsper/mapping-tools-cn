@@ -12,7 +12,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
     public class LayerImportArgs : INotifyPropertyChanged, IEquatable<LayerImportArgs> {
         /// <inheritdoc />
         public LayerImportArgs() {
-            ImportType = ImportType.None;
+            ImportType = ImportType.无;
             Path = "";
             X = -1;
             Y = -1;
@@ -84,7 +84,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
         /// 
         /// </summary>
         public Visibility CoordinateVisibility =>
-            ImportType == ImportType.Stack ? Visibility.Visible : Visibility.Collapsed;
+            ImportType == ImportType.堆叠 ? Visibility.Visible : Visibility.Collapsed;
 
         /// <summary>
         /// 
@@ -95,7 +95,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
         /// <summary>
         /// 
         /// </summary>
-        public bool CanImport => ImportType != ImportType.None;
+        public bool CanImport => ImportType != ImportType.无;
 
         private double x;
         /// <summary>
@@ -319,16 +319,16 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
                 return false;
 
             switch (ImportType) {
-                case ImportType.Stack:
+                case ImportType.堆叠:
                     return Path == o.Path && (X == -1 || X == o.X) && (Y == -1 || Y == o.Y);
-                case ImportType.Hitsounds:
+                case ImportType.音效:
                     return Path == o.Path && SamplePath == o.SamplePath && (!discriminateVolumes || Math.Abs(Volume - o.Volume) < Precision.DoubleEpsilon);
                 case ImportType.MIDI:
                     return Path == o.Path && (Bank == -1 || Bank == o.Bank) && (Patch == -1 || Patch == o.Patch) && (Key == -1 || Key == o.Key)
                                           && (Length == -1 || Length == o.Length) && (Velocity == -1 || Velocity == o.Velocity);
-                case ImportType.Storyboard:
+                case ImportType.故事板:
                     return Path == o.Path && SamplePath == o.SamplePath && (!discriminateVolumes || Math.Abs(Volume - o.Volume) < Precision.DoubleEpsilon);
-                case ImportType.None:
+                case ImportType.无:
                     return true;
                 default:
                     return Equals(o);

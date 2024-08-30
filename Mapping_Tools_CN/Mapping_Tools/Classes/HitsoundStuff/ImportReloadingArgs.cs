@@ -22,7 +22,7 @@ namespace Mapping_Tools.Classes.HitsoundStuff {
         public double Offset { get; }
 
         /// <inheritdoc />
-        public ImportReloadingArgs(string path) : this(ImportType.None, path, -1, -1, -1, -1, false, false, false, 0) {
+        public ImportReloadingArgs(string path) : this(ImportType.无, path, -1, -1, -1, -1, false, false, false, 0) {
         }
 
         /// <inheritdoc />

@@ -199,5 +199,44 @@
         "    Bookmarked,": "    书签处,",
         "    Time,": "    指定时间处,",
         "    Everything": "    所有物件"
+    },
+    "//": "HitsoundStudio部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundStudio\\HitsoundLayerImportWindow.xaml.cs": {
+        "ImportType.None": "ImportType.无"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\LayerImportArgs.cs": {
+        "ImportType.None": "ImportType.无",
+        "ImportType.Stack": "ImportType.堆叠",
+        "ImportType.Hitsounds": "ImportType.音效",
+        "ImportType.MIDI": "ImportType.MIDI",
+        "ImportType.Storyboard": "ImportType.故事板"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\ImportReloadingArgs.cs": {
+        "ImportType.None": "ImportType.无"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\ImportReloadingArgsComparer.cs": {
+        "ImportType.None": "ImportType.无",
+        "ImportType.Stack": "ImportType.堆叠",
+        "ImportType.Hitsounds": "ImportType.音效",
+        "ImportType.MIDI": "ImportType.MIDI"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\ImportType.cs": {
+        "None": "无",
+        "Stack": "堆叠",
+        "Hitsounds": "音效",
+        "MIDI": "MIDI",
+        "Storyboard": "故事板"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\HitsoundStuff\\HitsoundImporter.cs": {
+        "ImportType.Stack": "ImportType.堆叠",
+        "ImportType.Hitsounds": "ImportType.音效",
+        "ImportType.MIDI": "ImportType.MIDI",
+        "ImportType.Storyboard": "ImportType.故事板"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundStudio\\HitsoundStudioView.xaml.cs": {
+        "ImportType.Stack": "ImportType.堆叠",
+        "ImportType.Hitsounds": "ImportType.音效",
+        "ImportType.MIDI": "ImportType.MIDI",
+        "ImportType.Storyboard": "ImportType.故事板"
     }
 }

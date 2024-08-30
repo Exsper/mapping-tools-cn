@@ -150,10 +150,10 @@
                         <ComboBox x:Name="SelectedImportTypeBox" SelectionChanged="SelectedImportTypeBox_SelectionChanged" Cursor="Hand" Margin="0,5,0,0"
                             Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="导入类型"
                             ToolTip="导入该音效层的来源类型。">
-                            <ComboBoxItem Content="None" Cursor="Hand"/>
-                            <ComboBoxItem Content="Stack" Cursor="Hand"/>
-                            <ComboBoxItem Content="Hitsounds" Cursor="Hand"/>
-                            <ComboBoxItem Content="Storyboard" Cursor="Hand"/>
+                            <ComboBoxItem Content="无" Cursor="Hand"/>
+                            <ComboBoxItem Content="堆叠" Cursor="Hand"/>
+                            <ComboBoxItem Content="音效" Cursor="Hand"/>
+                            <ComboBoxItem Content="故事板" Cursor="Hand"/>
                             <ComboBoxItem Content="MIDI" Cursor="Hand"/>
                         </ComboBox>
                         <StackPanel x:Name="ImportArgsPanel">
@@ -376,7 +376,7 @@
                                        SelectedValue="{Binding SampleSet, Mode=TwoWay, Converter={StaticResource Ss2SConverter}}"
                                        SelectedValuePath="Content" Cursor="Hand"
                                        ToolTip="默认采样的音效组。">
-                                 <ComboBoxItem Content="None" Cursor="Hand"/>
+                                 <ComboBoxItem Content="无" Cursor="Hand"/>
                                  <ComboBoxItem Content="Normal" Cursor="Hand"/>
                                  <ComboBoxItem Content="Soft" Cursor="Hand"/>
                                  <ComboBoxItem Content="Drum" Cursor="Hand"/>
