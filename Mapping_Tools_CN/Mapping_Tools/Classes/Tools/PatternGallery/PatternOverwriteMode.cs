@@ -3,14 +3,14 @@
         /// <summary>
         /// Remove no objects from the original beatmap.
         /// </summary>
-        NoOverwrite,
+        不覆盖,
         /// <summary>
         /// Remove objects from the original beatmap only in dense parts of the pattern.
         /// </summary>
-        PartitionedOverwrite,
+        分区覆盖,
         /// <summary>
         /// Remove all objects from the original beatmap between the start time of the pattern and the end time of the pattern.
         /// </summary>
-        CompleteOverwrite,
+        完全覆盖,
     }
 }

@@ -24,11 +24,11 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
         /// <summary>
         /// Determines how to remove the objects in the target beatmap which overlap with the pattern.
         /// </summary>
-        public PatternOverwriteMode PatternOverwriteMode = PatternOverwriteMode.PartitionedOverwrite;
+        public PatternOverwriteMode PatternOverwriteMode = PatternOverwriteMode.分区覆盖;
         /// <summary>
         /// Determines which timing stuff to keep from the pattern.
         /// </summary>
-        public TimingOverwriteMode TimingOverwriteMode = TimingOverwriteMode.OriginalTimingOnly;
+        public TimingOverwriteMode TimingOverwriteMode = TimingOverwriteMode.仅原始Timing;
         public bool IncludeHitsounds = false;
         public bool IncludeKiai = false;
         public bool ScaleToNewCircleSize = false;
@@ -92,7 +92,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
                 part.StartTime <= tpc.MyTp.Offset && part.EndTime >= tpc.MyTp.Offset)).ToList();
 
             // Remove stuff
-            if (PatternOverwriteMode != PatternOverwriteMode.NoOverwrite) {
+            if (PatternOverwriteMode != PatternOverwriteMode.不覆盖) {
                 foreach (var part in parts) {
                     RemovePartOfBeatmap(beatmap, part.StartTime - Padding, part.EndTime + Padding);
                 }
@@ -235,7 +235,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
             // Avoid overwriting timing if the pattern has no redlines
             TimingOverwriteMode timingOverwriteMode = patternTiming.Redlines.Count > 0
                 ? TimingOverwriteMode
-                : TimingOverwriteMode.OriginalTimingOnly;
+                : TimingOverwriteMode.仅原始Timing;
 
             // Get the scale for custom scale x CS scale
             double csScale = Beatmap.GetHitObjectRadius(originalCircleSize) /
@@ -343,7 +343,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
             }
 
             // Partition the pattern based on the timing in the pattern
-            if (PatternOverwriteMode == PatternOverwriteMode.PartitionedOverwrite) {
+            if (PatternOverwriteMode == PatternOverwriteMode.分区覆盖) {
                 parts = PartitionBeatmap(patternBeatmap, scaleToNewTiming);
             } else {
                 parts = new List<Part> {
@@ -375,13 +375,13 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
                 TimingPoint[] inPartRedlines;
                 TimingPoint startPartRedline;
                 switch (timingOverwriteMode) {
-                    case TimingOverwriteMode.PatternTimingOnly:
+                    case TimingOverwriteMode.仅PatternTiming:
                         // Subtract one from the end time to omit BPM changes right on the end of the part.
                         inPartRedlines = transformPatternTiming.GetRedlinesInRange(startTime,
                             Math.Max(startTime, endTime - 2 * Precision.DoubleEpsilon)).ToArray();
                         startPartRedline = transformPatternTiming.GetRedlineAtTime(startTime);
                         break;
-                    case TimingOverwriteMode.InPatternAbsoluteTiming:
+                    case TimingOverwriteMode.Pattern中绝对Timing:
                         var tempInPartRedlines = transformPatternTiming.GetRedlinesInRange(startTime, endTime - 2 * Precision.DoubleEpsilon);
 
                         // Replace all parts in the pattern which have the default BPM to timing from the target beatmap.
@@ -397,7 +397,7 @@ namespace Mapping_Tools.Classes.Tools.PatternGallery {
 
                         startPartRedline = startOriginalRedline;
                         break;
-                    case TimingOverwriteMode.InPatternRelativeTiming:
+                    case TimingOverwriteMode.Pattern中相对Timing:
                         // Multiply mix the pattern timing and the original timing together.
                         // The pattern timing divided by the default BPM will be used as a scalar for the original timing.
                         var tempInPartRedlines2 = transformPatternTiming.GetRedlinesInRange(startTime, endTime - 2 * Precision.DoubleEpsilon);

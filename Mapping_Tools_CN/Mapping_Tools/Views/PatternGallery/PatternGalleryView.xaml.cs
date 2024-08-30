@@ -64,7 +64,7 @@ namespace Mapping_Tools.Views.PatternGallery {
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            RunTool(ViewModel.ExportTimeMode == ExportTimeMode.Current
+            RunTool(ViewModel.ExportTimeMode == ExportTimeMode.当前时间
                 ? new[] { IOHelper.GetCurrentBeatmapOrCurrentBeatmap() }
                 : MainWindow.AppWindow.GetCurrentMaps(), quick: false);
         }
@@ -96,7 +96,7 @@ namespace Mapping_Tools.Views.PatternGallery {
             double exportTime = 0;
             bool usePatternOffset = false;
             switch (args.ExportTimeMode) {
-                case ExportTimeMode.Current:
+                case ExportTimeMode.当前时间:
                     try {
                         reader = EditorReaderStuff.GetFullEditorReader();
                         exportTime = reader.EditorTime();
@@ -105,11 +105,11 @@ namespace Mapping_Tools.Views.PatternGallery {
                         throw new Exception("无法获取当前编辑器时间。", e);
                     }
                     break;
-                case ExportTimeMode.Pattern:
+                case ExportTimeMode.Pattern时间:
                     reader = EditorReaderStuff.GetFullEditorReaderOrNot();
                     usePatternOffset = true;
                     break;
-                case ExportTimeMode.Custom:
+                case ExportTimeMode.自定义时间:
                     reader = EditorReaderStuff.GetFullEditorReaderOrNot();
                     exportTime = args.CustomExportTime;
                     break;

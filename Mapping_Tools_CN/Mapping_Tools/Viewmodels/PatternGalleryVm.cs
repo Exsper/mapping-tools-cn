@@ -91,7 +91,7 @@ namespace Mapping_Tools.Viewmodels {
         }
 
         [JsonIgnore]
-        public bool CustomExportTimeVisible => ExportTimeMode == ExportTimeMode.Custom;
+        public bool CustomExportTimeVisible => ExportTimeMode == ExportTimeMode.自定义时间;
 
         /// <summary>
         /// Extra time in milliseconds around the patterns for deleting parts of the original map.
@@ -223,7 +223,7 @@ namespace Mapping_Tools.Viewmodels {
             OsuPatternMaker = new OsuPatternMaker();
             OsuPatternPlacer = new OsuPatternPlacer();
 
-            ExportTimeMode = ExportTimeMode.Current;
+            ExportTimeMode = ExportTimeMode.当前时间;
             CustomExportTime = 0;
 
             // Set up filters

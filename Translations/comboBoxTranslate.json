@@ -239,7 +239,7 @@
         "ImportType.MIDI": "ImportType.MIDI",
         "ImportType.Storyboard": "ImportType.故事板"
     },
-    "//": "ComboColourStudio部分，未测试",
+    "//": "ComboColourStudio部分，已测试",
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ColourPointMode.cs": {
         "Normal": "正常",
         "Burst": "爆发"
@@ -253,5 +253,39 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\ComboColourStudio\\ColourPoint.cs": {
         "ColourPointMode.Normal": "ColourPointMode.正常"
+    },
+    "//": "PatternGallery部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Views\\PatternGallery\\PatternGalleryView.xaml.cs": {
+        "ExportTimeMode.Current": "ExportTimeMode.当前时间",
+        "ExportTimeMode.Pattern": "ExportTimeMode.Pattern时间",
+        "ExportTimeMode.Custom": "ExportTimeMode.自定义时间"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Viewmodels\\PatternGalleryVm.cs": {
+        "ExportTimeMode.Current": "ExportTimeMode.当前时间",
+        "ExportTimeMode.Custom": "ExportTimeMode.自定义时间"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\ExportTimeMode.cs": {
+        "Pattern,": "Pattern时间,",
+        "Custom,": "自定义时间,",
+        "Current": "当前时间"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\PatternOverwriteMode.cs": {
+        "NoOverwrite": "不覆盖",
+        "PartitionedOverwrite": "分区覆盖",
+        "CompleteOverwrite": "完全覆盖"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\OsuPatternPlacer.cs": {
+        "PatternOverwriteMode.NoOverwrite": "PatternOverwriteMode.不覆盖",
+        "PatternOverwriteMode.PartitionedOverwrite": "PatternOverwriteMode.分区覆盖",
+        "TimingOverwriteMode.OriginalTimingOnly": "TimingOverwriteMode.仅原始Timing",
+        "TimingOverwriteMode.InPatternRelativeTiming": "TimingOverwriteMode.Pattern中相对Timing",
+        "TimingOverwriteMode.InPatternAbsoluteTiming": "TimingOverwriteMode.Pattern中绝对Timing",
+        "TimingOverwriteMode.PatternTimingOnly": "TimingOverwriteMode.仅PatternTiming"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\PatternGallery\\TimingOverwriteMode.cs": {
+        "OriginalTimingOnly": "仅原始Timing",
+        "InPatternRelativeTiming": "Pattern中相对Timing",
+        "InPatternAbsoluteTiming": "Pattern中绝对Timing",
+        "PatternTimingOnly": "仅PatternTiming"
     }
 }
