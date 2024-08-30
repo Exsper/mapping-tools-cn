@@ -10,9 +10,9 @@
 
 ## 目前进度
 
-⏱ 基本词条逐项翻译 ![进度](https://geps.dev/progress/100)
+✅ 基本词条逐项翻译 ![进度](https://geps.dev/progress/100)
 
-▶ 细节词条补充翻译（主要处理下拉菜单内容，尽量翻译且不影响原功能 ![进度](https://geps.dev/progress/26)
+♿ 细节词条补充翻译 ![进度](https://geps.dev/progress/26) （主要处理下拉菜单内容，尽量翻译且不影响原功能）
 
 ⏱ 翻译项目功能检查
 
