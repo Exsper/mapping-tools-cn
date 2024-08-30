@@ -170,5 +170,18 @@
     "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\SnappingTools\\Serialization\\SnappingToolsPreferences.cs": {
         "DashStylesEnum.Solid,": "DashStylesEnum.实线,",
         "DashStylesEnum.Dash,": "DashStylesEnum.虚线,"
+    },
+    "//": "RhythmGuide部分，已测试",
+    "./Mapping_Tools\\Mapping_Tools\\Classes\\Tools\\RhythmGuide.cs": {
+        "NewMap": "完全覆盖导出谱面",
+        "AddToMap": "添加到导出谱面",
+        "AllEvents,": "所有事件,",
+        "SelectionMode.AllEvents": "SelectionMode.所有事件",
+        "HitsoundEvents": "音效事件",
+        "AllEventSeparated": "分离所有事件",
+        "LongNotes": "长键"
+    },
+    "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideView.xaml.cs": {
+        "NewMap": "完全覆盖导出谱面"
     }
 }

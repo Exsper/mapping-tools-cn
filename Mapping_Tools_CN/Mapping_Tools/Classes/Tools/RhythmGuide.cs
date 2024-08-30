@@ -28,12 +28,12 @@ namespace Mapping_Tools.Classes.Tools {
             private GameMode outputGameMode = GameMode.Standard;
             private string outputName = "Hitsounds";
             private bool ncEverything;
-            private SelectionMode selectionMode = SelectionMode.HitsoundEvents;
+            private SelectionMode selectionMode = SelectionMode.音效事件;
             // ReSharper disable once CoVariantArrayConversion
             // ReSharper disable once RedundantArrayCreationExpression
             private IBeatDivisor[] beatDivisors = new RationalBeatDivisor[] {16, 12};
 
-            private ExportMode exportMode = ExportMode.NewMap;
+            private ExportMode exportMode = ExportMode.完全覆盖导出谱面;
             private string exportPath = Path.Combine(MainWindow.ExportPath, @"rhythm_guide.osu");
 
             #endregion
@@ -116,19 +116,19 @@ namespace Mapping_Tools.Classes.Tools {
             /// <summary>
             /// 
             /// </summary>
-            NewMap,
+            完全覆盖导出谱面,
 
             /// <summary>
             /// 
             /// </summary>
-            AddToMap,
+            添加到导出谱面,
         }
 
         public enum SelectionMode {
-            AllEvents,
-            HitsoundEvents,
-            AllEventSeparated,
-            LongNotes
+            所有事件,
+            音效事件,
+            分离所有事件,
+            长键
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Mapping_Tools.Classes.Tools {
             var reader = EditorReaderStuff.GetFullEditorReaderOrNot();
 
             switch (args.ExportMode) {
-                case ExportMode.NewMap:
+                case ExportMode.完全覆盖导出谱面:
                     var beatmap = MergeBeatmaps(args.Paths.Select(o => EditorReaderStuff.GetNewestVersionOrNot(o, reader).Beatmap).ToArray(),
                         args);
 
@@ -152,7 +152,7 @@ namespace Mapping_Tools.Classes.Tools {
                     System.Diagnostics.Process.Start("explorer.exe", Path.GetDirectoryName(args.ExportPath) ??
                                                                      throw new ArgumentException("导出路径必须是一个文件。"));
                     break;
-                case ExportMode.AddToMap:
+                case ExportMode.添加到导出谱面:
                     var editor2 = EditorReaderStuff.GetNewestVersionOrNot(args.ExportPath, reader);
 
                     PopulateBeatmap(editor2.Beatmap,
@@ -198,22 +198,22 @@ namespace Mapping_Tools.Classes.Tools {
                 foreach (var timelineObject in timeline.TimelineObjects) {
                     // Handle different selection modes
                     switch (args.SelectionMode) {
-                        case SelectionMode.AllEvents:
+                        case SelectionMode.所有事件:
                             addHitObject(timelineObject.Time);
                             break;
-                        case SelectionMode.HitsoundEvents:
+                        case SelectionMode.音效事件:
                             if (timelineObject.HasHitsound) {
                                 addHitObject(timelineObject.Time);
                             }
 
                             break;
-                        case SelectionMode.AllEventSeparated:
+                        case SelectionMode.分离所有事件:
                             var active = timelineObject.IsHoldnoteHead || timelineObject.IsCircle || timelineObject.IsSliderHead;
                             var pos = active ? new Vector2(0, 192) : new Vector2(512, 192);
 
                             addHitObject(timelineObject.Time, pos);
                             break;
-                        case SelectionMode.LongNotes:
+                        case SelectionMode.长键:
                             var isStart = timelineObject.IsHoldnoteHead || timelineObject.IsCircle ||
                                           timelineObject.IsSliderHead || timelineObject.IsSpinnerHead;
 
