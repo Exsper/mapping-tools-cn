@@ -2533,6 +2533,6 @@
         "$\"There exists no view with name '{name}'\"": "$\"不存在名为 '{name}' 的界面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
-        "1.12.19": "0.1.1"
+        "1.12.19": "0.1.2"
     }
 }
