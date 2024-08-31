@@ -412,7 +412,11 @@ namespace Mapping_Tools {
             builder.AppendLine("Coppertine");
             builder.AppendLine("JPK314");
 
-            MessageBox.Show(builder.ToString(), "信息");
+            builder.AppendLine();
+builder.AppendLine("汉化者：");
+builder.AppendLine("Candy");
+builder.AppendLine("Tachibana Gekka");
+MessageBox.Show(builder.ToString(), "信息");
         }
 
         //Change top right icons on changed window state and set state variable

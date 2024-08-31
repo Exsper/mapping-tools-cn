@@ -34,7 +34,7 @@ namespace Mapping_Tools.Views.MapCleaner {
         /// <summary>
         /// 
         /// </summary>
-        public static readonly string ToolName = "谱面清洁器";
+        public static readonly string ToolName = "谱面清除器";
 
         /// <summary>
         /// 

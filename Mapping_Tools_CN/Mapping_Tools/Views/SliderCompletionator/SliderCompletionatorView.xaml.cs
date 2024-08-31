@@ -33,7 +33,7 @@ namespace Mapping_Tools.Views.SliderCompletionator {
                                                         Environment.NewLine +
                                                         "例如，时长设为1，长度设为-1，将改变时长到1拍，但维持长度不变。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "检查工具提示以获取其他功能的信息。";
+                                                        "将鼠标停靠至详细工具上以获取更多信息。";
 
         /// <inheritdoc />
         public SliderCompletionatorView() {

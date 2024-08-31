@@ -26,7 +26,7 @@ namespace Mapping_Tools.Views.SliderPicturator {
 
         public static readonly string ToolName = "滑条绘图器";
 
-        public static readonly string ToolDescription = $@"程序将导入的图像转变为滑条！要开始，点击浏览按钮选择一个图像，然后调节颜色和设置直到显示满意。点击运行按钮输出滑条到指定的时间和位置。";
+        public static readonly string ToolDescription = $@"程序可将导入的图像转换为滑条！若要开始，首先点击浏览按钮选择一个图像，然后调节颜色和设置直到合适。点击运行按钮输出滑条到指定的时间和位置。";
 
         /// <inheritdoc />
         public SliderPicturatorView()

@@ -31,14 +31,14 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                  <Run Text="Pattern 展览馆（Pattern Gallery）"/>
+                  <Run Text="排列相册（Pattern Gallery）"/>
                 </TextBlock>
                     <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                   <materialDesign:PopupBox.ToggleContent>
                     <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                   </materialDesign:PopupBox.ToggleContent>
                   <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                      导入导出谱面的Pattern，制作成Pattern收藏夹并与其他人分享。<LineBreak/>
+                      导入导出谱面的排列（Pattern），制作成排列收藏夹并与其他人分享。<LineBreak/>
                       使用底部按钮添加或删除Pattern。<LineBreak/>
                       选择一个或多个Pattern并点击运行按钮，或者直接双击Pattern，来导出Pattern到当前谱面。<LineBreak/>
                       界面右边的选项可以定制导出规则。<LineBreak/>

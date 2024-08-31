@@ -38,7 +38,7 @@
                             <materialDesign:PackIcon Kind="HelpCircle" Width="24" Height="24" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                         </materialDesign:PopupBox.ToggleContent>
                         <TextBlock TextWrapping="Wrap" MaxWidth="600" Padding="5">
-                      为一一编辑每个难度的元数据节省时间，可以在本工具中编辑元数据，之后随时复制到多个难度。
+                      为需要编辑每个难度的元数据节省时间，可以在本工具中编辑元数据，之后随时复制到多个难度。
                       <LineBreak/>
                       您也可以从谱面A中导入元数据，然后复制给谱面B。
                       <LineBreak/>

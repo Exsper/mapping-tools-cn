@@ -31,9 +31,9 @@ namespace Mapping_Tools.Views.PatternGallery {
 
         public string ExtraAutoSavePath => Path.Combine(ViewModel.FileHandler.GetCollectionFolderPath(), "project.json");
 
-        public static readonly string ToolName = "Pattern 展览馆";
+        public static readonly string ToolName = "排列相册";
         public static readonly string ToolDescription =
-            $@"导入导出谱面的Pattern，制作成Pattern收藏夹并与其他人分享。"+Environment.NewLine+ 
+            $@"导入导出谱面的排列（Pattern），制作成排列收藏夹并与其他人分享。"+Environment.NewLine+ 
             @"使用底部按钮添加或删除Pattern。"+Environment.NewLine+ 
             @"选择一个或多个Pattern并点击运行按钮，或者直接双击Pattern，来导出Pattern到当前谱面。"+Environment.NewLine+ 
             @"界面右边的选项可以定制导出规则。"+Environment.NewLine+

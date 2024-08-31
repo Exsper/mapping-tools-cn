@@ -40,7 +40,7 @@ namespace Mapping_Tools.Views.Sliderator {
                                                         Environment.NewLine + Environment.NewLine +
                                                         "工具界面由滑条导入区、选项区、位置/速度图和预览图组成。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "要开始，从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。" +
+                                                        "若要开始，请从下拉菜单中选择导入方式，点击“导入滑条”按钮导入一个或多个滑条。" +
                                                         Environment.NewLine + Environment.NewLine +
                                                         "最关键的是位置/速度图，它决定了滑条如何动作。点击曲线图下方的绿色按钮可以切换曲线图模式。" +
                                                         Environment.NewLine +
@@ -48,7 +48,7 @@ namespace Mapping_Tools.Views.Sliderator {
                                                         Environment.NewLine + Environment.NewLine +
                                                         "使用恒定速度运行工具会生成原始滑条。调低SV、调高堆积块长度可以优化滑条，解决卡顿问题。" +
                                                         Environment.NewLine + Environment.NewLine +
-                                                        "查看所有选项的提示来获取更多信息。";
+                                                        "将鼠标停靠至详细工具上以获取更多信息。";
 
         private bool ignoreAnchorsChange;
         private bool initialized;

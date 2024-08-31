@@ -21,7 +21,7 @@ namespace Mapping_Tools.Views.MetadataManager {
 
         public static readonly string ToolName = "元数据管理器";
 
-        public static readonly string ToolDescription = $@"为一一编辑每个难度的元数据节省时间，可以在本工具中编辑元数据，之后随时复制到多个难度。{Environment.NewLine}您也可以从谱面A中导入元数据，然后复制给谱面B。{Environment.NewLine}利用保存和加载项目设置，可以轻松处理多个谱面集。";
+        public static readonly string ToolDescription = $@"为需要编辑每个难度的元数据节省时间，可以在本工具中编辑元数据，之后随时复制到多个难度。{Environment.NewLine}您也可以从谱面A中导入元数据，然后复制给谱面B。{Environment.NewLine}利用保存和加载项目设置，可以轻松处理多个谱面集。";
 
         public MetadataManagerView() {
             InitializeComponent();

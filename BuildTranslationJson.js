@@ -28,6 +28,11 @@ async function create() {
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",
             extraText: ["1.12.19"]
+        },
+        // 在“关于”中加入汉化人员用
+        {
+            filePath: "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs",
+            extraText: ["MessageBox.Show(builder.ToString()"]
         }
     ]
 

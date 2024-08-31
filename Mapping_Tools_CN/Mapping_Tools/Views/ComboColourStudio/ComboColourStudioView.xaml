@@ -31,7 +31,7 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <TextBlock FontSize="32" FontWeight="Bold" Foreground="{DynamicResource PrimaryHueMidBrush}">
-                    <Run Text="Combo 色彩工作室（Combo Colour Studio）"/>
+                    <Run Text="Combo 颜色工作室（Combo Colour Studio）"/>
                 </TextBlock>
                 <materialDesign:PopupBox Margin="10" VerticalAlignment="Bottom" ToolTip="点我！">
                     <materialDesign:PopupBox.ToggleContent>
@@ -44,7 +44,7 @@
                         <LineBreak/>
                         您也可以定义爆发（Burst）颜色轴，只用于单combo，适合于用颜色强调特定的Pattern。
                         <LineBreak/>
-                        要开始，点击左下角加号添加combo颜色或者从已有谱面中导入颜色。
+                        若要开始，请点击左下角加号添加combo颜色或者从已有谱面中导入颜色。
                         combo颜色可以通过点击修改。
                         <LineBreak/>
                         点击右下角的加号添加颜色轴。要编辑颜色次序可以双击对应单元格。
