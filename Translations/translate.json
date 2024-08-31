@@ -833,6 +833,9 @@
         "\"{0}:{1}:{2}\"": "\"{0}:{1}:{2}\"",
         "\"osu://edit/\"": "\"osu://edit/\""
     },
+    "./Mapping_Tools\\Mapping_Tools\\Components\\TimeLine\\TimeLineMark.xaml": {
+        "FontFamily=\"Consolas\"": "FontFamily=\"Consolas\""
+    },
     "./Mapping_Tools\\Mapping_Tools\\Components\\TimeLine\\TimeLineMark.xaml.cs": {
         "\"{0}:{1}\"": "\"{0}:{1}\""
     },
@@ -884,7 +887,8 @@
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "Content=\"{Binding View}\"": "Content=\"{Binding View}\"",
         "materialDesign:HintAssist.Hint=\"Search\"": "materialDesign:HintAssist.Hint=\"搜索\"",
-        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\""
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml.cs": {
         "\"Mapping Tools\"": "\"Mapping Tools\"",
@@ -940,7 +944,9 @@
         "Text=\"Downloading new update ...\"": "Text=\"下载新版本...\"",
         "Content=\"Install now\"": "Content=\"立即安装\"",
         "Content=\"Install after closing\"": "Content=\"关闭时安装\"",
-        "Content=\"Skip this version\"": "Content=\"跳过该版本\""
+        "Content=\"Skip this version\"": "Content=\"跳过该版本\"",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Updater\\UpdaterWindow.xaml.cs": {
         "\"https://api.github.com/repos/OliBomby/Mapping_Tools/releases/latest\"": "\"https://api.github.com/repos/Exsper/mapping-tools-cn/releases/latest\""
@@ -1279,7 +1285,9 @@
         "materialDesign:HintAssist.Hint=\"Velocity rounding roughness\"": "materialDesign:HintAssist.Hint=\"速度粗糙度\"",
         "Visibility=\"{Binding Path=IsChecked, ElementName=LengthBox3, UpdateSourceTrigger=PropertyChanged,": "Visibility=\"{Binding Path=IsChecked, ElementName=LengthBox3, UpdateSourceTrigger=PropertyChanged,",
         "Converter={StaticResource BooleanToVisibilityConverter},": "Converter={StaticResource BooleanToVisibilityConverter},",
-        "Visibility=\"{Binding Path=IsChecked, ElementName=VelocityBox3, UpdateSourceTrigger=PropertyChanged,": "Visibility=\"{Binding Path=IsChecked, ElementName=VelocityBox3, UpdateSourceTrigger=PropertyChanged,"
+        "Visibility=\"{Binding Path=IsChecked, ElementName=VelocityBox3, UpdateSourceTrigger=PropertyChanged,": "Visibility=\"{Binding Path=IsChecked, ElementName=VelocityBox3, UpdateSourceTrigger=PropertyChanged,",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\HitsoundStudio\\HitsoundLayerImportWindow.xaml.cs": {
         "$\"Layer {index + 1}\"": "$\"层级 {index + 1}\"",
@@ -1883,7 +1891,9 @@
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\RhythmGuide\\RhythmGuideWindow.xaml": {
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
-        "Content=\"{Binding}\"": "Content=\"{Binding}\""
+        "Content=\"{Binding}\"": "Content=\"{Binding}\"",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Sliderator\\SlideratorView.xaml": {
         "ToolTip=\"Click me!\"": "ToolTip=\"点我！\"",
@@ -2116,7 +2126,8 @@
         "Import an image and this program will distort a slider into it! To get started click the Browse button to select an image, then play with the colors and options until it looks right. Click the run button to export the slider picture at the specified time and position.": "程序将导入的图像转变为滑条！要开始，点击浏览按钮选择一个图像，然后调节颜色和设置直到显示满意。点击运行按钮输出滑条到指定的时间和位置。",
         "This tool is compatible with QuickRun!": "此工具兼容快速执行（QuickRun）！",
         "Remove slider": "移除滑条",
-        "Import slider": "导入滑条"
+        "Import slider": "导入滑条",
+        "FontFamily=\"Segoe UI\"": "FontFamily=\"Segoe UI\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SliderPicturator\\SliderPicturatorView.xaml.cs": {
         "\"Slider Picturator\"": "\"滑条绘图器\"",
@@ -2136,7 +2147,9 @@
         "Text=\"{Binding MinRelevancy, Converter={StaticResource DoubleToStringConverter}}\"": "Text=\"{Binding MinRelevancy, Converter={StaticResource DoubleToStringConverter}}\"",
         "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
         "Content=\"Apply\"": "Content=\"应用\"",
-        "Content=\"Cancel\"": "Content=\"取消\""
+        "Content=\"Cancel\"": "Content=\"取消\"",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\GeneratorSettingsWindow.xaml.cs": {
         "\"SelectionPredicateTemplate\"": "\"SelectionPredicateTemplate\"",
@@ -2235,7 +2248,9 @@
         "materialDesign:HintAssist.Hint=\"HEX value\"": "materialDesign:HintAssist.Hint=\"HEX值\"",
         "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"": "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"",
         "    DP": "    DP",
-        "    DC": "    DC"
+        "    DC": "    DC",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml": {
         "ToolTip=\"Duplicate selected saves.\"": "ToolTip=\"复制选中存档。\"",
@@ -2255,7 +2270,9 @@
         "materialDesign:HintAssist.Hint=\"Name\"": "materialDesign:HintAssist.Hint=\"Name\"",
         "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"": "xmlns:components1=\"clr-namespace:Mapping_Tools.Components\"",
         "    Save": "    保存",
-        "    Load": "    加载"
+        "    Load": "    加载",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\SnappingTools\\SnappingToolsProjectWindow.xaml.cs": {
         "$\"Save {Project.SaveSlots.Count + 1}\"": "$\"存档 {Project.SaveSlots.Count + 1}\"",
@@ -2316,7 +2333,9 @@
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\MessageWindow.xaml": {
         "Header=\"Show Error Details\"": "Header=\"显示错误详情\"",
         "Text=\"Informational Message Here Because nothing else would appear if there isn't anything that would show right?\"": "Text=\"这里是放消息的地方。如果不显示消息，就没有消息会显示。我说得对吗？\"",
-        "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\""
+        "Content=\"{materialDesign:PackIcon WindowCLose}\"": "Content=\"{materialDesign:PackIcon WindowCLose}\"",
+        "FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\"": "FontFamily=\"Microsoft YaHei\"",
+        "TextElement.FontWeight=\"Medium\"": "TextElement.FontWeight=\"Normal\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Views\\Standard\\MessageWindow.xaml.cs": {
         "\"Error\"": "\"错误\"",

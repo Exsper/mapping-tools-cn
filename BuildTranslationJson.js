@@ -24,11 +24,6 @@ async function create() {
                 "{Binding CurrentLayer.TumourSidedness, Converter={StaticResource EnumToVisibilityConverter}, ConverterParameter={x:Static enums:TumourSidedness.Random}}"
             ]
         },
-        // 更换字体
-        {
-            filePath: "./Mapping_Tools\\Mapping_Tools\\MainWindow.xaml",
-            extraText: ["FontFamily=\"pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto\""]
-        },
         // 替换版本号
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",

@@ -19,7 +19,7 @@
     MinHeight="200"
     AllowsTransparency="False"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    TextElement.FontWeight="Medium"
+    TextElement.FontWeight="Normal"
     TextElement.FontSize="14"
     ShowInTaskbar="True"
     FontFamily="Microsoft YaHei"

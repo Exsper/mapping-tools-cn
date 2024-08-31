@@ -13,10 +13,10 @@
         ResizeMode="CanResize"
         AllowsTransparency="False"
         WindowStartupLocation="CenterScreen"
-        TextElement.FontWeight="Medium"
+        TextElement.FontWeight="Normal"
         TextElement.FontSize="14"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto" Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="Microsoft YaHei" Background="{DynamicResource MaterialDesignPaper}"
         d:DataContext="{d:DesignData SnappingToolsProjectWindow}">
     
     <WindowChrome.WindowChrome>

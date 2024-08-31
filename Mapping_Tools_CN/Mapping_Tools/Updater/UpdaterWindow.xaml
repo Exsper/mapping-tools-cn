@@ -12,10 +12,10 @@
         Height="500"
         AllowsTransparency="False"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Medium"
+        TextElement.FontWeight="Normal"
         TextElement.FontSize="14"
         ShowInTaskbar="True"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        FontFamily="Microsoft YaHei"
         Background="{DynamicResource MaterialDesignPaper}">
     <Grid Margin="30 10 30 30">
         <Grid Name="ReadyPanel" Visibility="Visible">

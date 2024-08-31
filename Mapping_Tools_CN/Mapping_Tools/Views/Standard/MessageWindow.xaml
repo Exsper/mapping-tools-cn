@@ -13,9 +13,9 @@
         AllowsTransparency="False"
         WindowStartupLocation="CenterScreen"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Medium"
+        TextElement.FontWeight="Normal"
         MouseDown="DragWin"
-        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto" Background="{DynamicResource MaterialDesignPaper}">
+        FontFamily="Microsoft YaHei" Background="{DynamicResource MaterialDesignPaper}">
     <WindowChrome.WindowChrome>
         <WindowChrome 
             CaptionHeight="35"
