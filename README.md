@@ -30,19 +30,19 @@
 
 ## 文件说明
 
-- 文件夹 Mapping_Tools 为原项目文件夹
+- 文件夹 ```Mapping_Tools``` 为原项目文件夹
 
-- 文件夹 Mapping_Tools_CN 为翻译后的项目文件夹
+- 文件夹 ```Mapping_Tools_CN``` 为翻译后的项目文件夹
 
-- 文件 BuildTranslationJson.js 用于制作和更新翻译JSON文件
+- 文件 ```BuildTranslationJson.js``` 用于制作和更新翻译JSON文件
 
-- 文件 Translations/translate.json 生成的JSON翻译表
+- 文件 ```Translations/translate.json``` 生成的JSON翻译表
 
-- 文件 Translations/comboBoxTranslate.json 自行添加的ComboBox相关内容翻译表
+- 文件 ```Translations/comboBoxTranslate.json``` 自行添加的ComboBox相关内容翻译表
   
-  与 translate.json 不同，comboBoxTranslate.json翻译的不是字符串，而是原代码，修改内容必须谨慎防止破坏原有功能
+  与 ```translate.json``` 不同，```comboBoxTranslate.json``` 翻译的不是字符串，而是原代码，修改内容必须谨慎防止破坏原有功能
 
-- 文件 Translate.js 用于生成汉化后的项目
+- 文件 ```Translate.js``` 用于生成汉化后的项目
 
 ## 汉化步骤
 
