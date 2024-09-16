@@ -27,7 +27,7 @@ async function create() {
         // 替换版本号
         {
             filePath: "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj",
-            extraText: ["1.12.19"]
+            extraText: ["1.12.20"]
         },
         // 在“关于”中加入汉化人员用
         {
