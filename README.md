@@ -4,6 +4,8 @@
 
 汉化 [Mapping_Tools](https://github.com/OliBomby/Mapping_Tools) 专用项目，非汉化问题请转到原英文项目。
 
+有翻译问题请提交issue或转到讨论 [Discussion](https://github.com/Exsper/mapping-tools-cn/discussions)。
+
 考虑到 Mapping_Tools 更新频繁且无官方语言切换模块，故制作此项目
 
 使用翻译表修改项目文件字符串的方式进行翻译，解决因原项目更新导致需重复翻译的问题
