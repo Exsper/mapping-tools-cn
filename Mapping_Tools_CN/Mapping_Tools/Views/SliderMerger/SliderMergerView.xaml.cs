@@ -126,7 +126,7 @@ namespace Mapping_Tools.Views.SliderMerger {
                             case SliderMergerVm.ConnectionMode.移动:
                                 Move(sp2, sp1.Last() - sp2.First());
                                 break;
-                            case SliderMergerVm.ConnectionMode.线性连接:
+                            case SliderMergerVm.ConnectionMode.直线连接:
                                 sp1.Add(sp1.Last());
                                 sp1.Add(sp2.First());
                                 extraLength = (ho1.CurvePoints.Last() - ho2.Pos).Length;

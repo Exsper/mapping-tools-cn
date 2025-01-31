@@ -262,7 +262,7 @@
                                      ToolTip="决定凸点在滑条两边序列的随机种子。"/>
                             <Button Grid.Column="1" Margin="5 0 0 0" VerticalAlignment="Bottom"
                                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                                    ToolTip="随机化随机种子。" Command="{Binding CurrentLayer.RandomizeRandomSeedCommand}">
+                                    ToolTip="重设随机种子。" Command="{Binding CurrentLayer.RandomizeRandomSeedCommand}">
                                 <materialDesign:PackIcon Kind="DiceMultiple" Width="24" Height="24"/>
                             </Button>
                         </Grid>
@@ -286,21 +286,21 @@
                         <TextBlock Text="起始" FontWeight="Bold" Margin="0 10 0 0"/>
                         <TextBox materialDesign:HintAssist.Hint="起始" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  Text="{Binding CurrentLayer.TumourStart, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=0}"
-                                 ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"
+                                 ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为游戏像素。"
                                  Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Minimum="{Binding TumourStartSliderMin}" Maximum="{Binding TumourRangeSliderMax}" Value="{Binding CurrentLayer.TumourStart}"
                                 SmallChange="{Binding TumourRangeSliderSmallChange}"
-                                ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"/>
+                                ToolTip="在滑条何处开始放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为游戏像素。"/>
                         <TextBlock Text="终止" FontWeight="Bold" Margin="0 10 0 0"/>
                         <TextBox materialDesign:HintAssist.Hint="终止" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                  Text="{Binding CurrentLayer.TumourEnd, Converter={StaticResource DoubleToStringConverter}, ConverterParameter=1}"
-                                 ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"
+                                 ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为游戏像素。"
                                  Visibility="{Binding AdvancedOptions, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                         <Slider Minimum="0" Maximum="{Binding TumourRangeSliderMax}" Value="{Binding CurrentLayer.TumourEnd}"
                                 SmallChange="{Binding TumourRangeSliderSmallChange}"
-                                ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为osu!像素。"/>
+                                ToolTip="在滑条何处结束放置凸点。0 表示滑条头，1 表示滑条尾。如果选中了“绝对范围”，则该值单位为游戏像素。"/>
                         <CheckBox IsChecked="{Binding CurrentLayer.UseAbsoluteRange}" Margin="0 10 0 0"
-                                  Content="绝对范围" ToolTip="选中此项将使高度、宽度、间距、起始、终止的数值由相对于滑条长度替换为用绝对osu!像素表示。"/>
+                                  Content="绝对范围" ToolTip="选中此项将使高度、宽度、间距、起始、终止的数值由相对于滑条长度替换为用绝对游戏像素表示。"/>
                         <CheckBox IsChecked="{Binding CurrentLayer.Recalculate}" Margin="0 5 0 0"
                                   Content="迭代运算" ToolTip="应用该层级前是否重新计算滑条长度和角度。若勾选，该层凸点不再与前一层凸点进行融合，而是会把前一层的凸点视为滑条本身的一部分进行计算。"/>
                     </StackPanel>

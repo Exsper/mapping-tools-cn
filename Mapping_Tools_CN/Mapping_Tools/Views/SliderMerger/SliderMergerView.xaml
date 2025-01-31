@@ -48,7 +48,7 @@
 
                 <TextBox x:Name="LeniencyBox" Width="258" HorizontalAlignment="Left" Margin="0,20,0,0"
                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="合并允许距离"
-                    ToolTip="两个打击物件之间的最大osu!像素距离。">
+                    ToolTip="两个打击物件之间的最大游戏像素距离。">
                     <TextBox.Text>
                         <Binding Path="Leniency" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
                             <Binding.Converter>
@@ -86,8 +86,8 @@
                 <CheckBox x:Name="MergeOnSliderEndBox" Margin="0 26 0 0" Content="在滑条尾合并" IsChecked="{Binding MergeOnSliderEnd}"
                           ToolTip="在滑条尾合并而不是在滑条最后一个锚点合并。"/>
 
-                <CheckBox x:Name="LinearOnLinearBox" Margin="0,5,0,0" Content="在直线连接模式下使用线性类型" IsChecked="{Binding LinearOnLinear}"
-                          ToolTip="该选项使滑条合并器尽可能使用线性类型，减少生成滑条的红色锚点。"></CheckBox>
+                <CheckBox x:Name="LinearOnLinearBox" Margin="0,5,0,0" Content="在直线连接模式下使用线性曲线" IsChecked="{Binding LinearOnLinear}"
+                          ToolTip="尽可能使用线性曲线，减少生成滑条的红色锚点数量。"></CheckBox>
             </StackPanel>
 
             <Viewbox VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Margin="10">

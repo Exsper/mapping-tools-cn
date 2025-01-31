@@ -59,7 +59,7 @@
                             <ComboBox x:Name="SelectionViewportBox" Cursor="Hand" Width="258"
                             Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="GPU最大视口数量"
                             ItemsSource="{Binding ViewportSizes}" SelectedItem="{Binding ViewportSize}"
-                            ToolTip="不知道应该选哪个的话，先试着选一个看看能不能正常工作，如果不能就换一个。">
+                            ToolTip="不知道应该选哪个的话，先试着选一个看看能不能正常工作，如果不能就换另外一个。">
                             </ComboBox>
                             <Grid Margin="5 10 0 0">
                                 <Grid.ColumnDefinitions>
@@ -99,7 +99,7 @@
 
                                 <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="滑条位置" VerticalAlignment="Center"/>
                                 <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="滑条头的横坐标（以osu!像素为单位）。">
+                                 ToolTip="滑条头的横坐标（以游戏像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="SliderStartX" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -116,7 +116,7 @@
                                     </TextBox.Text>
                                 </TextBox>
                                 <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="滑条头的纵坐标（以osu!像素为单位）。">
+                                 ToolTip="滑条头的纵坐标（以游戏像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="SliderStartY" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -142,7 +142,7 @@
 
                                 <TextBlock Margin="5 15 0 0" Grid.Column="0" Text="图像位置" VerticalAlignment="Center"/>
                                 <TextBox Grid.Column="1" Width="75" materialDesign:HintAssist.Hint="X轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="图像左上角的横坐标（以osu!像素为单位）。">
+                                 ToolTip="图像左上角的横坐标（以游戏像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="ImageStartX" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
@@ -159,7 +159,7 @@
                                     </TextBox.Text>
                                 </TextBox>
                                 <TextBox Grid.Column="2" Width="75" materialDesign:HintAssist.Hint="Y轴位置" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                 ToolTip="图像左上角的纵坐标（以osu!像素为单位）。">
+                                 ToolTip="图像左上角的纵坐标（以游戏像素为单位）。">
                                     <TextBox.Text>
                                         <Binding Path="ImageStartY" Mode="TwoWay" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                                             <Binding.Converter>
