@@ -217,7 +217,7 @@
                     </Grid>
 
                     <TextBox Margin="0 20 0 0" materialDesign:HintAssist.Hint="时间" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="导出滑条在谱面中的时间。"
+                             ToolTip="滑条导出到谱面中的时间。"
                              Text="{Binding ExportTime, Converter={StaticResource TimeToStringConverter}}"/>
 
                     <ComboBox Margin="0 10 0 0" ToolTip="选择导出方式。" ItemsSource="{Binding ExportModes}"
@@ -241,7 +241,7 @@
                               IsChecked="{Binding ManualVelocity}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                     </CheckBox>
                     <TextBox materialDesign:HintAssist.Hint="新SV" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 0 0 5"
-                             ToolTip="生成滑条的新SV。SV影响程序运算。降低SV可以减少卡顿。"
+                             ToolTip="生成的滑条的速度（SV）。SV影响程序运算，降低SV可以减少卡顿。"
                              IsEnabled="{Binding ManualVelocity}" Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <TextBox.Text>
                             <Binding Path="NewVelocity" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">
@@ -259,7 +259,7 @@
                         </TextBox.Text>
                     </TextBox>
                     <TextBox materialDesign:HintAssist.Hint="最短堆积块长度" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                             ToolTip="用于降低滑条球速度的堆积块的最小长度。长堆积块可以减少卡顿，但滑条球会抖动得更加明显。"
+                             ToolTip="用于降低滑条球速度的堆积块的最小长度。增大堆积块长度可以减少卡顿，但滑条球会抖动得更加明显。"
                              Visibility="{Binding ExportAsNormal, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <TextBox.Text>
                             <Binding Path="MinDendrite" Mode="TwoWay" UpdateSourceTrigger="LostFocus"  NotifyOnValidationError="True">

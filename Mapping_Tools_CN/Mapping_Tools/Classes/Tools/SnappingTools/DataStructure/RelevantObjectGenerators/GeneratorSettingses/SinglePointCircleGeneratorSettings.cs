@@ -7,7 +7,7 @@ namespace Mapping_Tools.Classes.Tools.SnappingTools.DataStructure.RelevantObject
     {
         private double radius;
         [DisplayName("半径")]
-        [Description("以osu!像素为单位的圆半径。")]
+        [Description("以游戏像素为单位的圆半径。")]
         public double Radius
         {
             get => radius;

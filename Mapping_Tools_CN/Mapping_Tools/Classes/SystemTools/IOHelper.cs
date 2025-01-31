@@ -167,7 +167,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
                 if (string.IsNullOrEmpty(songs)) {
                     throw new Exception(
-                        @"无法获取游戏当前谱面，因为还未设置Songs文件夹地址。");
+                        @"无法获取游戏当前谱面，请先在首选项中设置Songs文件夹地址。");
                 }
 
                 string folder = ReadString(osuBaseAddresses.Beatmap, nameof(CurrentBeatmap.FolderName));

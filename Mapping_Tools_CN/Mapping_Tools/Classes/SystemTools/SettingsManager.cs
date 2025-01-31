@@ -165,7 +165,7 @@ namespace Mapping_Tools.Classes.SystemTools {
                 } catch (NullReferenceException) { }
             }
 
-            throw new KeyNotFoundException($"无法获取名称为 \"{name}\" 的注册快捷键。");
+            throw new KeyNotFoundException($"无法获取名为 \"{name}\" 的注册表项。");
         }
 
         public static List<string[]> GetRecentMaps() {

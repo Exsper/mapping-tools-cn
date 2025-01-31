@@ -18,7 +18,7 @@ namespace Mapping_Tools.Classes.SystemTools {
 
             string destinationDirectory = SettingsManager.GetBackupsPath();
             if (!Directory.Exists(destinationDirectory)) {
-                MessageBox.Show("备份文件夹不存在！请检查首选项中的备份文件夹路径是否存在。", "错误");
+                MessageBox.Show("备份文件夹不存在！请检查首选项中的备份文件夹路径是否正确。", "错误");
                 return false;
             }
 
@@ -76,7 +76,7 @@ namespace Mapping_Tools.Classes.SystemTools {
             var destinationFilename = destinationEditor.Beatmap.GetFileName();
 
             if (!allowDifferentFilename && !string.Equals(backupFilename, destinationFilename)) {
-                throw new BeatmapIncompatibleException($"备份文件和目标谱面的元数据（metadata）不一致。\n{backupFilename}\n{destinationFilename}");
+                throw new BeatmapIncompatibleException($"备份文件与目标谱面的元数据（metadata）不一致。\n{backupFilename}\n{destinationFilename}");
             }
 
             File.Copy(backupPath, destination, true);

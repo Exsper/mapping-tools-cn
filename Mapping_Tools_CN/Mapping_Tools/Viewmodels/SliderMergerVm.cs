@@ -86,7 +86,7 @@ namespace Mapping_Tools.Viewmodels {
         public enum ConnectionMode
         {
             移动,
-            线性连接
+            直线连接
         }
     }
 }
