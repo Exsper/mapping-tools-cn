@@ -92,6 +92,8 @@
                           ToolTip="在每次osu!保存后自动使用优化存储（BetterSave）。作为副作用，当编辑器打开时，对.osu文件的任何手动修改都将被覆盖。"/>
                 <CheckBox HorizontalAlignment="Left" Content="快速执行（QuickRun）后自动重新加载" IsChecked="{Binding AutoReload, Mode=TwoWay}" 
                           ToolTip="在每次快速执行后自动重新加载编辑器。"/>
+                <CheckBox HorizontalAlignment="Left" Content="总是使用快速执行（QuickRun）" IsChecked="{Binding AlwaysQuickRun, Mode=TwoWay}"
+                          ToolTip="总是使用快速执行，包括按下“运行”按钮时。"/>
             </StackPanel>
 
             <StackPanel Margin="5 10 0 0">

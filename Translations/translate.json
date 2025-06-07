@@ -913,7 +913,7 @@
         "\"https://mappingtools.github.io\"": "\"https://mappingtools.github.io\"",
         "\"https://github.com/OliBomby/Mapping_Tools\"": "\"https://github.com/Exsper/mapping-tools-cn\"",
         "\"https://ko-fi.com/olibomby \"": "\"https://ko-fi.com/olibomby \"",
-        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.21）\"",
+        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.24）\"",
         "\"Made by:\"": "\"制作者：\"",
         "\"Supporters:\"": "\"支持者：\"",
         "\"Mercury\"": "\"Mercury\"",
@@ -1739,6 +1739,7 @@
         "ToolTip=\"Enable functionality of Editor Reader. Editor Reader reads the memory of your osu! client to get live data from your editor. It can sometimes break, so you can choose to not use it.\"": "ToolTip=\"开启读取编辑器功能，通过读取osu!客户端的内存来获取编辑器实时数据。它有时会出错，所以您可以选择不使用它。\"",
         "ToolTip=\"Automatically BetterSave after every osu! save. As a side-effect, this will also overwrite manual .osu changes if you have the editor open.\"": "ToolTip=\"在每次osu!保存后自动使用优化存储（BetterSave）。作为副作用，当编辑器打开时，对.osu文件的任何手动修改都将被覆盖。\"",
         "ToolTip=\"Enable this to automatically reload the editor after every QuickRun.\"": "ToolTip=\"在每次快速执行后自动重新加载编辑器。\"",
+        "ToolTip=\"Enable this to use QuickRun even when you press the button to run normally.\"": "ToolTip=\"总是使用快速执行，包括按下“运行”按钮时。\"",
         "ToolTip=\"QuickRun lets you quickly run a tool on the beatmap you have open in the editor.\"": "ToolTip=\"快速执行（QuickRun）可以对编辑器正在打开的谱面上直接运行工具。\"",
         "ToolTip=\"Enable SmartQuickRun to modify the behavior of QuickRun based on the number of objects currently selected on the editor.\"": "ToolTip=\"智能快速执行（SmartQuickRun）可以根据编辑器当前选择的物件数量决定快速执行（QuickRun）的行为。\"",
         "ToolTip=\"This tool gets QuickRun if you have no objects selected in the editor.\"": "ToolTip=\"当编辑器未选择物件时快速执行（QuickRun）的工具。\"",
@@ -1768,6 +1769,7 @@
         "Content=\"Enable Editor Reader\"": "Content=\"允许读取编辑器\"",
         "Content=\"Override osu! save with BetterSave™\"": "Content=\"使用优化存储（BetterSave™）代替osu!保存谱面\"",
         "Content=\"Auto reload after QuickRun\"": "Content=\"快速执行（QuickRun）后自动重新加载\"",
+        "Content=\"Always use QuickRun\"": "Content=\"总是使用快速执行（QuickRun）\"",
         "materialDesign:HintAssist.Hint=\"osu! folder\"": "materialDesign:HintAssist.Hint=\"osu!文件夹\"",
         "materialDesign:HintAssist.Hint=\"Songs folder\"": "materialDesign:HintAssist.Hint=\"Songs文件夹\"",
         "materialDesign:HintAssist.Hint=\"osu! user config file\"": "materialDesign:HintAssist.Hint=\"osu!用户配置文件\"",
@@ -2544,6 +2546,6 @@
         "$\"There exists no view with name '{name}'\"": "$\"不存在名为 '{name}' 的界面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
-        "1.12.21": "0.1.4"
+        "1.12.24": "0.1.5"
     }
 }
