@@ -12,6 +12,10 @@ jobs:
   build:
     runs-on: windows-latest
 
+    defaults:
+      run:
+        working-directory: Mapping_Tools_CN
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
