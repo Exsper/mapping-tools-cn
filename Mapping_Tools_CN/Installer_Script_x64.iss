@@ -44,7 +44,7 @@
 #define MyAppPublisher "OliBomby"
 #define MyAppURL "https://mappingtools.github.io/"
 #define MyAppExeName "Mapping Tools.exe"
-#define BuildFolderPath "Mapping_Tools\bin\Release\net5.0-windows"
+#define BuildFolderPath "Mapping_Tools\bin\Release\net5.0-windows\win-x64\publish"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -372,7 +372,6 @@ Source: "{#BuildFolderPath}\Mapping Tools.dll"; DestDir: "{app}"; Flags: ignorev
 Source: "{#BuildFolderPath}\Mapping Tools.dll.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildFolderPath}\Mapping Tools.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildFolderPath}\Mapping Tools.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BuildFolderPath}\Mapping Tools.runtimeconfig.dev.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildFolderPath}\Mapping Tools.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildFolderPath}\MaterialDesignColors.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildFolderPath}\MaterialDesignThemes.Wpf.dll"; DestDir: "{app}"; Flags: ignoreversion

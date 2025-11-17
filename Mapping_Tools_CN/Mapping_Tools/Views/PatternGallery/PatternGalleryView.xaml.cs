@@ -8,6 +8,7 @@ using Mapping_Tools.Components.Dialogs.CustomDialog;
 using Mapping_Tools.Viewmodels;
 using MaterialDesignThemes.Wpf;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.IO;
@@ -193,7 +194,52 @@ namespace Mapping_Tools.Views.PatternGallery {
             };
             exportMenu.Click += DoExportCollection;
 
-            return new[] { renameMenu, importMenu, exportMenu };
+            var restoreMenu = new MenuItem {
+                Header = "恢复收藏夹（_R）", Icon = new PackIcon { Kind = PackIconKind.Restore },
+                ToolTip = "从Pattern文件夹中恢复收藏夹。" +
+                          "将删除已丢失文件的Pattern，新增未被索引的Pattern。" +
+                          "在恢复收藏夹前，请务必确保你已经备份了当前收藏夹。"
+            };
+            restoreMenu.Click += DoRestoreCollection;
+
+            return new[] { renameMenu, importMenu, exportMenu, restoreMenu };
+        }
+
+        private async void DoRestoreCollection(object sender, RoutedEventArgs e) {
+            try {
+                var result = MessageBox.Show(
+                    "从Pattern文件夹中恢复收藏夹。" +
+                    "将删除已丢失文件的Pattern，新增未被索引的Pattern。" +
+                    "在恢复收藏夹前，请务必确保你已经备份了当前收藏夹。",
+                    "恢复收藏夹", MessageBoxButton.YesNo);
+
+                if (result != MessageBoxResult.Yes) return;
+
+                // Get all the filenames that are currently in the collection
+                var indexedPatternFiles = ViewModel.Patterns.Select(o => o.FileName).ToHashSet();
+
+                // Get all the pattern files in the collection folder
+                var actualPatternFiles = Directory.GetFiles(ViewModel.FileHandler.GetPatternFilesFolderPath()).Select(Path.GetFileName).ToHashSet();
+
+                // Remove all patterns that are not in the actual pattern files
+                foreach (var pattern in ViewModel.Patterns.Where(o => !actualPatternFiles.Contains(o.FileName)).ToList()) {
+                    ViewModel.Patterns.Remove(pattern);
+                }
+
+                // Add all patterns that are in the actual pattern files but not in the indexed patterns
+                actualPatternFiles.ExceptWith(indexedPatternFiles);
+                foreach (var patternFileName in actualPatternFiles) {
+                    var patternPath = ViewModel.FileHandler.GetPatternPath(patternFileName);
+                    var patternName = Path.GetFileNameWithoutExtension(patternFileName).Split("__")[^1];
+                    var pattern = ViewModel.OsuPatternMaker.FromFile(patternPath, patternName, retainFilename: true);
+                    ViewModel.Patterns.Add(pattern);
+                }
+
+                await Task.Factory.StartNew(() => MainWindow.MessageQueue.Enqueue("恢复收藏夹成功！"));
+            }
+            catch (Exception exception) {
+                exception.Show();
+            }
         }
 
         private async void DoRenameCollection(object sender, RoutedEventArgs e) {

@@ -174,6 +174,7 @@
         "\"Error\"": "\"错误\"",
         "\"Backups folder does not exist! Check in the Preferences if the path to your backups folder is correct and the folder exists.\"": "\"备份文件夹不存在！请检查首选项中的备份文件夹路径是否正确。\"",
         "\".osu\"": "\".osu\"",
+        "\"_2_\"": "\"_2_\"",
         "$\"The backup and the destination beatmap have mismatching metadata.\\n{backupFilename}\\n{destinationFilename}\"": "$\"备份文件与目标谱面的元数据（metadata）不一致。\\n{backupFilename}\\n{destinationFilename}\"",
         "\"Do you want to load the backup anyways?\"": "\"是否仍要加载备份？\"",
         "\"Load backup\"": "\"加载备份\"",
@@ -913,7 +914,7 @@
         "\"https://mappingtools.github.io\"": "\"https://mappingtools.github.io\"",
         "\"https://github.com/OliBomby/Mapping_Tools\"": "\"https://github.com/Exsper/mapping-tools-cn\"",
         "\"https://ko-fi.com/olibomby \"": "\"https://ko-fi.com/olibomby \"",
-        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.24）\"",
+        "$\"Mapping Tools {version}\"": "$\"Mapping Tools {version} （对应原版1.12.27）\"",
         "\"Made by:\"": "\"制作者：\"",
         "\"Supporters:\"": "\"支持者：\"",
         "\"Mercury\"": "\"Mercury\"",
@@ -1715,6 +1716,13 @@
         "\"Import a collection zip file to the projects folder.\"": "\"将收藏夹zip文件导入到项目文件夹。\"",
         "\"_Export collection\"": "\"导出收藏夹（_E）\"",
         "\"Export this collection to the Exports folder. The exported file can later be imported with the import menu.\"": "\"导出该收藏夹到导出文件夹，导出的文件可以再使用导入菜单进行导入。\"",
+        "\"_Restore collection\"": "\"恢复收藏夹（_R）\"",
+        "\"Restore the collection from the pattern files directory. \"": "\"从Pattern文件夹中恢复收藏夹。\"",
+        "\"This will remove any patterns that have missing files, and add any patterns that have not been indexed. \"": "\"将删除已丢失文件的Pattern，新增未被索引的Pattern。\"",
+        "\"Make sure to back-up your collection before restoring it.\"": "\"在恢复收藏夹前，请务必确保你已经备份了当前收藏夹。\"",
+        "\"This will restore the collection from the pattern files directory. \"": "\"从Pattern文件夹中恢复收藏夹。\"",
+        "\"Restore collection\"": "\"恢复收藏夹\"",
+        "\"Successfully restored the collection!\"": "\"恢复收藏夹成功！\"",
         "\"Successfully renamed this collection!\"": "\"重命名收藏夹成功！\"",
         "\"Do you want to merge the imported collection into your current collection?\"": "\"将导入的收藏夹与当前收藏夹合并吗？\"",
         "\"Load new collection\"": "\"加载新收藏夹\"",
@@ -2546,6 +2554,6 @@
         "$\"There exists no view with name '{name}'\"": "$\"不存在名为 '{name}' 的界面\""
     },
     "./Mapping_Tools\\Mapping_Tools\\Mapping_Tools.csproj": {
-        "1.12.24": "0.1.5"
+        "1.12.27": "0.1.6"
     }
 }
